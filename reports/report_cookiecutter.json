@@ -1,0 +1,51 @@
+{
+  "cookiecutter_1": {
+    "status": "skipped"
+  },
+  "cookiecutter_2": {
+    "status": "running",
+    "time": {
+      "checkout": 0.5961441993713379,
+      "instrument": 10.041691541671753,
+      "test": 0.6037113666534424
+    },
+    "checkout": "successful",
+    "build": "successful",
+    "test": "successful",
+    "bug:tests/test_hooks.py::TestFindHooks::test_find_hook": "not_found",
+    "bug:tests/test_hooks.py::TestExternalHooks::test_run_hook": "not_found",
+    "bug_passing": "empty",
+    "check": "failed"
+  },
+  "cookiecutter_3": {
+    "status": "running",
+    "time": {
+      "checkout": 0.5551507472991943,
+      "instrument": 8.068104267120361,
+      "test": 0.6052727699279785
+    },
+    "checkout": "successful",
+    "build": "successful",
+    "test": "successful",
+    "bug:tests/test_read_user_choice.py::test_click_invocation[1-hello]": "not_found",
+    "bug:tests/test_read_user_choice.py::test_click_invocation[2-world]": "not_found",
+    "bug:tests/test_read_user_choice.py::test_click_invocation[3-foo]": "not_found",
+    "bug:tests/test_read_user_choice.py::test_click_invocation[4-bar]": "not_found",
+    "bug_passing": "empty",
+    "check": "failed"
+  },
+  "cookiecutter_4": {
+    "status": "running",
+    "time": {
+      "checkout": 0.5314958095550537,
+      "instrument": 9.167245864868164,
+      "test": 0.4822258949279785
+    },
+    "checkout": "successful",
+    "build": "successful",
+    "test": "successful",
+    "bug:tests/test_hooks.py::TestExternalHooks::test_run_failing_hook": "not_found",
+    "bug_passing": "empty",
+    "check": "failed"
+  }
+}
