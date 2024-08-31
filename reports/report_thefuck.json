@@ -2,192 +2,122 @@
   "thefuck_1": {
     "status": "running",
     "time": {
-      "checkout": 0.8299965858459473,
-      "instrument": 0.5550415515899658
+      "checkout": 0.6358709335327148,
+      "instrument": 16.42019295692444,
+      "test": 5.217206954956055
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_1/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_2": {
     "status": "running",
     "time": {
-      "checkout": 0.10841512680053711,
-      "instrument": 0.5238921642303467
+      "checkout": 0.6181399822235107,
+      "instrument": 19.319239854812622,
+      "test": 32.474995851516724
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_2/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_3": {
     "status": "running",
     "time": {
-      "checkout": 0.10662388801574707,
-      "instrument": 0.47078704833984375
+      "checkout": 0.6443142890930176,
+      "instrument": 15.99714183807373,
+      "test": 32.36910891532898
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_3/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_4": {
     "status": "running",
     "time": {
-      "checkout": 0.10621309280395508,
-      "instrument": 0.4719126224517822
+      "checkout": 0.6644978523254395,
+      "instrument": 16.00874972343445,
+      "test": 30.93754291534424
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_4/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_5": {
     "status": "running",
     "time": {
-      "checkout": 0.10091853141784668,
-      "instrument": 0.47766971588134766
+      "checkout": 0.5789370536804199,
+      "instrument": 16.027894020080566,
+      "test": 15.358215093612671
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_5/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_6": {
     "status": "running",
     "time": {
-      "checkout": 0.1058359146118164,
-      "instrument": 0.49205493927001953
+      "checkout": 0.5882351398468018,
+      "instrument": 16.095289945602417,
+      "test": 10.392253875732422
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_6/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_7": {
     "status": "running",
     "time": {
-      "checkout": 0.10621047019958496,
-      "instrument": 0.46505308151245117
+      "checkout": 0.611475944519043,
+      "instrument": 16.34448528289795,
+      "test": 7.630820035934448
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_7/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_8": {
     "status": "running",
     "time": {
-      "checkout": 0.10491490364074707,
-      "instrument": 0.4666016101837158
+      "checkout": 0.656641960144043,
+      "instrument": 16.450278282165527,
+      "test": 8.893731117248535
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_8/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_9": {
     "status": "running",
     "time": {
-      "checkout": 0.09501266479492188,
-      "instrument": 0.3594179153442383
+      "checkout": 0.5812599658966064,
+      "instrument": 15.606308698654175,
+      "test": 4.18097996711731
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_9/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_10": {
     "status": "running",
     "time": {
-      "checkout": 0.09475278854370117,
-      "instrument": 0.3580334186553955
+      "checkout": 0.5753707885742188,
+      "instrument": 15.607047080993652,
+      "test": 17.407947778701782
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_10/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_11": {
     "status": "skipped"
@@ -195,400 +125,253 @@
   "thefuck_12": {
     "status": "running",
     "time": {
-      "checkout": 0.09318709373474121,
-      "instrument": 0.3210170269012451
+      "checkout": 0.710169792175293,
+      "instrument": 21.7096848487854,
+      "test": 17.488740921020508
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_12/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_13": {
     "status": "running",
     "time": {
-      "checkout": 0.09247350692749023,
-      "instrument": 0.3227112293243408
+      "checkout": 0.6017167568206787,
+      "instrument": 17.206537008285522,
+      "test": 8.004162788391113
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_13/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_14": {
     "status": "running",
     "time": {
-      "checkout": 0.0913991928100586,
-      "instrument": 0.3273916244506836
+      "checkout": 0.6408860683441162,
+      "instrument": 16.81127381324768,
+      "test": 23.750128269195557
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_14/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_15": {
     "status": "running",
     "time": {
-      "checkout": 0.09180021286010742,
-      "instrument": 0.29003405570983887
+      "checkout": 0.5995678901672363,
+      "instrument": 16.942364931106567,
+      "test": 8.000784158706665
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_15/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_16": {
     "status": "running",
     "time": {
-      "checkout": 0.09163928031921387,
-      "instrument": 0.303802490234375
+      "checkout": 0.6059801578521729,
+      "instrument": 17.547485828399658,
+      "test": 20.44982385635376
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_16/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_17": {
     "status": "running",
     "time": {
-      "checkout": 0.09025001525878906,
-      "instrument": 0.31768321990966797
+      "checkout": 0.5853137969970703,
+      "instrument": 16.771325826644897,
+      "test": 11.872166872024536
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_17/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_18": {
     "status": "running",
     "time": {
-      "checkout": 0.09028816223144531,
-      "instrument": 0.269061803817749
+      "checkout": 0.627161979675293,
+      "instrument": 16.73256206512451,
+      "test": 14.47084379196167
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_18/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_19": {
     "status": "running",
     "time": {
-      "checkout": 0.0894308090209961,
-      "instrument": 0.27685117721557617
+      "checkout": 0.5967302322387695,
+      "instrument": 17.995945930480957,
+      "test": 13.130750894546509
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_19/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_20": {
     "status": "running",
     "time": {
-      "checkout": 0.08909225463867188,
-      "instrument": 0.29258012771606445
+      "checkout": 0.5934369564056396,
+      "instrument": 16.071019887924194,
+      "test": 12.574625015258789
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_20/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_21": {
     "status": "running",
     "time": {
-      "checkout": 0.0899817943572998,
-      "instrument": 0.2701725959777832
+      "checkout": 0.681049108505249,
+      "instrument": 16.886998176574707,
+      "test": 8.731280088424683
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_21/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_22": {
     "status": "running",
     "time": {
-      "checkout": 0.0893089771270752,
-      "instrument": 0.2494652271270752
+      "checkout": 0.5875210762023926,
+      "instrument": 16.60390305519104,
+      "test": 8.477437973022461
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_22/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_23": {
     "status": "running",
     "time": {
-      "checkout": 0.09004974365234375,
-      "instrument": 0.2632405757904053
+      "checkout": 0.57145094871521,
+      "instrument": 16.34943389892578,
+      "test": 20.495342016220093
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_23/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_24": {
     "status": "running",
     "time": {
-      "checkout": 0.08904790878295898,
-      "instrument": 0.2767219543457031
+      "checkout": 0.5496189594268799,
+      "instrument": 22.220285892486572,
+      "test": 7.424225091934204
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_24/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_25": {
     "status": "running",
     "time": {
-      "checkout": 0.08833050727844238,
-      "instrument": 0.24732422828674316
+      "checkout": 0.6033971309661865,
+      "instrument": 16.206614017486572,
+      "test": 11.617318153381348
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_25/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_26": {
     "status": "running",
     "time": {
-      "checkout": 0.08819103240966797,
-      "instrument": 0.2490239143371582
+      "checkout": 0.5361299514770508,
+      "instrument": 15.935025930404663,
+      "test": 12.002816200256348
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_26/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_27": {
     "status": "running",
     "time": {
-      "checkout": 0.0874781608581543,
-      "instrument": 0.24930548667907715
+      "checkout": 0.5427439212799072,
+      "instrument": 16.109642028808594,
+      "test": 16.555444955825806
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_27/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_28": {
     "status": "running",
     "time": {
-      "checkout": 0.08766889572143555,
-      "instrument": 0.24476909637451172
+      "checkout": 0.5417661666870117,
+      "instrument": 16.037563800811768,
+      "test": 96.05026936531067
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_28/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_29": {
     "status": "running",
     "time": {
-      "checkout": 0.08818221092224121,
-      "instrument": 0.24592947959899902
+      "checkout": 0.5958828926086426,
+      "instrument": 16.069995880126953,
+      "test": 26.296483039855957
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_29/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_30": {
     "status": "running",
     "time": {
-      "checkout": 0.08734893798828125,
-      "instrument": 0.2269909381866455
+      "checkout": 0.547548770904541,
+      "instrument": 16.172713041305542,
+      "test": 68.86096501350403
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_30/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_31": {
     "status": "running",
     "time": {
-      "checkout": 0.08509969711303711,
-      "instrument": 0.2217850685119629
+      "checkout": 0.5538599491119385,
+      "instrument": 15.890372037887573,
+      "test": 8.934155941009521
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_31/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   },
   "thefuck_32": {
     "status": "running",
     "time": {
-      "checkout": 0.07645249366760254,
-      "instrument": 0.17690181732177734
+      "checkout": 0.5183489322662354,
+      "instrument": 16.2537579536438,
+      "test": 3.967242956161499
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 27, in instrument\n    with open(src, \"r\") as fp:\n         ^^^^^^^^^^^^^^\n",
-      "IsADirectoryError: [Errno 21] Is a directory: '/home/smytzek/fendr/tmp/thefuck_32/'\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   }
 }

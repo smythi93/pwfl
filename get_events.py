@@ -59,11 +59,10 @@ def create_config(
         excludes = DEFAULT_EXCLUDES
     if project.project_name in ("calculator", "markup"):
         project.test_base = Path("tests")
-    test_files = [
-        str(file)
-        for file in project.test_files
-        if file.is_relative_to(project.test_base) and file.suffix == ".py"
-    ]
+    test_files = list({
+        str(file.split("::")[0])
+        for file in project.test_cases
+    })
     return Config.create(
         path=str(src.absolute()),
         language="python",

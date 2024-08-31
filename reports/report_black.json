@@ -248,25 +248,13 @@
   "black_23": {
     "status": "running",
     "time": {
-      "checkout": 0.08283066749572754,
-      "instrument": 0.3174276351928711
+      "checkout": 0.48862385749816895,
+      "instrument": 28.201851844787598,
+      "test": 52.85212302207947
     },
     "checkout": "successful",
-    "build": "failed",
-    "error": [
-      "Traceback (most recent call last):\n",
-      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 114, in instrument\n    sflkit.instrument_config(config)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/__init__.py\", line 14, in instrument_config\n    instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/dir_instrumentation.py\", line 167, in instrument\n    self.test_file_instrumentation.instrument(\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/instrumentation/file_instrumentation.py\", line 16, in instrument\n    self.visitor.instrument(src, dst, file)\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/visitor.py\", line 29, in instrument\n    tree = self.parse(source)\n           ^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/sflkit/language/python/visitor.py\", line 17, in parse\n    return parse(source)\n           ^^^^^^^^^^^^^\n",
-      "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/ast.py\", line 50, in parse\n    return compile(source, filename, mode, flags,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"<unknown>\", line 7\n",
-      "    print >> sys.stderr , \"Look, a repr:\", `sys`\n",
-      "                                           ^\n",
-      "SyntaxError: invalid syntax\n"
-    ]
+    "build": "successful",
+    "test": "successful",
+    "check": "successful"
   }
 }
