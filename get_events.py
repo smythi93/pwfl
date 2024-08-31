@@ -126,7 +126,9 @@ def sflkit_instrument(
 
 
 def main(project_name, bug_id):
-    report_file = f"report_{project_name}.json"
+    report_dir = "reports"
+    os.makedirs(report_dir, exist_ok=True)
+    report_file = os.path.join(report_dir, f"report_{project_name}.json")
     if os.path.exists(report_file):
         with open(report_file, "r") as f:
             report = json.load(f)
@@ -224,7 +226,7 @@ def main(project_name, bug_id):
         else:
             report[identifier]["check"] = "failed"
 
-    with open(f"report_{project_name}.json", "w") as f:
+    with open(report_file, "w") as f:
         json.dump(report, f, indent=2)
 
 
