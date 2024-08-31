@@ -68,6 +68,9 @@ def create_config(
         language="python",
         events="line",
         test_events="test_start,test_end,test_line,test_def,test_use,test_assert",
+        ignore_inner=str(project.project_name == "pysnooper"),  # pysnooper defines a testcase function inside a
+        # testcase, which it traces. With the instrumentation, the trace is not correct because the correct trace is
+        # asserted. Hence, inner functions are ignored.
         metrics=metrics or "",
         predicates="line",
         passing=str(
