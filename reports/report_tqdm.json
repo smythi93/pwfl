@@ -1,0 +1,153 @@
+{
+  "tqdm_1": {
+    "status": "running",
+    "time": {
+      "checkout": 1.0684430599212646,
+      "instrument": 15.779587268829346
+    },
+    "checkout": "successful",
+    "build": "failed",
+    "error": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
+      "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+      "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
+    ]
+  },
+  "tqdm_2": {
+    "status": "running",
+    "time": {
+      "checkout": 0.0527195930480957,
+      "instrument": 15.355274200439453
+    },
+    "checkout": "successful",
+    "build": "failed",
+    "error": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
+      "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+      "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
+    ]
+  },
+  "tqdm_3": {
+    "status": "running",
+    "time": {
+      "checkout": 0.05091547966003418,
+      "instrument": 15.535730123519897
+    },
+    "checkout": "successful",
+    "build": "failed",
+    "error": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
+      "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+      "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
+    ]
+  },
+  "tqdm_4": {
+    "status": "running",
+    "time": {
+      "checkout": 0.04985809326171875,
+      "instrument": 15.591086387634277
+    },
+    "checkout": "successful",
+    "build": "failed",
+    "error": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
+      "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+      "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
+    ]
+  },
+  "tqdm_5": {
+    "status": "running",
+    "time": {
+      "checkout": 0.046846628189086914,
+      "instrument": 15.797008514404297
+    },
+    "checkout": "successful",
+    "build": "failed",
+    "error": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
+      "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+      "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
+    ]
+  },
+  "tqdm_6": {
+    "status": "running",
+    "time": {
+      "checkout": 0.04752850532531738,
+      "instrument": 15.462710618972778
+    },
+    "checkout": "successful",
+    "build": "failed",
+    "error": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
+      "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+      "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
+    ]
+  },
+  "tqdm_7": {
+    "status": "running",
+    "time": {
+      "checkout": 0.051000118255615234,
+      "instrument": 15.591693878173828
+    },
+    "checkout": "successful",
+    "build": "failed",
+    "error": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
+      "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+      "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
+    ]
+  },
+  "tqdm_8": {
+    "status": "running",
+    "time": {
+      "checkout": 0.04235219955444336,
+      "instrument": 15.358595609664917
+    },
+    "checkout": "successful",
+    "build": "failed",
+    "error": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/smytzek/fendr/get_events.py\", line 112, in sflkit_instrument\n    instrument(\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
+      "  File \"/home/smytzek/fendr/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
+      "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+      "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
+    ]
+  },
+  "tqdm_9": {
+    "status": "running",
+    "time": {
+      "checkout": 0.034208059310913086,
+      "instrument": 15.60975456237793,
+      "test": 0.44124269485473633
+    },
+    "checkout": "successful",
+    "build": "successful",
+    "test": "successful",
+    "bug:tqdm/tests/tests_tqdm.py::test_si_format": "not_found",
+    "bug:tqdm/tests/tests_tqdm.py::test_update": "not_found",
+    "bug_passing": "empty",
+    "check": "failed"
+  }
+}
