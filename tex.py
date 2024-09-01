@@ -150,6 +150,48 @@ def analyze(results):
     best_for_each_metric = dict()
     p_values = dict()
     max_p = 0
+    better = {
+        slice_: {
+            m: {s: {l: 0 for l in localization_order} for s in scenario_order}
+            for m in metric_order
+        }
+        for slice_ in slice_order[1:]
+    }
+    worse = {
+        slice_: {
+            m: {s: {l: 0 for l in localization_order} for s in scenario_order}
+            for m in metric_order
+        }
+        for slice_ in slice_order[1:]
+    }
+    improvements = {
+        slice_: {
+            m: {s: {l: list() for l in localization_order} for s in scenario_order}
+            for m in metric_order
+        }
+        for slice_ in slice_order[1:]
+    }
+    max_improvement = {
+        slice_: {
+            m: {s: {l: 0 for l in localization_order} for s in scenario_order}
+            for m in metric_order
+        }
+        for slice_ in slice_order[1:]
+    }
+    median_improvement = {
+        slice_: {
+            m: {s: {l: 0 for l in localization_order} for s in scenario_order}
+            for m in metric_order
+        }
+        for slice_ in slice_order[1:]
+    }
+    avg_improvement = {
+        slice_: {
+            m: {s: {l: 0 for l in localization_order} for s in scenario_order}
+            for m in metric_order
+        }
+        for slice_ in slice_order[1:]
+    }
     for metric in metric_order:
         line_for_each_metric[metric] = dict()
         best_for_each_metric[metric] = dict()
@@ -165,6 +207,37 @@ def analyze(results):
                     avg = results[slice_][metric][scenario][localization]["avg"]
                     if slice_ == "line":
                         line_for_each_metric[metric][scenario][localization] = avg
+                    else:
+                        for slice_result, line_result in zip(
+                            results[slice_][metric][scenario][localization]["all"],
+                            results["line"][metric][scenario][localization]["all"],
+                        ):
+                            if comp:
+                                if slice_result > line_result:
+                                    better[slice_][metric][scenario][localization] += 1
+                                elif slice_result < line_result:
+                                    worse[slice_][metric][scenario][localization] += 1
+                                if line_result > 0:
+                                    improvements[slice_][metric][scenario][
+                                        localization
+                                    ].append(slice_result / line_result)
+                                else:
+                                    improvements[slice_][metric][scenario][
+                                        localization
+                                    ].append(float("inf"))
+                            else:
+                                if slice_result < line_result:
+                                    better[slice_][metric][scenario][localization] += 1
+                                elif slice_result > line_result:
+                                    worse[slice_][metric][scenario][localization] += 1
+                                if slice_result > 0:
+                                    improvements[slice_][metric][scenario][
+                                        localization
+                                    ].append(line_result / slice_result)
+                                else:
+                                    improvements[slice_][metric][scenario][
+                                        localization
+                                    ].append(float("inf"))
                     if avg in bests:
                         bests[avg].append(slice_)
                     else:
@@ -182,7 +255,36 @@ def analyze(results):
                         max_p = max(max_p, p)
                 bests = sorted([(score, bests[score]) for score in bests], reverse=comp)
                 best_for_each_metric[metric][scenario][localization] = bests
-    return best_for_each_metric, line_for_each_metric, p_values, max_p
+    for slice_ in slice_order[1:]:
+        for metric in metric_order:
+            for scenario in scenario_order:
+                for localization in localization_order:
+                    if len(improvements[slice_][metric][scenario][localization]) > 0:
+                        max_improvement[slice_][metric][scenario][localization] = max(
+                            improvements[slice_][metric][scenario][localization]
+                        )
+                        median_improvement[slice_][metric][scenario][
+                            localization
+                        ] = sorted(
+                            improvements[slice_][metric][scenario][localization]
+                        )[
+                            len(improvements[slice_][metric][scenario][localization])
+                            // 2
+                        ]
+                        avg_improvement[slice_][metric][scenario][localization] = sum(
+                            improvements[slice_][metric][scenario][localization]
+                        ) / len(improvements[slice_][metric][scenario][localization])
+    return (
+        best_for_each_metric,
+        line_for_each_metric,
+        p_values,
+        max_p,
+        better,
+        worse,
+        max_improvement,
+        median_improvement,
+        avg_improvement,
+    )
 
 
 def main(tex=False):
@@ -191,7 +293,80 @@ def main(tex=False):
         return
     with summary.open() as f:
         results = json.load(f)
-    best_for_each_metric, line_for_each_metric, p_values, _ = analyze(results)
+    (
+        best_for_each_metric,
+        line_for_each_metric,
+        p_values,
+        _,
+        better,
+        worse,
+        max_improvement,
+        median_improvement,
+        avg_improvement,
+    ) = analyze(results)
+    print("Better:")
+    for slice_ in slice_order[1:]:
+        for metric in metric_order:
+            for scenario in scenario_order:
+                for localization in localization_order:
+                    print(
+                        slice_,
+                        metric,
+                        scenario,
+                        localization,
+                        better[slice_][metric][scenario][localization],
+                    )
+    print("\n\nWorse:")
+    for slice_ in slice_order[1:]:
+        for metric in metric_order:
+            for scenario in scenario_order:
+                for localization in localization_order:
+                    print(
+                        slice_,
+                        metric,
+                        scenario,
+                        localization,
+                        worse[slice_][metric][scenario][localization],
+                    )
+    print("\n\nMax Improvement:")
+    for slice_ in slice_order[1:]:
+        for metric in metric_order:
+            for scenario in scenario_order:
+                for localization in localization_order:
+                    print(
+                        slice_,
+                        metric,
+                        scenario,
+                        localization,
+                        max_improvement[slice_][metric][scenario][localization],
+                    )
+
+    print("\n\nMedian Improvement:")
+    for slice_ in slice_order[1:]:
+        for metric in metric_order:
+            for scenario in scenario_order:
+                for localization in localization_order:
+                    print(
+                        slice_,
+                        metric,
+                        scenario,
+                        localization,
+                        median_improvement[slice_][metric][scenario][localization],
+                    )
+
+    print("\n\nAvg Improvement:")
+    for slice_ in slice_order[1:]:
+        for metric in metric_order:
+            for scenario in scenario_order:
+                for localization in localization_order:
+                    print(
+                        slice_,
+                        metric,
+                        scenario,
+                        localization,
+                        avg_improvement[slice_][metric][scenario][localization],
+                    )
+
     with Path("p_values.json").open("w") as f:
         json.dump(p_values, f, indent=1)
     if tex:
