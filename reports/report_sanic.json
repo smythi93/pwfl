@@ -1,0 +1,69 @@
+{
+ "sanic_1": {
+  "status": "running",
+  "time": {
+   "checkout": 1.5732145309448242,
+   "instrument_lines": 11.020436763763428,
+   "test_lines": 22.193704843521118,
+   "instrument": 11.406208515167236,
+   "test": 22.07602596282959
+  },
+  "checkout": "successful",
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
+ },
+ "sanic_2": {
+  "status": "skipped"
+ },
+ "sanic_3": {
+  "status": "running",
+  "time": {
+   "checkout": 0.13405251502990723,
+   "instrument_lines": 10.985138416290283,
+   "test_lines": 14.36541748046875,
+   "instrument": 11.157248973846436,
+   "test": 14.50370454788208
+  },
+  "checkout": "successful",
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
+ },
+ "sanic_4": {
+  "status": "running",
+  "time": {
+   "checkout": 0.11887264251708984,
+   "instrument_lines": 11.506651163101196,
+   "test_lines": 81.56876230239868,
+   "instrument": 12.013078212738037,
+   "test": 81.94898772239685
+  },
+  "checkout": "successful",
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
+ },
+ "sanic_5": {
+  "status": "running",
+  "time": {
+   "checkout": 0.1517963409423828,
+   "instrument_lines": 14.667970895767212,
+   "test_lines": 4.107540130615234,
+   "instrument": 14.998356819152832,
+   "test": 4.0900373458862305
+  },
+  "checkout": "successful",
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
+ }
+}
