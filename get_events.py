@@ -166,9 +166,9 @@ def get_events(
         json.dump(mapping_content, f, indent=2)
 
     shutil.rmtree(events_base, ignore_errors=True)
-    if project.project_name == "ansible":
+    if project.project_name == "ansible" or project.project_name == "thefuck":
         """
-        When ansible is executed it sometimes loads the original version.
+        When ansible or thefuck is executed it sometimes loads the original version.
         Even though it is never installed and the virtual environment clearly
         contains the instrumented version.
         This prevents an event collection.
@@ -253,7 +253,7 @@ def main(project_name, bug_id):
         for failing_test in project.test_cases:
             safe_test = Runner.safe(failing_test)
             if not (events_base / "failing" / safe_test).exists():
-                report[identifier][f"bug:{failing_test}"] = "not_found"
+                report[identifier][f"bug:{safe_test}"] = "not_found"
                 checks = False
         if not os.listdir(events_base / "passing"):
             report[identifier]["bug_passing"] = "empty"
