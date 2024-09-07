@@ -143,11 +143,9 @@ def get_events(
     else:
         suffix = "_lines"
     events_base = (
-        os.path.join("sflkit_events", project.project_name, str(project.bug_id))
+        Path("sflkit_events", project.project_name, str(project.bug_id))
         if tests
-        else os.path.join(
-            "sflkit_events", project.project_name, "lines", str(project.bug_id)
-        )
+        else Path("sflkit_events", project.project_name, "lines", str(project.bug_id))
     )
 
     mapping = os.path.join("mappings", f"{project}{suffix}.json")
