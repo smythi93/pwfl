@@ -85,7 +85,11 @@ def analyze(
     model_class: Optional[type[Model]] = None,
 ) -> Analyzer:
     os.makedirs("analysis", exist_ok=True)
-    events = Path("sflkit_events", project.project_name, str(project.bug_id))
+    events = Path(
+        "sflkit_events",
+        project.project_name,
+        str(project.bug_id),
+    )
     mapping_file = Path("mappings", f"{project}.json")
     if not events.exists():
         raise FileNotFoundError(f"Events not found for {project}")
@@ -133,7 +137,6 @@ def main(project_name, bug_id):
 
     with open(report_dir / f"analysis_{project_name}.json", "w") as f:
         json.dump(report, f, indent=1)
-
 
 
 if __name__ == "__main__":
