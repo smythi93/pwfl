@@ -188,7 +188,7 @@ def get_events(
     with open(mapping, "r") as f:
         mapping_content = json.load(f)
     with open(mapping, "w") as f:
-        json.dump(mapping_content, f, indent=2)
+        json.dump(mapping_content, f, indent=1)
 
     shutil.rmtree(events_base, ignore_errors=True)
     if project.project_name == "ansible":
@@ -279,7 +279,7 @@ def main(project_name, bug_id):
             report[identifier]["check"] = "failed"
 
     with open(report_file, "w") as f:
-        json.dump(report, f, indent=2)
+        json.dump(report, f, indent=1)
 
 
 if __name__ == "__main__":
