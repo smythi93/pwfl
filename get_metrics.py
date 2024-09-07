@@ -20,7 +20,7 @@ def get_results_for_type(
     type_,
     analyzer,
     project,
-    report,
+    location,
     faulty_lines,
     eval_metric=max,
 ):
@@ -29,7 +29,7 @@ def get_results_for_type(
     for metric in [Spectrum.Tarantula, Spectrum.Ochiai, Spectrum.DStar]:
         results[metric.__name__] = dict()
         time_start = time.time()
-        suggestions = analyzer.get_sorted_suggestions(report.location, metric, type_)
+        suggestions = analyzer.get_sorted_suggestions(location, metric, type_)
         times[metric.__name__] = time.time() - time_start
         rank = Rank(
             suggestions, total_number_of_locations=project.loc, metric=eval_metric
@@ -68,9 +68,12 @@ def main(project_name, bug_id, start=0, end=1000):
         project.buggy = True
         subject_results = dict()
         subject_times = dict()
-        report = t4p.checkout(project)
-        if not report.successful:
-            raise report.raised
+        location = Path("tmp", project.get_identifier())
+        if not location.exists():
+            report = t4p.checkout(project)
+            if not report.successful:
+                raise report.raised
+            location = report.location
         for suffix, model_class in dependencies:
             analysis_file = Path("analysis", f"{project}{suffix}.json")
             if analysis_file.exists():
@@ -87,7 +90,7 @@ def main(project_name, bug_id, start=0, end=1000):
                 subject_results[f"line{suffix}"],
                 subject_times[f"line{suffix}"],
             ) = get_results_for_type(
-                AnalysisType.LINE, analyzer, project, report, faulty_lines
+                AnalysisType.LINE, analyzer, project, location, faulty_lines
             )
         results[project.get_identifier()] = subject_results
         time_report[project.get_identifier()] = subject_times
