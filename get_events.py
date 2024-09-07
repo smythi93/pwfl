@@ -190,7 +190,7 @@ def get_events(
     else:
         report[identifier][f"test{suffix}"] = "failed"
         report[identifier]["error"] = traceback.format_exception(r.raised)
-        return events_base
+    return events_base
 
 
 def main(project_name, bug_id):
