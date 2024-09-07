@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import time
 from pathlib import Path
 
 import tests4py.api as t4p
@@ -24,12 +25,15 @@ def get_results_for_type(
     eval_metric=max,
 ):
     results = dict()
+    times = dict()
     for metric in [Spectrum.Tarantula, Spectrum.Ochiai, Spectrum.DStar]:
+        results[metric.__name__] = dict()
+        time_start = time.time()
         suggestions = analyzer.get_sorted_suggestions(report.location, metric, type_)
+        times[metric.__name__] = time.time() - time_start
         rank = Rank(
             suggestions, total_number_of_locations=project.loc, metric=eval_metric
         )
-        results[metric.__name__] = dict()
         for scenario in Scenario:
             results[metric.__name__][scenario.value] = {
                 "top-5": rank.top_n(faulty_lines, 5, scenario),
@@ -38,12 +42,16 @@ def get_results_for_type(
                 "exam": rank.exam(faulty_lines, scenario),
                 "wasted-effort": rank.wasted_effort(faulty_lines, scenario),
             }
-    return results
+    return results, times
 
 
 def main(project_name, bug_id, start=0, end=1000):
     Language.PYTHON.setup()
     os.makedirs("results", exist_ok=True)
+    reports_dir = Path("reports")
+    os.makedirs(reports_dir, exist_ok=True)
+    report_file = reports_dir / f"suggestion_{project_name}.json"
+    time_report = dict()
     for project in t4p.get_projects(project_name, bug_id):
         if project.bug_id < start or project.bug_id > end:
             continue
@@ -59,6 +67,7 @@ def main(project_name, bug_id, start=0, end=1000):
             continue
         project.buggy = True
         subject_results = dict()
+        subject_times = dict()
         report = t4p.checkout(project)
         if not report.successful:
             raise report.raised
@@ -68,16 +77,24 @@ def main(project_name, bug_id, start=0, end=1000):
                 if model_class is None:
                     analyzer = Analyzer.load(analysis_file)
                 else:
-                    analyzer = DependencyAnalyzer.load_with_dependencies(analysis_file, model_class)
+                    analyzer = DependencyAnalyzer.load_with_dependencies(
+                        analysis_file, model_class
+                    )
             else:
                 continue
             faulty_lines = set(t4p.get_faulty_lines(project))
-            subject_results[f"line{suffix}"] = get_results_for_type(
+            (
+                subject_results[f"line{suffix}"],
+                subject_times[f"line{suffix}"],
+            ) = get_results_for_type(
                 AnalysisType.LINE, analyzer, project, report, faulty_lines
             )
         results[project.get_identifier()] = subject_results
+        time_report[project.get_identifier()] = subject_times
         with open(results_file, "w") as f:
             json.dump(results, f, indent=1)
+    with open(report_file, "w") as f:
+        json.dump(time_report, f, indent=1)
 
 
 if __name__ == "__main__":
