@@ -250,13 +250,13 @@ def main(project_name, bug_id):
         )
 
         checks = True
-        bug_events = os.path.join(events_base, "bug")
+        bug_events = events_base / "bug"
         for failing_test in project.test_cases:
             safe_test = Runner.safe(failing_test)
-            if not os.path.exists(os.path.join(bug_events, "failing", safe_test)):
+            if not (bug_events / "failing" / safe_test).exists():
                 report[identifier][f"bug:{failing_test}"] = "not_found"
                 checks = False
-        if not os.listdir(os.path.join(bug_events, "passing")):
+        if not os.listdir(bug_events / "passing"):
             report[identifier]["bug_passing"] = "empty"
             checks = False
 
