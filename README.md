@@ -1,2 +1,2 @@
-# fendr
-Combine SFL with test slices.
+# DW-SFL
+Combine SFL with test dependencies.

@@ -1,5 +1,7 @@
 import argparse
+import json
 import os
+import time
 from pathlib import Path
 from typing import List, Tuple, Optional
 
@@ -8,20 +10,21 @@ from sflkit import Analyzer
 from sflkit.analysis.factory import (
     LineFactory,
 )
-from sflkit.fendr import (
+from sflkit.dependency import (
     TestLineModel,
     TestDefUseModel,
     TestDefUsesModel,
     TestAssertDefUseModel,
     TestAssertDefUsesModel,
-    SliceAnalyzer,
+    DependencyAnalyzer,
 )
-from sflkit.mapping import EventMapping
-from sflkit.model import EventFile, Model
+from sflkit.events.mapping import EventMapping
+from sflkit.events.event_file import EventFile
+from sflkit.model.model import Model
 from tests4py.projects import TestStatus, Project
 
 
-slices = [
+dependencies = [
     ("", None),
     ("_line", TestLineModel),
     ("_defuse", TestDefUseModel),
@@ -77,6 +80,8 @@ def get_event_files(
 def analyze(
     project: Project,
     analysis_file: os.PathLike,
+    report: dict,
+    suffix: str,
     model_class: Optional[type[Model]] = None,
 ) -> Analyzer:
     os.makedirs("analysis", exist_ok=True)
@@ -87,6 +92,7 @@ def analyze(
     if not mapping_file.exists():
         raise FileNotFoundError(f"Mapping not found for {project}")
     failing, passing, undefined = get_event_files(events, mapping_file)
+    start = time.time()
     if model_class is None:
         analyzer = Analyzer(
             relevant_event_files=failing,
@@ -94,18 +100,22 @@ def analyze(
             factory=LineFactory(),
         )
     else:
-        analyzer = SliceAnalyzer(
+        analyzer = DependencyAnalyzer(
             model_class,
             relevant_event_files=failing,
             irrelevant_event_files=passing,
             factory=LineFactory(),
         )
     analyzer.analyze()
+    report[project.get_identifier()][f"lines{suffix}"] = time.time() - start
     analyzer.dump(analysis_file, indent=1)
     return analyzer
 
 
 def main(project_name, bug_id):
+    report = dict()
+    report_dir = Path("reports")
+    os.makedirs(report_dir, exist_ok=True)
     for project in t4p.get_projects(project_name, bug_id):
         print(project)
         if (
@@ -114,11 +124,16 @@ def main(project_name, bug_id):
         ):
             continue
         project.buggy = True
-        for suffix, model_class in slices:
+        report[project.get_identifier()] = dict()
+        for suffix, model_class in dependencies:
             analysis_file = Path("analysis", f"{project}{suffix}.json")
             if analysis_file.exists():
                 continue
-            analyze(project, analysis_file, model_class)
+            analyze(project, analysis_file, report, suffix, model_class)
+
+    with open(report_dir / f"analysis_{project_name}.json", "w") as f:
+        json.dump(report, f, indent=1)
+
 
 
 if __name__ == "__main__":

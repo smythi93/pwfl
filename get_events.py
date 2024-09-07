@@ -44,6 +44,7 @@ def create_config(
     mapping: Optional[Path] = None,
     only_patched_files: bool = False,
     include_suffix: bool = False,
+    test: bool = True,
 ):
     if only_patched_files:
         includes = t4p.get_patched_files(project)
@@ -59,16 +60,17 @@ def create_config(
         excludes = DEFAULT_EXCLUDES
     if project.project_name in ("calculator", "markup"):
         project.test_base = Path("tests")
-    test_files = list({
-        str(file.split("::")[0])
-        for file in project.test_cases
-    })
+    test_files = list({str(file.split("::")[0]) for file in project.test_cases})
     return Config.create(
         path=str(src.absolute()),
         language="python",
         events="line",
-        test_events="test_start,test_end,test_line,test_def,test_use,test_assert",
-        ignore_inner=str(project.project_name == "pysnooper"),  # pysnooper defines a testcase function inside a
+        test_events="test_start,test_end,test_line,test_def,test_use,test_assert"
+        if test
+        else None,
+        ignore_inner=str(
+            project.project_name == "pysnooper"
+        ),  # pysnooper defines a testcase function inside a
         # testcase, which it traces. With the instrumentation, the trace is not correct because the correct trace is
         # asserted. Hence, inner functions are ignored.
         metrics=metrics or "",
@@ -103,6 +105,7 @@ def sflkit_instrument(
     mapping: os.PathLike = None,
     only_patched_files: bool = False,
     report: SFLInstrumentReport = None,
+    test: bool = True,
 ):
     report = report or SFLInstrumentReport()
     work_dir = get_work_dir(work_dir_or_project)
@@ -118,6 +121,7 @@ def sflkit_instrument(
                 Path(dst),
                 mapping=Path(mapping) if mapping else None,
                 only_patched_files=only_patched_files,
+                test=test,
             ),
         )
         report.successful = True
@@ -125,6 +129,70 @@ def sflkit_instrument(
         report.raised = e
         report.successful = False
     return report
+
+
+def get_events(
+    project: Project,
+    identifier: str,
+    report: dict,
+    original_checkout: Path,
+    tests: bool = True,
+):
+    if tests:
+        suffix = ""
+    else:
+        suffix = "_lines"
+    events_base = (
+        os.path.join("sflkit_events", project.project_name, str(project.bug_id))
+        if tests
+        else os.path.join(
+            "sflkit_events", project.project_name, "lines", str(project.bug_id)
+        )
+    )
+
+    mapping = os.path.join("mappings", f"{project}{suffix}.json")
+    sfl_path = os.path.join("tmp", f"sfl_{identifier}")
+    start = time.time()
+    r = sflkit_instrument(sfl_path, project, mapping=mapping)
+    report[identifier]["time"][f"instrument{suffix}"] = time.time() - start
+    if r.successful:
+        report[identifier][f"build{suffix}"] = "successful"
+    else:
+        report[identifier][f"build{suffix}"] = "failed"
+        report[identifier]["error"] = traceback.format_exception(r.raised)
+        return events_base
+
+    with open(mapping, "r") as f:
+        mapping_content = json.load(f)
+    with open(mapping, "w") as f:
+        json.dump(mapping_content, f, indent=2)
+
+    shutil.rmtree(events_base, ignore_errors=True)
+    if project.project_name == "ansible":
+        """
+        When ansible is executed it sometimes loads the original version.
+        Even though it is never installed and the virtual environment clearly
+        contains the instrumented version.
+        This prevents an event collection.
+        Removing the original version fixes this problem.
+        """
+        shutil.rmtree(original_checkout, ignore_errors=True)
+    start = time.time()
+    r = sfl.sflkit_unittest(
+        sfl_path,
+        output=events_base,
+        relevant_tests=True,
+        all_tests=False,
+        include_suffix=True,
+    )
+    report[identifier]["time"][f"test{suffix}"] = time.time() - start
+
+    if r.successful:
+        report[identifier][f"test{suffix}"] = "successful"
+    else:
+        report[identifier][f"test{suffix}"] = "failed"
+        report[identifier]["error"] = traceback.format_exception(r.raised)
+        return events_base
 
 
 def main(project_name, bug_id):
@@ -170,47 +238,18 @@ def main(project_name, bug_id):
             continue
         original_checkout = r.location
 
-        mapping = os.path.join("mappings", f"{project}.json")
-        sfl_path = os.path.join("tmp", f"sfl_{identifier}")
-        start = time.time()
-        r = sflkit_instrument(sfl_path, project, mapping=mapping)
-        report[identifier]["time"]["instrument"] = time.time() - start
-        if r.successful:
-            report[identifier]["build"] = "successful"
-        else:
-            report[identifier]["build"] = "failed"
-            report[identifier]["error"] = traceback.format_exception(r.raised)
+        events_base = get_events(project, identifier, report, original_checkout)
+        if report[identifier]["error"]:
             continue
 
-        with open(mapping, "r") as f:
-            mapping_content = json.load(f)
-        with open(mapping, "w") as f:
-            json.dump(mapping_content, f, indent=2)
-
-        events_base = os.path.join(
-            "sflkit_events", project.project_name, str(project.bug_id)
-        )
-        shutil.rmtree(events_base, ignore_errors=True)
-        if project.project_name == "ansible":
-            """
-            When ansible is executed it sometimes loads the original version.
-            Even though it is never installed and the virtual environment clearly
-            contains the instrumented version.
-            This prevents an event collection.
-            Removing the original version fixes this problem.
-            """
-            shutil.rmtree(original_checkout, ignore_errors=True)
-        start = time.time()
-        r = sfl.sflkit_unittest(
-            sfl_path, relevant_tests=True, all_tests=False, include_suffix=True
-        )
-        report[identifier]["time"]["test"] = time.time() - start
-        if r.successful:
-            report[identifier]["test"] = "successful"
-        else:
-            report[identifier]["test"] = "failed"
-            report[identifier]["error"] = traceback.format_exception(r.raised)
+        get_events(project, identifier, report, original_checkout, tests=False)
+        if report[identifier]["error"]:
             continue
+
+        shutil.rmtree(
+            os.path.join("sflkit_events", project.project_name, "lines"),
+            ignore_errors=True,
+        )
 
         checks = True
         bug_events = os.path.join(events_base, "bug")

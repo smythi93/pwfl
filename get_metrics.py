@@ -2,17 +2,17 @@ import argparse
 import json
 import os
 from pathlib import Path
+
 import tests4py.api as t4p
 from sflkit import Analyzer
 from sflkit.analysis.analysis_type import AnalysisType
 from sflkit.analysis.spectra import Spectrum
-from sflkit.evaluation import Rank, Scenario, Average
-from sflkit.fendr import SliceAnalyzer
+from sflkit.dependency import DependencyAnalyzer
+from sflkit.evaluation import Rank, Scenario
 from sflkit.language.language import Language
-
 from tests4py.projects import TestStatus
 
-from get_analysis import analyze, slices
+from get_analysis import dependencies
 
 
 def get_results_for_type(
@@ -62,15 +62,15 @@ def main(project_name, bug_id, start=0, end=1000):
         report = t4p.checkout(project)
         if not report.successful:
             raise report.raised
-        for suffix, model_class in slices:
+        for suffix, model_class in dependencies:
             analysis_file = Path("analysis", f"{project}{suffix}.json")
             if analysis_file.exists():
                 if model_class is None:
                     analyzer = Analyzer.load(analysis_file)
                 else:
-                    analyzer = SliceAnalyzer.load_with_slice(analysis_file, model_class)
+                    analyzer = DependencyAnalyzer.load_with_dependencies(analysis_file, model_class)
             else:
-                analyzer = analyze(project, analysis_file, model_class=model_class)
+                continue
             faulty_lines = set(t4p.get_faulty_lines(project))
             subject_results[f"line{suffix}"] = get_results_for_type(
                 AnalysisType.LINE, analyzer, project, report, faulty_lines
