@@ -250,13 +250,12 @@ def main(project_name, bug_id):
         )
 
         checks = True
-        bug_events = events_base / "bug"
         for failing_test in project.test_cases:
             safe_test = Runner.safe(failing_test)
-            if not (bug_events / "failing" / safe_test).exists():
+            if not (events_base / "failing" / safe_test).exists():
                 report[identifier][f"bug:{failing_test}"] = "not_found"
                 checks = False
-        if not os.listdir(bug_events / "passing"):
+        if not os.listdir(events_base / "passing"):
             report[identifier]["bug_passing"] = "empty"
             checks = False
 
