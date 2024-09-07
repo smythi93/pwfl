@@ -85,7 +85,7 @@ def analyze(
     model_class: Optional[type[Model]] = None,
 ) -> Analyzer:
     os.makedirs("analysis", exist_ok=True)
-    events = Path("sflkit_events", project.project_name, str(project.bug_id), "bug")
+    events = Path("sflkit_events", project.project_name, str(project.bug_id))
     mapping_file = Path("mappings", f"{project}.json")
     if not events.exists():
         raise FileNotFoundError(f"Events not found for {project}")
