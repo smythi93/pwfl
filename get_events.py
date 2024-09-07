@@ -237,11 +237,11 @@ def main(project_name, bug_id):
         original_checkout = r.location
 
         events_base = get_events(project, identifier, report, original_checkout)
-        if report[identifier]["error"]:
+        if "error" in report[identifier]:
             continue
 
         get_events(project, identifier, report, original_checkout, tests=False)
-        if report[identifier]["error"]:
+        if "error" in report[identifier]:
             continue
 
         shutil.rmtree(
