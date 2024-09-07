@@ -135,7 +135,6 @@ def get_events(
     project: Project,
     identifier: str,
     report: dict,
-    original_checkout: Path,
     tests: bool = True,
 ):
     if tests:
@@ -147,6 +146,17 @@ def get_events(
         if tests
         else Path("sflkit_events", project.project_name, "lines", str(project.bug_id))
     )
+
+    start = time.time()
+    r = t4p.checkout(project)
+    report[identifier]["time"]["checkout"] = time.time() - start
+    if r.successful:
+        report[identifier]["checkout"] = "successful"
+    else:
+        report[identifier]["checkout"] = "failed"
+        report[identifier]["error"] = traceback.format_exception(r.raised)
+        return events_base
+    original_checkout = r.location
 
     mapping = os.path.join("mappings", f"{project}{suffix}.json")
     sfl_path = os.path.join("tmp", f"sfl_{identifier}")
@@ -225,22 +235,11 @@ def main(project_name, bug_id):
 
         report[identifier]["time"] = dict()
 
-        start = time.time()
-        r = t4p.checkout(project)
-        report[identifier]["time"]["checkout"] = time.time() - start
-        if r.successful:
-            report[identifier]["checkout"] = "successful"
-        else:
-            report[identifier]["checkout"] = "failed"
-            report[identifier]["error"] = traceback.format_exception(r.raised)
-            continue
-        original_checkout = r.location
-
-        events_base = get_events(project, identifier, report, original_checkout)
+        get_events(project, identifier, report, tests=False)
         if "error" in report[identifier]:
             continue
 
-        get_events(project, identifier, report, original_checkout, tests=False)
+        events_base = get_events(project, identifier, report)
         if "error" in report[identifier]:
             continue
 
