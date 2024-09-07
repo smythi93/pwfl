@@ -148,15 +148,30 @@ def get_events(
     )
 
     start = time.time()
-    r = t4p.checkout(project)
-    report[identifier]["time"]["checkout"] = time.time() - start
-    if r.successful:
-        report[identifier]["checkout"] = "successful"
-    else:
-        report[identifier]["checkout"] = "failed"
-        report[identifier]["error"] = traceback.format_exception(r.raised)
-        return events_base
-    original_checkout = r.location
+    original_checkout = Path("tmp", f"{identifier}")
+    if not original_location.exists():
+        r = t4p.checkout(project)
+        report[identifier]["time"]["checkout"] = time.time() - start
+        if r.successful:
+            report[identifier]["checkout"] = "successful"
+        else:
+            report[identifier]["checkout"] = "failed"
+            report[identifier]["error"] = traceback.format_exception(r.raised)
+            return events_base
+        original_checkout = r.location
+
+    venv_location = (
+        Path.home()
+        / ".t4p"
+        / "projects"
+        / project.project_name
+        / f"venv_{project.bug_id}"
+    )
+    if not venv_location.exists():
+        r = t4p.build(original_checkout)
+        if not r.successful:
+            report[identifier]["error"] = traceback.format_exception(r.raised)
+            return events_base
 
     mapping = os.path.join("mappings", f"{project}{suffix}.json")
     sfl_path = os.path.join("tmp", f"sfl_{identifier}")
@@ -176,9 +191,9 @@ def get_events(
         json.dump(mapping_content, f, indent=2)
 
     shutil.rmtree(events_base, ignore_errors=True)
-    if project.project_name == "ansible" or project.project_name == "thefuck":
+    if project.project_name == "ansible":
         """
-        When ansible or thefuck is executed it sometimes loads the original version.
+        When ansible is executed it sometimes loads the original version.
         Even though it is never installed and the virtual environment clearly
         contains the instrumented version.
         This prevents an event collection.
