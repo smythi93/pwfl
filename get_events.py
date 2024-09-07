@@ -149,7 +149,7 @@ def get_events(
 
     start = time.time()
     original_checkout = Path("tmp", f"{identifier}")
-    if not original_location.exists():
+    if not original_checkout.exists():
         r = t4p.checkout(project)
         report[identifier]["time"]["checkout"] = time.time() - start
         if r.successful:
