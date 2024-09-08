@@ -60,6 +60,7 @@ def main():
     for subject in subjects:
         for i in range(100):
             subject_results = results_dir / f"{subject}_{i}.json"
+            print(subject)
             if not subject_results.exists():
                 continue
             with subject_results.open() as f:
@@ -79,7 +80,8 @@ def main():
             for sce in scenarios:
                 for loc in localizations:
                     results[dependency][m][sce][loc]["avg"] = (
-                        sum(results[dependency][m][sce][loc]["all"]) / number_of_subjects
+                        sum(results[dependency][m][sce][loc]["all"])
+                        / number_of_subjects
                     )
     with open("summary.json", "w") as f:
         json.dump(results, f, indent=1)
