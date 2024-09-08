@@ -1,0 +1,430 @@
+{
+ "fastapi_3": {
+  "line": {
+   "Tarantula": {
+    "best_case": {
+     "top-5": 1.0,
+     "top-10": 0.048,
+     "top-200": 0.627,
+     "exam": 0.0007078810759792355,
+     "wasted-effort": 6
+    },
+    "avg_case": {
+     "top-5": 0.41775,
+     "top-10": 0.00875,
+     "top-200": 0.21775,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.205375,
+     "top-10": 0.0055,
+     "top-200": 0.105875,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   },
+   "Ochiai": {
+    "best_case": {
+     "top-5": 0.003,
+     "top-10": 0.014,
+     "top-200": 0.292,
+     "exam": 0.08211420481359132,
+     "wasted-effort": 694
+    },
+    "avg_case": {
+     "top-5": 0.001,
+     "top-10": 0.00375,
+     "top-200": 0.0725,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.00025,
+     "top-10": 0.00175,
+     "top-200": 0.037875,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   },
+   "DStar": {
+    "best_case": {
+     "top-5": 0.009,
+     "top-10": 0.015,
+     "top-200": 0.299,
+     "exam": 0.08164228409627183,
+     "wasted-effort": 692
+    },
+    "avg_case": {
+     "top-5": 0.00175,
+     "top-10": 0.00375,
+     "top-200": 0.07075,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.00075,
+     "top-10": 0.000625,
+     "top-200": 0.03625,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   }
+  },
+  "line_line": {
+   "Tarantula": {
+    "best_case": {
+     "top-5": 1,
+     "top-10": 0.408,
+     "top-200": 0.999,
+     "exam": 0.0005899008966493629,
+     "wasted-effort": 5
+    },
+    "avg_case": {
+     "top-5": 0.5,
+     "top-10": 0.1105,
+     "top-200": 0.626,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.25,
+     "top-10": 0.05275,
+     "top-200": 0.314625,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   },
+   "Ochiai": {
+    "best_case": {
+     "top-5": 0.0,
+     "top-10": 0.0,
+     "top-200": 0.993,
+     "exam": 0.010736196319018405,
+     "wasted-effort": 50
+    },
+    "avg_case": {
+     "top-5": 0.0,
+     "top-10": 0.0,
+     "top-200": 0.63925,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.0,
+     "top-10": 0.0,
+     "top-200": 0.316375,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   },
+   "DStar": {
+    "best_case": {
+     "top-5": 0.0,
+     "top-10": 0.0,
+     "top-200": 0.863,
+     "exam": 0.010500235960358659,
+     "wasted-effort": 49
+    },
+    "avg_case": {
+     "top-5": 0.0,
+     "top-10": 0.0,
+     "top-200": 0.21875,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.0,
+     "top-10": 0.0,
+     "top-200": 0.106125,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   }
+  },
+  "line_defuse": {
+   "Tarantula": {
+    "best_case": {
+     "top-5": 1,
+     "top-10": 0.975,
+     "top-200": 0.996,
+     "exam": 0.0007078810759792355,
+     "wasted-effort": 5
+    },
+    "avg_case": {
+     "top-5": 0.5,
+     "top-10": 0.48675,
+     "top-200": 0.63,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.25,
+     "top-10": 0.2495,
+     "top-200": 0.320125,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   },
+   "Ochiai": {
+    "best_case": {
+     "top-5": 0.501,
+     "top-10": 1,
+     "top-200": 0.998,
+     "exam": 0.0012977819726285983,
+     "wasted-effort": 10
+    },
+    "avg_case": {
+     "top-5": 0.12275,
+     "top-10": 0.25,
+     "top-200": 0.64125,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.063375,
+     "top-10": 0.125,
+     "top-200": 0.318875,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   },
+   "DStar": {
+    "best_case": {
+     "top-5": 0.545,
+     "top-10": 0.188,
+     "top-200": 0.863,
+     "exam": 0.0010618216139688533,
+     "wasted-effort": 9
+    },
+    "avg_case": {
+     "top-5": 0.1445,
+     "top-10": 0.05125,
+     "top-200": 0.21975,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.0695,
+     "top-10": 0.024375,
+     "top-200": 0.1095,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   }
+  },
+  "line_defuses": {
+   "Tarantula": {
+    "best_case": {
+     "top-5": 1,
+     "top-10": 0.981,
+     "top-200": 0.996,
+     "exam": 0.0007078810759792355,
+     "wasted-effort": 5
+    },
+    "avg_case": {
+     "top-5": 0.5,
+     "top-10": 0.503,
+     "top-200": 0.62975,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.25,
+     "top-10": 0.247875,
+     "top-200": 0.318375,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   },
+   "Ochiai": {
+    "best_case": {
+     "top-5": 0.506,
+     "top-10": 1,
+     "top-200": 0.994,
+     "exam": 0.0012977819726285983,
+     "wasted-effort": 10
+    },
+    "avg_case": {
+     "top-5": 0.1225,
+     "top-10": 0.25,
+     "top-200": 0.629,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.061625,
+     "top-10": 0.125,
+     "top-200": 0.315625,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   },
+   "DStar": {
+    "best_case": {
+     "top-5": 0.559,
+     "top-10": 0.215,
+     "top-200": 0.864,
+     "exam": 0.0010618216139688533,
+     "wasted-effort": 9
+    },
+    "avg_case": {
+     "top-5": 0.13625,
+     "top-10": 0.05,
+     "top-200": 0.21725,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.064625,
+     "top-10": 0.026625,
+     "top-200": 0.107,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   }
+  },
+  "line_assert_use": {
+   "Tarantula": {
+    "best_case": {
+     "top-5": 1,
+     "top-10": 0.975,
+     "top-200": 0.992,
+     "exam": 0.0007078810759792355,
+     "wasted-effort": 5
+    },
+    "avg_case": {
+     "top-5": 0.5,
+     "top-10": 0.49325,
+     "top-200": 0.6335,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.25,
+     "top-10": 0.2565,
+     "top-200": 0.315875,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   },
+   "Ochiai": {
+    "best_case": {
+     "top-5": 0.488,
+     "top-10": 1,
+     "top-200": 0.994,
+     "exam": 0.0012977819726285983,
+     "wasted-effort": 10
+    },
+    "avg_case": {
+     "top-5": 0.13125,
+     "top-10": 0.25,
+     "top-200": 0.634,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.062625,
+     "top-10": 0.125,
+     "top-200": 0.31775,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   },
+   "DStar": {
+    "best_case": {
+     "top-5": 0.55,
+     "top-10": 0.207,
+     "top-200": 0.864,
+     "exam": 0.0010618216139688533,
+     "wasted-effort": 9
+    },
+    "avg_case": {
+     "top-5": 0.13375,
+     "top-10": 0.05025,
+     "top-200": 0.2155,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.069875,
+     "top-10": 0.02475,
+     "top-200": 0.106625,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   }
+  },
+  "line_assert_uses": {
+   "Tarantula": {
+    "best_case": {
+     "top-5": 1,
+     "top-10": 0.979,
+     "top-200": 0.999,
+     "exam": 0.0007078810759792355,
+     "wasted-effort": 5
+    },
+    "avg_case": {
+     "top-5": 0.5,
+     "top-10": 0.49325,
+     "top-200": 0.6305,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.25,
+     "top-10": 0.24875,
+     "top-200": 0.32,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   },
+   "Ochiai": {
+    "best_case": {
+     "top-5": 0.467,
+     "top-10": 1,
+     "top-200": 0.995,
+     "exam": 0.0012977819726285983,
+     "wasted-effort": 10
+    },
+    "avg_case": {
+     "top-5": 0.12025,
+     "top-10": 0.25,
+     "top-200": 0.6335,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.065625,
+     "top-10": 0.125,
+     "top-200": 0.318875,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   },
+   "DStar": {
+    "best_case": {
+     "top-5": 0.57,
+     "top-10": 0.191,
+     "top-200": 0.842,
+     "exam": 0.0010618216139688533,
+     "wasted-effort": 9
+    },
+    "avg_case": {
+     "top-5": 0.132,
+     "top-10": 0.04925,
+     "top-200": 0.2165,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    },
+    "worst_case": {
+     "top-5": 0.068,
+     "top-10": 0.0265,
+     "top-200": 0.107,
+     "exam": 0.5863614912694667,
+     "wasted-effort": 4238
+    }
+   }
+  }
+ }
+}
