@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 import time
+from itertools import repeat
 from pathlib import Path
 
 import tests4py.api as t4p
@@ -36,9 +37,9 @@ def get_results_for_type(
         )
         for scenario in Scenario:
             results[metric.__name__][scenario.value] = {
-                "top-5": rank.top_n(faulty_lines, 5, scenario),
-                "top-10": rank.top_n(faulty_lines, 10, scenario),
-                "top-200": rank.top_n(faulty_lines, 200, scenario),
+                "top-5": rank.top_n(faulty_lines, 5, scenario, repeat=10000),
+                "top-10": rank.top_n(faulty_lines, 10, scenario, repeat=10000),
+                "top-200": rank.top_n(faulty_lines, 200, scenario, repeat=10000),
                 "exam": rank.exam(faulty_lines, scenario),
                 "wasted-effort": rank.wasted_effort(faulty_lines, scenario),
             }

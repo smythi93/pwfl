@@ -58,9 +58,9 @@ def main():
     }
     number_of_subjects = 0
     for subject in subjects:
+        print(subject)
         for i in range(100):
             subject_results = results_dir / f"{subject}_{i}.json"
-            print(subject)
             if not subject_results.exists():
                 continue
             with subject_results.open() as f:
