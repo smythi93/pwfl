@@ -47,18 +47,20 @@ def main():
     if not results_dir.exists():
         return
     results = {
-        dependency: {
-            metric: {
-                scenario: {m: {"avg": 0.0, "all": list()} for m in localizations}
-                for scenario in scenarios
+        "subjects": list(),
+        **{
+            dependency: {
+                metric: {
+                    scenario: {m: {"avg": 0.0, "all": list()} for m in localizations}
+                    for scenario in scenarios
+                }
+                for metric in metrics
             }
-            for metric in metrics
-        }
-        for dependency in dependency_types
+            for dependency in dependency_types
+        },
     }
     number_of_subjects = 0
     for subject in subjects:
-        print(subject)
         for i in range(100):
             subject_results = results_dir / f"{subject}_{i}.json"
             if not subject_results.exists():
@@ -66,6 +68,7 @@ def main():
             with subject_results.open() as f:
                 subject_data = json.load(f)
             for s in subject_data:
+                results["subjects"].append(s)
                 number_of_subjects += 1
                 for dependency in dependency_types:
                     for m in metrics:

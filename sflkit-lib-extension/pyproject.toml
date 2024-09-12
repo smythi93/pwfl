@@ -1,0 +1,27 @@
+[build-system]
+requires = [
+    "setuptools>=59.6.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sflkitlib"
+version = "0.0.6"
+description = "Lib for SFLKit: : A Workbench for Statistical Fault Localization"
+readme = "README.md"
+license = { file = "COPYING" }
+requires-python = ">=3.6"
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.6",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Testing"
+]
+
+[project.urls]
+
+[tool.black]
+line-length = 88
+target-version = ['py36']
