@@ -4,7 +4,7 @@ from pathlib import Path
 from sflkit.analysis.spectra import Spectrum
 from sflkit.evaluation import Scenario
 
-from get_analysis import dependencies
+from get_analysis import times
 
 subjects = [
     "ansible",
@@ -36,7 +36,7 @@ metrics = [
     Spectrum.DStar.__name__,
 ]
 
-dependency_types = [f"line{suffix}" for suffix, _ in dependencies]
+dependency_types = [f"line{suffix}" for suffix, _ in times]
 scenarios = [scenario.value for scenario in Scenario]
 
 localizations = ["top-5", "top-10", "top-200", "exam", "wasted-effort"]

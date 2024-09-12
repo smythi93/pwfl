@@ -4,11 +4,9 @@ import json
 import os
 from pathlib import Path
 
-import tests4py.api as t4p
-from matplotlib import pyplot as plt
-from tests4py.projects import Project
-
 import seaborn as sns
+import tests4py.api as t4p
+from tests4py.projects import Project
 
 
 class Visitor(ast.NodeVisitor):

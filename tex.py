@@ -1,11 +1,10 @@
 import json
 from pathlib import Path
 
-from scipy import stats
 from sflkit.analysis.spectra import Spectrum
 from sflkit.evaluation import Scenario
 
-from get_analysis import dependencies
+from get_analysis import times
 from get_summary import subjects
 
 tex_translation = {
@@ -37,7 +36,7 @@ metric_order = [
     Spectrum.DStar.__name__,
 ]
 
-dependency_order = [f"line{suffix}" for suffix, _ in dependencies]
+times_order = [f"line{suffix}" for suffix, _ in times]
 
 localization_order = [
     "top-5",
@@ -60,7 +59,7 @@ def get_localization_tex_table(results, best_for_each_metric, line_for_each_metr
     table = (
         "\\begin{tabular}{llrrrrrrrrrrrrrrr}\n"
         "    \\toprule\n"
-        "    \\multicolumn{1}{c}{\\multirow{4}*{Dependency}} & \\multicolumn{1}{c}{\\multirow{4}*{Metric}} & "
+        "    \\multicolumn{1}{c}{\\multirow{4}*{Approach}} & \\multicolumn{1}{c}{\\multirow{4}*{Metric}} & "
         "\\multicolumn{5}{c}{Best-Case Debugging} & \\multicolumn{5}{c}{Average-Case Debugging} & "
         "\\multicolumn{5}{c}{Worst-Case Debugging} \\\\\\cmidrule(lr){3-7}\\cmidrule(lr){8-12}\\cmidrule(lr){13-17}\n"
         "    &"
@@ -80,27 +79,27 @@ def get_localization_tex_table(results, best_for_each_metric, line_for_each_metr
         )
         + "\\\\\\midrule\n"
     )
-    for dependency in dependency_order:
+    for times in times_order:
         for metric in metric_order:
             if metric == metric_order[0]:
-                table += f"    \\multirow{3}*{{{tex_translation[dependency]}}}"
+                table += f"    \\multirow{3}*{{{tex_translation[times]}}}"
             else:
                 table += "    "
             table += f" & {tex_translation[metric]}"
             for scenario in scenario_order:
                 for localization, comp in zip(localization_order, localization_comp):
                     text_underline = (
-                        dependency
+                        times
                         in best_for_each_metric[metric][scenario][localization][0][1]
                     )
                     text_bf = (
                         (
-                            results[dependency][metric][scenario][localization]["avg"]
+                            results[times][metric][scenario][localization]["avg"]
                             > line_for_each_metric[metric][scenario][localization]
                         )
                         if comp
                         else (
-                            results[dependency][metric][scenario][localization]["avg"]
+                            results[times][metric][scenario][localization]["avg"]
                             < line_for_each_metric[metric][scenario][localization]
                         )
                     )
@@ -111,14 +110,14 @@ def get_localization_tex_table(results, best_for_each_metric, line_for_each_metr
                         table += "\\textbf{"
                     if localization.startswith("top"):
                         table += (
-                            f"{results[dependency][metric][scenario][localization]['avg'] * 100:.1f}"
+                            f"{results[times][metric][scenario][localization]['avg'] * 100:.1f}"
                             "\\%"
                         )
                     elif localization == "exam":
-                        table += f"{results[dependency][metric][scenario][localization]['avg']:.3f}"
+                        table += f"{results[times][metric][scenario][localization]['avg']:.3f}"
                     else:
                         table += (
-                            f"{results[dependency][metric][scenario][localization]['avg'] / 1000:.1f}"
+                            f"{results[times][metric][scenario][localization]['avg'] / 1000:.1f}"
                             f"k"
                         )
                     if text_bf:
@@ -126,7 +125,7 @@ def get_localization_tex_table(results, best_for_each_metric, line_for_each_metr
                     if text_underline:
                         table += "}"
             table += " \\\\\n"
-        if dependency != dependency_order[-1]:
+        if times != times_order[-1]:
             table += "\\addlinespace[0.6em]\n"
 
     table += "\\bottomrule\n\\end{tabular}\n"
@@ -137,7 +136,7 @@ def get_found_tex_table(results):
     table = (
         "\\begin{tabular}{llrrrrrrrrrrrrrrr}\n"
         "    \\toprule\n"
-        "    \\multicolumn{1}{c}{\\multirow{4}*{Dependency}} & \\multicolumn{1}{c}{\\multirow{4}*{Metric}} & "
+        "    \\multicolumn{1}{c}{\\multirow{4}*{Approach}} & \\multicolumn{1}{c}{\\multirow{4}*{Metric}} & "
         "\\multicolumn{5}{c}{Best-Case Debugging} & \\multicolumn{5}{c}{Average-Case Debugging} & "
         "\\multicolumn{5}{c}{Worst-Case Debugging} \\\\\\cmidrule(lr){3-7}\\cmidrule(lr){8-12}\\cmidrule(lr){13-17}\n"
         "    &"
@@ -157,20 +156,16 @@ def get_found_tex_table(results):
         )
         + "\\\\\\midrule\n"
     )
-    for dependency in dependency_order:
-        table += f"    \\multirow{{3}}*{{{tex_translation[dependency]}}}"
+    for times in times_order:
+        table += f"    \\multirow{{3}}*{{{tex_translation[times]}}}"
         for metric in metric_order:
             table += f" & {tex_translation[metric]}"
-            # second_line = "    & "
             for scenario in scenario_order:
                 for localization in localization_order:
-                    total = len(
-                        results[dependency][metric][scenario][localization]["all"]
-                    )
                     found = len(
                         [
                             result
-                            for result in results[dependency][metric][scenario][
+                            for result in results[times][metric][scenario][
                                 localization
                             ]["all"]
                             if (result > 0 and localization.startswith("top"))
@@ -179,10 +174,8 @@ def get_found_tex_table(results):
                         ]
                     )
                     table += f" & {found}"
-                    # second_line += f" & {int(found / total * 100)}\\%"
             table += " \\\\\n"
-            # table += second_line + " \\\\\n"
-        if dependency != dependency_order[-1]:
+        if times != times_order[-1]:
             table += "\\addlinespace[0.6em]\n"
 
     table += "\\bottomrule\n\\end{tabular}\n"
@@ -193,7 +186,7 @@ def get_improvement_tex_table(improvements, total_improvements):
     table = (
         "\\begin{tabular}{llrrrrrrrrrrrrrrr}\n"
         "    \\toprule\n"
-        "    \\multicolumn{1}{c}{\\multirow{4}*{Dependency}} & \\multicolumn{1}{c}{\\multirow{4}*{}} & "
+        "    \\multicolumn{1}{c}{\\multirow{4}*{Approach}} & \\multicolumn{1}{c}{\\multirow{4}*{}} & "
         "\\multicolumn{5}{c}{Best-Case Debugging} & \\multicolumn{5}{c}{Average-Case Debugging} & "
         "\\multicolumn{5}{c}{Worst-Case Debugging} \\\\\\cmidrule(lr){3-7}\\cmidrule(lr){8-12}\\cmidrule(lr){13-17}\n"
         "    &"
@@ -213,16 +206,16 @@ def get_improvement_tex_table(improvements, total_improvements):
         )
         + "\\\\\\midrule\n"
     )
-    for dependency in dependency_order[1:]:
+    for times in times_order[1:]:
         for metric in metric_order:
             if metric == metric_order[0]:
-                table += f"    \\multirow{{3}}*{{{tex_translation[dependency]}}}"
+                table += f"    \\multirow{{3}}*{{{tex_translation[times]}}}"
             table += f" & {tex_translation[metric]}"
             actual_improvement = {
                 scenario: {
                     localization: [
                         improvement
-                        for improvement in improvements[dependency][metric][scenario][
+                        for improvement in improvements[times][metric][scenario][
                             localization
                         ]
                         if improvement != float("inf") and improvement > 0
@@ -240,7 +233,7 @@ def get_improvement_tex_table(improvements, total_improvements):
                     ) * 100
                     table += f" & {int(avg_percent)}\\%"
             table += " \\\\\n"
-        if dependency != dependency_order[-1]:
+        if times != times_order[-1]:
             table += "\\addlinespace[0.6em]\n"
 
     table += "\\bottomrule\n\\end{tabular}\n"
@@ -251,7 +244,7 @@ def get_disadvantages_tex_table(improvements, total_improvements):
     table = (
         "\\begin{tabular}{llrrrrrrrrrrrrrrr}\n"
         "    \\toprule\n"
-        "    \\multicolumn{1}{c}{\\multirow{4}*{Dependency}} & "
+        "    \\multicolumn{1}{c}{\\multirow{4}*{Approach}} & "
         "\\multicolumn{5}{c}{Best-Case Debugging} & \\multicolumn{5}{c}{Average-Case Debugging} & "
         "\\multicolumn{5}{c}{Worst-Case Debugging} \\\\\\cmidrule(lr){2-6}\\cmidrule(lr){7-11}\\cmidrule(lr){12-16}\n"
         "  "
@@ -271,14 +264,14 @@ def get_disadvantages_tex_table(improvements, total_improvements):
         )
         + "\\\\\\midrule\n"
     )
-    for dependency in dependency_order[1:]:
-        table += f"    {tex_translation[dependency]}"
+    for times in times_order[1:]:
+        table += f"    {tex_translation[times]}"
         actual_decrease = {
             scenario: {
                 localization: [
                     improvement
                     for metric in metric_order
-                    for improvement in improvements[dependency][metric][scenario][
+                    for improvement in improvements[times][metric][scenario][
                         localization
                     ]
                     if 0 < improvement < 1
@@ -296,7 +289,7 @@ def get_disadvantages_tex_table(improvements, total_improvements):
                 ) * 100
                 table += f" & {int(avg_percent)}\\%"
         table += " \\\\\n"
-        if dependency != dependency_order[-1]:
+        if times != times_order[-1]:
             table += "\\addlinespace[0.6em]\n"
 
     table += "\\bottomrule\n\\end{tabular}\n"
@@ -310,8 +303,8 @@ def get_overhead_tex_table(overhead):
         "    Stage & "
         + " & ".join(
             [
-                f"\\multicolumn{{1}}{{c}}{{{tex_translation[dependency]}}}"
-                for dependency in dependency_order[1:]
+                f"\\multicolumn{{1}}{{c}}{{{tex_translation[times]}}}"
+                for times in times_order[1:]
             ]
         )
         + "\\\\\\midrule\n"
@@ -337,9 +330,9 @@ def get_overhead_tex_table(overhead):
         if stage == "Overall":
             table += "    \\midrule\n"
         table += f"    {stage}"
-        for dependency in dependency_order[1:]:
+        for times in times_order[1:]:
             table += " & "
-            overheads = overhead[dependency][stage.lower()]
+            overheads = overhead[times][stage.lower()]
             avg_overhead = (sum(overheads) / len(overheads) - 1) * 100
             table += f"{avg_overhead:.2f}\\%"
         table += " \\\\\n"
@@ -381,97 +374,78 @@ def analyze(results):
     """analyze bests for the various metrics and report highest p-value"""
     line_for_each_metric = dict()
     best_for_each_metric = dict()
-    p_values = dict()
-    max_p = 0
     improvements = {
-        dependency: {
+        times: {
             m: {s: {lo: list() for lo in localization_order} for s in scenario_order}
             for m in metric_order
         }
-        for dependency in dependency_order[1:]
+        for times in times_order[1:]
     }
     total_improvements = {
-        dependency: {
+        times: {
             m: {s: {lo: list() for lo in localization_order} for s in scenario_order}
             for m in metric_order
         }
-        for dependency in dependency_order[1:]
+        for times in times_order[1:]
     }
     failed = set()
     for metric in metric_order:
         line_for_each_metric[metric] = dict()
         best_for_each_metric[metric] = dict()
-        p_values[metric] = dict()
         for scenario in scenario_order:
             best_for_each_metric[metric][scenario] = dict()
             line_for_each_metric[metric][scenario] = dict()
-            p_values[metric][scenario] = dict()
             for localization, comp in zip(localization_order, localization_comp):
-                p_values[metric][scenario][localization] = dict()
                 bests = dict()
-                for dependency in dependency_order:
-                    avg = results[dependency][metric][scenario][localization]["avg"]
-                    if dependency == "line":
+                for times in times_order:
+                    avg = results[times][metric][scenario][localization]["avg"]
+                    if times == "line":
                         line_for_each_metric[metric][scenario][localization] = avg
                     else:
-                        for dependency_result, line_result, subject in zip(
-                            results[dependency][metric][scenario][localization]["all"],
+                        for times_result, line_result, subject in zip(
+                            results[times][metric][scenario][localization]["all"],
                             results["line"][metric][scenario][localization]["all"],
                             results["subjects"],
                         ):
                             if comp:
                                 if line_result > 0:
-                                    improvements[dependency][metric][scenario][
+                                    improvements[times][metric][scenario][
                                         localization
-                                    ].append(dependency_result / line_result)
+                                    ].append(times_result / line_result)
                                 else:
-                                    improvements[dependency][metric][scenario][
+                                    improvements[times][metric][scenario][
                                         localization
                                     ].append(float("inf"))
-                                total_improvements[dependency][metric][scenario][
+                                total_improvements[times][metric][scenario][
                                     localization
-                                ].append(dependency_result - line_result)
+                                ].append(times_result - line_result)
                             else:
-                                if dependency_result > 0:
-                                    improvements[dependency][metric][scenario][
+                                if times_result > 0:
+                                    improvements[times][metric][scenario][
                                         localization
-                                    ].append(line_result / dependency_result)
+                                    ].append(line_result / times_result)
                                 else:
-                                    improvements[dependency][metric][scenario][
+                                    improvements[times][metric][scenario][
                                         localization
                                     ].append(float("inf"))
-                                total_improvements[dependency][metric][scenario][
+                                total_improvements[times][metric][scenario][
                                     localization
-                                ].append(line_result - dependency_result)
+                                ].append(line_result - times_result)
                             if (
-                                improvements[dependency][metric][scenario][
-                                    localization
-                                ][-1]
+                                improvements[times][metric][scenario][localization][-1]
                                 == 0
                             ):
                                 failed.add(subject)
                     if avg in bests:
-                        bests[avg].append(dependency)
+                        bests[avg].append(times)
                     else:
-                        bests[avg] = [dependency]
-                    for dependency2 in dependency_order:
-                        if dependency == dependency2:
-                            continue
-                        _, p = stats.ranksums(
-                            results[dependency][metric][scenario][localization]["all"],
-                            results[dependency2][metric][scenario][localization]["all"],
-                        )
-                        p_values[metric][scenario][localization][
-                            f"{dependency}-{dependency2}"
-                        ] = p
-                        max_p = max(max_p, p)
+                        bests[avg] = [times]
                 bests = sorted([(score, bests[score]) for score in bests], reverse=comp)
                 best_for_each_metric[metric][scenario][localization] = bests
     print("\n".join(sorted(failed)))
     return (
         best_for_each_metric,
         line_for_each_metric,
-        p_values,
         improvements,
         total_improvements,
     )
@@ -483,12 +457,12 @@ def get_times():
         "instrument": [],
         "test": [],
         **{
-            dependency: {
+            times: {
                 "analyze": [],
                 "suggest": [],
                 "overall": [],
             }
-            for dependency in dependency_order[1:]
+            for times in times_order[1:]
         },
     }
     for subject in subjects:
@@ -512,9 +486,9 @@ def get_times():
                 "test_lines": report_data[project]["time"]["test_lines"],
                 "test": report_data[project]["time"]["test"],
                 "analysis": {
-                    dependency: analysis_data[project][mistake]
-                    for dependency, mistake in zip(
-                        dependency_order,
+                    times: analysis_data[project][mistake]
+                    for times, mistake in zip(
+                        times_order,
                         [
                             "lines",
                             "lines_line",
@@ -526,11 +500,11 @@ def get_times():
                     )
                 },
                 "suggest": {
-                    dependency: {
-                        metric: suggestion_data[project][dependency][metric]
+                    times: {
+                        metric: suggestion_data[project][times][metric]
                         for metric in metric_order
                     }
-                    for dependency in dependency_order
+                    for times in times_order
                 },
             }
             overhead["instrument"].append(
@@ -539,24 +513,24 @@ def get_times():
             overhead["test"].append(
                 times[project]["test"] / times[project]["test_lines"]
             )
-            for dependency in dependency_order[1:]:
-                overhead[dependency]["analyze"].append(
-                    times[project]["analysis"][dependency]
+            for times in times_order[1:]:
+                overhead[times]["analyze"].append(
+                    times[project]["analysis"][times]
                     / times[project]["analysis"]["line"]
                 )
-                overhead[dependency]["suggest"].extend(
+                overhead[times]["suggest"].extend(
                     [
-                        times[project]["suggest"][dependency][metric]
+                        times[project]["suggest"][times][metric]
                         / times[project]["suggest"]["line"][metric]
                         for metric in metric_order
                     ]
                 )
                 for metric in metric_order:
-                    overhead[dependency]["overall"].append(
+                    overhead[times]["overall"].append(
                         (
                             times[project]["test"]
-                            + times[project]["analysis"][dependency]
-                            + times[project]["suggest"][dependency][metric]
+                            + times[project]["analysis"][times]
+                            + times[project]["suggest"][times][metric]
                         )
                         / (
                             times[project]["test_lines"]
@@ -576,14 +550,11 @@ def main(tex=False):
     (
         best_for_each_metric,
         line_for_each_metric,
-        p_values,
         improvements,
         total_improvements,
     ) = analyze(results)
 
     _, overhead = get_times()
-    with Path("p_values.json").open("w") as f:
-        json.dump(p_values, f, indent=1)
     if tex:
         write_tex(
             results,

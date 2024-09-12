@@ -2,19 +2,18 @@ import argparse
 import json
 import os
 import time
-from itertools import repeat
 from pathlib import Path
 
 import tests4py.api as t4p
 from sflkit import Analyzer
 from sflkit.analysis.analysis_type import AnalysisType
 from sflkit.analysis.spectra import Spectrum
-from sflkit.dependency import DependencyAnalyzer
+from sflkit.weights import TimeAnalyzer
 from sflkit.evaluation import Rank, Scenario
 from sflkit.language.language import Language
 from tests4py.projects import TestStatus
 
-from get_analysis import dependencies
+from get_analysis import times
 
 
 def get_results_for_type(
@@ -75,13 +74,13 @@ def main(project_name, bug_id, start=0, end=1000):
             if not report.successful:
                 raise report.raised
             location = report.location
-        for suffix, model_class in dependencies:
+        for suffix, model_class in times:
             analysis_file = Path("analysis", f"{project}{suffix}.json")
             if analysis_file.exists():
                 if model_class is None:
                     analyzer = Analyzer.load(analysis_file)
                 else:
-                    analyzer = DependencyAnalyzer.load_with_dependencies(
+                    analyzer = TimeAnalyzer.load_with_dependencies(
                         analysis_file, model_class
                     )
             else:

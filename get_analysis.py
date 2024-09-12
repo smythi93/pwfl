@@ -10,13 +10,13 @@ from sflkit import Analyzer
 from sflkit.analysis.factory import (
     LineFactory,
 )
-from sflkit.dependency import (
+from sflkit.weights import (
     TestLineModel,
     TestDefUseModel,
     TestDefUsesModel,
     TestAssertDefUseModel,
     TestAssertDefUsesModel,
-    DependencyAnalyzer,
+    TimeAnalyzer,
 )
 from sflkit.events.mapping import EventMapping
 from sflkit.events.event_file import EventFile
@@ -24,7 +24,7 @@ from sflkit.model.model import Model
 from tests4py.projects import TestStatus, Project
 
 
-dependencies = [
+times = [
     ("", None),
     ("_line", TestLineModel),
     ("_defuse", TestDefUseModel),
@@ -104,7 +104,7 @@ def analyze(
             factory=LineFactory(),
         )
     else:
-        analyzer = DependencyAnalyzer(
+        analyzer = TimeAnalyzer(
             model_class,
             relevant_event_files=failing,
             irrelevant_event_files=passing,
@@ -129,7 +129,7 @@ def main(project_name, bug_id):
             continue
         project.buggy = True
         report[project.get_identifier()] = dict()
-        for suffix, model_class in dependencies:
+        for suffix, model_class in times:
             analysis_file = Path("analysis", f"{project}{suffix}.json")
             if analysis_file.exists():
                 continue
