@@ -133,6 +133,9 @@ def print_results(visitor):
     average_lines_between_assertions = sum(visitor.lines_between_assertions) / len(
         visitor.lines_between_assertions
     )
+    tests_without_assertions = len(
+        [visitor.tests_per_subject for x in visitor.assertions_per_test if x == 0]
+    )
 
     print(f"Total subjects: {visitor.total_subjects}")
     print(f"Total tests: {visitor.total_tests}")
@@ -143,15 +146,13 @@ def print_results(visitor):
     print(f"Tests with multiple assertions: {tests_with_multiple_assertions}")
     print(f"Tests with multiple lines: {tests_with_multiple_lines}")
     print(f"Average lines between assertions: {average_lines_between_assertions}")
+    print(f"Tests without assertions: {tests_without_assertions}")
 
 
 def analyze_file(file):
     with open(file, "r") as f:
         data = json.load(f)
     visitor = Visitor.load(data)
-    print(
-        len([visitor.tests_per_subject for x in visitor.assertions_per_test if x == 0])
-    )
     test_per_subject = sns.displot(
         {"Tests per Subject": visitor.tests_per_subject},
         kde=True,

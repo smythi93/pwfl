@@ -24,7 +24,7 @@ from sflkit.model.model import Model
 from tests4py.projects import TestStatus, Project
 
 
-times = [
+distances = [
     ("", None),
     ("_line", TestLineModel),
     ("_defuse", TestDefUseModel),
@@ -129,7 +129,7 @@ def main(project_name, bug_id):
             continue
         project.buggy = True
         report[project.get_identifier()] = dict()
-        for suffix, model_class in times:
+        for suffix, model_class in distances:
             analysis_file = Path("analysis", f"{project}{suffix}.json")
             if analysis_file.exists():
                 continue

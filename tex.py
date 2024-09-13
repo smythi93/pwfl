@@ -4,7 +4,7 @@ from pathlib import Path
 from sflkit.analysis.spectra import Spectrum
 from sflkit.evaluation import Scenario
 
-from get_analysis import times
+from get_analysis import distances
 from get_summary import subjects
 
 tex_translation = {
@@ -16,12 +16,12 @@ tex_translation = {
     Scenario.AVG_CASE.value: "Average Case Debugging",
     "exam": "\\EXAM{}",
     "wasted-effort": "W Effort",
-    "line": "w/o \\DW{}",
-    "line_line": "\\DW{}$_L$",
-    "line_defuse": "\\DW{}$_{DU}$",
-    "line_defuses": "\\DW{}$_{DUU}$",
-    "line_assert_use": "\\DW{}$_{ADU}$",
-    "line_assert_uses": "\\DW{}$_{ADUU}$",
+    "line": "w/o \\TW{}",
+    "line_line": "\\TW{}$_L$",
+    "line_defuse": "\\TW{}$_{DU}$",
+    "line_defuses": "\\TW{}$_{DUU}$",
+    "line_assert_use": "\\TW{}$_{ADU}$",
+    "line_assert_uses": "\\TW{}$_{ADUU}$",
 }
 
 scenario_order = [
@@ -36,7 +36,7 @@ metric_order = [
     Spectrum.DStar.__name__,
 ]
 
-times_order = [f"line{suffix}" for suffix, _ in times]
+distance_order = [f"line{suffix}" for suffix, _ in distances]
 
 localization_order = [
     "top-5",
@@ -79,27 +79,27 @@ def get_localization_tex_table(results, best_for_each_metric, line_for_each_metr
         )
         + "\\\\\\midrule\n"
     )
-    for times in times_order:
+    for distance in distance_order:
         for metric in metric_order:
             if metric == metric_order[0]:
-                table += f"    \\multirow{3}*{{{tex_translation[times]}}}"
+                table += f"    \\multirow{3}*{{{tex_translation[distance]}}}"
             else:
                 table += "    "
             table += f" & {tex_translation[metric]}"
             for scenario in scenario_order:
                 for localization, comp in zip(localization_order, localization_comp):
                     text_underline = (
-                        times
+                        distance
                         in best_for_each_metric[metric][scenario][localization][0][1]
                     )
                     text_bf = (
                         (
-                            results[times][metric][scenario][localization]["avg"]
+                            results[distance][metric][scenario][localization]["avg"]
                             > line_for_each_metric[metric][scenario][localization]
                         )
                         if comp
                         else (
-                            results[times][metric][scenario][localization]["avg"]
+                            results[distance][metric][scenario][localization]["avg"]
                             < line_for_each_metric[metric][scenario][localization]
                         )
                     )
@@ -110,14 +110,14 @@ def get_localization_tex_table(results, best_for_each_metric, line_for_each_metr
                         table += "\\textbf{"
                     if localization.startswith("top"):
                         table += (
-                            f"{results[times][metric][scenario][localization]['avg'] * 100:.1f}"
+                            f"{results[distance][metric][scenario][localization]['avg'] * 100:.1f}"
                             "\\%"
                         )
                     elif localization == "exam":
-                        table += f"{results[times][metric][scenario][localization]['avg']:.3f}"
+                        table += f"{results[distance][metric][scenario][localization]['avg']:.3f}"
                     else:
                         table += (
-                            f"{results[times][metric][scenario][localization]['avg'] / 1000:.1f}"
+                            f"{results[distance][metric][scenario][localization]['avg'] / 1000:.1f}"
                             f"k"
                         )
                     if text_bf:
@@ -125,7 +125,7 @@ def get_localization_tex_table(results, best_for_each_metric, line_for_each_metr
                     if text_underline:
                         table += "}"
             table += " \\\\\n"
-        if times != times_order[-1]:
+        if distance != distance_order[-1]:
             table += "\\addlinespace[0.6em]\n"
 
     table += "\\bottomrule\n\\end{tabular}\n"
@@ -156,8 +156,8 @@ def get_found_tex_table(results):
         )
         + "\\\\\\midrule\n"
     )
-    for times in times_order:
-        table += f"    \\multirow{{3}}*{{{tex_translation[times]}}}"
+    for distance in distance_order:
+        table += f"    \\multirow{{3}}*{{{tex_translation[distance]}}}"
         for metric in metric_order:
             table += f" & {tex_translation[metric]}"
             for scenario in scenario_order:
@@ -165,7 +165,7 @@ def get_found_tex_table(results):
                     found = len(
                         [
                             result
-                            for result in results[times][metric][scenario][
+                            for result in results[distance][metric][scenario][
                                 localization
                             ]["all"]
                             if (result > 0 and localization.startswith("top"))
@@ -175,7 +175,7 @@ def get_found_tex_table(results):
                     )
                     table += f" & {found}"
             table += " \\\\\n"
-        if times != times_order[-1]:
+        if distance != distance_order[-1]:
             table += "\\addlinespace[0.6em]\n"
 
     table += "\\bottomrule\n\\end{tabular}\n"
@@ -206,16 +206,16 @@ def get_improvement_tex_table(improvements, total_improvements):
         )
         + "\\\\\\midrule\n"
     )
-    for times in times_order[1:]:
+    for distance in distance_order[1:]:
         for metric in metric_order:
             if metric == metric_order[0]:
-                table += f"    \\multirow{{3}}*{{{tex_translation[times]}}}"
+                table += f"    \\multirow{{3}}*{{{tex_translation[distance]}}}"
             table += f" & {tex_translation[metric]}"
             actual_improvement = {
                 scenario: {
                     localization: [
                         improvement
-                        for improvement in improvements[times][metric][scenario][
+                        for improvement in improvements[distance][metric][scenario][
                             localization
                         ]
                         if improvement != float("inf") and improvement > 0
@@ -233,7 +233,7 @@ def get_improvement_tex_table(improvements, total_improvements):
                     ) * 100
                     table += f" & {int(avg_percent)}\\%"
             table += " \\\\\n"
-        if times != times_order[-1]:
+        if distance != distance_order[-1]:
             table += "\\addlinespace[0.6em]\n"
 
     table += "\\bottomrule\n\\end{tabular}\n"
@@ -264,14 +264,14 @@ def get_disadvantages_tex_table(improvements, total_improvements):
         )
         + "\\\\\\midrule\n"
     )
-    for times in times_order[1:]:
-        table += f"    {tex_translation[times]}"
+    for distance in distance_order[1:]:
+        table += f"    {tex_translation[distance]}"
         actual_decrease = {
             scenario: {
                 localization: [
                     improvement
                     for metric in metric_order
-                    for improvement in improvements[times][metric][scenario][
+                    for improvement in improvements[distance][metric][scenario][
                         localization
                     ]
                     if 0 < improvement < 1
@@ -289,7 +289,7 @@ def get_disadvantages_tex_table(improvements, total_improvements):
                 ) * 100
                 table += f" & {int(avg_percent)}\\%"
         table += " \\\\\n"
-        if times != times_order[-1]:
+        if distance != distance_order[-1]:
             table += "\\addlinespace[0.6em]\n"
 
     table += "\\bottomrule\n\\end{tabular}\n"
@@ -303,8 +303,8 @@ def get_overhead_tex_table(overhead):
         "    Stage & "
         + " & ".join(
             [
-                f"\\multicolumn{{1}}{{c}}{{{tex_translation[times]}}}"
-                for times in times_order[1:]
+                f"\\multicolumn{{1}}{{c}}{{{tex_translation[distance]}}}"
+                for distance in distance_order[1:]
             ]
         )
         + "\\\\\\midrule\n"
@@ -330,9 +330,9 @@ def get_overhead_tex_table(overhead):
         if stage == "Overall":
             table += "    \\midrule\n"
         table += f"    {stage}"
-        for times in times_order[1:]:
+        for distance in distance_order[1:]:
             table += " & "
-            overheads = overhead[times][stage.lower()]
+            overheads = overhead[distance][stage.lower()]
             avg_overhead = (sum(overheads) / len(overheads) - 1) * 100
             table += f"{avg_overhead:.2f}\\%"
         table += " \\\\\n"
@@ -375,18 +375,18 @@ def analyze(results):
     line_for_each_metric = dict()
     best_for_each_metric = dict()
     improvements = {
-        times: {
+        distance: {
             m: {s: {lo: list() for lo in localization_order} for s in scenario_order}
             for m in metric_order
         }
-        for times in times_order[1:]
+        for distance in distance_order[1:]
     }
     total_improvements = {
-        times: {
+        distance: {
             m: {s: {lo: list() for lo in localization_order} for s in scenario_order}
             for m in metric_order
         }
-        for times in times_order[1:]
+        for distance in distance_order[1:]
     }
     failed = set()
     for metric in metric_order:
@@ -397,49 +397,51 @@ def analyze(results):
             line_for_each_metric[metric][scenario] = dict()
             for localization, comp in zip(localization_order, localization_comp):
                 bests = dict()
-                for times in times_order:
-                    avg = results[times][metric][scenario][localization]["avg"]
-                    if times == "line":
+                for distance in distance_order:
+                    avg = results[distance][metric][scenario][localization]["avg"]
+                    if distance == "line":
                         line_for_each_metric[metric][scenario][localization] = avg
                     else:
-                        for times_result, line_result, subject in zip(
-                            results[times][metric][scenario][localization]["all"],
+                        for distance_result, line_result, subject in zip(
+                            results[distance][metric][scenario][localization]["all"],
                             results["line"][metric][scenario][localization]["all"],
                             results["subjects"],
                         ):
                             if comp:
                                 if line_result > 0:
-                                    improvements[times][metric][scenario][
+                                    improvements[distance][metric][scenario][
                                         localization
-                                    ].append(times_result / line_result)
+                                    ].append(distance_result / line_result)
                                 else:
-                                    improvements[times][metric][scenario][
+                                    improvements[distance][metric][scenario][
                                         localization
                                     ].append(float("inf"))
-                                total_improvements[times][metric][scenario][
+                                total_improvements[distance][metric][scenario][
                                     localization
-                                ].append(times_result - line_result)
+                                ].append(distance_result - line_result)
                             else:
-                                if times_result > 0:
-                                    improvements[times][metric][scenario][
+                                if distance_result > 0:
+                                    improvements[distance][metric][scenario][
                                         localization
-                                    ].append(line_result / times_result)
+                                    ].append(line_result / distance_result)
                                 else:
-                                    improvements[times][metric][scenario][
+                                    improvements[distance][metric][scenario][
                                         localization
                                     ].append(float("inf"))
-                                total_improvements[times][metric][scenario][
+                                total_improvements[distance][metric][scenario][
                                     localization
-                                ].append(line_result - times_result)
+                                ].append(line_result - distance_result)
                             if (
-                                improvements[times][metric][scenario][localization][-1]
+                                improvements[distance][metric][scenario][localization][
+                                    -1
+                                ]
                                 == 0
                             ):
                                 failed.add(subject)
                     if avg in bests:
-                        bests[avg].append(times)
+                        bests[avg].append(distance)
                     else:
-                        bests[avg] = [times]
+                        bests[avg] = [distance]
                 bests = sorted([(score, bests[score]) for score in bests], reverse=comp)
                 best_for_each_metric[metric][scenario][localization] = bests
     print("\n".join(sorted(failed)))
@@ -452,17 +454,17 @@ def analyze(results):
 
 
 def get_times():
-    times = dict()
+    run_times = dict()
     overhead = {
         "instrument": [],
         "test": [],
         **{
-            times: {
+            distance: {
                 "analyze": [],
                 "suggest": [],
                 "overall": [],
             }
-            for times in times_order[1:]
+            for distance in distance_order[1:]
         },
     }
     for subject in subjects:
@@ -480,15 +482,15 @@ def get_times():
         for project in report_data:
             if report_data[project]["status"] != "running":
                 continue
-            times[project] = {
+            run_times[project] = {
                 "instrument_lines": report_data[project]["time"]["instrument_lines"],
                 "instrument": report_data[project]["time"]["instrument"],
                 "test_lines": report_data[project]["time"]["test_lines"],
                 "test": report_data[project]["time"]["test"],
                 "analysis": {
-                    times: analysis_data[project][mistake]
-                    for times, mistake in zip(
-                        times_order,
+                    distance: analysis_data[project][mistake]
+                    for distance, mistake in zip(
+                        distance_order,
                         [
                             "lines",
                             "lines_line",
@@ -500,45 +502,46 @@ def get_times():
                     )
                 },
                 "suggest": {
-                    times: {
-                        metric: suggestion_data[project][times][metric]
+                    distance: {
+                        metric: suggestion_data[project][distance][metric]
                         for metric in metric_order
                     }
-                    for times in times_order
+                    for distance in distance_order
                 },
             }
             overhead["instrument"].append(
-                times[project]["instrument"] / times[project]["instrument_lines"]
+                run_times[project]["instrument"]
+                / run_times[project]["instrument_lines"]
             )
             overhead["test"].append(
-                times[project]["test"] / times[project]["test_lines"]
+                run_times[project]["test"] / run_times[project]["test_lines"]
             )
-            for times in times_order[1:]:
-                overhead[times]["analyze"].append(
-                    times[project]["analysis"][times]
-                    / times[project]["analysis"]["line"]
+            for distance in distance_order[1:]:
+                overhead[distance]["analyze"].append(
+                    run_times[project]["analysis"][distance]
+                    / run_times[project]["analysis"]["line"]
                 )
-                overhead[times]["suggest"].extend(
+                overhead[distance]["suggest"].extend(
                     [
-                        times[project]["suggest"][times][metric]
-                        / times[project]["suggest"]["line"][metric]
+                        run_times[project]["suggest"][distance][metric]
+                        / run_times[project]["suggest"]["line"][metric]
                         for metric in metric_order
                     ]
                 )
                 for metric in metric_order:
-                    overhead[times]["overall"].append(
+                    overhead[distance]["overall"].append(
                         (
-                            times[project]["test"]
-                            + times[project]["analysis"][times]
-                            + times[project]["suggest"][times][metric]
+                            run_times[project]["test"]
+                            + run_times[project]["analysis"][distance]
+                            + run_times[project]["suggest"][distance][metric]
                         )
                         / (
-                            times[project]["test_lines"]
-                            + times[project]["analysis"]["line"]
-                            + times[project]["suggest"]["line"][metric]
+                            run_times[project]["test_lines"]
+                            + run_times[project]["analysis"]["line"]
+                            + run_times[project]["suggest"]["line"][metric]
                         )
                     )
-    return times, overhead
+    return run_times, overhead
 
 
 def main(tex=False):

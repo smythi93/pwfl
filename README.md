@@ -2,18 +2,18 @@
 
 ## Abstract
 
- When a program fails, statistical fault localization (SFL) provides important debugging hints by identifying the program locations whose execution most correlates with failures.
- However, such correlations can be significantly weakened if a test contains both passing and failing assertions, creating ambiguous and misleading associations.
- Likewise, if multiple lines correlate with failure with the same strength, SFL provides little orientation to disambiguate between these lines.
-
- This paper proposes a novel approach that assigns different \emph{weights} to code locations in the test subject:
- The more recently a subject line is executed before the test fails, the higher its weight.
- This way, code executed last before a failing assertion gets a higher weight than earlier (passing) assertions or test setup code.
- Once computed, the weight of lines can be integrated into any SFL metric.
-
- In our evaluation of dependency-weighted fault localization on 310~real-world programs, we found that it vastly outperforms traditional fault localization techniques.
- On average, per test subject, dependency-weighted fault localization ranks faulty lines higher by between 200\% and 300\% , \emph{reducing the effort to find faulty locations by a factor of three to four}.
- Our approach can be easily integrated into existing fault localization techniques to improve performance, making it a valuable addition to automated debugging.
+When a program fails, statistical fault localization (SFL) provides important debugging hints by identifying the program locations whose execution most correlates with failures.
+However, such correlations can be significantly weakened if a test contains passing and failing assertions, creating ambiguous and misleading associations.
+Likewise, if multiple lines correlate with failure with the same strength, SFL provides little orientation to disambiguate between these lines.
+   
+This paper proposes a novel approach that assigns different _weights_ to code locations in the test subject:
+The more recently a subject line is executed before the test fails, the higher its weight.
+This way, code executed last before a failing assertion gets a higher weight than earlier (passing) assertions or test setup code.
+Once computed, the weight of lines can be integrated into any SFL metric.
+   
+Our evaluation of time-weighted fault localization on 310 real-world programs shows that it vastly outperforms traditional fault localization techniques.
+On average per test subject, time-weighted fault localization ranks faulty lines higher by between 200% and 300%, _reducing the effort to find faulty locations by a factor of three to four._
+Our approach can be easily integrated into existing fault localization techniques to improve performance, making it a valuable addition to automated debugging.
 
 ## Setup
 

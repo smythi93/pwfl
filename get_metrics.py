@@ -13,7 +13,7 @@ from sflkit.evaluation import Rank, Scenario
 from sflkit.language.language import Language
 from tests4py.projects import TestStatus
 
-from get_analysis import times
+from get_analysis import distances
 
 
 def get_results_for_type(
@@ -74,7 +74,7 @@ def main(project_name, bug_id, start=0, end=1000):
             if not report.successful:
                 raise report.raised
             location = report.location
-        for suffix, model_class in times:
+        for suffix, model_class in distances:
             analysis_file = Path("analysis", f"{project}{suffix}.json")
             if analysis_file.exists():
                 if model_class is None:
