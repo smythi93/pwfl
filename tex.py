@@ -42,6 +42,7 @@ metric_order = [
 distance_order = [f"line{suffix}" for suffix, _ in distances]
 
 localization_order = [
+    "top-1",
     "top-5",
     "top-10",
     "top-200",

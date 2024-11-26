@@ -42,7 +42,7 @@ metrics = [
 dependency_types = [f"line{suffix}" for suffix, _ in distances]
 scenarios = [scenario.value for scenario in Scenario]
 
-localizations = ["top-5", "top-10", "top-200", "exam", "wasted-effort"]
+localizations = ["top-1", "top-5", "top-10", "top-200", "exam", "wasted-effort"]
 
 
 def main():
