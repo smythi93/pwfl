@@ -26,7 +26,14 @@ def get_results_for_type(
 ):
     results = dict()
     times = dict()
-    for metric in [Spectrum.Tarantula, Spectrum.Ochiai, Spectrum.DStar]:
+    for metric in [
+        Spectrum.Tarantula,
+        Spectrum.Ochiai,
+        Spectrum.DStar,
+        Spectrum.Naish1,
+        Spectrum.Naish2,
+        Spectrum.GP13,
+    ]:
         results[metric.__name__] = dict()
         time_start = time.time()
         suggestions = analyzer.get_sorted_suggestions(location, metric, type_)

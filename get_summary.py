@@ -34,6 +34,9 @@ metrics = [
     Spectrum.Tarantula.__name__,
     Spectrum.Ochiai.__name__,
     Spectrum.DStar.__name__,
+    Spectrum.Naish1.__name__,
+    Spectrum.Naish2.__name__,
+    Spectrum.GP13.__name__,
 ]
 
 dependency_types = [f"line{suffix}" for suffix, _ in distances]

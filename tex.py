@@ -34,6 +34,9 @@ metric_order = [
     Spectrum.Tarantula.__name__,
     Spectrum.Ochiai.__name__,
     Spectrum.DStar.__name__,
+    Spectrum.Naish1.__name__,
+    Spectrum.Naish2.__name__,
+    Spectrum.GP13.__name__,
 ]
 
 distance_order = [f"line{suffix}" for suffix, _ in distances]
@@ -287,7 +290,7 @@ def get_disadvantages_tex_table(improvements, total_improvements):
                     / len(actual_decrease[scenario][localization])
                     - 1
                 ) * 100
-                table += f" & {int(avg_percent)}\\%"
+                table += f" & ${int(avg_percent)}\\%$"
         table += " \\\\\n"
         if distance != distance_order[-1]:
             table += "\\addlinespace[0.6em]\n"
