@@ -11,6 +11,9 @@ tex_translation = {
     Spectrum.Tarantula.__name__: "\\TARANTULA{}",
     Spectrum.Ochiai.__name__: "\\OCHIAI{}",
     Spectrum.DStar.__name__: "\\DSTAR{}",
+    Spectrum.Naish1.__name__: "\\NAISHONE{}",
+    Spectrum.Naish2.__name__: "\\NAISHTWO{}",
+    Spectrum.GP13.__name__: "\\GP{}",
     Scenario.BEST_CASE.value: "Best Case Debugging",
     Scenario.WORST_CASE.value: "Worst Case Debugging",
     Scenario.AVG_CASE.value: "Average Case Debugging",
@@ -51,6 +54,7 @@ localization_order = [
 ]
 
 localization_comp = [
+    True,
     True,
     True,
     True,
@@ -230,12 +234,32 @@ def get_improvement_tex_table(improvements, total_improvements):
             }
             for scenario in scenario_order:
                 for localization in localization_order:
-                    avg_percent = (
-                        sum(actual_improvement[scenario][localization])
-                        / len(actual_improvement[scenario][localization])
-                        - 1
-                    ) * 100
-                    table += f" & {int(avg_percent)}\\%"
+                    if len(actual_improvement[scenario][localization]) == 0:
+                        table += " & 0\\%"
+                        print(
+                            f"Improvement: 0% for {distance} {metric} {scenario} {localization}"
+                        )
+                        no_improvements = {
+                            scenario: {
+                                localization: [
+                                    improvement
+                                    for improvement in improvements[distance][metric][
+                                        scenario
+                                    ][localization]
+                                    if improvement == float("inf") or improvement <= 0
+                                ]
+                                for localization in localization_order
+                            }
+                            for scenario in scenario_order
+                        }
+                        print(no_improvements)
+                    else:
+                        avg_percent = (
+                            sum(actual_improvement[scenario][localization])
+                            / len(actual_improvement[scenario][localization])
+                            - 1
+                        ) * 100
+                        table += f" & {int(avg_percent)}\\%"
             table += " \\\\\n"
         if distance != distance_order[-1]:
             table += "\\addlinespace[0.6em]\n"
@@ -411,7 +435,14 @@ def analyze(results):
                             results["line"][metric][scenario][localization]["all"],
                             results["subjects"],
                         ):
-                            if comp:
+                            if line_result == distance_result:
+                                improvements[distance][metric][scenario][
+                                    localization
+                                ].append(1)
+                                total_improvements[distance][metric][scenario][
+                                    localization
+                                ].append(0)
+                            elif comp:
                                 if line_result > 0:
                                     improvements[distance][metric][scenario][
                                         localization
