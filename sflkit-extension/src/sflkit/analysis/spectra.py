@@ -105,7 +105,10 @@ class Spectrum(AnalysisObject, ABC):
                 m = 0
             if use_weight:
                 if m < 0:
-                    m /= self.weight
+                    if self.weight != 0:
+                        m /= self.weight
+                    else:
+                        m = float("-inf")
                 else:
                     m *= self.weight
             return m
