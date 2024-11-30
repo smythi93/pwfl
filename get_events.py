@@ -64,7 +64,7 @@ def create_config(
     return Config.create(
         path=str(src.absolute()),
         language="python",
-        events="line",
+        events="line,function_enter",
         test_events="test_start,test_end,test_line,test_def,test_use,test_assert"
         if test
         else None,

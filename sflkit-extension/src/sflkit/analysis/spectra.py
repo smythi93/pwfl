@@ -104,13 +104,13 @@ class Spectrum(AnalysisObject, ABC):
             if numpy.isnan(m):
                 m = 0
             if use_weight:
-                if m < 0:
-                    if self.weight != 0:
-                        m /= self.weight
-                    else:
-                        m = float("-inf")
-                else:
-                    m *= self.weight
+                # if m < 0:
+                #     if self.weight != 0:
+                #         m /= self.weight
+                #     else:
+                #         m = float("-inf")
+                # else:
+                m *= self.weight
             return m
         except ZeroDivisionError:
             return 0
