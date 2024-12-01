@@ -2,24 +2,25 @@ import argparse
 import json
 import os
 import shutil
-import subprocess
-import sys
-import time
 import traceback
 from pathlib import Path
-from typing import List, Optional, Union
-
-from pyan import CallGraphVisitor
+from typing import Optional, Union
 
 import tests4py.api as t4p
-from sflkit import Config, instrument
-from tests4py import sfl
+from sflkit import Config
+from tests4py import sfl, environment
 from tests4py.api.utils import get_work_dir, load_project
 from tests4py.projects import TestStatus, Project
-from tests4py.sfl import get_events_path, SFLInstrumentReport
+from tests4py.sfl import get_events_path, SFLInstrumentReport, instrument
 from tests4py.sfl.constants import DEFAULT_EXCLUDES
 
-PYTHON = sys.executable
+from get_events import sflkit_env
+
+SFLKIT_LIB_ABS_PATH = (Path(__file__).parent / "sflkit-lib-extension").absolute()
+
+
+environment.sflkit_env = sflkit_env
+t4p.default.sflkit_env = sflkit_env
 
 
 def create_config(
@@ -168,7 +169,6 @@ def get_events(
         Removing the original version fixes this problem.
         """
         shutil.rmtree(original_checkout, ignore_errors=True)
-    start = time.time()
     r = sfl.sflkit_unittest(
         sfl_path,
         output=events_base,
@@ -176,7 +176,6 @@ def get_events(
         all_tests=False,
         include_suffix=True,
     )
-    report[identifier]["time"][f"test"] = time.time() - start
 
     if r.successful:
         report[identifier][f"test"] = "successful"
