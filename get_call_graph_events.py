@@ -189,8 +189,6 @@ def main(project_name, bug_id):
     report_dir = "reports"
     os.makedirs(report_dir, exist_ok=True)
     report_file = os.path.join(report_dir, f"cg_{project_name}.json")
-    cg_dir = "call_graphs"
-    os.makedirs(cg_dir, exist_ok=True)
     if os.path.exists(report_file):
         with open(report_file, "r") as f:
             report = json.load(f)
