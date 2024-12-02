@@ -1,0 +1,2343 @@
+{
+ "197": [
+  [
+   "luigi/six.py",
+   174,
+   "__init__",
+   197
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "195": [
+  [
+   "luigi/six.py",
+   144,
+   "__init__",
+   195
+  ],
+  {
+   "PASS": {
+    "count": 243,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 81,
+    "ids": [
+     0
+    ]
+   },
+   "188": {
+    "PASS": {
+     "count": 243,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 81,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "188": [
+  [
+   "luigi/six.py",
+   91,
+   "__init__",
+   188
+  ],
+  {
+   "PASS": {
+    "count": 375,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 125,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "190": [
+  [
+   "luigi/six.py",
+   108,
+   "__init__",
+   190
+  ],
+  {
+   "PASS": {
+    "count": 132,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 44,
+    "ids": [
+     0
+    ]
+   },
+   "188": {
+    "PASS": {
+     "count": 132,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 44,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "198": [
+  [
+   "luigi/six.py",
+   178,
+   "_add_module",
+   198
+  ],
+  {
+   "PASS": {
+    "count": 153,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 51,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "193": [
+  [
+   "luigi/six.py",
+   129,
+   "__init__",
+   193
+  ],
+  {
+   "PASS": {
+    "count": 18,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "199": [
+  [
+   "luigi/six.py",
+   182,
+   "_get_module",
+   199
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 5,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "186": [
+  [
+   "luigi/six.py",
+   78,
+   "_add_doc",
+   186
+  ],
+  {
+   "PASS": {
+    "count": 24,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 8,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "189": [
+  [
+   "luigi/six.py",
+   94,
+   "__get__",
+   189
+  ],
+  {
+   "PASS": {
+    "count": 18,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   },
+   "191": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "196": {
+    "PASS": {
+     "count": 15,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 5,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "191": [
+  [
+   "luigi/six.py",
+   117,
+   "_resolve",
+   191
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "187": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "187": [
+  [
+   "luigi/six.py",
+   83,
+   "_import_module",
+   187
+  ],
+  {
+   "PASS": {
+    "count": 18,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "200": [
+  [
+   "luigi/six.py",
+   185,
+   "find_module",
+   200
+  ],
+  {
+   "PASS": {
+    "count": 72,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 24,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "410": [
+  [
+   "luigi/deprecate_kwarg.py",
+   21,
+   "deprecate_kwarg",
+   410
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "411": [
+  [
+   "luigi/deprecate_kwarg.py",
+   41,
+   "real_decorator",
+   411
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "242": [
+  [
+   "luigi/six.py",
+   787,
+   "add_metaclass",
+   242
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 5,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "243": [
+  [
+   "luigi/six.py",
+   789,
+   "wrapper",
+   243
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 5,
+    "ids": [
+     0
+    ]
+   },
+   "136": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "136": [
+  [
+   "luigi/task_register.py",
+   54,
+   "__new__",
+   136
+  ],
+  {
+   "PASS": {
+    "count": 69,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 23,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "471": [
+  [
+   "luigi/format.py",
+   442,
+   "__init__",
+   471
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "474": [
+  [
+   "luigi/format.py",
+   478,
+   "__init__",
+   474
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "203": [
+  [
+   "luigi/six.py",
+   210,
+   "is_package",
+   203
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 5,
+    "ids": [
+     0
+    ]
+   },
+   "201": {
+    "PASS": {
+     "count": 15,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 5,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "201": [
+  [
+   "luigi/six.py",
+   190,
+   "__get_module",
+   201
+  ],
+  {
+   "PASS": {
+    "count": 30,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 10,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "202": [
+  [
+   "luigi/six.py",
+   196,
+   "load_module",
+   202
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 5,
+    "ids": [
+     0
+    ]
+   },
+   "201": {
+    "PASS": {
+     "count": 15,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 5,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "196": [
+  [
+   "luigi/six.py",
+   162,
+   "_resolve",
+   196
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 5,
+    "ids": [
+     0
+    ]
+   },
+   "187": {
+    "PASS": {
+     "count": 15,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 5,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "412": [
+  [
+   "luigi/deprecate_kwarg.py",
+   42,
+   "new_function",
+   412
+  ],
+  {
+   "PASS": {
+    "count": 171,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 57,
+    "ids": [
+     0
+    ]
+   },
+   "104": {
+    "PASS": {
+     "count": 171,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 57,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "104": [
+  [
+   "luigi/parameter.py",
+   105,
+   "__init__",
+   104
+  ],
+  {
+   "PASS": {
+    "count": 171,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 57,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "126": [
+  [
+   "luigi/parameter.py",
+   455,
+   "__init__",
+   126
+  ],
+  {
+   "PASS": {
+    "count": 30,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 10,
+    "ids": [
+     0
+    ]
+   },
+   "412": {
+    "PASS": {
+     "count": 30,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 10,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1052": [
+  [
+   "luigi/contrib/hdfs/clients.py",
+   33,
+   "get_autoconfig_client",
+   1052
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "1050": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1018": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1050": [
+  [
+   "luigi/contrib/hdfs/config.py",
+   63,
+   "get_configured_hdfs_client",
+   1050
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "137": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "137": [
+  [
+   "luigi/task_register.py",
+   70,
+   "__call__",
+   137
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "526": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "527": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "138": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "526": [
+  [
+   "luigi/task.py",
+   167,
+   "get_params",
+   526
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0
+    ]
+   },
+   "141": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 4,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "141": [
+  [
+   "luigi/task_register.py",
+   116,
+   "task_family",
+   141
+  ],
+  {
+   "PASS": {
+    "count": 30,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 10,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "527": [
+  [
+   "luigi/task.py",
+   185,
+   "get_param_values",
+   527
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0
+    ]
+   },
+   "141": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 4,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "216": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 4,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "109": {
+    "PASS": {
+     "count": 48,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 16,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "110": {
+    "PASS": {
+     "count": 48,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 16,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "528": {
+    "PASS": {
+     "count": 54,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 16,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "216": [
+  [
+   "luigi/six.py",
+   562,
+   "iteritems",
+   216
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "109": [
+  [
+   "luigi/parameter.py",
+   235,
+   "has_task_value",
+   109
+  ],
+  {
+   "PASS": {
+    "count": 48,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 16,
+    "ids": [
+     0
+    ]
+   },
+   "106": {
+    "PASS": {
+     "count": 48,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 16,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "106": [
+  [
+   "luigi/parameter.py",
+   176,
+   "_get_value",
+   106
+  ],
+  {
+   "PASS": {
+    "count": 96,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 32,
+    "ids": [
+     0
+    ]
+   },
+   "105": {
+    "PASS": {
+     "count": 204,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 68,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "105": [
+  [
+   "luigi/parameter.py",
+   161,
+   "_get_value_from_config",
+   105
+  ],
+  {
+   "PASS": {
+    "count": 204,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 68,
+    "ids": [
+     0
+    ]
+   },
+   "276": {
+    "PASS": {
+     "count": 204,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 68,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "270": {
+    "PASS": {
+     "count": 204,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 68,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "276": [
+  [
+   "luigi/configuration.py",
+   109,
+   "get_config",
+   276
+  ],
+  {
+   "PASS": {
+    "count": 209,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 69,
+    "ids": [
+     0
+    ]
+   },
+   "267": {
+    "PASS": {
+     "count": 209,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 69,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "267": [
+  [
+   "luigi/configuration.py",
+   53,
+   "instance",
+   267
+  ],
+  {
+   "PASS": {
+    "count": 212,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 70,
+    "ids": [
+     0
+    ]
+   },
+   "268": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "268": [
+  [
+   "luigi/configuration.py",
+   63,
+   "reload",
+   268
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "267": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "270": [
+  [
+   "luigi/configuration.py",
+   84,
+   "get",
+   270
+  ],
+  {
+   "PASS": {
+    "count": 209,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 69,
+    "ids": [
+     0
+    ]
+   },
+   "269": {
+    "PASS": {
+     "count": 209,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 69,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "269": [
+  [
+   "luigi/configuration.py",
+   66,
+   "_get_with_default",
+   269
+  ],
+  {
+   "PASS": {
+    "count": 209,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 69,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "110": [
+  [
+   "luigi/parameter.py",
+   238,
+   "task_value",
+   110
+  ],
+  {
+   "PASS": {
+    "count": 48,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 16,
+    "ids": [
+     0
+    ]
+   },
+   "106": {
+    "PASS": {
+     "count": 48,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 16,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "528": [
+  [
+   "luigi/task.py",
+   227,
+   "list_to_tuple",
+   528
+  ],
+  {
+   "PASS": {
+    "count": 54,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 16,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "138": [
+  [
+   "luigi/task_register.py",
+   77,
+   "instantiate",
+   138
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "529": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "529": [
+  [
+   "luigi/task.py",
+   236,
+   "__init__",
+   529
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "526": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "527": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "114": {
+    "PASS": {
+     "count": 24,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 7,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "525": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "114": [
+  [
+   "luigi/parameter.py",
+   270,
+   "serialize",
+   114
+  ],
+  {
+   "PASS": {
+    "count": 24,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 7,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "525": [
+  [
+   "luigi/task.py",
+   160,
+   "task_family",
+   525
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "141": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1018": [
+  [
+   "luigi/contrib/hdfs/hadoopcli_clients.py",
+   39,
+   "create_hadoopcli_client",
+   1018
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "1049": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1049": [
+  [
+   "luigi/contrib/hdfs/config.py",
+   51,
+   "get_configured_hadoop_version",
+   1049
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "276": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "270": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "839": [
+  [
+   "luigi/contrib/hadoop.py",
+   649,
+   "run",
+   839
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "837": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "979": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "976": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "837": [
+  [
+   "luigi/contrib/hadoop.py",
+   636,
+   "init_local",
+   837
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "979": [
+  [
+   "luigi/contrib/hadoop_jar.py",
+   129,
+   "job_runner",
+   979
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "975": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "975": [
+  [
+   "luigi/contrib/hadoop_jar.py",
+   67,
+   "__init__",
+   975
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "976": [
+  [
+   "luigi/contrib/hadoop_jar.py",
+   70,
+   "run_job",
+   976
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "981": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "977": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1048": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "978": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "836": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "974": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "981": [
+  [
+   "luigi/contrib/hadoop_jar.py",
+   140,
+   "ssh",
+   981
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "977": [
+  [
+   "luigi/contrib/hadoop_jar.py",
+   117,
+   "jar",
+   977
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1048": [
+  [
+   "luigi/contrib/hdfs/config.py",
+   47,
+   "load_hadoop_cmd",
+   1048
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "276": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "270": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "978": [
+  [
+   "luigi/contrib/hadoop_jar.py",
+   123,
+   "main",
+   978
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "836": [
+  [
+   "luigi/contrib/hadoop.py",
+   621,
+   "jobconfs",
+   836
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "974": [
+  [
+   "luigi/contrib/hadoop_jar.py",
+   31,
+   "fix_paths",
+   974
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "982": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "982": [
+  [
+   "luigi/contrib/hadoop_jar.py",
+   147,
+   "args",
+   982
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

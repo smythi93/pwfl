@@ -1,0 +1,4304 @@
+{
+ "400": [
+  [
+   "scrapy/http/common.py",
+   1,
+   "obsolete_setter",
+   400
+  ],
+  {
+   "PASS": {
+    "count": 60,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "296": [
+  [
+   "scrapy/utils/python.py",
+   141,
+   "get_func_args",
+   296
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "192": [
+  [
+   "scrapy/utils/decorators.py",
+   9,
+   "deprecated",
+   192
+  ],
+  {
+   "PASS": {
+    "count": 90,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   },
+   "193": {
+    "PASS": {
+     "count": 15,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "193": [
+  [
+   "scrapy/utils/decorators.py",
+   14,
+   "deco",
+   193
+  ],
+  {
+   "PASS": {
+    "count": 90,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "293": [
+  [
+   "scrapy/utils/python.py",
+   120,
+   "memoizemethod_noargs",
+   293
+  ],
+  {
+   "PASS": {
+    "count": 30,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "200": [
+  [
+   "scrapy/utils/deprecate.py",
+   15,
+   "create_deprecated_class",
+   200
+  ],
+  {
+   "PASS": {
+    "count": 90,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   },
+   "201": {
+    "PASS": {
+     "count": 90,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "202": {
+    "PASS": {
+     "count": 90,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "201": [
+  [
+   "scrapy/utils/deprecate.py",
+   55,
+   "__new__",
+   201
+  ],
+  {
+   "PASS": {
+    "count": 120,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 8,
+    "ids": [
+     0
+    ]
+   },
+   "201": {
+    "PASS": {
+     "count": 30,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "202": [
+  [
+   "scrapy/utils/deprecate.py",
+   61,
+   "__init__",
+   202
+  ],
+  {
+   "PASS": {
+    "count": 120,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 8,
+    "ids": [
+     0
+    ]
+   },
+   "202": {
+    "PASS": {
+     "count": 30,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "560": [
+  [
+   "scrapy/spiders/__init__.py",
+   102,
+   "__init__",
+   560
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "20": [
+  [
+   "scrapy/item.py",
+   27,
+   "__new__",
+   20
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "252": [
+  [
+   "scrapy/utils/trackref.py",
+   28,
+   "__new__",
+   252
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     1,
+     6,
+     8,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "547": [
+  [
+   "scrapy/spiders/__init__.py",
+   25,
+   "__init__",
+   547
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     6,
+     8,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "896": [
+  [
+   "scrapy/pipelines/media.py",
+   26,
+   "__init__",
+   896
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     6,
+     8,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "898": [
+  [
+   "scrapy/pipelines/media.py",
+   38,
+   "open_spider",
+   898
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     6,
+     8,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "895": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      1,
+      6,
+      8,
+      10,
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "895": [
+  [
+   "scrapy/pipelines/media.py",
+   20,
+   "__init__",
+   895
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     6,
+     8,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "907": [
+  [
+   "scrapy/pipelines/media.py",
+   122,
+   "item_completed",
+   907
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "263": [
+  [
+   "scrapy/utils/log.py",
+   18,
+   "failure_to_exc_info",
+   263
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     14
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "228": [
+  [
+   "scrapy/utils/signal.py",
+   66,
+   "disconnect_all",
+   228
+  ],
+  {
+   "PASS": {
+    "count": 90,
+    "ids": [
+     1,
+     6,
+     8,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 18,
+    "ids": [
+     0
+    ]
+   },
+   "1143": {
+    "PASS": {
+     "count": 90,
+     "ids": [
+      1,
+      6,
+      8,
+      10,
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 18,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1143": [
+  [
+   "scrapy/xlib/pydispatch/dispatcher.py",
+   265,
+   "liveReceivers",
+   1143
+  ],
+  {
+   "PASS": {
+    "count": 90,
+    "ids": [
+     1,
+     6,
+     8,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 18,
+    "ids": [
+     0
+    ]
+   },
+   "1144": {
+    "PASS": {
+     "count": 90,
+     "ids": [
+      1,
+      6,
+      8,
+      10,
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 18,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1144": [
+  [
+   "scrapy/xlib/pydispatch/dispatcher.py",
+   283,
+   "getAllReceivers",
+   1144
+  ],
+  {
+   "PASS": {
+    "count": 90,
+    "ids": [
+     1,
+     6,
+     8,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 18,
+    "ids": [
+     0
+    ]
+   },
+   "1142": {
+    "PASS": {
+     "count": 360,
+     "ids": [
+      1,
+      6,
+      8,
+      10,
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 72,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1142": [
+  [
+   "scrapy/xlib/pydispatch/dispatcher.py",
+   241,
+   "getReceivers",
+   1142
+  ],
+  {
+   "PASS": {
+    "count": 360,
+    "ids": [
+     1,
+     6,
+     8,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 72,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "899": [
+  [
+   "scrapy/pipelines/media.py",
+   41,
+   "process_item",
+   899
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "904": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "181": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "907": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "904": [
+  [
+   "scrapy/pipelines/media.py",
+   110,
+   "get_media_requests",
+   904
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "181": [
+  [
+   "scrapy/utils/misc.py",
+   17,
+   "arg_to_iter",
+   181
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "264": [
+  [
+   "scrapy/utils/log.py",
+   36,
+   "__init__",
+   264
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     3,
+     5,
+     9,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "265": [
+  [
+   "scrapy/utils/log.py",
+   39,
+   "filter",
+   265
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     3,
+     5,
+     9,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "268": [
+  [
+   "scrapy/utils/log.py",
+   123,
+   "__init__",
+   268
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "269": [
+  [
+   "scrapy/utils/log.py",
+   128,
+   "write",
+   269
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "1108": [
+  [
+   "scrapy/http/request/__init__.py",
+   18,
+   "__init__",
+   1108
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     8,
+     10
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "1111": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6,
+      8,
+      10
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1113": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6,
+      8,
+      10
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "402": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6,
+      8,
+      10
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1111": [
+  [
+   "scrapy/http/request/__init__.py",
+   48,
+   "_set_url",
+   1111
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     8,
+     10
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "237": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6,
+      8,
+      10
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "237": [
+  [
+   "scrapy/utils/url.py",
+   79,
+   "escape_ajax",
+   237
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     8,
+     10
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "1113": [
+  [
+   "scrapy/http/request/__init__.py",
+   66,
+   "_set_body",
+   1113
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     8,
+     10
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "402": [
+  [
+   "scrapy/http/headers.py",
+   9,
+   "__init__",
+   402
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     6,
+     8,
+     10
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "327": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      6,
+      8,
+      10
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "327": [
+  [
+   "scrapy/utils/datatypes.py",
+   167,
+   "__init__",
+   327
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     6,
+     8,
+     10
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "906": [
+  [
+   "scrapy/pipelines/media.py",
+   118,
+   "media_failed",
+   906
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "177": [
+  [
+   "scrapy/utils/test.py",
+   23,
+   "get_crawler",
+   177
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "348": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "454": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "100": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "104": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "348": [
+  [
+   "scrapy/utils/datatypes.py",
+   276,
+   "__init__",
+   348
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "454": [
+  [
+   "scrapy/settings/__init__.py",
+   50,
+   "__init__",
+   454
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "464": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "463": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "464": [
+  [
+   "scrapy/settings/__init__.py",
+   105,
+   "setmodule",
+   464
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "465": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "462": {
+    "PASS": {
+     "count": 342,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "465": [
+  [
+   "scrapy/settings/__init__.py",
+   113,
+   "_assert_mutability",
+   465
+  ],
+  {
+   "PASS": {
+    "count": 354,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "462": [
+  [
+   "scrapy/settings/__init__.py",
+   91,
+   "set",
+   462
+  ],
+  {
+   "PASS": {
+    "count": 345,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "465": {
+    "PASS": {
+     "count": 345,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "451": {
+    "PASS": {
+     "count": 342,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "452": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "451": [
+  [
+   "scrapy/settings/__init__.py",
+   31,
+   "__init__",
+   451
+  ],
+  {
+   "PASS": {
+    "count": 342,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "463": [
+  [
+   "scrapy/settings/__init__.py",
+   100,
+   "setdict",
+   463
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "465": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "462": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "452": [
+  [
+   "scrapy/settings/__init__.py",
+   35,
+   "set",
+   452
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "100": [
+  [
+   "scrapy/crawler.py",
+   110,
+   "__init__",
+   100
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "112": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "112": [
+  [
+   "scrapy/crawler.py",
+   262,
+   "_get_spider_loader",
+   112
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "456": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "182": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "468": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "5": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "456": [
+  [
+   "scrapy/settings/__init__.py",
+   63,
+   "get",
+   456
+  ],
+  {
+   "PASS": {
+    "count": 48,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "455": {
+    "PASS": {
+     "count": 87,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "455": [
+  [
+   "scrapy/settings/__init__.py",
+   57,
+   "__getitem__",
+   455
+  ],
+  {
+   "PASS": {
+    "count": 108,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "182": [
+  [
+   "scrapy/utils/misc.py",
+   31,
+   "load_object",
+   182
+  ],
+  {
+   "PASS": {
+    "count": 36,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "468": [
+  [
+   "scrapy/settings/__init__.py",
+   123,
+   "frozencopy",
+   468
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "466": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "467": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "466": [
+  [
+   "scrapy/settings/__init__.py",
+   117,
+   "copy",
+   466
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "467": [
+  [
+   "scrapy/settings/__init__.py",
+   120,
+   "freeze",
+   467
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "5": [
+  [
+   "scrapy/spiderloader.py",
+   29,
+   "from_settings",
+   5
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "3": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "3": [
+  [
+   "scrapy/spiderloader.py",
+   17,
+   "__init__",
+   3
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "460": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "460": [
+  [
+   "scrapy/settings/__init__.py",
+   79,
+   "getlist",
+   460
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "456": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "104": [
+  [
+   "scrapy/crawler.py",
+   162,
+   "_create_crawler",
+   104
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "94": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "94": [
+  [
+   "scrapy/crawler.py",
+   26,
+   "__init__",
+   94
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "466": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "117": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "455": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "182": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "141": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "456": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "270": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "118": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1147": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "35": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "39": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "556": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "467": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "117": [
+  [
+   "scrapy/signalmanager.py",
+   6,
+   "__init__",
+   117
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "141": [
+  [
+   "scrapy/statscollectors.py",
+   55,
+   "__init__",
+   141
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "129": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "129": [
+  [
+   "scrapy/statscollectors.py",
+   12,
+   "__init__",
+   129
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "457": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "457": [
+  [
+   "scrapy/settings/__init__.py",
+   66,
+   "getbool",
+   457
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "456": {
+    "PASS": {
+     "count": 15,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "270": [
+  [
+   "scrapy/utils/log.py",
+   136,
+   "__init__",
+   270
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "118": [
+  [
+   "scrapy/signalmanager.py",
+   9,
+   "connect",
+   118
+  ],
+  {
+   "PASS": {
+    "count": 39,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "1139": {
+    "PASS": {
+     "count": 39,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1139": [
+  [
+   "scrapy/xlib/pydispatch/dispatcher.py",
+   86,
+   "connect",
+   1139
+  ],
+  {
+   "PASS": {
+    "count": 39,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "1127": {
+    "PASS": {
+     "count": 39,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1127": [
+  [
+   "scrapy/xlib/pydispatch/saferef.py",
+   6,
+   "safeRef",
+   1127
+  ],
+  {
+   "PASS": {
+    "count": 39,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "1147": [
+  [
+   "scrapy/xlib/pydispatch/dispatcher.py",
+   382,
+   "_removeReceiver",
+   1147
+  ],
+  {
+   "PASS": {
+    "count": 39,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "1148": {
+    "PASS": {
+     "count": 39,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1148": [
+  [
+   "scrapy/xlib/pydispatch/dispatcher.py",
+   412,
+   "_cleanupConnections",
+   1148
+  ],
+  {
+   "PASS": {
+    "count": 39,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "1149": {
+    "PASS": {
+     "count": 39,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1149": [
+  [
+   "scrapy/xlib/pydispatch/dispatcher.py",
+   432,
+   "_removeSender",
+   1149
+  ],
+  {
+   "PASS": {
+    "count": 39,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "1150": {
+    "PASS": {
+     "count": 39,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1150": [
+  [
+   "scrapy/xlib/pydispatch/dispatcher.py",
+   447,
+   "_removeBackrefs",
+   1150
+  ],
+  {
+   "PASS": {
+    "count": 39,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "1151": {
+    "PASS": {
+     "count": 39,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1151": [
+  [
+   "scrapy/xlib/pydispatch/dispatcher.py",
+   456,
+   "allReceivers",
+   1151
+  ],
+  {
+   "PASS": {
+    "count": 39,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "35": [
+  [
+   "scrapy/logformatter.py",
+   68,
+   "from_crawler",
+   35
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "39": [
+  [
+   "scrapy/middleware.py",
+   55,
+   "from_crawler",
+   39
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "38": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "38": [
+  [
+   "scrapy/middleware.py",
+   27,
+   "from_settings",
+   38
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "149": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "182": {
+    "PASS": {
+     "count": 27,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1061": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "55": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "975": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1080": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1073": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1038": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1068": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "964": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1049": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "36": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "149": [
+  [
+   "scrapy/extension.py",
+   14,
+   "_get_mwlist_from_settings",
+   149
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "455": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "246": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "246": [
+  [
+   "scrapy/utils/conf.py",
+   9,
+   "build_component_list",
+   246
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "1061": [
+  [
+   "scrapy/extensions/corestats.py",
+   14,
+   "from_crawler",
+   1061
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "1060": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "118": {
+    "PASS": {
+     "count": 15,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1147": {
+    "PASS": {
+     "count": 15,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1060": [
+  [
+   "scrapy/extensions/corestats.py",
+   10,
+   "__init__",
+   1060
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "55": [
+  [
+   "scrapy/telnet.py",
+   52,
+   "from_crawler",
+   55
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "54": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "54": [
+  [
+   "scrapy/telnet.py",
+   39,
+   "__init__",
+   54
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "457": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "460": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "455": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "118": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1147": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "975": [
+  [
+   "scrapy/extensions/memusage.py",
+   44,
+   "from_crawler",
+   975
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "974": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "974": [
+  [
+   "scrapy/extensions/memusage.py",
+   24,
+   "__init__",
+   974
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "457": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1080": [
+  [
+   "scrapy/extensions/memdebug.py",
+   21,
+   "from_crawler",
+   1080
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "457": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1073": [
+  [
+   "scrapy/extensions/closespider.py",
+   39,
+   "from_crawler",
+   1073
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "1072": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1072": [
+  [
+   "scrapy/extensions/closespider.py",
+   16,
+   "__init__",
+   1072
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "459": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "458": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "118": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1147": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "459": [
+  [
+   "scrapy/settings/__init__.py",
+   76,
+   "getfloat",
+   459
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "456": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "458": [
+  [
+   "scrapy/settings/__init__.py",
+   73,
+   "getint",
+   458
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "456": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1038": [
+  [
+   "scrapy/extensions/feedexport.py",
+   159,
+   "from_crawler",
+   1038
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "1037": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1037": [
+  [
+   "scrapy/extensions/feedexport.py",
+   141,
+   "__init__",
+   1037
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "455": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1068": [
+  [
+   "scrapy/extensions/logstats.py",
+   20,
+   "from_crawler",
+   1068
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "459": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1067": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "118": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1147": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1067": [
+  [
+   "scrapy/extensions/logstats.py",
+   14,
+   "__init__",
+   1067
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "964": [
+  [
+   "scrapy/extensions/spiderstate.py",
+   14,
+   "from_crawler",
+   964
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "229": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "963": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "118": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1147": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "229": [
+  [
+   "scrapy/utils/job.py",
+   3,
+   "job_dir",
+   229
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "455": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "963": [
+  [
+   "scrapy/extensions/spiderstate.py",
+   10,
+   "__init__",
+   963
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "1049": [
+  [
+   "scrapy/extensions/throttle.py",
+   21,
+   "from_crawler",
+   1049
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "1048": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1048": [
+  [
+   "scrapy/extensions/throttle.py",
+   11,
+   "__init__",
+   1048
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "457": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "36": [
+  [
+   "scrapy/middleware.py",
+   16,
+   "__init__",
+   36
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "40": {
+    "PASS": {
+     "count": 15,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "40": [
+  [
+   "scrapy/middleware.py",
+   58,
+   "_add_middleware",
+   40
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "556": [
+  [
+   "scrapy/spiders/__init__.py",
+   79,
+   "update_settings",
+   556
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "463": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      7,
+      12,
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "130": [
+  [
+   "scrapy/statscollectors.py",
+   16,
+   "get_value",
+   130
+  ],
+  {
+   "PASS": {
+    "count": 7,
+    "ids": [
+     7,
+     12,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "1082": [
+  [
+   "scrapy/http/response/__init__.py",
+   18,
+   "__init__",
+   1082
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "402": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1087": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1085": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "1087": [
+  [
+   "scrapy/http/response/__init__.py",
+   49,
+   "_set_body",
+   1087
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "1085": [
+  [
+   "scrapy/http/response/__init__.py",
+   37,
+   "_set_url",
+   1085
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "905": [
+  [
+   "scrapy/pipelines/media.py",
+   114,
+   "media_downloaded",
+   905
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "903": [
+  [
+   "scrapy/pipelines/media.py",
+   106,
+   "media_to_download",
+   903
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     10
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "271": [
+  [
+   "scrapy/utils/log.py",
+   140,
+   "emit",
+   271
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "134": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      13
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "134": [
+  [
+   "scrapy/statscollectors.py",
+   28,
+   "inc_value",
+   134
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

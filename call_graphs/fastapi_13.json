@@ -1,0 +1,1674 @@
+{
+ "44": [
+  [
+   "fastapi/params.py",
+   240,
+   "__init__",
+   44
+  ],
+  {
+   "PASS": {
+    "count": 132,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 12,
+    "ids": [
+     0
+    ]
+   },
+   "43": {
+    "PASS": {
+     "count": 132,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 12,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "43": [
+  [
+   "fastapi/params.py",
+   203,
+   "__init__",
+   43
+  ],
+  {
+   "PASS": {
+    "count": 132,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 12,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "18": [
+  [
+   "fastapi/applications.py",
+   26,
+   "__init__",
+   18
+  ],
+  {
+   "PASS": {
+    "count": 11,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "20": {
+    "PASS": {
+     "count": 11,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "20": [
+  [
+   "fastapi/applications.py",
+   79,
+   "setup",
+   20
+  ],
+  {
+   "PASS": {
+    "count": 11,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "8": [
+  [
+   "fastapi/routing.py",
+   323,
+   "get",
+   8
+  ],
+  {
+   "PASS": {
+    "count": 11,
+    "ids": [
+     1,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   },
+   "5": {
+    "PASS": {
+     "count": 11,
+     "ids": [
+      1,
+      4,
+      5,
+      6,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "5": [
+  [
+   "fastapi/routing.py",
+   235,
+   "api_route",
+   5
+  ],
+  {
+   "PASS": {
+    "count": 13,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "6": [
+  [
+   "fastapi/routing.py",
+   253,
+   "decorator",
+   6
+  ],
+  {
+   "PASS": {
+    "count": 13,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   },
+   "4": {
+    "PASS": {
+     "count": 13,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "4": [
+  [
+   "fastapi/routing.py",
+   197,
+   "add_api_route",
+   4
+  ],
+  {
+   "PASS": {
+    "count": 26,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   },
+   "3": {
+    "PASS": {
+     "count": 26,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "3": [
+  [
+   "fastapi/routing.py",
+   102,
+   "__init__",
+   3
+  ],
+  {
+   "PASS": {
+    "count": 26,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   },
+   "53": {
+    "PASS": {
+     "count": 26,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "61": {
+    "PASS": {
+     "count": 26,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1": {
+    "PASS": {
+     "count": 26,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "53": [
+  [
+   "fastapi/dependencies/utils.py",
+   84,
+   "get_dependant",
+   53
+  ],
+  {
+   "PASS": {
+    "count": 26,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   },
+   "35": {
+    "PASS": {
+     "count": 26,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "50": {
+    "PASS": {
+     "count": 26,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "55": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "35": [
+  [
+   "fastapi/utils.py",
+   55,
+   "get_path_param_names",
+   35
+  ],
+  {
+   "PASS": {
+    "count": 26,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "50": [
+  [
+   "fastapi/dependencies/models.py",
+   16,
+   "__init__",
+   50
+  ],
+  {
+   "PASS": {
+    "count": 56,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 18,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "61": [
+  [
+   "fastapi/dependencies/utils.py",
+   382,
+   "get_body_field",
+   61
+  ],
+  {
+   "PASS": {
+    "count": 26,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   },
+   "52": {
+    "PASS": {
+     "count": 26,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "60": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "52": [
+  [
+   "fastapi/dependencies/utils.py",
+   64,
+   "get_flat_dependant",
+   52
+  ],
+  {
+   "PASS": {
+    "count": 30,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 12,
+    "ids": [
+     0
+    ]
+   },
+   "50": {
+    "PASS": {
+     "count": 30,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 12,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1": [
+  [
+   "fastapi/routing.py",
+   40,
+   "get_app",
+   1
+  ],
+  {
+   "PASS": {
+    "count": 26,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "24": [
+  [
+   "fastapi/applications.py",
+   183,
+   "include_router",
+   24
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     1,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "7": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "7": [
+  [
+   "fastapi/routing.py",
+   275,
+   "include_router",
+   7
+  ],
+  {
+   "PASS": {
+    "count": 14,
+    "ids": [
+     1,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "4": {
+    "PASS": {
+     "count": 13,
+     "ids": [
+      1,
+      4,
+      5,
+      6,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "19": [
+  [
+   "fastapi/applications.py",
+   67,
+   "openapi",
+   19
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "72": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "72": [
+  [
+   "fastapi/openapi/utils.py",
+   230,
+   "get_openapi",
+   72
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "33": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "34": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "71": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "16": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "33": [
+  [
+   "fastapi/utils.py",
+   17,
+   "get_flat_models_from_routes",
+   33
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "34": [
+  [
+   "fastapi/utils.py",
+   41,
+   "get_model_definitions",
+   34
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "71": [
+  [
+   "fastapi/openapi/utils.py",
+   143,
+   "get_openapi_path",
+   71
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   },
+   "70": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "52": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "65": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "64": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "66": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "67": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "70": [
+  [
+   "fastapi/openapi/utils.py",
+   130,
+   "get_openapi_operation_metadata",
+   70
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   },
+   "69": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "68": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "69": [
+  [
+   "fastapi/openapi/utils.py",
+   124,
+   "generate_operation_summary",
+   69
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "68": [
+  [
+   "fastapi/openapi/utils.py",
+   114,
+   "generate_operation_id",
+   68
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "65": [
+  [
+   "fastapi/openapi/utils.py",
+   52,
+   "get_openapi_security_definitions",
+   65
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "64": [
+  [
+   "fastapi/openapi/utils.py",
+   42,
+   "get_openapi_params",
+   64
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   },
+   "52": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "66": [
+  [
+   "fastapi/openapi/utils.py",
+   67,
+   "get_openapi_operation_parameters",
+   66
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "16": [
+  [
+   "fastapi/encoders.py",
+   9,
+   "jsonable_encoder",
+   16
+  ],
+  {
+   "PASS": {
+    "count": 177,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 92,
+    "ids": [
+     0
+    ]
+   },
+   "16": {
+    "PASS": {
+     "count": 170,
+     "ids": [
+      2,
+      6,
+      7,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 91,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "2": [
+  [
+   "fastapi/routing.py",
+   51,
+   "app",
+   2
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "57": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "0": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "57": [
+  [
+   "fastapi/dependencies/utils.py",
+   230,
+   "solve_dependencies",
+   57
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "58": {
+    "PASS": {
+     "count": 20,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "59": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "58": [
+  [
+   "fastapi/dependencies/utils.py",
+   288,
+   "request_params_to_args",
+   58
+  ],
+  {
+   "PASS": {
+    "count": 20,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "0": [
+  [
+   "fastapi/routing.py",
+   24,
+   "serialize_response",
+   0
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     4,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "16": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      1,
+      2,
+      4,
+      5,
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "27": [
+  [
+   "fastapi/applications.py",
+   261,
+   "post",
+   27
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "10": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "10": [
+  [
+   "fastapi/routing.py",
+   391,
+   "post",
+   10
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "5": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "55": [
+  [
+   "fastapi/dependencies/utils.py",
+   197,
+   "add_param_to_body_fields",
+   55
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "60": [
+  [
+   "fastapi/dependencies/utils.py",
+   367,
+   "get_schema_compatible_field",
+   60
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "59": [
+  [
+   "fastapi/dependencies/utils.py",
+   325,
+   "request_body_to_args",
+   59
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "67": [
+  [
+   "fastapi/openapi/utils.py",
+   91,
+   "get_openapi_operation_request_body",
+   67
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

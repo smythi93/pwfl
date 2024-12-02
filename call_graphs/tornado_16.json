@@ -1,0 +1,4043 @@
+{
+ "568": [
+  [
+   "tornado/escape.py",
+   210,
+   "to_unicode",
+   568
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "574": [
+  [
+   "tornado/escape.py",
+   390,
+   "_build_unicode_map",
+   574
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "681": [
+  [
+   "tornado/stack_context.py",
+   83,
+   "__init__",
+   681
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "970": [
+  [
+   "tornado/httputil.py",
+   81,
+   "__init__",
+   970
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "168": [
+  [
+   "tornado/concurrent.py",
+   163,
+   "__init__",
+   168
+  ],
+  {
+   "PASS": {
+    "count": 25,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "177": [
+  [
+   "tornado/concurrent.py",
+   239,
+   "set_result",
+   177
+  ],
+  {
+   "PASS": {
+    "count": 23,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   },
+   "182": {
+    "PASS": {
+     "count": 23,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "182": [
+  [
+   "tornado/concurrent.py",
+   288,
+   "_set_done",
+   182
+  ],
+  {
+   "PASS": {
+    "count": 25,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 5,
+    "ids": [
+     0
+    ]
+   },
+   "224": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "106": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "6": [
+  [
+   "tornado/util.py",
+   87,
+   "u",
+   6
+  ],
+  {
+   "PASS": {
+    "count": 375,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 125,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "187": [
+  [
+   "tornado/concurrent.py",
+   340,
+   "run_on_executor",
+   187
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "188": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "188": [
+  [
+   "tornado/concurrent.py",
+   357,
+   "run_on_executor_decorator",
+   188
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "217": [
+  [
+   "tornado/gen.py",
+   160,
+   "coroutine",
+   217
+  ],
+  {
+   "PASS": {
+    "count": 168,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 56,
+    "ids": [
+     0
+    ]
+   },
+   "218": {
+    "PASS": {
+     "count": 168,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 56,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "218": [
+  [
+   "tornado/gen.py",
+   198,
+   "_make_coroutine_wrapper",
+   218
+  ],
+  {
+   "PASS": {
+    "count": 180,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 60,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "190": [
+  [
+   "tornado/concurrent.py",
+   381,
+   "return_future",
+   190
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "18": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "18": [
+  [
+   "tornado/util.py",
+   284,
+   "__init__",
+   18
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "214": [
+  [
+   "tornado/gen.py",
+   125,
+   "engine",
+   214
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0
+    ]
+   },
+   "218": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 4,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "354": [
+  [
+   "tornado/web.py",
+   1506,
+   "asynchronous",
+   354
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 5,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "688": [
+  [
+   "tornado/stack_context.py",
+   177,
+   "__init__",
+   688
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "691": [
+  [
+   "tornado/stack_context.py",
+   188,
+   "__enter__",
+   691
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "10": [
+  [
+   "tornado/util.py",
+   201,
+   "__new__",
+   10
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "67": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "15": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1113": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "67": [
+  [
+   "tornado/ioloop.py",
+   232,
+   "configurable_base",
+   67
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "15": [
+  [
+   "tornado/util.py",
+   258,
+   "configured_class",
+   15
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "67": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "68": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "68": [
+  [
+   "tornado/ioloop.py",
+   236,
+   "configurable_default",
+   68
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1113": [
+  [
+   "tornado/platform/epoll.py",
+   25,
+   "initialize",
+   1113
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "95": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "95": [
+  [
+   "tornado/ioloop.py",
+   663,
+   "initialize",
+   95
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "69": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1037": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1039": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1040": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "97": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "69": [
+  [
+   "tornado/ioloop.py",
+   247,
+   "initialize",
+   69
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "64": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "65": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "64": [
+  [
+   "tornado/ioloop.py",
+   189,
+   "current",
+   64
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "65": [
+  [
+   "tornado/ioloop.py",
+   212,
+   "make_current",
+   65
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1037": [
+  [
+   "tornado/platform/posix.py",
+   27,
+   "set_close_exec",
+   1037
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1039": [
+  [
+   "tornado/platform/posix.py",
+   38,
+   "__init__",
+   1039
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "1038": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1037": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1038": [
+  [
+   "tornado/platform/posix.py",
+   32,
+   "_set_nonblocking",
+   1038
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1040": [
+  [
+   "tornado/platform/posix.py",
+   47,
+   "fileno",
+   1040
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "97": [
+  [
+   "tornado/ioloop.py",
+   701,
+   "add_handler",
+   97
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "93": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "696": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "93": [
+  [
+   "tornado/ioloop.py",
+   614,
+   "split_fd",
+   93
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "696": [
+  [
+   "tornado/stack_context.py",
+   253,
+   "wrap",
+   696
+  ],
+  {
+   "PASS": {
+    "count": 29,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 9,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "80": [
+  [
+   "tornado/ioloop.py",
+   400,
+   "run_sync",
+   80
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "106": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "103": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "83": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "101": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "105": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "172": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "174": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "106": [
+  [
+   "tornado/ioloop.py",
+   911,
+   "add_callback",
+   106
+  ],
+  {
+   "PASS": {
+    "count": 17,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   },
+   "696": {
+    "PASS": {
+     "count": 17,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1042": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1042": [
+  [
+   "tornado/platform/posix.py",
+   53,
+   "wake",
+   1042
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "103": [
+  [
+   "tornado/ioloop.py",
+   891,
+   "time",
+   103
+  ],
+  {
+   "PASS": {
+    "count": 21,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 11,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "83": [
+  [
+   "tornado/ioloop.py",
+   462,
+   "add_timeout",
+   83
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "104": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "103": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "21": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "104": [
+  [
+   "tornado/ioloop.py",
+   894,
+   "call_at",
+   104
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   },
+   "696": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "108": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "109": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "108": [
+  [
+   "tornado/ioloop.py",
+   952,
+   "__init__",
+   108
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "101": [
+  [
+   "tornado/ioloop.py",
+   729,
+   "start",
+   101
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "78": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1041": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "103": {
+    "PASS": {
+     "count": 18,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 8,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "91": {
+    "PASS": {
+     "count": 17,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 5,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "698": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "109": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "183": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "78": [
+  [
+   "tornado/ioloop.py",
+   360,
+   "_setup_logging",
+   78
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1041": [
+  [
+   "tornado/platform/posix.py",
+   50,
+   "write_fileno",
+   1041
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "91": [
+  [
+   "tornado/ioloop.py",
+   586,
+   "_run_callback",
+   91
+  ],
+  {
+   "PASS": {
+    "count": 17,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 5,
+    "ids": [
+     0
+    ]
+   },
+   "698": {
+    "PASS": {
+     "count": 17,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 5,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "698": [
+  [
+   "tornado/stack_context.py",
+   281,
+   "wrapped",
+   698
+  ],
+  {
+   "PASS": {
+    "count": 20,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   },
+   "695": {
+    "PASS": {
+     "count": 20,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "81": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1043": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "177": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "257": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "264": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "102": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "106": {
+    "PASS": {
+     "count": 7,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "178": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "695": [
+  [
+   "tornado/stack_context.py",
+   227,
+   "_remove_deactivated",
+   695
+  ],
+  {
+   "PASS": {
+    "count": 20,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "81": [
+  [
+   "tornado/ioloop.py",
+   424,
+   "run",
+   81
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "219": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "184": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "90": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "183": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "219": [
+  [
+   "tornado/gen.py",
+   206,
+   "wrapper",
+   219
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "168": {
+    "PASS": {
+     "count": 10,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "258": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "221": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "223": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "255": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "259": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "177": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "222": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "106": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "258": [
+  [
+   "tornado/gen.py",
+   760,
+   "sleep",
+   258
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "168": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "64": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "84": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "84": [
+  [
+   "tornado/ioloop.py",
+   496,
+   "call_later",
+   84
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "103": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "104": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "109": [
+  [
+   "tornado/ioloop.py",
+   963,
+   "__lt__",
+   109
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "221": [
+  [
+   "tornado/gen.py",
+   323,
+   "__init__",
+   221
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "176": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "176": [
+  [
+   "tornado/concurrent.py",
+   226,
+   "add_done_callback",
+   176
+  ],
+  {
+   "PASS": {
+    "count": 24,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   },
+   "224": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "195": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "106": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      1,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "223": [
+  [
+   "tornado/gen.py",
+   352,
+   "next",
+   223
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "168": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "225": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "255": [
+  [
+   "tornado/gen.py",
+   699,
+   "with_timeout",
+   255
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "168": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "194": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "64": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "83": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "176": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "194": [
+  [
+   "tornado/concurrent.py",
+   467,
+   "chain_future",
+   194
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "176": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "21": [
+  [
+   "tornado/util.py",
+   324,
+   "timedelta_to_seconds",
+   21
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "259": [
+  [
+   "tornado/gen.py",
+   805,
+   "__init__",
+   259
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "64": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "265": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "264": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "183": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "265": [
+  [
+   "tornado/gen.py",
+   918,
+   "handle_yield",
+   265
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "273": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "172": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "90": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "273": [
+  [
+   "tornado/gen.py",
+   1010,
+   "convert_yielded",
+   273
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "184": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "184": [
+  [
+   "tornado/concurrent.py",
+   321,
+   "is_future",
+   184
+  ],
+  {
+   "PASS": {
+    "count": 18,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "172": [
+  [
+   "tornado/concurrent.py",
+   193,
+   "done",
+   172
+  ],
+  {
+   "PASS": {
+    "count": 34,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "90": [
+  [
+   "tornado/ioloop.py",
+   574,
+   "add_future",
+   90
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "184": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "696": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "176": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1043": [
+  [
+   "tornado/platform/posix.py",
+   59,
+   "consume",
+   1043
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "224": [
+  [
+   "tornado/gen.py",
+   366,
+   "_done_callback",
+   224
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "172": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "225": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "183": [
+  [
+   "tornado/concurrent.py",
+   302,
+   "__del__",
+   183
+  ],
+  {
+   "PASS": {
+    "count": 11,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "257": [
+  [
+   "tornado/gen.py",
+   740,
+   "timeout_callback",
+   257
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "178": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "176": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "178": [
+  [
+   "tornado/concurrent.py",
+   248,
+   "set_exception",
+   178
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "180": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "180": [
+  [
+   "tornado/concurrent.py",
+   263,
+   "set_exc_info",
+   180
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "182": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "264": [
+  [
+   "tornado/gen.py",
+   857,
+   "run",
+   264
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "172": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "174": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "180": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "270": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "222": {
+    "PASS": {
+     "count": 10,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "223": {
+    "PASS": {
+     "count": 7,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "265": {
+    "PASS": {
+     "count": 7,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "183": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "221": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "177": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "174": [
+  [
+   "tornado/concurrent.py",
+   203,
+   "result",
+   174
+  ],
+  {
+   "PASS": {
+    "count": 20,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "173": {
+    "PASS": {
+     "count": 20,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "181": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "173": [
+  [
+   "tornado/concurrent.py",
+   197,
+   "_clear_tb_log",
+   173
+  ],
+  {
+   "PASS": {
+    "count": 38,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "270": [
+  [
+   "tornado/gen.py",
+   985,
+   "_deactivate_stack_context",
+   270
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "102": [
+  [
+   "tornado/ioloop.py",
+   886,
+   "stop",
+   102
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "1042": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "105": [
+  [
+   "tornado/ioloop.py",
+   902,
+   "remove_timeout",
+   105
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "804": [
+  [
+   "tornado/process.py",
+   315,
+   "uninitialize",
+   804
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "66": [
+  [
+   "tornado/ioloop.py",
+   228,
+   "clear_current",
+   66
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "61": [
+  [
+   "tornado/ioloop.py",
+   165,
+   "initialized",
+   61
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "96": [
+  [
+   "tornado/ioloop.py",
+   689,
+   "close",
+   96
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "1040": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "99": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1044": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "99": [
+  [
+   "tornado/ioloop.py",
+   710,
+   "remove_handler",
+   99
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "93": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1044": [
+  [
+   "tornado/platform/posix.py",
+   68,
+   "close",
+   1044
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "692": [
+  [
+   "tornado/stack_context.py",
+   195,
+   "__exit__",
+   692
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "222": [
+  [
+   "tornado/gen.py",
+   344,
+   "done",
+   222
+  ],
+  {
+   "PASS": {
+    "count": 13,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "225": [
+  [
+   "tornado/gen.py",
+   374,
+   "_return_result",
+   225
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "194": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "195": [
+  [
+   "tornado/concurrent.py",
+   473,
+   "copy",
+   195
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "172": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "179": {
+    "PASS": {
+     "count": 10,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "175": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "174": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "177": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "180": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "179": [
+  [
+   "tornado/concurrent.py",
+   255,
+   "exc_info",
+   179
+  ],
+  {
+   "PASS": {
+    "count": 10,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "173": {
+    "PASS": {
+     "count": 10,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "175": [
+  [
+   "tornado/concurrent.py",
+   215,
+   "exception",
+   175
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "173": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "181": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "181": [
+  [
+   "tornado/concurrent.py",
+   284,
+   "_check_done",
+   181
+  ],
+  {
+   "PASS": {
+    "count": 11,
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}
