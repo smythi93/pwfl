@@ -1,25 +1,5 @@
 {
- "errors": [
-  [
-   "tqdm_1",
-   [
-    "Traceback (most recent call last):\n",
-    "  File \"/home/smytzek/dw-sfl/get_events.py\", line 117, in sflkit_instrument\n    instrument(\n",
-    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
-    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/tests4py/api/default.py\", line 359, in build\n    sflkit_env(environ)\n",
-    "  File \"/home/smytzek/dw-sfl/get_events.py\", line 26, in sflkit_env\n    subprocess.check_call(\n",
-    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
-    "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', PosixPath('/home/smytzek/dw-sfl/sflkit-lib-extension')]' returned non-zero exit status 1.\n"
-   ]
-  ]
- ],
- "missing_bug": [
-  [
-   "thefuck_17",
-   [
-    "tests_shells_test_bash_py__TestBash__test_from_shell_ll_ls _alF_"
-   ]
-  ]
- ],
+ "errors": [],
+ "missing_bug": [],
  "empty_passing": []
 }
