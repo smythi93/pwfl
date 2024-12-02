@@ -1,0 +1,73 @@
+{
+ "PASS": {
+  "methods": {
+   "url_basename (196)": 0.0,
+   "unified_strdate (162)": 0.6666666666666667,
+   "sanitize_filename (142)": 1.0,
+   "replace_insane (143)": 1.0,
+   "encodeFilename (146)": 0.33333333333333337,
+   "shell_quote (185)": 0.33333333333333337,
+   "xpath_with_ns (123)": 0.6666666666666667,
+   "unescapeHTML (145)": 0.6666666666666667,
+   "orderedSet (144)": 0.6666666666666667,
+   "timeconvert (141)": 0.6666666666666667,
+   "str_to_int (190)": 0.6666666666666667,
+   "__init__ (166)": 0.22222222222222224,
+   "date_from_str (165)": 0.22222222222222224,
+   "__contains__ (168)": 0.22222222222222224,
+   "get_meta_content (138)": 0.13333333333333333,
+   "__init__ (135)": 0.13333333333333333,
+   "loads (126)": 0.13333333333333333,
+   "handle_starttag (136)": 0.13333333333333333,
+   "get_result (137)": 0.13333333333333333,
+   "smuggle_url (187)": 0.33333333333333337,
+   "unsmuggle_url (188)": 0.33333333333333337,
+   "find_xpath_attr (121)": 0.6666666666666667
+  },
+  "tests": {
+   "Pass Test (1)": 1.0,
+   "Pass Test (2)": 0.9999999999999999,
+   "Pass Test (11)": 0.9999999999999999,
+   "Pass Test (14)": 0.9999999999999999,
+   "Pass Test (3)": 1.0,
+   "Pass Test (4)": 1.0,
+   "Pass Test (5)": 1.0,
+   "Pass Test (6)": 1.0,
+   "Pass Test (7)": 1.0,
+   "Pass Test (8)": 1.0,
+   "Pass Test (9)": 1.0,
+   "Pass Test (10)": 0.9999999999999999,
+   "Pass Test (12)": 1.0,
+   "Pass Test (13)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "url_basename (196)": 1.0,
+   "unified_strdate (162)": 0.0,
+   "sanitize_filename (142)": 0.0,
+   "replace_insane (143)": 0.0,
+   "encodeFilename (146)": 0.0,
+   "shell_quote (185)": 0.0,
+   "xpath_with_ns (123)": 0.0,
+   "unescapeHTML (145)": 0.0,
+   "orderedSet (144)": 0.0,
+   "timeconvert (141)": 0.0,
+   "str_to_int (190)": 0.0,
+   "__init__ (166)": 0.0,
+   "date_from_str (165)": 0.0,
+   "__contains__ (168)": 0.0,
+   "get_meta_content (138)": 0.0,
+   "__init__ (135)": 0.0,
+   "loads (126)": 0.0,
+   "handle_starttag (136)": 0.0,
+   "get_result (137)": 0.0,
+   "smuggle_url (187)": 0.0,
+   "unsmuggle_url (188)": 0.0,
+   "find_xpath_attr (121)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

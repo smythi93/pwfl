@@ -1,0 +1,202 @@
+{
+ "youtubedl_1": {
+  "time": 0.0024857521057128906,
+  "check": "successful"
+ },
+ "youtubedl_2": {
+  "time": 0.0017066001892089844,
+  "check": "successful"
+ },
+ "youtubedl_3": {
+  "time": 0.002018451690673828,
+  "check": "successful"
+ },
+ "youtubedl_4": {
+  "time": 0.0007576942443847656,
+  "check": "successful"
+ },
+ "youtubedl_5": {
+  "time": 0.0018990039825439453,
+  "check": "successful"
+ },
+ "youtubedl_6": {
+  "time": 0.0019009113311767578,
+  "check": "successful"
+ },
+ "youtubedl_7": {
+  "time": 0.0013515949249267578,
+  "check": "successful"
+ },
+ "youtubedl_8": {
+  "time": 0.0008249282836914062,
+  "check": "successful"
+ },
+ "youtubedl_9": {
+  "time": 0.0007779598236083984,
+  "check": "successful"
+ },
+ "youtubedl_10": {
+  "time": 0.001169443130493164,
+  "check": "successful"
+ },
+ "youtubedl_11": {
+  "time": 0.0035521984100341797,
+  "check": "successful"
+ },
+ "youtubedl_12": {
+  "time": 0.0016455650329589844,
+  "check": "successful"
+ },
+ "youtubedl_13": {
+  "time": 0.002685546875,
+  "check": "successful"
+ },
+ "youtubedl_14": {
+  "time": 0.002360820770263672,
+  "check": "successful"
+ },
+ "youtubedl_15": {
+  "time": 0.0025954246520996094,
+  "check": "successful"
+ },
+ "youtubedl_16": {
+  "time": 0.002341032028198242,
+  "check": "successful"
+ },
+ "youtubedl_17": {
+  "time": 0.0025925636291503906,
+  "check": "successful"
+ },
+ "youtubedl_18": {
+  "time": 0.002043485641479492,
+  "check": "successful"
+ },
+ "youtubedl_19": {
+  "time": 0.0020384788513183594,
+  "check": "successful"
+ },
+ "youtubedl_20": {
+  "time": 0.0025777816772460938,
+  "check": "successful"
+ },
+ "youtubedl_21": {
+  "time": 0.0024805068969726562,
+  "check": "successful"
+ },
+ "youtubedl_22": {
+  "time": 0.0020475387573242188,
+  "check": "successful"
+ },
+ "youtubedl_23": {
+  "time": 0.0023932456970214844,
+  "check": "successful"
+ },
+ "youtubedl_24": {
+  "time": 0.002025127410888672,
+  "check": "successful"
+ },
+ "youtubedl_25": {
+  "time": 0.0023441314697265625,
+  "check": "successful"
+ },
+ "youtubedl_26": {
+  "time": 0.0021393299102783203,
+  "check": "successful"
+ },
+ "youtubedl_27": {
+  "time": 0.0019152164459228516,
+  "check": "successful"
+ },
+ "youtubedl_28": {
+  "time": 0.0018990039825439453,
+  "check": "successful"
+ },
+ "youtubedl_29": {
+  "time": 0.0019028186798095703,
+  "check": "successful"
+ },
+ "youtubedl_30": {
+  "time": 0.0011026859283447266,
+  "check": "successful"
+ },
+ "youtubedl_31": {
+  "time": 0.001760244369506836,
+  "check": "successful"
+ },
+ "youtubedl_32": {
+  "time": 0.0010104179382324219,
+  "check": "successful"
+ },
+ "youtubedl_33": {
+  "time": 0.0009722709655761719,
+  "check": "successful"
+ },
+ "youtubedl_34": {
+  "time": 0.000957489013671875,
+  "check": "successful"
+ },
+ "youtubedl_35": {
+  "time": 0.0009555816650390625,
+  "check": "successful"
+ },
+ "youtubedl_36": {
+  "time": 0.0010917186737060547,
+  "check": "successful"
+ },
+ "youtubedl_37": {
+  "time": 0.0003573894500732422,
+  "check": "successful"
+ },
+ "youtubedl_38": {
+  "check": "fail",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+  ]
+ },
+ "youtubedl_39": {
+  "check": "fail",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+  ]
+ },
+ "youtubedl_40": {
+  "check": "fail",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+  ]
+ },
+ "youtubedl_41": {
+  "time": 0.00033545494079589844,
+  "check": "successful"
+ },
+ "youtubedl_42": {
+  "check": "fail",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+  ]
+ },
+ "youtubedl_43": {
+  "time": 0.00033020973205566406,
+  "check": "successful"
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "PASS": {
+  "methods": {
+   "__init__ (0)": 1.0,
+   "memoize (6)": 1.0,
+   "cache (22)": 1.0,
+   "_get_shell (123)": 1.0,
+   "__setattr__ (66)": 1.0,
+   "app_alias (94)": 0.05951776462404582,
+   "__getattr__ (65)": 0.2345592176968078,
+   "app_alias (116)": 0.05951776462404582,
+   "to_shell (83)": 0.12049133381328085,
+   "from_shell (82)": 0.4068329912129269,
+   "_expand_aliases (81)": 0.4068329912129269,
+   "wrapper (7)": 0.6399818031253466,
+   "get_aliases (96)": 0.29126923126614135,
+   "_parse_alias (95)": 0.29126923126614135,
+   "get_aliases (118)": 0.2331888834104891,
+   "_parse_alias (117)": 0.2331888834104891,
+   "and_ (89)": 0.12049133381328085,
+   "get_history (87)": 0.11552368844871608,
+   "_get_history_lines (88)": 0.11552368844871608,
+   "_get_history_file_name (119)": 0.05776184422435804,
+   "_script_from_history (121)": 0.05776184422435804,
+   "_get_history_file_name (97)": 0.05776184422435804,
+   "_script_from_history (93)": 0.05776184422435804
+  },
+  "tests": {
+   "Pass Test (2)": 0.568909689422797,
+   "Pass Test (3)": 0.568909689422797,
+   "Pass Test (4)": 0.9146563002184246,
+   "Pass Test (5)": 0.6557086539217705,
+   "Pass Test (6)": 0.9147863209147623,
+   "Pass Test (7)": 0.6557086539217705,
+   "Pass Test (8)": 0.9147863209147623,
+   "Pass Test (9)": 0.568909689422797,
+   "Pass Test (10)": 0.7405672007297964,
+   "Pass Test (11)": 0.9146563002184246,
+   "Pass Test (12)": 0.7404371800334587,
+   "Pass Test (13)": 0.9147863209147623,
+   "Pass Test (14)": 0.9146563002184246,
+   "Pass Test (15)": 0.568909689422797,
+   "Pass Test (16)": 0.9146563002184246,
+   "Pass Test (17)": 1.0,
+   "Pass Test (18)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "__init__ (0)": 1.0,
+   "memoize (6)": 1.0,
+   "cache (22)": 1.0,
+   "_get_shell (123)": 1.0,
+   "__setattr__ (66)": 1.0,
+   "app_alias (94)": 0.5,
+   "__getattr__ (65)": 1.0,
+   "app_alias (116)": 0.5,
+   "to_shell (83)": 0.0,
+   "from_shell (82)": 0.0,
+   "_expand_aliases (81)": 0.0,
+   "wrapper (7)": 0.0,
+   "get_aliases (96)": 0.0,
+   "_parse_alias (95)": 0.0,
+   "get_aliases (118)": 0.0,
+   "_parse_alias (117)": 0.0,
+   "and_ (89)": 0.0,
+   "get_history (87)": 0.0,
+   "_get_history_lines (88)": 0.0,
+   "_get_history_file_name (119)": 0.0,
+   "_script_from_history (121)": 0.0,
+   "_get_history_file_name (97)": 0.0,
+   "_script_from_history (93)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0,
+   "Fail Test (1)": 1.0
+  }
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "PASS": {
+  "methods": {
+   "__init__ (0)": 1.0,
+   "memoize (6)": 1.0,
+   "cache (22)": 1.0,
+   "_get_shell (130)": 1.0,
+   "__setattr__ (68)": 1.0,
+   "__init__ (47)": 1.0,
+   "sudo_support (345)": 1.0,
+   "get_new_command (299)": 1.0,
+   "script_parts (48)": 1.0,
+   "split_command (93)": 1.0,
+   "get_closest (12)": 1.0,
+   "_get_used_executables (298)": 1.0
+  },
+  "tests": {
+   "Pass Test (6)": 1.0,
+   "Pass Test (7)": 1.0,
+   "Pass Test (8)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "__init__ (0)": 1.0,
+   "memoize (6)": 1.0,
+   "cache (22)": 1.0,
+   "_get_shell (130)": 1.0,
+   "__setattr__ (68)": 1.0,
+   "__init__ (47)": 0.0,
+   "sudo_support (345)": 0.0,
+   "get_new_command (299)": 0.0,
+   "script_parts (48)": 0.0,
+   "split_command (93)": 0.0,
+   "get_closest (12)": 0.0,
+   "_get_used_executables (298)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0,
+   "Fail Test (1)": 1.0,
+   "Fail Test (2)": 1.0,
+   "Fail Test (3)": 1.0,
+   "Fail Test (4)": 1.0,
+   "Fail Test (5)": 1.0
+  }
+ }
+}

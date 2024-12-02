@@ -1,0 +1,65 @@
+{
+ "PASS": {
+  "methods": {
+   "__init__ (0)": 1.0,
+   "memoize (9)": 1.0,
+   "cache (26)": 1.0,
+   "_get_shell_from_env (148)": 1.0,
+   "wrapper (10)": 1.0,
+   "which (11)": 1.0,
+   "for_app (23)": 1.0,
+   "__setattr__ (76)": 1.0,
+   "_get_operations (164)": 0.0,
+   "_parse_operations (163)": 0.0,
+   "__init__ (54)": 1.0,
+   "sudo_support (458)": 0.49913183386961435,
+   "get_new_command (165)": 0.0,
+   "replace_command (21)": 0.0,
+   "__repr__ (59)": 0.0,
+   "_for_app (24)": 1.0,
+   "is_app (22)": 1.0,
+   "script_parts (57)": 1.0,
+   "split_command (104)": 1.0,
+   "encode_utf8 (105)": 1.0,
+   "decode_utf8 (106)": 1.0,
+   "match (162)": 0.49913183386961435
+  },
+  "tests": {
+   "Pass Test (3)": 1.0,
+   "Pass Test (4)": 0.8854223865077246,
+   "Pass Test (5)": 0.8854223865077246,
+   "Pass Test (6)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "__init__ (0)": 1.0,
+   "memoize (9)": 1.0,
+   "cache (26)": 1.0,
+   "_get_shell_from_env (148)": 1.0,
+   "wrapper (10)": 1.0,
+   "which (11)": 1.0,
+   "for_app (23)": 1.0,
+   "__setattr__ (76)": 1.0,
+   "_get_operations (164)": 1.0,
+   "_parse_operations (163)": 1.0,
+   "__init__ (54)": 0.6349332003638697,
+   "sudo_support (458)": 0.6349332003638697,
+   "get_new_command (165)": 0.6349332003638697,
+   "replace_command (21)": 0.6349332003638697,
+   "__repr__ (59)": 0.6349332003638697,
+   "_for_app (24)": 0.0,
+   "is_app (22)": 0.0,
+   "script_parts (57)": 0.0,
+   "split_command (104)": 0.0,
+   "encode_utf8 (105)": 0.0,
+   "decode_utf8 (106)": 0.0,
+   "match (162)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 0.7666242305874277,
+   "Fail Test (1)": 1.0,
+   "Fail Test (2)": 0.9999999999999998
+  }
+ }
+}

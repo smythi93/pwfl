@@ -1,0 +1,59 @@
+{
+ "PASS": {
+  "methods": {
+   "__init__ (78)": 1.0,
+   "memoize (42)": 1.0,
+   "cache (58)": 1.0,
+   "_get_shell (111)": 1.0,
+   "__setattr__ (12)": 1.0,
+   "from_shell (93)": 0.3279030434035741,
+   "_expand_aliases (92)": 0.3279030434035741,
+   "wrapper (43)": 0.4909610763412226,
+   "_cache (61)": 0.3279030434035741,
+   "get_aliases (107)": 0.3279030434035741,
+   "to_shell (94)": 0.1703886848229412,
+   "app_alias (105)": 0.16826155401289503,
+   "__getattr__ (11)": 0.3313195869505434,
+   "and_ (100)": 0.1703886848229412,
+   "get_history (98)": 0.16305803293764842,
+   "_get_history_lines (99)": 0.16305803293764842,
+   "_get_history_file_name (108)": 0.16305803293764842,
+   "_script_from_history (104)": 0.16305803293764842
+  },
+  "tests": {
+   "Pass Test (3)": 0.5699763039629056,
+   "Pass Test (4)": 0.6566708968376854,
+   "Pass Test (5)": 0.5699763039629056,
+   "Pass Test (6)": 0.9140724211086539,
+   "Pass Test (7)": 0.9140724211086539,
+   "Pass Test (8)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "__init__ (78)": 1.0,
+   "memoize (42)": 1.0,
+   "cache (58)": 1.0,
+   "_get_shell (111)": 1.0,
+   "__setattr__ (12)": 1.0,
+   "from_shell (93)": 0.6486630911210942,
+   "_expand_aliases (92)": 0.6486630911210942,
+   "wrapper (43)": 1.0,
+   "_cache (61)": 1.0,
+   "get_aliases (107)": 1.0,
+   "to_shell (94)": 0.0,
+   "app_alias (105)": 0.0,
+   "__getattr__ (11)": 0.0,
+   "and_ (100)": 0.0,
+   "get_history (98)": 0.0,
+   "_get_history_lines (99)": 0.0,
+   "_get_history_file_name (108)": 0.0,
+   "_script_from_history (104)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0,
+   "Fail Test (1)": 0.866611161853095,
+   "Fail Test (2)": 1.0
+  }
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "PASS": {
+  "methods": {
+   "__init__ (0)": 1.0,
+   "memoize (9)": 1.0,
+   "__init__ (26)": 1.0,
+   "cache (33)": 1.0,
+   "cache_decorator (34)": 1.0,
+   "_get_shell_from_env (165)": 1.0,
+   "_get_shell_from_proc (166)": 1.0,
+   "for_app (24)": 1.0,
+   "__setattr__ (83)": 1.0,
+   "__init__ (61)": 1.0,
+   "get_new_command (428)": 0.5046495392846717,
+   "__repr__ (66)": 0.0,
+   "replace_argument (19)": 0.5046495392846717,
+   "sudo_support (543)": 0.4953504607153283,
+   "_for_app (25)": 0.4953504607153283,
+   "wrapper (10)": 0.4953504607153283,
+   "is_app (23)": 0.4953504607153283,
+   "script_parts (64)": 0.4953504607153283,
+   "split_command (112)": 0.4953504607153283,
+   "encode_utf8 (113)": 0.4953504607153283,
+   "decode_utf8 (114)": 0.4953504607153283,
+   "match (427)": 0.4953504607153283
+  },
+  "tests": {
+   "Pass Test (1)": 0.6434348398615347,
+   "Pass Test (2)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "__init__ (0)": 1.0,
+   "memoize (9)": 1.0,
+   "__init__ (26)": 1.0,
+   "cache (33)": 1.0,
+   "cache_decorator (34)": 1.0,
+   "_get_shell_from_env (165)": 1.0,
+   "_get_shell_from_proc (166)": 1.0,
+   "for_app (24)": 1.0,
+   "__setattr__ (83)": 1.0,
+   "__init__ (61)": 1.0,
+   "get_new_command (428)": 1.0,
+   "__repr__ (66)": 1.0,
+   "replace_argument (19)": 0.0,
+   "sudo_support (543)": 0.0,
+   "_for_app (25)": 0.0,
+   "wrapper (10)": 0.0,
+   "is_app (23)": 0.0,
+   "script_parts (64)": 0.0,
+   "split_command (112)": 0.0,
+   "encode_utf8 (113)": 0.0,
+   "decode_utf8 (114)": 0.0,
+   "match (427)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

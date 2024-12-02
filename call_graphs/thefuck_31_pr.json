@@ -1,0 +1,32 @@
+{
+ "PASS": {
+  "methods": {
+   "memoize (65)": 1.0,
+   "git_support (63)": 1.0,
+   "wrapper (64)": 1.0,
+   "get_new_command (189)": 0.14285714285714288,
+   "match (188)": 0.8571428571428571
+  },
+  "tests": {
+   "Pass Test (1)": 0.9999999999999999,
+   "Pass Test (2)": 0.9999999999999999,
+   "Pass Test (3)": 0.9999999999999999,
+   "Pass Test (4)": 0.9999999999999999,
+   "Pass Test (5)": 0.9999999999999999,
+   "Pass Test (6)": 1.0,
+   "Pass Test (7)": 0.9999999999999999
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "memoize (65)": 1.0,
+   "git_support (63)": 1.0,
+   "wrapper (64)": 1.0,
+   "get_new_command (189)": 1.0,
+   "match (188)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

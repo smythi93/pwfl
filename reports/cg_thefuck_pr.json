@@ -1,0 +1,134 @@
+{
+ "thefuck_1": {
+  "time": 0.0010466575622558594,
+  "check": "successful"
+ },
+ "thefuck_2": {
+  "time": 0.001268148422241211,
+  "check": "successful"
+ },
+ "thefuck_3": {
+  "time": 0.0012202262878417969,
+  "check": "successful"
+ },
+ "thefuck_4": {
+  "time": 0.0012714862823486328,
+  "check": "successful"
+ },
+ "thefuck_5": {
+  "time": 0.0007576942443847656,
+  "check": "successful"
+ },
+ "thefuck_6": {
+  "time": 0.0007193088531494141,
+  "check": "successful"
+ },
+ "thefuck_7": {
+  "time": 0.0008866786956787109,
+  "check": "successful"
+ },
+ "thefuck_8": {
+  "time": 0.0008392333984375,
+  "check": "successful"
+ },
+ "thefuck_9": {
+  "time": 0.0002758502960205078,
+  "check": "successful"
+ },
+ "thefuck_10": {
+  "time": 0.0008909702301025391,
+  "check": "successful"
+ },
+ "thefuck_11": {},
+ "thefuck_12": {
+  "time": 0.0003161430358886719,
+  "check": "successful"
+ },
+ "thefuck_13": {
+  "time": 0.00055694580078125,
+  "check": "successful"
+ },
+ "thefuck_14": {
+  "time": 0.0009276866912841797,
+  "check": "successful"
+ },
+ "thefuck_15": {
+  "time": 0.0006122589111328125,
+  "check": "successful"
+ },
+ "thefuck_16": {
+  "time": 0.0009472370147705078,
+  "check": "successful"
+ },
+ "thefuck_17": {
+  "time": 0.0011010169982910156,
+  "check": "successful"
+ },
+ "thefuck_18": {
+  "time": 0.00030493736267089844,
+  "check": "successful"
+ },
+ "thefuck_19": {
+  "time": 0.0003724098205566406,
+  "check": "successful"
+ },
+ "thefuck_20": {
+  "time": 0.0007903575897216797,
+  "check": "successful"
+ },
+ "thefuck_21": {
+  "time": 0.0006954669952392578,
+  "check": "successful"
+ },
+ "thefuck_22": {
+  "time": 0.001913309097290039,
+  "check": "successful"
+ },
+ "thefuck_23": {
+  "time": 0.0014541149139404297,
+  "check": "successful"
+ },
+ "thefuck_24": {
+  "check": "fail",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+  ]
+ },
+ "thefuck_25": {
+  "time": 0.0002930164337158203,
+  "check": "successful"
+ },
+ "thefuck_26": {
+  "time": 0.0002803802490234375,
+  "check": "successful"
+ },
+ "thefuck_27": {
+  "time": 0.0002884864807128906,
+  "check": "successful"
+ },
+ "thefuck_28": {
+  "time": 0.001226186752319336,
+  "check": "successful"
+ },
+ "thefuck_29": {
+  "time": 0.0020513534545898438,
+  "check": "successful"
+ },
+ "thefuck_30": {
+  "time": 0.0010902881622314453,
+  "check": "successful"
+ },
+ "thefuck_31": {
+  "time": 0.0002720355987548828,
+  "check": "successful"
+ },
+ "thefuck_32": {
+  "time": 0.00024056434631347656,
+  "check": "successful"
+ }
+}

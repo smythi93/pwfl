@@ -1,0 +1,34 @@
+{
+ "PASS": {
+  "methods": {
+   "memoize (63)": 1.0,
+   "eager (69)": 1.0,
+   "get_new_command (251)": 0.0,
+   "match (250)": 1.0
+  },
+  "tests": {
+   "Pass Test (4)": 1.0,
+   "Pass Test (5)": 1.0,
+   "Pass Test (6)": 1.0,
+   "Pass Test (7)": 1.0,
+   "Pass Test (8)": 1.0,
+   "Pass Test (9)": 1.0,
+   "Pass Test (10)": 1.0,
+   "Pass Test (11)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "memoize (63)": 1.0,
+   "eager (69)": 1.0,
+   "get_new_command (251)": 1.0,
+   "match (250)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0,
+   "Fail Test (1)": 1.0,
+   "Fail Test (2)": 1.0,
+   "Fail Test (3)": 1.0
+  }
+ }
+}

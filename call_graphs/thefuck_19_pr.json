@@ -1,0 +1,56 @@
+{
+ "PASS": {
+  "methods": {
+   "memoize (59)": 1.0,
+   "cache (75)": 1.0,
+   "__init__ (98)": 1.0,
+   "__setattr__ (119)": 1.0,
+   "git_support (318)": 1.0,
+   "wrapper (60)": 1.0,
+   "is_app (72)": 1.0,
+   "script_parts (99)": 1.0,
+   "split_command (55)": 1.0,
+   "_get_shell (47)": 1.0,
+   "split_command (16)": 1.0,
+   "get_new_command (182)": 0.0,
+   "replace_argument (68)": 0.0,
+   "__repr__ (101)": 0.0,
+   "match (181)": 1.0
+  },
+  "tests": {
+   "Pass Test (3)": 1.0,
+   "Pass Test (4)": 1.0,
+   "Pass Test (5)": 1.0,
+   "Pass Test (6)": 1.0,
+   "Pass Test (7)": 1.0,
+   "Pass Test (8)": 1.0,
+   "Pass Test (9)": 1.0,
+   "Pass Test (10)": 1.0,
+   "Pass Test (11)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "memoize (59)": 1.0,
+   "cache (75)": 1.0,
+   "__init__ (98)": 1.0,
+   "__setattr__ (119)": 1.0,
+   "git_support (318)": 1.0,
+   "wrapper (60)": 1.0,
+   "is_app (72)": 1.0,
+   "script_parts (99)": 1.0,
+   "split_command (55)": 1.0,
+   "_get_shell (47)": 1.0,
+   "split_command (16)": 1.0,
+   "get_new_command (182)": 1.0,
+   "replace_argument (68)": 1.0,
+   "__repr__ (101)": 1.0,
+   "match (181)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0,
+   "Fail Test (1)": 1.0,
+   "Fail Test (2)": 0.9999999999999998
+  }
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "PASS": {
+  "methods": {
+   "__init__ (0)": 1.0,
+   "memoize (9)": 1.0,
+   "__init__ (25)": 1.0,
+   "cache (31)": 1.0,
+   "cache_decorator (32)": 1.0,
+   "_get_shell_from_env (154)": 1.0,
+   "for_app (23)": 1.0,
+   "__init__ (59)": 1.0,
+   "__setattr__ (81)": 1.0,
+   "_for_app (24)": 0.595684765089879,
+   "wrapper (10)": 0.595684765089879,
+   "is_app (22)": 0.595684765089879,
+   "script_parts (62)": 0.595684765089879,
+   "split_command (109)": 0.595684765089879,
+   "encode_utf8 (110)": 0.595684765089879,
+   "decode_utf8 (111)": 0.595684765089879,
+   "match (249)": 0.39688380372370924,
+   "__repr__ (64)": 0.0,
+   "get_new_command (250)": 0.4043152349101211,
+   "replace_argument (18)": 0.4043152349101211
+  },
+  "tests": {
+   "Pass Test (1)": 1.0,
+   "Pass Test (2)": 0.6591746445216107,
+   "Pass Test (3)": 1.0,
+   "Pass Test (4)": 0.9428794292569028,
+   "Pass Test (5)": 0.6591746445216107
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "__init__ (0)": 1.0,
+   "memoize (9)": 1.0,
+   "__init__ (25)": 1.0,
+   "cache (31)": 1.0,
+   "cache_decorator (32)": 1.0,
+   "_get_shell_from_env (154)": 1.0,
+   "for_app (23)": 1.0,
+   "__init__ (59)": 1.0,
+   "__setattr__ (81)": 1.0,
+   "_for_app (24)": 1.0,
+   "wrapper (10)": 1.0,
+   "is_app (22)": 1.0,
+   "script_parts (62)": 1.0,
+   "split_command (109)": 1.0,
+   "encode_utf8 (110)": 1.0,
+   "decode_utf8 (111)": 1.0,
+   "match (249)": 1.0,
+   "__repr__ (64)": 1.0,
+   "get_new_command (250)": 0.0,
+   "replace_argument (18)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

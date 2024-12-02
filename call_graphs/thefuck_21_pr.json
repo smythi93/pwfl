@@ -1,0 +1,45 @@
+{
+ "PASS": {
+  "methods": {
+   "memoize (55)": 1.0,
+   "cache (71)": 1.0,
+   "__setattr__ (113)": 1.0,
+   "__init__ (93)": 1.0,
+   "git_support (309)": 1.0,
+   "wrapper (56)": 1.0,
+   "is_app (68)": 1.0,
+   "match (280)": 0.5027210611775897,
+   "__repr__ (95)": 0.0,
+   "get_new_command (281)": 0.49727893882241025,
+   "get_closest (61)": 0.49727893882241025,
+   "replace_argument (64)": 0.33095178599068015
+  },
+  "tests": {
+   "Pass Test (1)": 0.8101418715482168,
+   "Pass Test (2)": 1.0,
+   "Pass Test (3)": 0.9046298819657833,
+   "Pass Test (4)": 1.0,
+   "Pass Test (5)": 0.8101418715482168,
+   "Pass Test (6)": 0.8101418715482168
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "memoize (55)": 1.0,
+   "cache (71)": 1.0,
+   "__setattr__ (113)": 1.0,
+   "__init__ (93)": 1.0,
+   "git_support (309)": 1.0,
+   "wrapper (56)": 1.0,
+   "is_app (68)": 1.0,
+   "match (280)": 1.0,
+   "__repr__ (95)": 1.0,
+   "get_new_command (281)": 0.0,
+   "get_closest (61)": 0.0,
+   "replace_argument (64)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

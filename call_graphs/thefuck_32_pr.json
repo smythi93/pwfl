@@ -1,0 +1,22 @@
+{
+ "PASS": {
+  "methods": {
+   "memoize (56)": 1.0,
+   "match (187)": 0.0,
+   "get_new_command (188)": 1.0
+  },
+  "tests": {
+   "Pass Test (1)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "memoize (56)": 1.0,
+   "match (187)": 1.0,
+   "get_new_command (188)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

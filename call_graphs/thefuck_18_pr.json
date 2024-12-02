@@ -1,0 +1,41 @@
+{
+ "PASS": {
+  "methods": {
+   "memoize (61)": 1.0,
+   "cache (77)": 1.0,
+   "__setattr__ (120)": 1.0,
+   "__init__ (99)": 1.0,
+   "match (145)": 0.7499999999999999,
+   "__repr__ (102)": 0.0,
+   "get_new_command (146)": 0.25
+  },
+  "tests": {
+   "Pass Test (1)": 1.0,
+   "Pass Test (2)": 1.0,
+   "Pass Test (3)": 1.0,
+   "Pass Test (4)": 1.0,
+   "Pass Test (5)": 1.0,
+   "Pass Test (6)": 1.0,
+   "Pass Test (7)": 1.0,
+   "Pass Test (8)": 1.0,
+   "Pass Test (9)": 1.0,
+   "Pass Test (10)": 1.0,
+   "Pass Test (11)": 1.0,
+   "Pass Test (12)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "memoize (61)": 1.0,
+   "cache (77)": 1.0,
+   "__setattr__ (120)": 1.0,
+   "__init__ (99)": 1.0,
+   "match (145)": 1.0,
+   "__repr__ (102)": 1.0,
+   "get_new_command (146)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

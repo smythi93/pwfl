@@ -1,0 +1,37 @@
+{
+ "PASS": {
+  "methods": {
+   "memoize (63)": 1.0,
+   "eager (69)": 1.0,
+   "sudo_support (59)": 1.0,
+   "wrapper (60)": 1.0,
+   "get_new_command (195)": 0.1111111111111111,
+   "match (194)": 0.8888888888888888
+  },
+  "tests": {
+   "Pass Test (2)": 1.0,
+   "Pass Test (3)": 1.0,
+   "Pass Test (4)": 1.0,
+   "Pass Test (5)": 1.0,
+   "Pass Test (6)": 1.0,
+   "Pass Test (7)": 1.0,
+   "Pass Test (8)": 1.0,
+   "Pass Test (9)": 1.0,
+   "Pass Test (10)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "memoize (63)": 1.0,
+   "eager (69)": 1.0,
+   "sudo_support (59)": 1.0,
+   "wrapper (60)": 1.0,
+   "get_new_command (195)": 1.0,
+   "match (194)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0,
+   "Fail Test (1)": 1.0
+  }
+ }
+}
