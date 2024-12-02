@@ -69,26 +69,12 @@
   "check": "successful"
  },
  "black_19": {
-  "check": "fail",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 188, in main\n    try:\n         \n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 152, in build_call_graph\n    with event_file:\n            ^^^^^^^^^\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sflkitlib/events/event.py\", line 264, in handle\n    model.handle_function_exit_event(self)\n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 131, in handle_function_exit_event\n    if self.call_stack:\n",
-   "IndexError: pop from empty list\n"
-  ]
+  "check": "successful",
+  "time": 105.6529049873352
  },
  "black_20": {
-  "check": "fail",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 188, in main\n    try:\n         \n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 152, in build_call_graph\n    with event_file:\n            ^^^^^^^^^\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sflkitlib/events/event.py\", line 316, in handle\n    model.handle_function_error_event(self)\n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 135, in handle_function_error_event\n    event: FunctionErrorEvent\n    ^^^^^^^^^^^^^^^^^^^^^\n",
-   "IndexError: pop from empty list\n"
-  ]
+  "check": "successful",
+  "time": 104.92953300476074
  },
  "black_21": {},
  "black_22": {
