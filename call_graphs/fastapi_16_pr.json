@@ -1,0 +1,63 @@
+{
+ "PASS": {
+  "methods": {
+   "__init__ (42)": 1.0,
+   "__init__ (41)": 1.0,
+   "jsonable_encoder (16)": 1.0,
+   "__init__ (18)": 0.2769071749797292,
+   "setup (20)": 0.2769071749797292,
+   "get (25)": 0.2769071749797292,
+   "get (8)": 0.2769071749797292,
+   "api_route (5)": 0.2769071749797292,
+   "decorator (6)": 0.2769071749797292,
+   "add_api_route (4)": 0.2769071749797292,
+   "__init__ (3)": 0.2769071749797292,
+   "get_dependant (50)": 0.2769071749797292,
+   "get_path_param_names (35)": 0.2769071749797292,
+   "__init__ (47)": 0.2769071749797292,
+   "get_body_field (57)": 0.2769071749797292,
+   "get_flat_dependant (49)": 0.2769071749797292,
+   "get_app (1)": 0.2769071749797292,
+   "app (2)": 0.2769071749797292,
+   "solve_dependencies (54)": 0.2769071749797292,
+   "request_params_to_args (55)": 0.2769071749797292,
+   "serialize_response (0)": 0.2769071749797292
+  },
+  "tests": {
+   "Pass Test (1)": 0.9999999999999998,
+   "Pass Test (2)": 0.1865223429321061,
+   "Pass Test (3)": 0.1865223429321061,
+   "Pass Test (4)": 0.1865223429321061,
+   "Pass Test (5)": 0.1865223429321061,
+   "Pass Test (6)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "__init__ (42)": 1.0,
+   "__init__ (41)": 1.0,
+   "jsonable_encoder (16)": 1.0,
+   "__init__ (18)": 0.0,
+   "setup (20)": 0.0,
+   "get (25)": 0.0,
+   "get (8)": 0.0,
+   "api_route (5)": 0.0,
+   "decorator (6)": 0.0,
+   "add_api_route (4)": 0.0,
+   "__init__ (3)": 0.0,
+   "get_dependant (50)": 0.0,
+   "get_path_param_names (35)": 0.0,
+   "__init__ (47)": 0.0,
+   "get_body_field (57)": 0.0,
+   "get_flat_dependant (49)": 0.0,
+   "get_app (1)": 0.0,
+   "app (2)": 0.0,
+   "solve_dependencies (54)": 0.0,
+   "request_params_to_args (55)": 0.0,
+   "serialize_response (0)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

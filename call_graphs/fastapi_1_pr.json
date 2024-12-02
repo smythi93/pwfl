@@ -1,0 +1,36 @@
+{
+ "PASS": {
+  "methods": {
+   "Form (81)": 1.0,
+   "__init__ (72)": 1.0,
+   "__init__ (71)": 1.0,
+   "generate_encoders_by_class_tuples (26)": 1.0,
+   "jsonable_encoder (27)": 0.9074344008475654
+  },
+  "tests": {
+   "Pass Test (1)": 1.0,
+   "Pass Test (2)": 1.0,
+   "Pass Test (3)": 1.0,
+   "Pass Test (4)": 1.0,
+   "Pass Test (5)": 1.0,
+   "Pass Test (6)": 1.0,
+   "Pass Test (7)": 0.8160633942419823,
+   "Pass Test (8)": 1.0,
+   "Pass Test (9)": 1.0,
+   "Pass Test (10)": 1.0,
+   "Pass Test (11)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "Form (81)": 1.0,
+   "__init__ (72)": 1.0,
+   "__init__ (71)": 1.0,
+   "generate_encoders_by_class_tuples (26)": 1.0,
+   "jsonable_encoder (27)": 1.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

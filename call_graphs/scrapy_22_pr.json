@@ -1,0 +1,81 @@
+{
+ "PASS": {
+  "methods": {
+   "deprecated (228)": 1.0,
+   "deco (229)": 1.0,
+   "obsolete_setter (459)": 1.0,
+   "get_func_args (350)": 1.0,
+   "memoizemethod_noargs (347)": 1.0,
+   "create_deprecated_class (236)": 1.0,
+   "__new__ (237)": 1.0,
+   "__init__ (238)": 1.0,
+   "__init__ (610)": 1.0,
+   "__new__ (57)": 1.0,
+   "__new__ (300)": 1.0,
+   "__len__ (64)": 1.0,
+   "__getattr__ (62)": 1.0,
+   "__init__ (58)": 1.0,
+   "__setattr__ (63)": 1.0,
+   "__setitem__ (60)": 1.0,
+   "__init__ (16)": 1.0,
+   "_configure (4)": 1.0,
+   "start_exporting (17)": 0.6234632614857142,
+   "export_item (18)": 0.6234632614857142,
+   "_get_serialized_fields (9)": 0.7488860879711593,
+   "serialize_field (6)": 1.0,
+   "_export_xml_field (20)": 0.6234632614857142,
+   "is_listlike (338)": 0.6234632614857142,
+   "_xg_characters (21)": 0.6234632614857142,
+   "keys (66)": 0.6234632614857142,
+   "__getitem__ (59)": 1.0,
+   "finish_exporting (19)": 0.6234632614857142,
+   "__iter__ (65)": 0.24929652837205843
+  },
+  "tests": {
+   "Pass Test (1)": 0.9660902489229837,
+   "Pass Test (2)": 0.7286374629015889,
+   "Pass Test (3)": 0.6946825298024767,
+   "Pass Test (4)": 0.9660902489229837,
+   "Pass Test (5)": 1.0,
+   "Pass Test (6)": 0.9660902489229837,
+   "Pass Test (7)": 0.6946825298024767,
+   "Pass Test (8)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "deprecated (228)": 1.0,
+   "deco (229)": 1.0,
+   "obsolete_setter (459)": 1.0,
+   "get_func_args (350)": 1.0,
+   "memoizemethod_noargs (347)": 1.0,
+   "create_deprecated_class (236)": 1.0,
+   "__new__ (237)": 1.0,
+   "__init__ (238)": 1.0,
+   "__init__ (610)": 1.0,
+   "__new__ (57)": 1.0,
+   "__new__ (300)": 1.0,
+   "__len__ (64)": 1.0,
+   "__getattr__ (62)": 1.0,
+   "__init__ (58)": 1.0,
+   "__setattr__ (63)": 1.0,
+   "__setitem__ (60)": 1.0,
+   "__init__ (16)": 1.0,
+   "_configure (4)": 1.0,
+   "start_exporting (17)": 1.0,
+   "export_item (18)": 1.0,
+   "_get_serialized_fields (9)": 1.0,
+   "serialize_field (6)": 1.0,
+   "_export_xml_field (20)": 1.0,
+   "is_listlike (338)": 1.0,
+   "_xg_characters (21)": 1.0,
+   "keys (66)": 0.0,
+   "__getitem__ (59)": 0.0,
+   "finish_exporting (19)": 0.0,
+   "__iter__ (65)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "PASS": {
+  "methods": {
+   "deprecated (230)": 1.0,
+   "deco (231)": 1.0,
+   "obsolete_setter (447)": 1.0,
+   "get_func_args (342)": 1.0,
+   "memoizemethod_noargs (339)": 1.0,
+   "create_deprecated_class (238)": 1.0,
+   "__new__ (239)": 1.0,
+   "__init__ (240)": 1.0,
+   "__init__ (607)": 1.0,
+   "__new__ (55)": 1.0,
+   "execute (246)": 0.0,
+   "__init__ (248)": 0.0,
+   "errReceived (250)": 0.0,
+   "processEnded (251)": 0.0,
+   "_process_finished (247)": 0.0
+  },
+  "tests": {
+   "Pass Test (1)": 1.0,
+   "Pass Test (2)": 1.0,
+   "Pass Test (3)": 1.0,
+   "Pass Test (4)": 1.0,
+   "Pass Test (5)": 0.9999999999999998,
+   "Pass Test (6)": 0.9999999999999998,
+   "Pass Test (7)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "deprecated (230)": 1.0,
+   "deco (231)": 1.0,
+   "obsolete_setter (447)": 1.0,
+   "get_func_args (342)": 1.0,
+   "memoizemethod_noargs (339)": 1.0,
+   "create_deprecated_class (238)": 1.0,
+   "__new__ (239)": 1.0,
+   "__init__ (240)": 1.0,
+   "__init__ (607)": 1.0,
+   "__new__ (55)": 1.0,
+   "execute (246)": 1.0,
+   "__init__ (248)": 1.0,
+   "errReceived (250)": 1.0,
+   "processEnded (251)": 1.0,
+   "_process_finished (247)": 1.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

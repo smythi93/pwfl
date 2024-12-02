@@ -1,0 +1,75 @@
+{
+ "PASS": {
+  "methods": {
+   "deprecated (231)": 0.9999999999999998,
+   "deco (232)": 0.9999999999999998,
+   "obsolete_setter (470)": 0.9999999999999998,
+   "get_func_args (356)": 0.9999999999999998,
+   "memoizemethod_noargs (352)": 0.9999999999999998,
+   "create_deprecated_class (239)": 0.9999999999999998,
+   "__new__ (240)": 0.9999999999999998,
+   "__init__ (241)": 0.9999999999999998,
+   "__init__ (623)": 0.9999999999999998,
+   "__new__ (58)": 0.9999999999999998,
+   "canonicalize_url (275)": 0.9999999999999998,
+   "parse_url (277)": 0.9999999999999998,
+   "to_unicode (347)": 0.9999999999999998,
+   "_safe_ParseResult (274)": 0.9999999999999998,
+   "to_native_str (349)": 0.9999999999999998,
+   "to_bytes (348)": 0.9999999999999998,
+   "parse_qsl_to_bytes (278)": 1.0,
+   "_unquotepath (276)": 1.0
+  },
+  "tests": {
+   "Pass Test (1)": 1.0,
+   "Pass Test (2)": 1.0,
+   "Pass Test (3)": 1.0,
+   "Pass Test (4)": 1.0,
+   "Pass Test (5)": 1.0,
+   "Pass Test (6)": 1.0,
+   "Pass Test (7)": 1.0,
+   "Pass Test (8)": 1.0,
+   "Pass Test (9)": 1.0,
+   "Pass Test (10)": 1.0,
+   "Pass Test (11)": 1.0,
+   "Pass Test (12)": 1.0,
+   "Pass Test (13)": 1.0,
+   "Pass Test (14)": 1.0,
+   "Pass Test (15)": 1.0,
+   "Pass Test (16)": 1.0,
+   "Pass Test (17)": 1.0,
+   "Pass Test (18)": 1.0,
+   "Pass Test (19)": 1.0,
+   "Pass Test (20)": 1.0,
+   "Pass Test (21)": 1.0,
+   "Pass Test (22)": 1.0,
+   "Pass Test (23)": 1.0,
+   "Pass Test (24)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "deprecated (231)": 1.0,
+   "deco (232)": 1.0,
+   "obsolete_setter (470)": 1.0,
+   "get_func_args (356)": 1.0,
+   "memoizemethod_noargs (352)": 1.0,
+   "create_deprecated_class (239)": 1.0,
+   "__new__ (240)": 1.0,
+   "__init__ (241)": 1.0,
+   "__init__ (623)": 1.0,
+   "__new__ (58)": 1.0,
+   "canonicalize_url (275)": 1.0,
+   "parse_url (277)": 1.0,
+   "to_unicode (347)": 1.0,
+   "_safe_ParseResult (274)": 1.0,
+   "to_native_str (349)": 1.0,
+   "to_bytes (348)": 0.0,
+   "parse_qsl_to_bytes (278)": 0.0,
+   "_unquotepath (276)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

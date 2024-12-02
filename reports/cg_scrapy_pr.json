@@ -1,0 +1,142 @@
+{
+ "scrapy_1": {
+  "time": 0.0020580291748046875,
+  "check": "successful"
+ },
+ "scrapy_2": {
+  "time": 0.0028853416442871094,
+  "check": "successful"
+ },
+ "scrapy_3": {
+  "time": 0.014722585678100586,
+  "check": "successful"
+ },
+ "scrapy_4": {
+  "time": 0.0018489360809326172,
+  "check": "successful"
+ },
+ "scrapy_5": {
+  "time": 0.002480030059814453,
+  "check": "successful"
+ },
+ "scrapy_6": {},
+ "scrapy_7": {
+  "time": 0.008852005004882812,
+  "check": "successful"
+ },
+ "scrapy_8": {
+  "time": 0.0019199848175048828,
+  "check": "successful"
+ },
+ "scrapy_9": {},
+ "scrapy_10": {
+  "time": 0.01014089584350586,
+  "check": "successful"
+ },
+ "scrapy_11": {},
+ "scrapy_12": {},
+ "scrapy_13": {
+  "time": 0.003856182098388672,
+  "check": "successful"
+ },
+ "scrapy_14": {},
+ "scrapy_15": {
+  "time": 0.001636505126953125,
+  "check": "successful"
+ },
+ "scrapy_16": {
+  "time": 0.001768350601196289,
+  "check": "successful"
+ },
+ "scrapy_17": {
+  "time": 0.0020492076873779297,
+  "check": "successful"
+ },
+ "scrapy_18": {
+  "time": 0.002703428268432617,
+  "check": "successful"
+ },
+ "scrapy_19": {
+  "time": 0.0032291412353515625,
+  "check": "successful"
+ },
+ "scrapy_20": {
+  "check": "fail",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 222, in main\n    x_m_passing, x_t_passing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 157, in get_page_rank\n    max_m = np.max(y_m)\n            ^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+  ]
+ },
+ "scrapy_21": {
+  "time": 0.0031070709228515625,
+  "check": "successful"
+ },
+ "scrapy_22": {
+  "time": 0.0020024776458740234,
+  "check": "successful"
+ },
+ "scrapy_23": {
+  "time": 0.0017743110656738281,
+  "check": "successful"
+ },
+ "scrapy_24": {},
+ "scrapy_25": {},
+ "scrapy_26": {
+  "time": 0.003329038619995117,
+  "check": "successful"
+ },
+ "scrapy_27": {
+  "time": 0.0018188953399658203,
+  "check": "successful"
+ },
+ "scrapy_28": {},
+ "scrapy_29": {
+  "time": 0.001905202865600586,
+  "check": "successful"
+ },
+ "scrapy_30": {
+  "time": 0.0008072853088378906,
+  "check": "successful"
+ },
+ "scrapy_31": {
+  "time": 0.0024454593658447266,
+  "check": "successful"
+ },
+ "scrapy_32": {
+  "time": 0.0034377574920654297,
+  "check": "successful"
+ },
+ "scrapy_33": {
+  "time": 0.009250640869140625,
+  "check": "successful"
+ },
+ "scrapy_34": {
+  "time": 0.0023314952850341797,
+  "check": "successful"
+ },
+ "scrapy_35": {
+  "time": 0.003241300582885742,
+  "check": "successful"
+ },
+ "scrapy_36": {
+  "time": 0.002206087112426758,
+  "check": "successful"
+ },
+ "scrapy_37": {
+  "time": 0.0038754940032958984,
+  "check": "successful"
+ },
+ "scrapy_38": {},
+ "scrapy_39": {
+  "time": 0.0017800331115722656,
+  "check": "successful"
+ },
+ "scrapy_40": {
+  "time": 0.006242990493774414,
+  "check": "successful"
+ }
+}

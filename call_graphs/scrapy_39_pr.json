@@ -1,0 +1,71 @@
+{
+ "PASS": {
+  "methods": {
+   "deprecated (231)": 1.0,
+   "deco (232)": 1.0,
+   "obsolete_setter (471)": 1.0,
+   "get_func_args (354)": 1.0,
+   "memoizemethod_noargs (350)": 1.0,
+   "create_deprecated_class (239)": 1.0,
+   "__new__ (240)": 1.0,
+   "__init__ (241)": 1.0,
+   "__init__ (624)": 1.0,
+   "__new__ (58)": 1.0,
+   "__new__ (302)": 0.4970218914922509,
+   "__init__ (611)": 0.4970218914922509,
+   "start_requests (617)": 0.0,
+   "make_requests_from_url (618)": 0.0,
+   "__init__ (1159)": 0.0,
+   "_set_url (1162)": 0.0,
+   "encoding (1165)": 0.0,
+   "escape_ajax (275)": 0.0,
+   "_set_body (1164)": 0.0,
+   "__init__ (473)": 0.0,
+   "__init__ (387)": 0.0,
+   "_clspath (245)": 0.25158187673945825,
+   "__subclasscheck__ (243)": 0.7484181232605418,
+   "__instancecheck__ (242)": 0.4970218914922509,
+   "__init__ (600)": 0.24794515822131882,
+   "_compile_rules (607)": 0.24794515822131882
+  },
+  "tests": {
+   "Pass Test (1)": 0.6975838588628099,
+   "Pass Test (2)": 0.6970691042348379,
+   "Pass Test (3)": 0.8789933353630077,
+   "Pass Test (4)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "deprecated (231)": 1.0,
+   "deco (232)": 1.0,
+   "obsolete_setter (471)": 1.0,
+   "get_func_args (354)": 1.0,
+   "memoizemethod_noargs (350)": 1.0,
+   "create_deprecated_class (239)": 1.0,
+   "__new__ (240)": 1.0,
+   "__init__ (241)": 1.0,
+   "__init__ (624)": 1.0,
+   "__new__ (58)": 1.0,
+   "__new__ (302)": 1.0,
+   "__init__ (611)": 1.0,
+   "start_requests (617)": 1.0,
+   "make_requests_from_url (618)": 1.0,
+   "__init__ (1159)": 1.0,
+   "_set_url (1162)": 1.0,
+   "encoding (1165)": 1.0,
+   "escape_ajax (275)": 1.0,
+   "_set_body (1164)": 1.0,
+   "__init__ (473)": 1.0,
+   "__init__ (387)": 1.0,
+   "_clspath (245)": 0.0,
+   "__subclasscheck__ (243)": 0.0,
+   "__instancecheck__ (242)": 0.0,
+   "__init__ (600)": 0.0,
+   "_compile_rules (607)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}
