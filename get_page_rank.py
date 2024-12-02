@@ -1,6 +1,8 @@
 import argparse
 import json
 import os
+import time
+import traceback
 
 import numpy as np
 import tests4py.api as t4p
@@ -170,12 +172,29 @@ def main(project_name, bug_id):
     cg_dir = "call_graphs"
     os.makedirs(cg_dir, exist_ok=True)
 
+    report_dir = "reports"
+    os.makedirs(report_dir, exist_ok=True)
+    report_file = os.path.join(report_dir, f"cg_{project_name}_build.json")
+    if os.path.exists(report_file):
+        with open(report_file, "r") as f:
+            report = json.load(f)
+    else:
+        report = dict()
+
     for project in t4p.get_projects(project_name, bug_id):
         identifier = project.get_identifier()
+        if identifier not in report:
+            report[identifier] = dict()
         print(identifier)
+        pr_file = os.path.join(cg_dir, f"{identifier}_pr.json")
         if (
             project.test_status_buggy != TestStatus.FAILING
             or project.test_status_fixed != TestStatus.PASSING
+            or (
+                "check" in report[identifier]
+                and report[identifier]["check"] == "successful"
+                and os.path.exists(pr_file)
+            )
         ):
             continue
         cg_file = os.path.join(cg_dir, f"{identifier}.json")
@@ -183,41 +202,61 @@ def main(project_name, bug_id):
             continue
         with open(cg_file, "r") as f:
             call_graph_data = json.load(f)
-        (
-            p_mm,
-            p_tm_passing,
-            p_mt_passing,
-            p_tt_passing,
-            p_tm_failing,
-            p_mt_failing,
-            p_tt_failing,
-            v_m,
-            v_t_passing,
-            v_t_failing,
-            entity_index,
-            test_index_passing,
-            test_index_failing,
-        ) = build_transition_matrix(call_graph_data)
-        x_m_passing, x_t_passing = get_page_rank(
-            p_mm, p_tm_passing, p_mt_passing, p_tt_passing, v_m, v_t_passing
-        )
-        x_m_failing, x_t_failing = get_page_rank(
-            p_mm, p_tm_failing, p_mt_failing, p_tt_failing, v_m, v_t_failing
-        )
+        try:
+            start = time.time()
+            (
+                p_mm,
+                p_tm_passing,
+                p_mt_passing,
+                p_tt_passing,
+                p_tm_failing,
+                p_mt_failing,
+                p_tt_failing,
+                v_m,
+                v_t_passing,
+                v_t_failing,
+                entity_index,
+                test_index_passing,
+                test_index_failing,
+            ) = build_transition_matrix(call_graph_data)
+            x_m_passing, x_t_passing = get_page_rank(
+                p_mm, p_tm_passing, p_mt_passing, p_tt_passing, v_m, v_t_passing
+            )
+            x_m_failing, x_t_failing = get_page_rank(
+                p_mm, p_tm_failing, p_mt_failing, p_tt_failing, v_m, v_t_failing
+            )
+            report[identifier]["time"] = time.time() - start
+        except Exception as e:
+            report[identifier]["check"] = "fail"
+            report[identifier]["error"] = traceback.format_exception(e)
+            continue
+        else:
+            report[identifier]["check"] = "successful"
+            if "error" in report[identifier]:
+                del report[identifier]["error"]
         page_rank_results = {
-            "PASS": dict(),
-            "FAIL": dict(),
+            "PASS": {
+                "methods": dict(),
+                "tests": dict(),
+            },
+            "FAIL": {
+                "methods": dict(),
+                "tests": dict(),
+            },
         }
         for entity, idx in entity_index.items():
-            page_rank_results["PASS"][entity] = x_m_passing[idx]
-            page_rank_results["FAIL"][entity] = x_m_failing[idx]
+            page_rank_results["PASS"]["methods"][entity] = x_m_passing[idx]
+            page_rank_results["FAIL"]["methods"][entity] = x_m_failing[idx]
         for test, idx in test_index_passing.items():
-            page_rank_results["PASS"][test] = x_t_passing[idx]
+            page_rank_results["PASS"]["tests"][test] = x_t_passing[idx]
         for test, idx in test_index_failing.items():
-            page_rank_results["FAIL"][test] = x_t_failing[idx]
+            page_rank_results["FAIL"]["tests"][test] = x_t_failing[idx]
 
-        with open(os.path.join(cg_dir, f"{identifier}_page_rank.json"), "w") as f:
+        with open(pr_file, "w") as f:
             json.dump(page_rank_results, f, indent=1)
+
+    with open(report_file, "w") as f:
+        json.dump(report, f, indent=1)
 
 
 if __name__ == "__main__":
