@@ -1,0 +1,36 @@
+{
+ "PASS": {
+  "methods": {
+   "__init__ (548)": 0.41666666666666663,
+   "__init__ (31)": 0.41666666666666663,
+   "join_path (527)": 0.0,
+   "_unquote (540)": 0.0,
+   "_parse_clixml (523)": 1.0,
+   "quote (544)": 0.41666666666666663
+  },
+  "tests": {
+   "Pass Test (2)": 1.0,
+   "Pass Test (4)": 1.0,
+   "Pass Test (6)": 1.0,
+   "Pass Test (8)": 1.0,
+   "Pass Test (9)": 1.0,
+   "Pass Test (1)": 1.0,
+   "Pass Test (3)": 1.0,
+   "Pass Test (5)": 1.0,
+   "Pass Test (7)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "__init__ (548)": 1.0,
+   "__init__ (31)": 1.0,
+   "join_path (527)": 1.0,
+   "_unquote (540)": 1.0,
+   "_parse_clixml (523)": 0.0,
+   "quote (544)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

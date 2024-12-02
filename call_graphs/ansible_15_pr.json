@@ -1,0 +1,58 @@
+{
+ "PASS": {
+  "methods": {
+   "main (5017)": 1.0,
+   "check_transport (5004)": 1.0,
+   "map_params_to_obj (5014)": 1.0,
+   "validate_vrf (5008)": 0.9290096538992251,
+   "map_config_to_obj (5013)": 0.8585313584021116,
+   "parse_state (5012)": 0.8585313584021116,
+   "map_obj_to_commands (5009)": 0.8585313584021116,
+   "needs_update (5010)": 0.8585313584021116,
+   "add (5011)": 0.7921377371427205,
+   "collect_facts (5016)": 0.7924645995289342,
+   "validate_https_port (5006)": 0.06577379900279427,
+   "validate_http_port (5005)": 0.1370010965872393,
+   "validate_local_http_port (5007)": 0.06577379900279427,
+   "verify_state (5015)": 0.06606675887317727
+  },
+  "tests": {
+   "Pass Test (1)": 0.9964104106994076,
+   "Pass Test (2)": 1.0,
+   "Pass Test (3)": 0.9098253381639795,
+   "Pass Test (4)": 0.9098253381639795,
+   "Pass Test (5)": 0.38824692797750543,
+   "Pass Test (6)": 0.9964104106994076,
+   "Pass Test (7)": 0.9098253381639795,
+   "Pass Test (8)": 0.3910676839625676,
+   "Pass Test (9)": 0.9098253381639795,
+   "Pass Test (10)": 0.9098253381639795,
+   "Pass Test (11)": 0.8229273770917407,
+   "Pass Test (12)": 0.9098622488320594,
+   "Pass Test (13)": 0.9098253381639796,
+   "Pass Test (14)": 0.9098253381639796,
+   "Pass Test (15)": 0.9098253381639796
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "main (5017)": 1.0,
+   "check_transport (5004)": 1.0,
+   "map_params_to_obj (5014)": 1.0,
+   "validate_vrf (5008)": 1.0,
+   "map_config_to_obj (5013)": 1.0,
+   "parse_state (5012)": 1.0,
+   "map_obj_to_commands (5009)": 1.0,
+   "needs_update (5010)": 1.0,
+   "add (5011)": 1.0,
+   "collect_facts (5016)": 1.0,
+   "validate_https_port (5006)": 0.0,
+   "validate_http_port (5005)": 0.0,
+   "validate_local_http_port (5007)": 0.0,
+   "verify_state (5015)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}
