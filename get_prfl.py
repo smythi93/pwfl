@@ -4,14 +4,13 @@ import os
 import time
 from pathlib import Path
 
-import numpy as np
 import tests4py.api as t4p
 from sflkit import Analyzer
 from sflkit.analysis.analysis_type import AnalysisType
 from sflkit.analysis.spectra import Spectrum, Line
-from sflkit.weights import TimeAnalyzer
 from sflkit.evaluation import Rank, Scenario
 from sflkit.language.language import Language
+from sflkit.weights import TimeAnalyzer
 from tests4py.projects import TestStatus
 
 from get_analysis import distances
@@ -26,7 +25,9 @@ def get_lines_map(project):
     lines_map = dict()
     for function_id in lines:
         details, function_lines = lines[function_id]
+        details = tuple(details)
         for line in function_lines:
+            line = tuple(line)
             lines_map[line] = details
     return lines_map
 
