@@ -1,15 +1,8 @@
 {
  "tornado_1": {
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph_events.py\", line 99, in sflkit_instrument\n    instrument(\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
-   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
-  ],
-  "check": "fail"
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
  },
  "tornado_2": {
   "build": "successful",
