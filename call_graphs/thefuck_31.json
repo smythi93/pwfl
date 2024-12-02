@@ -1,0 +1,169 @@
+{
+ "65": [
+  [
+   "thefuck/utils.py",
+   101,
+   "memoize",
+   65
+  ],
+  {
+   "PASS": {
+    "count": 21,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "63": [
+  [
+   "thefuck/utils.py",
+   77,
+   "git_support",
+   63
+  ],
+  {
+   "PASS": {
+    "count": 14,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "64": [
+  [
+   "thefuck/utils.py",
+   80,
+   "wrapper",
+   64
+  ],
+  {
+   "PASS": {
+    "count": 7,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "189": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "188": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "189": [
+  [
+   "thefuck/rules/git_diff_staged.py",
+   12,
+   "get_new_command",
+   189
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "188": [
+  [
+   "thefuck/rules/git_diff_staged.py",
+   5,
+   "match",
+   188
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

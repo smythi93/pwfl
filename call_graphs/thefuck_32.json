@@ -1,0 +1,67 @@
+{
+ "56": [
+  [
+   "thefuck/utils.py",
+   68,
+   "memoize",
+   56
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "187": [
+  [
+   "thefuck/rules/ls_lah.py",
+   1,
+   "match",
+   187
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 5,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "188": [
+  [
+   "thefuck/rules/ls_lah.py",
+   5,
+   "get_new_command",
+   188
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

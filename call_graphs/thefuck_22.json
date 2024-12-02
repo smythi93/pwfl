@@ -1,0 +1,480 @@
+{
+ "52": [
+  [
+   "thefuck/utils.py",
+   24,
+   "memoize",
+   52
+  ],
+  {
+   "PASS": {
+    "count": 18,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "94": [
+  [
+   "thefuck/types.py",
+   62,
+   "__init__",
+   94
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "95": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "95": [
+  [
+   "thefuck/types.py",
+   68,
+   "_realise_first",
+   95
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "87": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "101": [
+  [
+   "thefuck/types.py",
+   104,
+   "__iter__",
+   101
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "97": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "97": [
+  [
+   "thefuck/types.py",
+   82,
+   "_realise",
+   97
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "96": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "90": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "77": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "96": [
+  [
+   "thefuck/types.py",
+   74,
+   "_remove_duplicates",
+   96
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "87": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "88": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "89": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "91": [
+  [
+   "thefuck/types.py",
+   36,
+   "__contains__",
+   91
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "87": [
+  [
+   "thefuck/types.py",
+   12,
+   "__init__",
+   87
+  ],
+  {
+   "PASS": {
+    "count": 18,
+    "ids": [
+     2,
+     3,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "98": [
+  [
+   "thefuck/types.py",
+   91,
+   "__getitem__",
+   98
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "97": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "88": [
+  [
+   "thefuck/types.py",
+   17,
+   "__eq__",
+   88
+  ],
+  {
+   "PASS": {
+    "count": 14,
+    "ids": [
+     2,
+     3,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "89": [
+  [
+   "thefuck/types.py",
+   25,
+   "__hash__",
+   89
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "90": [
+  [
+   "thefuck/types.py",
+   28,
+   "__repr__",
+   90
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "77": [
+  [
+   "thefuck/logs.py",
+   63,
+   "debug",
+   77
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "93": [
+  [
+   "thefuck/types.py",
+   44,
+   "update",
+   93
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "92": [
+  [
+   "thefuck/types.py",
+   41,
+   "__getattr__",
+   92
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

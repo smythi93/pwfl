@@ -1,0 +1,120 @@
+{
+ "63": [
+  [
+   "thefuck/utils.py",
+   111,
+   "memoize",
+   63
+  ],
+  {
+   "PASS": {
+    "count": 32,
+    "ids": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 16,
+    "ids": [
+     0,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {}
+ ],
+ "69": [
+  [
+   "thefuck/utils.py",
+   166,
+   "eager",
+   69
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {}
+ ],
+ "251": [
+  [
+   "thefuck/rules/vagrant_up.py",
+   8,
+   "get_new_command",
+   251
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {}
+ ],
+ "250": [
+  [
+   "thefuck/rules/vagrant_up.py",
+   4,
+   "match",
+   250
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

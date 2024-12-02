@@ -1,0 +1,407 @@
+{
+ "55": [
+  [
+   "thefuck/utils.py",
+   26,
+   "memoize",
+   55
+  ],
+  {
+   "PASS": {
+    "count": 54,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 9,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "71": [
+  [
+   "thefuck/utils.py",
+   167,
+   "cache",
+   71
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "113": [
+  [
+   "thefuck/conf.py",
+   46,
+   "__setattr__",
+   113
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "93": [
+  [
+   "thefuck/types.py",
+   16,
+   "__init__",
+   93
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "309": [
+  [
+   "thefuck/specific/git.py",
+   9,
+   "git_support",
+   309
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "56": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "280": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      5,
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "281": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "56": [
+  [
+   "thefuck/utils.py",
+   31,
+   "wrapper",
+   56
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "68": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "68": [
+  [
+   "thefuck/utils.py",
+   147,
+   "is_app",
+   68
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "280": [
+  [
+   "thefuck/rules/git_fix_stash.py",
+   7,
+   "match",
+   280
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "95": [
+  [
+   "thefuck/types.py",
+   35,
+   "__repr__",
+   95
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "281": [
+  [
+   "thefuck/rules/git_fix_stash.py",
+   24,
+   "get_new_command",
+   281
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "61": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "64": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "61": [
+  [
+   "thefuck/utils.py",
+   80,
+   "get_closest",
+   61
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "64": [
+  [
+   "thefuck/utils.py",
+   113,
+   "replace_argument",
+   64
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

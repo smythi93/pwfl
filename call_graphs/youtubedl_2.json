@@ -1,0 +1,3434 @@
+{
+ "123": [
+  [
+   "youtube_dl/compat.py",
+   2771,
+   "_testfunc",
+   123
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "187": [
+  [
+   "youtube_dl/utils.py",
+   188,
+   "preferredencoding",
+   187
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "440": [
+  [
+   "youtube_dl/downloader/external.py",
+   61,
+   "get_basename",
+   440
+  ],
+  {
+   "PASS": {
+    "count": 56,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 7,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "157": [
+  [
+   "youtube_dl/swfinterp.py",
+   67,
+   "__init__",
+   157
+  ],
+  {
+   "PASS": {
+    "count": 32,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0
+    ]
+   },
+   "155": {
+    "PASS": {
+     "count": 32,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 4,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "155": [
+  [
+   "youtube_dl/swfinterp.py",
+   56,
+   "__init__",
+   155
+  ],
+  {
+   "PASS": {
+    "count": 32,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "2020": [
+  [
+   "youtube_dl/extractor/common.py",
+   481,
+   "ie_key",
+   2020
+  ],
+  {
+   "PASS": {
+    "count": 161,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 20,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "0": [
+  [
+   "youtube_dl/YoutubeDL.py",
+   334,
+   "__init__",
+   0
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "179": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "1": {
+    "PASS": {
+     "count": 32,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 4,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "79": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "186": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "179": [
+  [
+   "youtube_dl/cache.py",
+   19,
+   "__init__",
+   179
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1": [
+  [
+   "youtube_dl/YoutubeDL.py",
+   353,
+   "check_deprecated",
+   1
+  ],
+  {
+   "PASS": {
+    "count": 32,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "79": [
+  [
+   "youtube_dl/YoutubeDL.py",
+   2268,
+   "_setup_opener",
+   79
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "246": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "371": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "223": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "236": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "246": [
+  [
+   "youtube_dl/utils.py",
+   1092,
+   "__init__",
+   246
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "371": [
+  [
+   "youtube_dl/utils.py",
+   3495,
+   "__init__",
+   371
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "223": [
+  [
+   "youtube_dl/utils.py",
+   683,
+   "make_HTTPS_handler",
+   223
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "244": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "244": [
+  [
+   "youtube_dl/utils.py",
+   1067,
+   "__init__",
+   244
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "236": [
+  [
+   "youtube_dl/utils.py",
+   918,
+   "__init__",
+   236
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "186": [
+  [
+   "youtube_dl/utils.py",
+   71,
+   "register_socks_protocols",
+   186
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "2009": [
+  [
+   "youtube_dl/extractor/common.py",
+   361,
+   "__init__",
+   2009
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "2017": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "2017": [
+  [
+   "youtube_dl/extractor/common.py",
+   468,
+   "set_downloader",
+   2017
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "101": [
+  [
+   "youtube_dl/compat.py",
+   2509,
+   "compat_etree_fromstring",
+   101
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "2093": [
+  [
+   "youtube_dl/extractor/common.py",
+   1753,
+   "_parse_mpd_formats",
+   2093
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "2043": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "306": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "2094": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 39,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "2096": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 10,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "2095": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 9,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "300": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 42,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "343": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 7,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "303": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 14,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "344": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 7,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "2099": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 14,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "2100": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 14,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "2043": [
+  [
+   "youtube_dl/extractor/common.py",
+   765,
+   "_search_regex",
+   2043
+  ],
+  {
+   "PASS": {
+    "count": 26,
+    "ids": [
+     3,
+     4,
+     6,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "225": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      4,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "306": [
+  [
+   "youtube_dl/utils.py",
+   1828,
+   "parse_duration",
+   306
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "2094": [
+  [
+   "youtube_dl/extractor/common.py",
+   1766,
+   "_add_ns",
+   2094
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 70,
+    "ids": [
+     0
+    ]
+   },
+   "2082": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 70,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "2082": [
+  [
+   "youtube_dl/extractor/common.py",
+   1507,
+   "_xpath_ns",
+   2082
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 70,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "2096": [
+  [
+   "youtube_dl/extractor/common.py",
+   1772,
+   "extract_multisegment_info",
+   2096
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 10,
+    "ids": [
+     0
+    ]
+   },
+   "2094": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 20,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "2097": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "2095": [
+  [
+   "youtube_dl/extractor/common.py",
+   1769,
+   "is_drm_protected",
+   2095
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 9,
+    "ids": [
+     0
+    ]
+   },
+   "2094": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 9,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "2097": [
+  [
+   "youtube_dl/extractor/common.py",
+   1778,
+   "extract_common",
+   2097
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "2094": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "300": [
+  [
+   "youtube_dl/utils.py",
+   1785,
+   "int_or_none",
+   300
+  ],
+  {
+   "PASS": {
+    "count": 22,
+    "ids": [
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 42,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "343": [
+  [
+   "youtube_dl/utils.py",
+   2332,
+   "mimetype2ext",
+   343
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 7,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "303": [
+  [
+   "youtube_dl/utils.py",
+   1811,
+   "float_or_none",
+   303
+  ],
+  {
+   "PASS": {
+    "count": 49,
+    "ids": [
+     6,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 14,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "344": [
+  [
+   "youtube_dl/utils.py",
+   2369,
+   "parse_codecs",
+   344
+  ],
+  {
+   "PASS": {
+    "count": 23,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 7,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "2099": [
+  [
+   "youtube_dl/extractor/common.py",
+   1887,
+   "prepare_template",
+   2099
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 14,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "2100": [
+  [
+   "youtube_dl/extractor/common.py",
+   1909,
+   "location_key",
+   2100
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 14,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "2067": [
+  [
+   "youtube_dl/extractor/common.py",
+   1067,
+   "_sort_formats",
+   2067
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     5,
+     6,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "2068": {
+    "PASS": {
+     "count": 32,
+     "ids": [
+      5,
+      6,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "2068": [
+  [
+   "youtube_dl/extractor/common.py",
+   1077,
+   "_formats_key",
+   2068
+  ],
+  {
+   "PASS": {
+    "count": 32,
+    "ids": [
+     5,
+     6,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   },
+   "349": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "346": [
+  [
+   "youtube_dl/utils.py",
+   2419,
+   "encode_data_uri",
+   346
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2030": [
+  [
+   "youtube_dl/extractor/common.py",
+   671,
+   "_download_json",
+   2030
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2027": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2031": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2027": [
+  [
+   "youtube_dl/extractor/common.py",
+   626,
+   "_download_webpage",
+   2027
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2023": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2023": [
+  [
+   "youtube_dl/extractor/common.py",
+   531,
+   "_download_webpage_handle",
+   2023
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2022": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2026": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2022": [
+  [
+   "youtube_dl/extractor/common.py",
+   489,
+   "_request_webpage",
+   2022
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2033": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "77": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2033": [
+  [
+   "youtube_dl/extractor/common.py",
+   701,
+   "to_screen",
+   2033
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2021": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2021": [
+  [
+   "youtube_dl/extractor/common.py",
+   486,
+   "IE_NAME",
+   2021
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "77": [
+  [
+   "youtube_dl/YoutubeDL.py",
+   2194,
+   "urlopen",
+   77
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "211": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "211": [
+  [
+   "youtube_dl/utils.py",
+   546,
+   "sanitized_Request",
+   211
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "210": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "210": [
+  [
+   "youtube_dl/utils.py",
+   542,
+   "sanitize_url",
+   210
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2026": [
+  [
+   "youtube_dl/extractor/common.py",
+   589,
+   "_webpage_read_content",
+   2026
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2024": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2025": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2024": [
+  [
+   "youtube_dl/extractor/common.py",
+   545,
+   "_guess_encoding_from_content",
+   2024
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2025": [
+  [
+   "youtube_dl/extractor/common.py",
+   561,
+   "__check_blocked",
+   2025
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2031": [
+  [
+   "youtube_dl/extractor/common.py",
+   684,
+   "_parse_json",
+   2031
+  ],
+  {
+   "PASS": {
+    "count": 7,
+    "ids": [
+     1,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "332": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "225": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2032": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "333": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "332": [
+  [
+   "youtube_dl/utils.py",
+   2224,
+   "strip_jsonp",
+   332
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "225": [
+  [
+   "youtube_dl/utils.py",
+   727,
+   "__init__",
+   225
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     4,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "224": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      1,
+      4,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "224": [
+  [
+   "youtube_dl/utils.py",
+   708,
+   "bug_reports_message",
+   224
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     4,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "340": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      1,
+      4,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "340": [
+  [
+   "youtube_dl/utils.py",
+   2311,
+   "ytdl_is_updateable",
+   340
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     4,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2032": [
+  [
+   "youtube_dl/extractor/common.py",
+   696,
+   "report_warning",
+   2032
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2021": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "19": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "19": [
+  [
+   "youtube_dl/YoutubeDL.py",
+   585,
+   "report_warning",
+   19
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "12": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "12": [
+  [
+   "youtube_dl/YoutubeDL.py",
+   510,
+   "to_stderr",
+   12
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "8": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "10": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "8": [
+  [
+   "youtube_dl/YoutubeDL.py",
+   479,
+   "_bidi_workaround",
+   8
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "10": [
+  [
+   "youtube_dl/YoutubeDL.py",
+   496,
+   "_write_string",
+   10
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "265": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "265": [
+  [
+   "youtube_dl/utils.py",
+   1384,
+   "write_string",
+   265
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2385": [
+  [
+   "youtube_dl/extractor/__init__.py",
+   44,
+   "get_info_extractor",
+   2385
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2044": [
+  [
+   "youtube_dl/extractor/common.py",
+   799,
+   "_html_search_regex",
+   2044
+  ],
+  {
+   "PASS": {
+    "count": 13,
+    "ids": [
+     3,
+     4,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2043": {
+    "PASS": {
+     "count": 13,
+     "ids": [
+      3,
+      4,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "204": {
+    "PASS": {
+     "count": 10,
+     "ids": [
+      3,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "204": [
+  [
+   "youtube_dl/utils.py",
+   423,
+   "clean_html",
+   204
+  ],
+  {
+   "PASS": {
+    "count": 10,
+    "ids": [
+     3,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "215": {
+    "PASS": {
+     "count": 10,
+     "ids": [
+      3,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "215": [
+  [
+   "youtube_dl/utils.py",
+   595,
+   "unescapeHTML",
+   215
+  ],
+  {
+   "PASS": {
+    "count": 20,
+    "ids": [
+     3,
+     4,
+     6,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "214": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2053": [
+  [
+   "youtube_dl/extractor/common.py",
+   905,
+   "_og_search_title",
+   2053
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2050": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2050": [
+  [
+   "youtube_dl/extractor/common.py",
+   886,
+   "_og_search_property",
+   2050
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2048": {
+    "PASS": {
+     "count": 11,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2043": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "215": {
+    "PASS": {
+     "count": 7,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2048": [
+  [
+   "youtube_dl/extractor/common.py",
+   870,
+   "_og_regexes",
+   2048
+  ],
+  {
+   "PASS": {
+    "count": 14,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2052": [
+  [
+   "youtube_dl/extractor/common.py",
+   902,
+   "_og_search_description",
+   2052
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2050": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2051": [
+  [
+   "youtube_dl/extractor/common.py",
+   899,
+   "_og_search_thumbnail",
+   2051
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2050": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "214": [
+  [
+   "youtube_dl/utils.py",
+   564,
+   "_htmlentity_transform",
+   214
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2054": [
+  [
+   "youtube_dl/extractor/common.py",
+   908,
+   "_og_search_video_url",
+   2054
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2048": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2044": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2076": [
+  [
+   "youtube_dl/extractor/common.py",
+   1218,
+   "_parse_f4m_formats",
+   2076
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "481": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "483": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "192": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "194": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "300": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "481": [
+  [
+   "youtube_dl/downloader/f4m.py",
+   240,
+   "remove_encrypted_media",
+   481
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "483": [
+  [
+   "youtube_dl/downloader/f4m.py",
+   250,
+   "get_base_url",
+   483
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "482": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "194": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "482": [
+  [
+   "youtube_dl/downloader/f4m.py",
+   246,
+   "_add_ns",
+   482
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "194": [
+  [
+   "youtube_dl/utils.py",
+   311,
+   "xpath_text",
+   194
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "192": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "192": [
+  [
+   "youtube_dl/utils.py",
+   288,
+   "xpath_element",
+   192
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "193": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "193": [
+  [
+   "youtube_dl/utils.py",
+   289,
+   "_find_xpath",
+   193
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2112": [
+  [
+   "youtube_dl/extractor/common.py",
+   2316,
+   "_extract_jwplayer_data",
+   2112
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2111": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2113": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2111": [
+  [
+   "youtube_dl/extractor/common.py",
+   2301,
+   "_find_jwplayer_data",
+   2111
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2031": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "333": [
+  [
+   "youtube_dl/utils.py",
+   2234,
+   "js_to_json",
+   333
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "334": {
+    "PASS": {
+     "count": 91,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "334": [
+  [
+   "youtube_dl/utils.py",
+   2242,
+   "fix_kv",
+   334
+  ],
+  {
+   "PASS": {
+    "count": 91,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2113": [
+  [
+   "youtube_dl/extractor/common.py",
+   2322,
+   "_parse_jwplayer_data",
+   2113
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2114": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "215": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2073": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "300": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "303": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2067": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2114": [
+  [
+   "youtube_dl/extractor/common.py",
+   2387,
+   "_parse_jwplayer_formats",
+   2114
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2073": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "343": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "253": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "300": {
+    "PASS": {
+     "count": 16,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2043": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2073": [
+  [
+   "youtube_dl/extractor/common.py",
+   1183,
+   "_proto_relative_url",
+   2073
+  ],
+  {
+   "PASS": {
+    "count": 7,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "253": [
+  [
+   "youtube_dl/utils.py",
+   1212,
+   "determine_ext",
+   253
+  ],
+  {
+   "PASS": {
+    "count": 7,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "349": [
+  [
+   "youtube_dl/utils.py",
+   2453,
+   "determine_protocol",
+   349
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "253": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2056": [
+  [
+   "youtube_dl/extractor/common.py",
+   917,
+   "_html_search_meta",
+   2056
+  ],
+  {
+   "PASS": {
+    "count": 11,
+    "ids": [
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2049": {
+    "PASS": {
+     "count": 18,
+     "ids": [
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2044": {
+    "PASS": {
+     "count": 11,
+     "ids": [
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2049": [
+  [
+   "youtube_dl/extractor/common.py",
+   881,
+   "_meta_regex",
+   2049
+  ],
+  {
+   "PASS": {
+    "count": 18,
+    "ids": [
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2079": [
+  [
+   "youtube_dl/extractor/common.py",
+   1347,
+   "_parse_m3u8_formats",
+   2079
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2080": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "379": {
+    "PASS": {
+     "count": 23,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "303": {
+    "PASS": {
+     "count": 46,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2081": {
+    "PASS": {
+     "count": 23,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "344": {
+    "PASS": {
+     "count": 23,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2080": [
+  [
+   "youtube_dl/extractor/common.py",
+   1390,
+   "extract_media",
+   2080
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "379": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "379": [
+  [
+   "youtube_dl/utils.py",
+   3638,
+   "parse_m3u8_attributes",
+   379
+  ],
+  {
+   "PASS": {
+    "count": 35,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2081": [
+  [
+   "youtube_dl/extractor/common.py",
+   1418,
+   "build_stream_name",
+   2081
+  ],
+  {
+   "PASS": {
+    "count": 23,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

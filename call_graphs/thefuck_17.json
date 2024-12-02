@@ -1,0 +1,588 @@
+{
+ "78": [
+  [
+   "thefuck/const.py",
+   5,
+   "__init__",
+   78
+  ],
+  {
+   "PASS": {
+    "count": 48,
+    "ids": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 24,
+    "ids": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ],
+ "42": [
+  [
+   "thefuck/utils.py",
+   26,
+   "memoize",
+   42
+  ],
+  {
+   "PASS": {
+    "count": 48,
+    "ids": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 24,
+    "ids": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ],
+ "58": [
+  [
+   "thefuck/utils.py",
+   180,
+   "cache",
+   58
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ],
+ "111": [
+  [
+   "thefuck/shells/__init__.py",
+   20,
+   "_get_shell",
+   111
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ],
+ "12": [
+  [
+   "thefuck/conf.py",
+   13,
+   "__setattr__",
+   12
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ],
+ "93": [
+  [
+   "thefuck/shells/generic.py",
+   21,
+   "from_shell",
+   93
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     6,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     2
+    ]
+   },
+   "92": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      6,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      2
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "92": [
+  [
+   "thefuck/shells/generic.py",
+   13,
+   "_expand_aliases",
+   92
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     6,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     2
+    ]
+   },
+   "43": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      6,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      2
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "43": [
+  [
+   "thefuck/utils.py",
+   31,
+   "wrapper",
+   43
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0,
+     1,
+     2
+    ]
+   },
+   "61": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      6,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0,
+      1,
+      2
+     ]
+    }
+   },
+   "98": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "61": [
+  [
+   "thefuck/utils.py",
+   212,
+   "_cache",
+   61
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     6,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0,
+     1,
+     2
+    ]
+   },
+   "107": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      6,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 3,
+     "ids": [
+      0,
+      1,
+      2
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "107": [
+  [
+   "thefuck/shells/bash.py",
+   28,
+   "get_aliases",
+   107
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     6,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ],
+ "94": [
+  [
+   "thefuck/shells/generic.py",
+   25,
+   "to_shell",
+   94
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "105": [
+  [
+   "thefuck/shells/bash.py",
+   9,
+   "app_alias",
+   105
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "11": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "11": [
+  [
+   "thefuck/conf.py",
+   10,
+   "__getattr__",
+   11
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     4,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "100": [
+  [
+   "thefuck/shells/generic.py",
+   60,
+   "and_",
+   100
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "98": [
+  [
+   "thefuck/shells/generic.py",
+   40,
+   "get_history",
+   98
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "99": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "99": [
+  [
+   "thefuck/shells/generic.py",
+   43,
+   "_get_history_lines",
+   99
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "108": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "11": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "104": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "108": [
+  [
+   "thefuck/shells/bash.py",
+   35,
+   "_get_history_file_name",
+   108
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "104": [
+  [
+   "thefuck/shells/generic.py",
+   82,
+   "_script_from_history",
+   104
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

@@ -1,0 +1,383 @@
+{
+ "0": [
+  [
+   "thefuck/const.py",
+   5,
+   "__init__",
+   0
+  ],
+  {
+   "PASS": {
+    "count": 24,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 48,
+    "ids": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   }
+  },
+  {}
+ ],
+ "6": [
+  [
+   "thefuck/utils.py",
+   29,
+   "memoize",
+   6
+  ],
+  {
+   "PASS": {
+    "count": 27,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 54,
+    "ids": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   }
+  },
+  {}
+ ],
+ "22": [
+  [
+   "thefuck/utils.py",
+   183,
+   "cache",
+   22
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   }
+  },
+  {}
+ ],
+ "130": [
+  [
+   "thefuck/shells/__init__.py",
+   22,
+   "_get_shell",
+   130
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   }
+  },
+  {}
+ ],
+ "68": [
+  [
+   "thefuck/conf.py",
+   16,
+   "__setattr__",
+   68
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   }
+  },
+  {}
+ ],
+ "47": [
+  [
+   "thefuck/types.py",
+   18,
+   "__init__",
+   47
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "345": [
+  [
+   "thefuck/specific/sudo.py",
+   6,
+   "sudo_support",
+   345
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "299": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "299": [
+  [
+   "thefuck/rules/no_command.py",
+   21,
+   "get_new_command",
+   299
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "48": {
+    "PASS": {
+     "count": 7,
+     "ids": [
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "12": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "48": [
+  [
+   "thefuck/types.py",
+   31,
+   "script_parts",
+   48
+  ],
+  {
+   "PASS": {
+    "count": 7,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "93": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "93": [
+  [
+   "thefuck/shells/generic.py",
+   66,
+   "split_command",
+   93
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "12": [
+  [
+   "thefuck/utils.py",
+   92,
+   "get_closest",
+   12
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "298": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      6,
+      7,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "298": [
+  [
+   "thefuck/rules/no_command.py",
+   15,
+   "_get_used_executables",
+   298
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

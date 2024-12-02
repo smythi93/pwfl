@@ -1,0 +1,102 @@
+{
+ "black_1": {},
+ "black_2": {
+  "time": 306.1131947040558,
+  "check": "successful"
+ },
+ "black_3": {
+  "time": 307.04934525489807,
+  "check": "successful"
+ },
+ "black_4": {
+  "time": 222.32457566261292,
+  "check": "successful"
+ },
+ "black_5": {
+  "time": 211.3939802646637,
+  "check": "successful"
+ },
+ "black_6": {
+  "time": 209.35807132720947,
+  "check": "successful"
+ },
+ "black_7": {
+  "time": 206.14129328727722,
+  "check": "successful"
+ },
+ "black_8": {
+  "time": 204.03522515296936,
+  "check": "successful"
+ },
+ "black_9": {
+  "time": 203.3319091796875,
+  "check": "successful"
+ },
+ "black_10": {
+  "time": 189.94648790359497,
+  "check": "successful"
+ },
+ "black_11": {
+  "time": 185.03679966926575,
+  "check": "successful"
+ },
+ "black_12": {
+  "time": 176.5604944229126,
+  "check": "successful"
+ },
+ "black_13": {
+  "time": 175.5635528564453,
+  "check": "successful"
+ },
+ "black_14": {
+  "time": 169.2097144126892,
+  "check": "successful"
+ },
+ "black_15": {
+  "time": 215.73455572128296,
+  "check": "successful"
+ },
+ "black_16": {
+  "time": 174.363055229187,
+  "check": "successful"
+ },
+ "black_17": {
+  "time": 169.62484860420227,
+  "check": "successful"
+ },
+ "black_18": {
+  "time": 167.6876723766327,
+  "check": "successful"
+ },
+ "black_19": {
+  "check": "fail",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 188, in main\n    try:\n         \n",
+   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 152, in build_call_graph\n    with event_file:\n            ^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sflkitlib/events/event.py\", line 264, in handle\n    model.handle_function_exit_event(self)\n",
+   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 131, in handle_function_exit_event\n    if self.call_stack:\n",
+   "IndexError: pop from empty list\n"
+  ]
+ },
+ "black_20": {
+  "check": "fail",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 188, in main\n    try:\n         \n",
+   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 152, in build_call_graph\n    with event_file:\n            ^^^^^^^^^\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sflkitlib/events/event.py\", line 316, in handle\n    model.handle_function_error_event(self)\n",
+   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 135, in handle_function_error_event\n    event: FunctionErrorEvent\n    ^^^^^^^^^^^^^^^^^^^^^\n",
+   "IndexError: pop from empty list\n"
+  ]
+ },
+ "black_21": {},
+ "black_22": {
+  "time": 61.115087270736694,
+  "check": "successful"
+ },
+ "black_23": {
+  "time": 53.0491042137146,
+  "check": "successful"
+ }
+}

@@ -1,0 +1,443 @@
+{
+ "0": [
+  [
+   "thefuck/const.py",
+   5,
+   "__init__",
+   0
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 8,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "6": [
+  [
+   "thefuck/utils.py",
+   25,
+   "memoize",
+   6
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 9,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "22": [
+  [
+   "thefuck/utils.py",
+   179,
+   "cache",
+   22
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "129": [
+  [
+   "thefuck/shells/__init__.py",
+   22,
+   "_get_shell",
+   129
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "67": [
+  [
+   "thefuck/conf.py",
+   14,
+   "__setattr__",
+   67
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "46": [
+  [
+   "thefuck/types.py",
+   17,
+   "__init__",
+   46
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "387": [
+  [
+   "thefuck/specific/git.py",
+   8,
+   "git_support",
+   387
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "7": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "274": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "273": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "7": [
+  [
+   "thefuck/utils.py",
+   30,
+   "wrapper",
+   7
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "19": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "19": [
+  [
+   "thefuck/utils.py",
+   155,
+   "is_app",
+   19
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "47": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "47": [
+  [
+   "thefuck/types.py",
+   30,
+   "script_parts",
+   47
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 13,
+    "ids": [
+     0
+    ]
+   },
+   "92": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "92": [
+  [
+   "thefuck/shells/generic.py",
+   66,
+   "split_command",
+   92
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "274": [
+  [
+   "thefuck/rules/git_push.py",
+   12,
+   "get_new_command",
+   274
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "47": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 7,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "15": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "15": [
+  [
+   "thefuck/utils.py",
+   121,
+   "replace_argument",
+   15
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "49": [
+  [
+   "thefuck/types.py",
+   47,
+   "__repr__",
+   49
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "273": [
+  [
+   "thefuck/rules/git_push.py",
+   6,
+   "match",
+   273
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

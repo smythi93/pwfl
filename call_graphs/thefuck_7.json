@@ -1,0 +1,651 @@
+{
+ "0": [
+  [
+   "thefuck/const.py",
+   5,
+   "__init__",
+   0
+  ],
+  {
+   "PASS": {
+    "count": 40,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 8,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "9": [
+  [
+   "thefuck/utils.py",
+   24,
+   "memoize",
+   9
+  ],
+  {
+   "PASS": {
+    "count": 45,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 9,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "25": [
+  [
+   "thefuck/utils.py",
+   189,
+   "__init__",
+   25
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "31": [
+  [
+   "thefuck/utils.py",
+   251,
+   "cache",
+   31
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "32": [
+  [
+   "thefuck/utils.py",
+   260,
+   "cache_decorator",
+   32
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "9": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "154": [
+  [
+   "thefuck/shells/__init__.py",
+   22,
+   "_get_shell_from_env",
+   154
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "23": [
+  [
+   "thefuck/utils.py",
+   175,
+   "for_app",
+   23
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "59": [
+  [
+   "thefuck/types.py",
+   16,
+   "__init__",
+   59
+  ],
+  {
+   "PASS": {
+    "count": 30,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "81": [
+  [
+   "thefuck/conf.py",
+   14,
+   "__setattr__",
+   81
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "24": [
+  [
+   "thefuck/utils.py",
+   177,
+   "_for_app",
+   24
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "10": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      3,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "249": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      1,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "10": [
+  [
+   "thefuck/utils.py",
+   29,
+   "wrapper",
+   10
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "22": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      3,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "22": [
+  [
+   "thefuck/utils.py",
+   162,
+   "is_app",
+   22
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "62": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      1,
+      3,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "62": [
+  [
+   "thefuck/types.py",
+   37,
+   "script_parts",
+   62
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     1,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   },
+   "109": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      3,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "109": [
+  [
+   "thefuck/shells/generic.py",
+   80,
+   "split_command",
+   109
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "110": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      3,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "111": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      1,
+      3,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "110": [
+  [
+   "thefuck/shells/generic.py",
+   91,
+   "encode_utf8",
+   110
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "111": [
+  [
+   "thefuck/shells/generic.py",
+   96,
+   "decode_utf8",
+   111
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     1,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "249": [
+  [
+   "thefuck/rules/php_s.py",
+   5,
+   "match",
+   249
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "64": [
+  [
+   "thefuck/types.py",
+   54,
+   "__repr__",
+   64
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "250": [
+  [
+   "thefuck/rules/php_s.py",
+   9,
+   "get_new_command",
+   250
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "18": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "18": [
+  [
+   "thefuck/utils.py",
+   123,
+   "replace_argument",
+   18
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}
