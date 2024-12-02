@@ -2,22 +2,16 @@
  "tqdm_1": {
   "status": "running",
   "time": {
-   "instrument_lines": 7.613965272903442,
-   "test_lines": 2.686596632003784,
-   "instrument": 5.069191932678223
+   "instrument_lines": 6.502684831619263,
+   "test_lines": 2.0772292613983154,
+   "instrument": 5.412898778915405,
+   "test": 2.0742831230163574
   },
   "build_lines": "successful",
   "test_lines": "successful",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/dw-sfl/get_events.py\", line 117, in sflkit_instrument\n    instrument(\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/tests4py/api/default.py\", line 359, in build\n    sflkit_env(environ)\n",
-   "  File \"/home/smytzek/dw-sfl/get_events.py\", line 26, in sflkit_env\n    subprocess.check_call(\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
-   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', PosixPath('/home/smytzek/dw-sfl/sflkit-lib-extension')]' returned non-zero exit status 1.\n"
-  ]
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
  },
  "tqdm_2": {
   "status": "running",
