@@ -195,6 +195,8 @@ def main(project_name, bug_id):
             continue
         else:
             report[identifier]["check"] = "successful"
+            if "error" in report[identifier]:
+                del report[identifier]["error"]
         with open(cg_file, "w") as f:
             json.dump(call_graph, f, indent=1)
         with open(cg_lines_file, "w") as f:

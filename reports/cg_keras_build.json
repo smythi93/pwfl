@@ -16,16 +16,8 @@
   "check": "successful"
  },
  "keras_5": {
-  "check": "successful",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 188, in main\n    call_graph, lines = build_call_graph(project)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 152, in build_call_graph\n    event.handle(model)\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sflkitlib/events/event.py\", line 264, in handle\n    model.handle_function_exit_event(self)\n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 131, in handle_function_exit_event\n    self.call_stack.pop()\n",
-   "IndexError: pop from empty list\n"
-  ],
-  "time": 0.25903940200805664
+  "time": 0.25903940200805664,
+  "check": "successful"
  },
  "keras_6": {
   "time": 2.3063573837280273,
@@ -128,16 +120,8 @@
   "check": "successful"
  },
  "keras_34": {
-  "check": "successful",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 188, in main\n    call_graph, lines = build_call_graph(project)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 152, in build_call_graph\n    event.handle(model)\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sflkitlib/events/event.py\", line 264, in handle\n    model.handle_function_exit_event(self)\n",
-   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 131, in handle_function_exit_event\n    self.call_stack.pop()\n",
-   "IndexError: pop from empty list\n"
-  ],
-  "time": 2.414499044418335
+  "time": 2.414499044418335,
+  "check": "successful"
  },
  "keras_35": {
   "time": 0.23480820655822754,
