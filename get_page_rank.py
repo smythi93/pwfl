@@ -146,6 +146,8 @@ def get_page_rank(
     """
     x_m = np.zeros(p_mm.shape[0])
     x_t = np.zeros(p_tt.shape[0])
+    if not np.any(x_m) or not np.any(x_t):
+        return x_m, x_t
 
     for _ in range(max_iter):
         x_m_old = x_m.copy()

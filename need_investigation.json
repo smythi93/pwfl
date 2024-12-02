@@ -1,5 +1,83 @@
 {
- "errors": [],
+ "errors": [
+  [
+   "youtubedl_38",
+   [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+   ]
+  ],
+  [
+   "youtubedl_39",
+   [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+   ]
+  ],
+  [
+   "youtubedl_40",
+   [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+   ]
+  ],
+  [
+   "youtubedl_42",
+   [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+   ]
+  ],
+  [
+   "ansible_11",
+   [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+   ]
+  ],
+  [
+   "scrapy_20",
+   [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 222, in main\n    x_m_passing, x_t_passing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 157, in get_page_rank\n    max_m = np.max(y_m)\n            ^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+   ]
+  ],
+  [
+   "thefuck_24",
+   [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "ValueError: zero-size array to reduction operation maximum which has no identity\n"
+   ]
+  ]
+ ],
  "missing_bug": [],
  "empty_passing": []
 }
