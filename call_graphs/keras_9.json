@@ -1,0 +1,377 @@
+{
+ "1711": [
+  [
+   "keras/backend/common.py",
+   48,
+   "floatx",
+   1711
+  ],
+  {
+   "PASS": {
+    "count": 10,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 5,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1709": [
+  [
+   "keras/backend/common.py",
+   13,
+   "epsilon",
+   1709
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1714": [
+  [
+   "keras/backend/common.py",
+   113,
+   "image_data_format",
+   1714
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1712": [
+  [
+   "keras/backend/common.py",
+   64,
+   "set_floatx",
+   1712
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1710": [
+  [
+   "keras/backend/common.py",
+   28,
+   "set_epsilon",
+   1710
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1715": [
+  [
+   "keras/backend/common.py",
+   128,
+   "set_image_data_format",
+   1715
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "461": [
+  [
+   "keras/legacy/interfaces.py",
+   13,
+   "generate_legacy_interface",
+   461
+  ],
+  {
+   "PASS": {
+    "count": 66,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 33,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "462": [
+  [
+   "keras/legacy/interfaces.py",
+   26,
+   "legacy_support",
+   462
+  ],
+  {
+   "PASS": {
+    "count": 104,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 52,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1445": [
+  [
+   "keras/backend/__init__.py",
+   111,
+   "backend",
+   1445
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "317": [
+  [
+   "keras/engine/saving.py",
+   377,
+   "allow_write_to_gcs",
+   317
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "319": [
+  [
+   "keras/engine/saving.py",
+   408,
+   "allow_read_from_gcs",
+   319
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "236": [
+  [
+   "keras/applications/__init__.py",
+   20,
+   "keras_modules_injection",
+   236
+  ],
+  {
+   "PASS": {
+    "count": 94,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 47,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1615": [
+  [
+   "keras/backend/numpy_backend.py",
+   14,
+   "normalize_conv",
+   1615
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "1448": [
+  [
+   "keras/backend/tensorflow_backend.py",
+   88,
+   "clear_session",
+   1448
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "1447": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "1447": [
+  [
+   "keras/backend/tensorflow_backend.py",
+   81,
+   "reset_uids",
+   1447
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ]
+}

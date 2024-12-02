@@ -1,0 +1,28 @@
+{
+ "0": [
+  [
+   "src/markup/__init__.py",
+   1,
+   "remove_html_markup",
+   0
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   }
+  },
+  {}
+ ]
+}

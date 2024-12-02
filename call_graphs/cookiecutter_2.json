@@ -1,0 +1,549 @@
+{
+ "16": [
+  [
+   "cookiecutter/utils.py",
+   49,
+   "work_in",
+   16
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     5,
+     8,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0,
+     1,
+     2
+    ]
+   },
+   "55": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      5,
+      8,
+      9
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "58": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "55": [
+  [
+   "cookiecutter/hooks.py",
+   39,
+   "find_hook",
+   55
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     5,
+     6,
+     8,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0,
+     1,
+     2
+    ]
+   },
+   "54": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      5,
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0,
+      1,
+      2
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "54": [
+  [
+   "cookiecutter/hooks.py",
+   22,
+   "valid_hook",
+   54
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     5,
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ],
+ "14": [
+  [
+   "cookiecutter/utils.py",
+   25,
+   "rmtree",
+   14
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     3,
+     4,
+     5,
+     7,
+     8,
+     9
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ],
+ "58": [
+  [
+   "cookiecutter/hooks.py",
+   114,
+   "run_hook",
+   58
+  ],
+  {
+   "PASS": {
+    "count": 0,
+    "ids": []
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "55": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    }
+   },
+   "57": {
+    "PASS": {
+     "count": 0,
+     "ids": []
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "57": [
+  [
+   "cookiecutter/hooks.py",
+   93,
+   "run_script_with_context",
+   57
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "53": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    }
+   },
+   "56": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "53": [
+  [
+   "cookiecutter/environment.py",
+   59,
+   "__init__",
+   53
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "51": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "51": [
+  [
+   "cookiecutter/environment.py",
+   14,
+   "__init__",
+   51
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "52": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    }
+   },
+   "2": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    }
+   },
+   "4": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    }
+   },
+   "6": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "52": [
+  [
+   "cookiecutter/environment.py",
+   38,
+   "_read_extensions",
+   52
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ],
+ "2": [
+  [
+   "cookiecutter/extensions.py",
+   13,
+   "__init__",
+   2
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ],
+ "4": [
+  [
+   "cookiecutter/extensions.py",
+   26,
+   "__init__",
+   4
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ],
+ "6": [
+  [
+   "cookiecutter/extensions.py",
+   43,
+   "__init__",
+   6
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ],
+ "56": [
+  [
+   "cookiecutter/hooks.py",
+   64,
+   "run_script",
+   56
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     3,
+     4,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   },
+   "17": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      3,
+      4,
+      7
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      1,
+      2
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "17": [
+  [
+   "cookiecutter/utils.py",
+   63,
+   "make_executable",
+   17
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     3,
+     4,
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     1,
+     2
+    ]
+   }
+  },
+  {}
+ ]
+}

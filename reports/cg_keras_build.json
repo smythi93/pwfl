@@ -1,0 +1,184 @@
+{
+ "keras_1": {
+  "time": 0.32962870597839355,
+  "check": "successful"
+ },
+ "keras_2": {
+  "time": 1.1837337017059326,
+  "check": "successful"
+ },
+ "keras_3": {
+  "time": 0.9812242984771729,
+  "check": "successful"
+ },
+ "keras_4": {
+  "time": 2.702056407928467,
+  "check": "successful"
+ },
+ "keras_5": {
+  "check": "fail",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 188, in main\n    call_graph, lines = build_call_graph(project)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 152, in build_call_graph\n    event.handle(model)\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sflkitlib/events/event.py\", line 264, in handle\n    model.handle_function_exit_event(self)\n",
+   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 131, in handle_function_exit_event\n    self.call_stack.pop()\n",
+   "IndexError: pop from empty list\n"
+  ]
+ },
+ "keras_6": {
+  "time": 2.3063573837280273,
+  "check": "successful"
+ },
+ "keras_7": {},
+ "keras_8": {
+  "time": 0.7155907154083252,
+  "check": "successful"
+ },
+ "keras_9": {
+  "time": 0.09896016120910645,
+  "check": "successful"
+ },
+ "keras_10": {
+  "time": 1.7063920497894287,
+  "check": "successful"
+ },
+ "keras_11": {
+  "time": 5.917089223861694,
+  "check": "successful"
+ },
+ "keras_12": {},
+ "keras_13": {
+  "time": 1.4929530620574951,
+  "check": "successful"
+ },
+ "keras_14": {
+  "time": 6.9679412841796875,
+  "check": "successful"
+ },
+ "keras_15": {},
+ "keras_16": {
+  "time": 0.8537166118621826,
+  "check": "successful"
+ },
+ "keras_17": {},
+ "keras_18": {
+  "time": 0.6512699127197266,
+  "check": "successful"
+ },
+ "keras_19": {
+  "time": 3.4495677947998047,
+  "check": "successful"
+ },
+ "keras_20": {
+  "time": 4.683671712875366,
+  "check": "successful"
+ },
+ "keras_21": {
+  "time": 1.6800174713134766,
+  "check": "successful"
+ },
+ "keras_22": {
+  "time": 1.1244924068450928,
+  "check": "successful"
+ },
+ "keras_23": {
+  "time": 0.8561747074127197,
+  "check": "successful"
+ },
+ "keras_24": {
+  "time": 1.4278666973114014,
+  "check": "successful"
+ },
+ "keras_25": {
+  "time": 0.14325666427612305,
+  "check": "successful"
+ },
+ "keras_26": {
+  "time": 0.4922511577606201,
+  "check": "successful"
+ },
+ "keras_27": {
+  "time": 1.0754857063293457,
+  "check": "successful"
+ },
+ "keras_28": {
+  "time": 0.11725234985351562,
+  "check": "successful"
+ },
+ "keras_29": {
+  "time": 2.6774814128875732,
+  "check": "successful"
+ },
+ "keras_30": {
+  "time": 1.027066946029663,
+  "check": "successful"
+ },
+ "keras_31": {
+  "time": 0.47524523735046387,
+  "check": "successful"
+ },
+ "keras_32": {
+  "time": 1.1946561336517334,
+  "check": "successful"
+ },
+ "keras_33": {
+  "time": 0.14752531051635742,
+  "check": "successful"
+ },
+ "keras_34": {
+  "check": "fail",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 188, in main\n    call_graph, lines = build_call_graph(project)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 152, in build_call_graph\n    event.handle(model)\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sflkitlib/events/event.py\", line 264, in handle\n    model.handle_function_exit_event(self)\n",
+   "  File \"/home/smytzek/dw-sfl/get_call_graph.py\", line 131, in handle_function_exit_event\n    self.call_stack.pop()\n",
+   "IndexError: pop from empty list\n"
+  ]
+ },
+ "keras_35": {
+  "time": 0.23480820655822754,
+  "check": "successful"
+ },
+ "keras_36": {
+  "time": 3.4488470554351807,
+  "check": "successful"
+ },
+ "keras_37": {
+  "time": 0.8706223964691162,
+  "check": "successful"
+ },
+ "keras_38": {
+  "time": 2.988518714904785,
+  "check": "successful"
+ },
+ "keras_39": {
+  "time": 0.1890394687652588,
+  "check": "successful"
+ },
+ "keras_40": {
+  "time": 2.70704984664917,
+  "check": "successful"
+ },
+ "keras_41": {
+  "time": 0.17554616928100586,
+  "check": "successful"
+ },
+ "keras_42": {
+  "time": 0.8415839672088623,
+  "check": "successful"
+ },
+ "keras_43": {
+  "time": 0.2358710765838623,
+  "check": "successful"
+ },
+ "keras_44": {
+  "time": 2.6365373134613037,
+  "check": "successful"
+ },
+ "keras_45": {
+  "time": 2.3595714569091797,
+  "check": "successful"
+ }
+}

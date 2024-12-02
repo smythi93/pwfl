@@ -1,0 +1,117 @@
+{
+ "41": [
+  [
+   "cookiecutter/prompt.py",
+   61,
+   "read_user_choice",
+   41
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {}
+ ],
+ "43": [
+  [
+   "cookiecutter/prompt.py",
+   113,
+   "read_user_dict",
+   43
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     4,
+     10,
+     12
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "42": [
+  [
+   "cookiecutter/prompt.py",
+   96,
+   "process_json",
+   42
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     5,
+     9,
+     11,
+     13
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "38": [
+  [
+   "cookiecutter/prompt.py",
+   24,
+   "read_user_variable",
+   38
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "39": [
+  [
+   "cookiecutter/prompt.py",
+   35,
+   "read_user_yes_no",
+   39
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     7
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

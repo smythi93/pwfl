@@ -1,0 +1,2417 @@
+{
+ "41": [
+  [
+   "sanic/exceptions.py",
+   124,
+   "add_status_code",
+   41
+  ],
+  {
+   "PASS": {
+    "count": 50,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 10,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "42": [
+  [
+   "sanic/exceptions.py",
+   129,
+   "class_decorator",
+   42
+  ],
+  {
+   "PASS": {
+    "count": 50,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 10,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "127": [
+  [
+   "sanic/app.py",
+   31,
+   "__init__",
+   127
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "65": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "0": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "57": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "65": [
+  [
+   "sanic/router.py",
+   82,
+   "__init__",
+   65
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "0": [
+  [
+   "sanic/handlers.py",
+   26,
+   "__init__",
+   0
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "57": [
+  [
+   "sanic/config.py",
+   11,
+   "__init__",
+   57
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "59": {
+    "PASS": {
+     "count": 60,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "63": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "59": [
+  [
+   "sanic/config.py",
+   56,
+   "__setattr__",
+   59
+  ],
+  {
+   "PASS": {
+    "count": 63,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "63": [
+  [
+   "sanic/config.py",
+   118,
+   "load_environment_vars",
+   63
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "134": [
+  [
+   "sanic/app.py",
+   146,
+   "route",
+   134
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "135": [
+  [
+   "sanic/app.py",
+   179,
+   "response",
+   135
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "67": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "67": [
+  [
+   "sanic/router.py",
+   121,
+   "add",
+   67
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "68": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "68": [
+  [
+   "sanic/router.py",
+   184,
+   "_add",
+   68
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "161": [
+  [
+   "sanic/app.py",
+   816,
+   "test_client",
+   161
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "170": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "170": [
+  [
+   "sanic/testing.py",
+   13,
+   "__init__",
+   170
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "176": [
+  [
+   "sanic/testing.py",
+   118,
+   "get",
+   176
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "172": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "172": [
+  [
+   "sanic/testing.py",
+   52,
+   "_sanic_endpoint_test",
+   172
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "151": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "152": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "131": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "132": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "162": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "151": [
+  [
+   "sanic/app.py",
+   465,
+   "exception",
+   151
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "152": [
+  [
+   "sanic/app.py",
+   472,
+   "response",
+   152
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "3": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "3": [
+  [
+   "sanic/handlers.py",
+   60,
+   "add",
+   3
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "131": [
+  [
+   "sanic/app.py",
+   120,
+   "listener",
+   131
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "132": [
+  [
+   "sanic/app.py",
+   126,
+   "decorator",
+   132
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "162": [
+  [
+   "sanic/app.py",
+   823,
+   "run",
+   162
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "59": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "169": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "238": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "169": [
+  [
+   "sanic/app.py",
+   1020,
+   "_helper",
+   169
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "58": {
+    "PASS": {
+     "count": 39,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "58": [
+  [
+   "sanic/config.py",
+   50,
+   "__getattr__",
+   58
+  ],
+  {
+   "PASS": {
+    "count": 39,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "238": [
+  [
+   "sanic/server.py",
+   555,
+   "serve",
+   238
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "237": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "236": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "213": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "237": [
+  [
+   "sanic/server.py",
+   543,
+   "trigger_events",
+   237
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "175": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "236": [
+  [
+   "sanic/server.py",
+   531,
+   "update_current_time",
+   236
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "175": [
+  [
+   "sanic/testing.py",
+   83,
+   "_collect_response",
+   175
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "171": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "163": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "171": [
+  [
+   "sanic/testing.py",
+   17,
+   "_local_request",
+   171
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "210": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "212": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "219": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "160": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "213": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "210": [
+  [
+   "sanic/server.py",
+   78,
+   "__init__",
+   210
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "212": [
+  [
+   "sanic/server.py",
+   147,
+   "connection_made",
+   212
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "219": [
+  [
+   "sanic/server.py",
+   226,
+   "data_received",
+   219
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "220": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "221": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "222": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "224": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "220": [
+  [
+   "sanic/server.py",
+   251,
+   "on_url",
+   220
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "221": [
+  [
+   "sanic/server.py",
+   257,
+   "on_header",
+   221
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "222": [
+  [
+   "sanic/server.py",
+   276,
+   "on_headers_complete",
+   222
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "103": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "103": [
+  [
+   "sanic/request.py",
+   76,
+   "__init__",
+   103
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "224": [
+  [
+   "sanic/server.py",
+   305,
+   "on_message_complete",
+   224
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "225": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "225": [
+  [
+   "sanic/server.py",
+   319,
+   "execute_request_handler",
+   225
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "160": [
+  [
+   "sanic/app.py",
+   705,
+   "handle_request",
+   160
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "167": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "74": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "194": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "168": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "227": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "167": [
+  [
+   "sanic/app.py",
+   998,
+   "_run_request_middleware",
+   167
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "173": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "173": [
+  [
+   "sanic/testing.py",
+   67,
+   "_collect_request",
+   173
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "74": [
+  [
+   "sanic/router.py",
+   387,
+   "get",
+   74
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "123": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "76": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "123": [
+  [
+   "sanic/request.py",
+   279,
+   "path",
+   123
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "76": [
+  [
+   "sanic/router.py",
+   417,
+   "_get",
+   76
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "75": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "44": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "75": [
+  [
+   "sanic/router.py",
+   406,
+   "get_supported_methods",
+   75
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "44": [
+  [
+   "sanic/exceptions.py",
+   157,
+   "__init__",
+   44
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "43": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "43": [
+  [
+   "sanic/exceptions.py",
+   138,
+   "__init__",
+   43
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "194": [
+  [
+   "sanic/response.py",
+   222,
+   "text",
+   194
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "190": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "190": [
+  [
+   "sanic/response.py",
+   132,
+   "__init__",
+   190
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "183": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "183": [
+  [
+   "sanic/response.py",
+   19,
+   "_encode_body",
+   183
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "168": [
+  [
+   "sanic/app.py",
+   1009,
+   "_run_response_middleware",
+   168
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "227": [
+  [
+   "sanic/server.py",
+   357,
+   "write_response",
+   227
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "211": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      2,
+      3,
+      5
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "114": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "191": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "226": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "233": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "211": [
+  [
+   "sanic/server.py",
+   136,
+   "keep_alive",
+   211
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "114": [
+  [
+   "sanic/request.py",
+   204,
+   "ip",
+   114
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "117": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "117": [
+  [
+   "sanic/request.py",
+   221,
+   "_get_address",
+   117
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "213": [
+  [
+   "sanic/server.py",
+   155,
+   "connection_lost",
+   213
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "163": [
+  [
+   "sanic/app.py",
+   926,
+   "stop",
+   163
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     2,
+     3,
+     5
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "191": [
+  [
+   "sanic/response.py",
+   151,
+   "output",
+   191
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "88": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "184": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "88": [
+  [
+   "sanic/helpers.py",
+   97,
+   "has_message_body",
+   88
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "184": [
+  [
+   "sanic/response.py",
+   27,
+   "_parse_headers",
+   184
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "226": [
+  [
+   "sanic/server.py",
+   333,
+   "log_response",
+   226
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "114": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "115": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "125": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "115": [
+  [
+   "sanic/request.py",
+   210,
+   "port",
+   115
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "125": [
+  [
+   "sanic/request.py",
+   290,
+   "url",
+   125
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "119": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "120": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "123": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "124": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "119": [
+  [
+   "sanic/request.py",
+   249,
+   "scheme",
+   119
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "120": [
+  [
+   "sanic/request.py",
+   264,
+   "host",
+   120
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "124": [
+  [
+   "sanic/request.py",
+   283,
+   "query_string",
+   124
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "233": [
+  [
+   "sanic/server.py",
+   499,
+   "cleanup",
+   233
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}
