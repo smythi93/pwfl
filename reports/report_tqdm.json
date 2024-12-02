@@ -1,0 +1,134 @@
+{
+ "tqdm_1": {
+  "status": "running",
+  "time": {
+   "instrument_lines": 7.613965272903442,
+   "test_lines": 2.686596632003784,
+   "instrument": 5.069191932678223
+  },
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "failed",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/dw-sfl/get_events.py\", line 117, in sflkit_instrument\n    instrument(\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/tests4py/api/default.py\", line 359, in build\n    sflkit_env(environ)\n",
+   "  File \"/home/smytzek/dw-sfl/get_events.py\", line 26, in sflkit_env\n    subprocess.check_call(\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', PosixPath('/home/smytzek/dw-sfl/sflkit-lib-extension')]' returned non-zero exit status 1.\n"
+  ]
+ },
+ "tqdm_2": {
+  "status": "running",
+  "time": {
+   "instrument_lines": 8.313902854919434,
+   "test_lines": 56.650182485580444,
+   "instrument": 7.403192520141602,
+   "test": 55.0645866394043
+  },
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
+ },
+ "tqdm_3": {
+  "status": "running",
+  "time": {
+   "instrument_lines": 8.418087005615234,
+   "test_lines": 26.53469467163086,
+   "instrument": 7.410260438919067,
+   "test": 26.076306104660034
+  },
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
+ },
+ "tqdm_4": {
+  "status": "running",
+  "time": {
+   "instrument_lines": 8.47595739364624,
+   "test_lines": 24.961005449295044,
+   "instrument": 7.323197841644287,
+   "test": 23.792845010757446
+  },
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
+ },
+ "tqdm_5": {
+  "status": "running",
+  "time": {
+   "instrument_lines": 8.229722499847412,
+   "test_lines": 20.162177085876465,
+   "instrument": 7.185492277145386,
+   "test": 20.38259720802307
+  },
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
+ },
+ "tqdm_6": {
+  "status": "running",
+  "time": {
+   "instrument_lines": 7.172938108444214,
+   "test_lines": 6.127312898635864,
+   "instrument": 6.398129224777222,
+   "test": 6.181363344192505
+  },
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
+ },
+ "tqdm_7": {
+  "status": "running",
+  "time": {
+   "instrument_lines": 7.029024600982666,
+   "test_lines": 19.401743412017822,
+   "instrument": 6.265954494476318,
+   "test": 18.90079092979431
+  },
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
+ },
+ "tqdm_8": {
+  "status": "running",
+  "time": {
+   "instrument_lines": 7.476848840713501,
+   "test_lines": 14.307118892669678,
+   "instrument": 6.988464832305908,
+   "test": 14.231273174285889
+  },
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
+ },
+ "tqdm_9": {
+  "status": "running",
+  "time": {
+   "instrument_lines": 7.1322572231292725,
+   "test_lines": 4.769361734390259,
+   "instrument": 6.2909746170043945,
+   "test": 4.671837568283081
+  },
+  "build_lines": "successful",
+  "test_lines": "successful",
+  "build": "successful",
+  "test": "successful",
+  "check": "successful"
+ }
+}
