@@ -1,0 +1,51 @@
+{
+ "PASS": {
+  "methods": {
+   "snoop (17)": 1.0,
+   "get_write_function (13)": 1.0,
+   "decorate (18)": 1.0,
+   "__init__ (5)": 1.0,
+   "__enter__ (7)": 1.0,
+   "trace (9)": 1.0,
+   "get_local_reprs (3)": 1.0,
+   "get_shortish_repr (2)": 1.0,
+   "write (6)": 1.0,
+   "write (15)": 0.0,
+   "__exit__ (8)": 1.0,
+   "write (14)": 0.5014426642179569,
+   "get_source_from_frame (4)": 1.0,
+   "__subclasshook__ (12)": 0.49855733578204314,
+   "_check_methods (10)": 0.49855733578204314,
+   "write (16)": 0.49855733578204314
+  },
+  "tests": {
+   "Pass Test (1)": 0.8621034473936761,
+   "Pass Test (2)": 1.0,
+   "Pass Test (3)": 0.8621034473936761,
+   "Pass Test (4)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "snoop (17)": 1.0,
+   "get_write_function (13)": 1.0,
+   "decorate (18)": 1.0,
+   "__init__ (5)": 1.0,
+   "__enter__ (7)": 1.0,
+   "trace (9)": 1.0,
+   "get_local_reprs (3)": 1.0,
+   "get_shortish_repr (2)": 1.0,
+   "write (6)": 1.0,
+   "write (15)": 1.0,
+   "__exit__ (8)": 1.0,
+   "write (14)": 0.0,
+   "get_source_from_frame (4)": 0.0,
+   "__subclasshook__ (12)": 0.0,
+   "_check_methods (10)": 0.0,
+   "write (16)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

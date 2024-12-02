@@ -174,7 +174,7 @@ def main(project_name, bug_id):
 
     report_dir = "reports"
     os.makedirs(report_dir, exist_ok=True)
-    report_file = os.path.join(report_dir, f"cg_{project_name}_build.json")
+    report_file = os.path.join(report_dir, f"cg_{project_name}_pr.json")
     if os.path.exists(report_file):
         with open(report_file, "r") as f:
             report = json.load(f)
