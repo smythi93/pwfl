@@ -58,7 +58,6 @@ def create_config(
         # testcase, which it traces. With the instrumentation, the trace is not correct because the correct trace is
         # asserted. Hence, inner functions are ignored.
         metrics=metrics or "",
-        predicates="line",
         passing=str(
             get_events_path(
                 project=project,
@@ -138,11 +137,6 @@ def get_events(
         / project.project_name
         / f"venv_{project.bug_id}"
     )
-    if not venv_location.exists():
-        r = t4p.build(original_checkout)
-        if not r.successful:
-            report[identifier]["error"] = traceback.format_exception(r.raised)
-            return events_base
 
     mapping = os.path.join("mappings", f"{project}_cg.json")
     sfl_path = os.path.join("tmp", f"sfl_{identifier}_cg")
