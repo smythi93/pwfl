@@ -148,52 +148,24 @@
   "check": "successful"
  },
  "youtubedl_38": {
-  "check": "fail",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-   "ValueError: zero-size array to reduction operation maximum which has no identity\n"
-  ]
+  "check": "successful",
+  "time": 0.0007829666137695312
  },
  "youtubedl_39": {
-  "check": "fail",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-   "ValueError: zero-size array to reduction operation maximum which has no identity\n"
-  ]
+  "check": "successful",
+  "time": 0.00017118453979492188
  },
  "youtubedl_40": {
-  "check": "fail",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-   "ValueError: zero-size array to reduction operation maximum which has no identity\n"
-  ]
+  "check": "successful",
+  "time": 0.00013756752014160156
  },
  "youtubedl_41": {
   "time": 0.00033545494079589844,
   "check": "successful"
  },
  "youtubedl_42": {
-  "check": "fail",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 225, in main\n    x_m_failing, x_t_failing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 161, in get_page_rank\n    max_t = np.max(y_t)\n            ^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-   "ValueError: zero-size array to reduction operation maximum which has no identity\n"
-  ]
+  "check": "successful",
+  "time": 0.0001277923583984375
  },
  "youtubedl_43": {
   "time": 0.00033020973205566406,
