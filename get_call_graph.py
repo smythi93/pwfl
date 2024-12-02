@@ -128,11 +128,13 @@ class CallGraphBuilder(Model):
 
     def handle_function_exit_event(self, event):
         event: FunctionExitEvent
-        self.call_stack.pop()
+        if self.call_stack:
+            self.call_stack.pop()
 
     def handle_function_error_event(self, event):
         event: FunctionErrorEvent
-        self.call_stack.pop()
+        if self.call_stack:
+            self.call_stack.pop()
 
 
 def build_call_graph(project):
