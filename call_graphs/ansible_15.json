@@ -1,0 +1,728 @@
+{
+ "5017": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   370,
+   "main",
+   5017
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "5004": {
+    "PASS": {
+     "count": 15,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "5014": {
+    "PASS": {
+     "count": 15,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "5013": {
+    "PASS": {
+     "count": 13,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "5009": {
+    "PASS": {
+     "count": 13,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "5016": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "5015": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      12
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "5004": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   180,
+   "check_transport",
+   5004
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "5014": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   307,
+   "map_params_to_obj",
+   5014
+  ],
+  {
+   "PASS": {
+    "count": 15,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "5008": {
+    "PASS": {
+     "count": 14,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "5006": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "5005": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2,
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "5007": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      6
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "5008": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   203,
+   "validate_vrf",
+   5008
+  ],
+  {
+   "PASS": {
+    "count": 14,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "5013": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   292,
+   "map_config_to_obj",
+   5013
+  ],
+  {
+   "PASS": {
+    "count": 13,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     6,
+     7,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "5012": {
+    "PASS": {
+     "count": 13,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "5012": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   285,
+   "parse_state",
+   5012
+  ],
+  {
+   "PASS": {
+    "count": 13,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     6,
+     7,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "5009": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   219,
+   "map_obj_to_commands",
+   5009
+  ],
+  {
+   "PASS": {
+    "count": 13,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     6,
+     7,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "5010": {
+    "PASS": {
+     "count": 135,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 11,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "5011": {
+    "PASS": {
+     "count": 16,
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "5010": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   223,
+   "needs_update",
+   5010
+  ],
+  {
+   "PASS": {
+    "count": 135,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     6,
+     7,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 11,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "5011": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   226,
+   "add",
+   5011
+  ],
+  {
+   "PASS": {
+    "count": 16,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     6,
+     7,
+     9,
+     10,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "5016": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   358,
+   "collect_facts",
+   5016
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     6,
+     7,
+     9,
+     10,
+     11,
+     13,
+     14,
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "5006": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   193,
+   "validate_https_port",
+   5006
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "5005": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   188,
+   "validate_http_port",
+   5005
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2,
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "5007": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   198,
+   "validate_local_http_port",
+   5007
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     6
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "5015": [
+  [
+   "lib/ansible/modules/network/eos/eos_eapi.py",
+   329,
+   "verify_state",
+   5015
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     12
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

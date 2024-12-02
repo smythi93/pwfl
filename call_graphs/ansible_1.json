@@ -1,0 +1,2143 @@
+{
+ "86": [
+  [
+   "lib/ansible/galaxy/api.py",
+   34,
+   "g_connect",
+   86
+  ],
+  {
+   "PASS": {
+    "count": 928,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49,
+     50,
+     51,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57,
+     58
+    ]
+   },
+   "FAIL": {
+    "count": 16,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "87": [
+  [
+   "lib/ansible/galaxy/api.py",
+   41,
+   "decorator",
+   87
+  ],
+  {
+   "PASS": {
+    "count": 928,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49,
+     50,
+     51,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57,
+     58
+    ]
+   },
+   "FAIL": {
+    "count": 16,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "75": [
+  [
+   "lib/ansible/galaxy/token.py",
+   103,
+   "__init__",
+   75
+  ],
+  {
+   "PASS": {
+    "count": 29,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     8,
+     9,
+     11,
+     12,
+     13,
+     14,
+     21,
+     23,
+     24,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     33,
+     38,
+     40,
+     41,
+     42,
+     47,
+     48,
+     51,
+     54,
+     58
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "92": [
+  [
+   "lib/ansible/galaxy/api.py",
+   171,
+   "__init__",
+   92
+  ],
+  {
+   "PASS": {
+    "count": 29,
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     8,
+     9,
+     11,
+     12,
+     13,
+     14,
+     21,
+     23,
+     24,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     33,
+     38,
+     40,
+     41,
+     42,
+     47,
+     48,
+     51,
+     54,
+     58
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "12": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   60,
+   "__init__",
+   12
+  ],
+  {
+   "PASS": {
+    "count": 27,
+    "ids": [
+     2,
+     8,
+     9,
+     10,
+     12,
+     13,
+     27,
+     29,
+     33,
+     36,
+     37,
+     40,
+     41,
+     46,
+     51,
+     54
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "21": {
+    "PASS": {
+     "count": 27,
+     "ids": [
+      2,
+      8,
+      9,
+      10,
+      12,
+      13,
+      27,
+      29,
+      33,
+      36,
+      37,
+      40,
+      41,
+      46,
+      51,
+      54
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "21": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   143,
+   "add_requirement",
+   21
+  ],
+  {
+   "PASS": {
+    "count": 27,
+    "ids": [
+     2,
+     8,
+     9,
+     10,
+     12,
+     13,
+     27,
+     29,
+     33,
+     36,
+     37,
+     40,
+     41,
+     46,
+     51,
+     54
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "16": {
+    "PASS": {
+     "count": 27,
+     "ids": [
+      2,
+      8,
+      9,
+      10,
+      12,
+      13,
+      27,
+      29,
+      33,
+      36,
+      37,
+      40,
+      41,
+      46,
+      51,
+      54
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "28": {
+    "PASS": {
+     "count": 27,
+     "ids": [
+      2,
+      8,
+      9,
+      10,
+      12,
+      13,
+      27,
+      29,
+      33,
+      36,
+      37,
+      40,
+      41,
+      46,
+      51,
+      54
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "17": {
+    "PASS": {
+     "count": 27,
+     "ids": [
+      2,
+      8,
+      9,
+      10,
+      12,
+      13,
+      27,
+      29,
+      33,
+      36,
+      37,
+      40,
+      41,
+      46,
+      51,
+      54
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "16": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   109,
+   "versions",
+   16
+  ],
+  {
+   "PASS": {
+    "count": 60,
+    "ids": [
+     2,
+     8,
+     9,
+     10,
+     12,
+     13,
+     27,
+     29,
+     33,
+     36,
+     37,
+     40,
+     41,
+     46,
+     51,
+     54
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "28": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   309,
+   "_meets_requirements",
+   28
+  ],
+  {
+   "PASS": {
+    "count": 27,
+    "ids": [
+     2,
+     8,
+     9,
+     10,
+     12,
+     13,
+     27,
+     29,
+     33,
+     36,
+     37,
+     40,
+     41,
+     46,
+     51,
+     54
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "17": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   115,
+   "versions",
+   17
+  ],
+  {
+   "PASS": {
+    "count": 27,
+    "ids": [
+     2,
+     8,
+     9,
+     10,
+     12,
+     13,
+     27,
+     29,
+     33,
+     36,
+     37,
+     40,
+     41,
+     46,
+     51,
+     54
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "38": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   650,
+   "verify_collections",
+   38
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     2,
+     8,
+     16,
+     17,
+     25,
+     40,
+     51,
+     54
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "41": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      2,
+      8,
+      16,
+      17,
+      25,
+      40,
+      51,
+      54
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "41": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   715,
+   "_display_progress",
+   41
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     2,
+     3,
+     8,
+     16,
+     17,
+     25,
+     40,
+     51,
+     54
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "39": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      2,
+      8,
+      16,
+      17,
+      25,
+      40,
+      51,
+      54
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "39": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   701,
+   "_tempdir",
+   39
+  ],
+  {
+   "PASS": {
+    "count": 10,
+    "ids": [
+     2,
+     8,
+     16,
+     17,
+     25,
+     28,
+     30,
+     40,
+     51,
+     54
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "31": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      40,
+      51
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   },
+   "15": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "95": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "51": {
+    "PASS": {
+     "count": 56,
+     "ids": [
+      28,
+      30
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "31": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   438,
+   "from_name",
+   31
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     40,
+     51
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "62": [
+  [
+   "lib/ansible/galaxy/__init__.py",
+   46,
+   "__init__",
+   62
+  ],
+  {
+   "PASS": {
+    "count": 14,
+    "ids": [
+     1,
+     4,
+     11,
+     14,
+     21,
+     23,
+     24,
+     26,
+     28,
+     30,
+     38,
+     42,
+     47,
+     48
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "37": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   637,
+   "validate_collection_path",
+   37
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     1,
+     21
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "91": [
+  [
+   "lib/ansible/galaxy/api.py",
+   148,
+   "__init__",
+   91
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     2,
+     8,
+     9,
+     12,
+     13,
+     27,
+     29,
+     33,
+     41,
+     46,
+     54
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "19": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   123,
+   "latest_version",
+   19
+  ],
+  {
+   "PASS": {
+    "count": 31,
+    "ids": [
+     2,
+     12,
+     13,
+     27,
+     29,
+     33,
+     41,
+     46
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "16": {
+    "PASS": {
+     "count": 31,
+     "ids": [
+      2,
+      12,
+      13,
+      27,
+      29,
+      33,
+      41,
+      46
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "15": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   104,
+   "metadata",
+   15
+  ],
+  {
+   "PASS": {
+    "count": 7,
+    "ids": [
+     2,
+     12,
+     13,
+     27,
+     29,
+     33,
+     41
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "27": {
+    "PASS": {
+     "count": 7,
+     "ids": [
+      2,
+      12,
+      13,
+      27,
+      29,
+      33,
+      41
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "27": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   304,
+   "_get_metadata",
+   27
+  ],
+  {
+   "PASS": {
+    "count": 7,
+    "ids": [
+     2,
+     12,
+     13,
+     27,
+     29,
+     33,
+     41
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "95": [
+  [
+   "lib/ansible/galaxy/api.py",
+   211,
+   "_add_auth_token",
+   95
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "81": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "81": [
+  [
+   "lib/ansible/galaxy/token.py",
+   146,
+   "headers",
+   81
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "79": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "79": [
+  [
+   "lib/ansible/galaxy/token.py",
+   139,
+   "get",
+   79
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "76": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "76": [
+  [
+   "lib/ansible/galaxy/token.py",
+   110,
+   "config",
+   76
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "77": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      2
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "77": [
+  [
+   "lib/ansible/galaxy/token.py",
+   120,
+   "_read",
+   77
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "34": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   548,
+   "publish_collection",
+   34
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     3,
+     58
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "41": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "36": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   620,
+   "validate_collection_name",
+   36
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     4,
+     11,
+     26,
+     28,
+     30,
+     38,
+     42,
+     47,
+     48
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "47": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   842,
+   "_build_files_manifest",
+   47
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     4,
+     11,
+     26,
+     28,
+     30,
+     38,
+     42,
+     47,
+     48
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "48": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      4,
+      11,
+      26,
+      28,
+      30,
+      38,
+      42,
+      47,
+      48
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "48": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   876,
+   "_walk",
+   48
+  ],
+  {
+   "PASS": {
+    "count": 163,
+    "ids": [
+     4,
+     11,
+     26,
+     28,
+     30,
+     38,
+     42,
+     47,
+     48
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "48": {
+    "PASS": {
+     "count": 154,
+     "ids": [
+      4,
+      11,
+      26,
+      28,
+      30,
+      38,
+      42,
+      47,
+      48
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "56": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   1129,
+   "_extract_tar_file",
+   56
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     5,
+     20,
+     52,
+     57
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "57": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      5,
+      20,
+      52,
+      57
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "40": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      5,
+      20,
+      57
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "57": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   1160,
+   "_get_tar_file_member",
+   57
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     5,
+     15,
+     19,
+     20,
+     39,
+     43,
+     52,
+     57
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "40": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   708,
+   "_tarfile_extract",
+   40
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     5,
+     15,
+     20,
+     39,
+     43,
+     57
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "60": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      5,
+      15,
+      20,
+      57
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "60": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   1192,
+   "_consume_file",
+   60
+  ],
+  {
+   "PASS": {
+    "count": 10,
+    "ids": [
+     5,
+     10,
+     15,
+     20,
+     22,
+     36,
+     45,
+     50,
+     53,
+     57
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "32": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   475,
+   "build_collection",
+   32
+  ],
+  {
+   "PASS": {
+    "count": 5,
+    "ids": [
+     7,
+     28,
+     30,
+     38,
+     42
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "46": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      28,
+      30,
+      38,
+      42
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "47": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      28,
+      30,
+      38,
+      42
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "49": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      28,
+      30,
+      38,
+      42
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "50": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      28,
+      30
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "25": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   242,
+   "verify",
+   25
+  ],
+  {
+   "PASS": {
+    "count": 7,
+    "ids": [
+     9,
+     12,
+     13,
+     27,
+     29,
+     33,
+     41
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "13": {
+    "PASS": {
+     "count": 16,
+     "ids": [
+      9,
+      12,
+      13,
+      27,
+      29,
+      33,
+      41
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "19": {
+    "PASS": {
+     "count": 22,
+     "ids": [
+      12,
+      13,
+      27,
+      29,
+      33,
+      41
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "15": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      12,
+      13,
+      27,
+      29,
+      33,
+      41
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "26": {
+    "PASS": {
+     "count": 10,
+     "ids": [
+      12,
+      13,
+      27,
+      41
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "13": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   97,
+   "__str__",
+   13
+  ],
+  {
+   "PASS": {
+    "count": 20,
+    "ids": [
+     9,
+     12,
+     13,
+     27,
+     29,
+     33,
+     41,
+     46
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "26": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   292,
+   "_verify_file_hash",
+   26
+  ],
+  {
+   "PASS": {
+    "count": 13,
+    "ids": [
+     10,
+     12,
+     13,
+     27,
+     36,
+     37,
+     41
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "60": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      10,
+      36
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "59": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   1186,
+   "_get_tar_file_hash",
+   59
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     15
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "57": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "40": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      15
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "46": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   779,
+   "_get_galaxy_yml",
+   46
+  ],
+  {
+   "PASS": {
+    "count": 10,
+    "ids": [
+     28,
+     30,
+     32,
+     34,
+     35,
+     38,
+     42,
+     44,
+     49,
+     55
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "61": {
+    "PASS": {
+     "count": 10,
+     "ids": [
+      28,
+      30,
+      32,
+      34,
+      35,
+      38,
+      42,
+      44,
+      49,
+      55
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "61": [
+  [
+   "lib/ansible/galaxy/__init__.py",
+   37,
+   "get_collections_galaxy_meta_info",
+   61
+  ],
+  {
+   "PASS": {
+    "count": 10,
+    "ids": [
+     28,
+     30,
+     32,
+     34,
+     35,
+     38,
+     42,
+     44,
+     49,
+     55
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "49": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   922,
+   "_build_manifest",
+   49
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     28,
+     30,
+     38,
+     42
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "50": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   955,
+   "_build_collection_tar",
+   50
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     28,
+     30
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "39": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      28,
+      30
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "51": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   981,
+   "reset_stat",
+   51
+  ],
+  {
+   "PASS": {
+    "count": 56,
+    "ids": [
+     28,
+     30
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "58": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   1172,
+   "_get_json_from_tar_file",
+   58
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     39
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "57": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      39
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "40": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      39
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "55": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   1107,
+   "_download_file",
+   55
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     45,
+     50
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "111": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      45,
+      50
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "60": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      45,
+      50
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "111": [
+  [
+   "lib/ansible/galaxy/user_agent.py",
+   13,
+   "user_agent",
+   111
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     45,
+     50
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "52": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   996,
+   "find_existing_collections",
+   52
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     46
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "30": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      46
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "13": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      46
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "19": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      46
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "30": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   389,
+   "from_path",
+   30
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     46
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "91": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      46
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "12": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      46
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "20": [
+  [
+   "lib/ansible/galaxy/collection.py",
+   130,
+   "dependencies",
+   20
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     46
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}

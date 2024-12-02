@@ -1,0 +1,1341 @@
+{
+ "2288": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   765,
+   "main",
+   2288
+  ],
+  {
+   "PASS": {
+    "count": 19,
+    "ids": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   },
+   "2261": {
+    "PASS": {
+     "count": 19,
+     "ids": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   },
+   "2264": {
+    "PASS": {
+     "count": 17,
+     "ids": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   },
+   "2262": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      5,
+      6,
+      7,
+      8,
+      10,
+      13,
+      17,
+      18,
+      19
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   },
+   "2263": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      5,
+      6,
+      7,
+      8,
+      10,
+      13,
+      17,
+      18,
+      19
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   },
+   "2265": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      5,
+      6,
+      7,
+      8,
+      10,
+      13,
+      17,
+      18,
+      19
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   },
+   "2269": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      18
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   },
+   "2284": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      3,
+      9,
+      13,
+      14,
+      15,
+      19
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2285": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      3,
+      9,
+      13,
+      14,
+      15,
+      19
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2268": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2273": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2274": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      14,
+      15,
+      19
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2266": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      16
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2267": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      16
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2261": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   324,
+   "__init__",
+   2261
+  ],
+  {
+   "PASS": {
+    "count": 19,
+    "ids": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   },
+   "2253": {
+    "PASS": {
+     "count": 19,
+     "ids": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "2253": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   278,
+   "__init__",
+   2253
+  ],
+  {
+   "PASS": {
+    "count": 19,
+    "ids": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   }
+  },
+  {}
+ ],
+ "2264": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   366,
+   "is_registered",
+   2264
+  ],
+  {
+   "PASS": {
+    "count": 17,
+    "ids": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   }
+  },
+  {}
+ ],
+ "2262": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   328,
+   "enable",
+   2262
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     5,
+     6,
+     7,
+     8,
+     10,
+     13,
+     17,
+     18,
+     19
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   },
+   "2255": {
+    "PASS": {
+     "count": 9,
+     "ids": [
+      5,
+      6,
+      7,
+      8,
+      10,
+      13,
+      17,
+      18,
+      19
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   },
+   "2259": {
+    "PASS": {
+     "count": 18,
+     "ids": [
+      5,
+      6,
+      7,
+      8,
+      10,
+      13,
+      17,
+      18,
+      19
+     ]
+    },
+    "FAIL": {
+     "count": 4,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "2255": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   286,
+   "enable",
+   2255
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     5,
+     6,
+     7,
+     8,
+     10,
+     13,
+     17,
+     18,
+     19
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   }
+  },
+  {}
+ ],
+ "2259": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   300,
+   "update_plugin_conf",
+   2259
+  ],
+  {
+   "PASS": {
+    "count": 20,
+    "ids": [
+     5,
+     6,
+     7,
+     8,
+     10,
+     13,
+     16,
+     17,
+     18,
+     19
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0,
+     1
+    ]
+   }
+  },
+  {}
+ ],
+ "2263": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   338,
+   "configure",
+   2263
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     5,
+     6,
+     7,
+     8,
+     10,
+     13,
+     17,
+     18,
+     19
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   }
+  },
+  {}
+ ],
+ "2265": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   381,
+   "register",
+   2265
+  ],
+  {
+   "PASS": {
+    "count": 9,
+    "ids": [
+     5,
+     6,
+     7,
+     8,
+     10,
+     13,
+     17,
+     18,
+     19
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   }
+  },
+  {}
+ ],
+ "2269": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   508,
+   "subscribe_by_pool_ids",
+   2269
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     11,
+     18
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   },
+   "2279": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      11,
+      18
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   },
+   "2280": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      11,
+      18
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   },
+   "2277": {
+    "PASS": {
+     "count": 5,
+     "ids": [
+      11,
+      18
+     ]
+    },
+    "FAIL": {
+     "count": 4,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "2279": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   635,
+   "__init__",
+   2279
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     8,
+     11,
+     18
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   },
+   "2281": {
+    "PASS": {
+     "count": 4,
+     "ids": [
+      8,
+      11,
+      18
+     ]
+    },
+    "FAIL": {
+     "count": 2,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "2281": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   642,
+   "_load_product_list",
+   2281
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     8,
+     11,
+     18
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   },
+   "2275": {
+    "PASS": {
+     "count": 7,
+     "ids": [
+      8,
+      11,
+      18
+     ]
+    },
+    "FAIL": {
+     "count": 4,
+     "ids": [
+      0,
+      1
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "2275": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   610,
+   "__init__",
+   2275
+  ],
+  {
+   "PASS": {
+    "count": 7,
+    "ids": [
+     8,
+     11,
+     18
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0,
+     1
+    ]
+   }
+  },
+  {}
+ ],
+ "2280": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   639,
+   "__iter__",
+   2280
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     11,
+     18
+    ]
+   },
+   "FAIL": {
+    "count": 2,
+    "ids": [
+     0,
+     1
+    ]
+   }
+  },
+  {}
+ ],
+ "2277": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   618,
+   "get_pool_id",
+   2277
+  ],
+  {
+   "PASS": {
+    "count": 10,
+    "ids": [
+     8,
+     11,
+     18
+    ]
+   },
+   "FAIL": {
+    "count": 4,
+    "ids": [
+     0,
+     1
+    ]
+   }
+  },
+  {}
+ ],
+ "2284": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   708,
+   "__init__",
+   2284
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     3,
+     9,
+     13,
+     14,
+     15,
+     19
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2285": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   714,
+   "update_syspurpose",
+   2285
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     3,
+     9,
+     13,
+     14,
+     15,
+     19
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2287": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      3,
+      9,
+      13,
+      14,
+      15,
+      19
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2286": {
+    "PASS": {
+     "count": 6,
+     "ids": [
+      3,
+      9,
+      13,
+      14,
+      15,
+      19
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2287": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   750,
+   "_read_syspurpose",
+   2287
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     3,
+     9,
+     13,
+     14,
+     15,
+     19
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2286": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   742,
+   "_write_syspurpose",
+   2286
+  ],
+  {
+   "PASS": {
+    "count": 6,
+    "ids": [
+     3,
+     9,
+     13,
+     14,
+     15,
+     19
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2268": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   472,
+   "subscribe",
+   2268
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2270": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2270": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   524,
+   "subscribe_pool",
+   2270
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2279": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2282": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2282": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   680,
+   "filter_pools",
+   2282
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2277": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2278": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2278": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   621,
+   "subscribe",
+   2278
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     8
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2277": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      8
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2273": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   574,
+   "update_subscriptions_by_pool_ids",
+   2273
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     11
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2279": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2280": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2277": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2266": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2269": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      11
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "2266": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   440,
+   "unsubscribe",
+   2266
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     11,
+     16
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2274": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   597,
+   "sync_syspurpose",
+   2274
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     14,
+     15,
+     19
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2267": [
+  [
+   "lib/ansible/modules/packaging/os/redhat_subscription.py",
+   461,
+   "unregister",
+   2267
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     16
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "2259": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      16
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ]
+}

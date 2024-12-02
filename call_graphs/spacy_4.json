@@ -1,0 +1,2935 @@
+{
+ "118": [
+  [
+   "spacy/errors.py",
+   9,
+   "add_codes",
+   118
+  ],
+  {
+   "PASS": {
+    "count": 12,
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 3,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "121": [
+  [
+   "spacy/errors.py",
+   591,
+   "_get_warn_types",
+   121
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "122": [
+  [
+   "spacy/errors.py",
+   599,
+   "_get_warn_excl",
+   122
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "268": [
+  [
+   "spacy/_ml.py",
+   904,
+   "_uniform_init",
+   268
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "91": [
+  [
+   "spacy/language.py",
+   1014,
+   "__init__",
+   91
+  ],
+  {
+   "PASS": {
+    "count": 52,
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 13,
+    "ids": [
+     0
+    ]
+   },
+   "130": {
+    "PASS": {
+     "count": 104,
+     "ids": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 26,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "130": [
+  [
+   "spacy/analysis.py",
+   71,
+   "validate_attrs",
+   130
+  ],
+  {
+   "PASS": {
+    "count": 104,
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 26,
+    "ids": [
+     0
+    ]
+   },
+   "129": {
+    "PASS": {
+     "count": 104,
+     "ids": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 26,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "129": [
+  [
+   "spacy/analysis.py",
+   54,
+   "dot_to_dict",
+   129
+  ],
+  {
+   "PASS": {
+    "count": 104,
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 26,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "92": [
+  [
+   "spacy/language.py",
+   1027,
+   "__call__",
+   92
+  ],
+  {
+   "PASS": {
+    "count": 52,
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 13,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "162": [
+  [
+   "spacy/util.py",
+   390,
+   "add_lookups",
+   162
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "164": [
+  [
+   "spacy/util.py",
+   410,
+   "update_exc",
+   164
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "165": {
+    "PASS": {
+     "count": 8,
+     "ids": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "165": [
+  [
+   "spacy/util.py",
+   430,
+   "expand_exc",
+   165
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "166": {
+    "PASS": {
+     "count": 2848,
+     "ids": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 6,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "166": [
+  [
+   "spacy/util.py",
+   440,
+   "_fix_token",
+   166
+  ],
+  {
+   "PASS": {
+    "count": 2848,
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 6,
+    "ids": [
+     0
+    ]
+   }
+  },
+  {}
+ ],
+ "575": [
+  [
+   "spacy/cli/converters/conllu2json.py",
+   9,
+   "conllu2json",
+   575
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "577": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 1,
+     "ids": [
+      0
+     ]
+    }
+   }
+  },
+  {}
+ ],
+ "577": [
+  [
+   "spacy/cli/converters/conllu2json.py",
+   57,
+   "read_conllx",
+   577
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 1,
+    "ids": [
+     0
+    ]
+   },
+   "576": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "579": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "580": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "568": [
+  [
+   "spacy/cli/converters/iob2json.py",
+   11,
+   "iob2json",
+   568
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "569": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "574": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "570": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "569": [
+  [
+   "spacy/cli/converters/iob2json.py",
+   31,
+   "read_iob",
+   569
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "574": [
+  [
+   "spacy/cli/converters/conll_ner2json.py",
+   168,
+   "n_sents_info",
+   574
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "570": [
+  [
+   "spacy/cli/converters/iob2json.py",
+   59,
+   "merge_sentences",
+   570
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "168": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      1
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "168": [
+  [
+   "spacy/util.py",
+   470,
+   "minibatch",
+   168
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     1
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "571": [
+  [
+   "spacy/cli/converters/conll_ner2json.py",
+   12,
+   "conll_ner2json",
+   571
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     2
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "576": [
+  [
+   "spacy/cli/converters/conllu2json.py",
+   43,
+   "is_ner",
+   576
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "579": [
+  [
+   "spacy/cli/converters/conllu2json.py",
+   113,
+   "generate_sentence",
+   579
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "578": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      3
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "578": [
+  [
+   "spacy/cli/converters/conllu2json.py",
+   89,
+   "simplify_tags",
+   578
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "580": [
+  [
+   "spacy/cli/converters/conllu2json.py",
+   134,
+   "create_doc",
+   580
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     3
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "52": [
+  [
+   "spacy/language.py",
+   136,
+   "__init__",
+   52
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "50": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "51": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "50": [
+  [
+   "spacy/language.py",
+   63,
+   "create_vocab",
+   50
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "49": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "48": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "49": [
+  [
+   "spacy/language.py",
+   49,
+   "create_lookups",
+   49
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "144": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "541": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "0": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "2": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "144": [
+  [
+   "spacy/util.py",
+   144,
+   "get_module_path",
+   144
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "541": [
+  [
+   "spacy/lang/en/__init__.py",
+   19,
+   "_return_en",
+   541
+  ],
+  {
+   "PASS": {
+    "count": 496,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "0": [
+  [
+   "spacy/lookups.py",
+   24,
+   "__init__",
+   0
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "2": [
+  [
+   "spacy/lookups.py",
+   42,
+   "__len__",
+   2
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "48": [
+  [
+   "spacy/language.py",
+   43,
+   "create_lemmatizer",
+   48
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "105": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "105": [
+  [
+   "spacy/lemmatizer.py",
+   23,
+   "__init__",
+   105
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "51": [
+  [
+   "spacy/language.py",
+   81,
+   "create_tokenizer",
+   51
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "159": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "160": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "161": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "333": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "163": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "334": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "335": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "336": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "337": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "338": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "339": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "340": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "341": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "342": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "343": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "344": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "345": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "330": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "543": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "322": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "323": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "332": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "325": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "326": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "327": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "328": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "329": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "331": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "541": {
+    "PASS": {
+     "count": 478,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "106": {
+    "PASS": {
+     "count": 71,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "159": [
+  [
+   "spacy/util.py",
+   353,
+   "compile_prefix_regex",
+   159
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "160": [
+  [
+   "spacy/util.py",
+   370,
+   "compile_suffix_regex",
+   160
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "161": [
+  [
+   "spacy/util.py",
+   380,
+   "compile_infix_regex",
+   161
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "333": [
+  [
+   "spacy/lang/lex_attrs.py",
+   177,
+   "lower",
+   333
+  ],
+  {
+   "PASS": {
+    "count": 958,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "163": [
+  [
+   "spacy/util.py",
+   403,
+   "_get_attr_unless_lookup",
+   163
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "333": {
+    "PASS": {
+     "count": 467,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "334": [
+  [
+   "spacy/lang/lex_attrs.py",
+   181,
+   "prefix",
+   334
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "335": [
+  [
+   "spacy/lang/lex_attrs.py",
+   185,
+   "suffix",
+   335
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "336": [
+  [
+   "spacy/lang/lex_attrs.py",
+   189,
+   "cluster",
+   336
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "337": [
+  [
+   "spacy/lang/lex_attrs.py",
+   193,
+   "is_alpha",
+   337
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "338": [
+  [
+   "spacy/lang/lex_attrs.py",
+   197,
+   "is_digit",
+   338
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "339": [
+  [
+   "spacy/lang/lex_attrs.py",
+   201,
+   "is_lower",
+   339
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "340": [
+  [
+   "spacy/lang/lex_attrs.py",
+   205,
+   "is_space",
+   340
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "341": [
+  [
+   "spacy/lang/lex_attrs.py",
+   209,
+   "is_title",
+   341
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "342": [
+  [
+   "spacy/lang/lex_attrs.py",
+   213,
+   "is_upper",
+   342
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "343": [
+  [
+   "spacy/lang/lex_attrs.py",
+   217,
+   "is_stop",
+   343
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "344": [
+  [
+   "spacy/lang/lex_attrs.py",
+   221,
+   "is_oov",
+   344
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "345": [
+  [
+   "spacy/lang/lex_attrs.py",
+   225,
+   "get_prob",
+   345
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "330": [
+  [
+   "spacy/lang/lex_attrs.py",
+   120,
+   "like_email",
+   330
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "543": [
+  [
+   "spacy/lang/en/lex_attrs.py",
+   47,
+   "like_num",
+   543
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "322": [
+  [
+   "spacy/lang/lex_attrs.py",
+   27,
+   "is_punct",
+   322
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "323": [
+  [
+   "spacy/lang/lex_attrs.py",
+   34,
+   "is_ascii",
+   323
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "332": [
+  [
+   "spacy/lang/lex_attrs.py",
+   150,
+   "word_shape",
+   332
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "325": [
+  [
+   "spacy/lang/lex_attrs.py",
+   55,
+   "is_bracket",
+   325
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "326": [
+  [
+   "spacy/lang/lex_attrs.py",
+   60,
+   "is_quote",
+   326
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "327": [
+  [
+   "spacy/lang/lex_attrs.py",
+   85,
+   "is_left_punct",
+   327
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "328": [
+  [
+   "spacy/lang/lex_attrs.py",
+   107,
+   "is_right_punct",
+   328
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "329": [
+  [
+   "spacy/lang/lex_attrs.py",
+   112,
+   "is_currency",
+   329
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "331": [
+  [
+   "spacy/lang/lex_attrs.py",
+   124,
+   "like_url",
+   331
+  ],
+  {
+   "PASS": {
+    "count": 491,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "106": [
+  [
+   "spacy/lemmatizer.py",
+   34,
+   "__call__",
+   106
+  ],
+  {
+   "PASS": {
+    "count": 71,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "5": {
+    "PASS": {
+     "count": 71,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "1": {
+    "PASS": {
+     "count": 71,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "5": [
+  [
+   "spacy/lookups.py",
+   66,
+   "get_table",
+   5
+  ],
+  {
+   "PASS": {
+    "count": 71,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "1": [
+  [
+   "spacy/lookups.py",
+   33,
+   "__contains__",
+   1
+  ],
+  {
+   "PASS": {
+    "count": 71,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "7": {
+    "PASS": {
+     "count": 71,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "7": [
+  [
+   "spacy/lookups.py",
+   94,
+   "has_table",
+   7
+  ],
+  {
+   "PASS": {
+    "count": 71,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "392": [
+  [
+   "spacy/cli/pretrain.py",
+   269,
+   "make_docs",
+   392
+  ],
+  {
+   "PASS": {
+    "count": 8,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "74": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "541": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "137": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "333": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "163": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "334": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "335": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "336": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "337": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "338": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "339": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "340": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "341": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "342": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "343": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "344": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "345": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "330": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "543": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "322": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "323": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "332": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "325": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "326": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "327": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "328": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "329": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "331": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "119": {
+    "PASS": {
+     "count": 2,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "74": [
+  [
+   "spacy/language.py",
+   452,
+   "make_doc",
+   74
+  ],
+  {
+   "PASS": {
+    "count": 3,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "541": {
+    "PASS": {
+     "count": 15,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "137": {
+    "PASS": {
+     "count": 3,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "333": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "163": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "334": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "335": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "336": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "337": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "338": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "339": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "340": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "341": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "342": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "343": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "344": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "345": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "330": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "543": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "322": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "323": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "332": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "325": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "326": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "327": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "328": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "329": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   },
+   "331": {
+    "PASS": {
+     "count": 12,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "137": [
+  [
+   "spacy/util.py",
+   63,
+   "get_lang_class",
+   137
+  ],
+  {
+   "PASS": {
+    "count": 4,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   },
+   "138": {
+    "PASS": {
+     "count": 1,
+     "ids": [
+      4
+     ]
+    },
+    "FAIL": {
+     "count": 0,
+     "ids": []
+    }
+   }
+  },
+  {}
+ ],
+ "138": [
+  [
+   "spacy/util.py",
+   81,
+   "set_lang_class",
+   138
+  ],
+  {
+   "PASS": {
+    "count": 1,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ],
+ "119": [
+  [
+   "spacy/errors.py",
+   13,
+   "__getattribute__",
+   119
+  ],
+  {
+   "PASS": {
+    "count": 2,
+    "ids": [
+     4
+    ]
+   },
+   "FAIL": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  {}
+ ]
+}
