@@ -1,0 +1,63 @@
+{
+ "PASS": {
+  "methods": {
+   "floatx (1605)": 1.0,
+   "epsilon (1603)": 1.0,
+   "image_data_format (1608)": 1.0,
+   "set_floatx (1606)": 1.0,
+   "set_epsilon (1604)": 1.0,
+   "set_image_data_format (1609)": 1.0,
+   "generate_legacy_interface (501)": 1.0,
+   "legacy_support (502)": 1.0,
+   "backend (1439)": 1.0,
+   "text_to_word_sequence (289)": 1.0,
+   "one_hot (290)": 0.11132872965577954,
+   "hashing_trick (291)": 0.33465521969231204,
+   "__init__ (292)": 0.44125857937859203,
+   "fit_on_texts (293)": 0.44125857937859203,
+   "texts_to_sequences (295)": 0.3301112603111096,
+   "texts_to_sequences_generator (296)": 0.3301112603111096,
+   "fit_on_sequences (294)": 0.10970774490202831,
+   "texts_to_matrix (297)": 0.2196421271429404,
+   "sequences_to_matrix (298)": 0.2196421271429404
+  },
+  "tests": {
+   "Pass Test (2)": 0.7163121045788711,
+   "Pass Test (3)": 0.658592408562579,
+   "Pass Test (4)": 0.6007570952668257,
+   "Pass Test (5)": 0.6007570952668257,
+   "Pass Test (6)": 0.8292448298648544,
+   "Pass Test (7)": 0.658592408562579,
+   "Pass Test (8)": 1.0,
+   "Pass Test (9)": 0.7151448712807119,
+   "Pass Test (10)": 0.9431207793597324
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "floatx (1605)": 1.0,
+   "epsilon (1603)": 1.0,
+   "image_data_format (1608)": 1.0,
+   "set_floatx (1606)": 1.0,
+   "set_epsilon (1604)": 1.0,
+   "set_image_data_format (1609)": 1.0,
+   "generate_legacy_interface (501)": 1.0,
+   "legacy_support (502)": 1.0,
+   "backend (1439)": 1.0,
+   "text_to_word_sequence (289)": 1.0,
+   "one_hot (290)": 0.0,
+   "hashing_trick (291)": 0.0,
+   "__init__ (292)": 0.0,
+   "fit_on_texts (293)": 0.0,
+   "texts_to_sequences (295)": 0.0,
+   "texts_to_sequences_generator (296)": 0.0,
+   "fit_on_sequences (294)": 0.0,
+   "texts_to_matrix (297)": 0.0,
+   "sequences_to_matrix (298)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0,
+   "Fail Test (1)": 1.0
+  }
+ }
+}

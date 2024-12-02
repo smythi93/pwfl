@@ -1,0 +1,47 @@
+{
+ "PASS": {
+  "methods": {
+   "floatx (1711)": 1.0,
+   "epsilon (1709)": 1.0,
+   "image_data_format (1714)": 1.0,
+   "set_floatx (1712)": 1.0,
+   "set_epsilon (1710)": 1.0,
+   "set_image_data_format (1715)": 1.0,
+   "generate_legacy_interface (461)": 1.0,
+   "legacy_support (462)": 1.0,
+   "backend (1445)": 1.0,
+   "allow_write_to_gcs (317)": 1.0,
+   "allow_read_from_gcs (319)": 1.0,
+   "keras_modules_injection (236)": 1.0,
+   "normalize_conv (1615)": 1.0,
+   "clear_session (1448)": 1.0,
+   "reset_uids (1447)": 1.0
+  },
+  "tests": {
+   "Pass Test (1)": 1.0,
+   "Pass Test (2)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "floatx (1711)": 1.0,
+   "epsilon (1709)": 1.0,
+   "image_data_format (1714)": 1.0,
+   "set_floatx (1712)": 1.0,
+   "set_epsilon (1710)": 1.0,
+   "set_image_data_format (1715)": 1.0,
+   "generate_legacy_interface (461)": 1.0,
+   "legacy_support (462)": 1.0,
+   "backend (1445)": 1.0,
+   "allow_write_to_gcs (317)": 1.0,
+   "allow_read_from_gcs (319)": 1.0,
+   "keras_modules_injection (236)": 1.0,
+   "normalize_conv (1615)": 1.0,
+   "clear_session (1448)": 1.0,
+   "reset_uids (1447)": 1.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

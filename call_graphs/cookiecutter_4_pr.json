@@ -1,0 +1,53 @@
+{
+ "PASS": {
+  "methods": {
+   "work_in (5)": 0.6828218007499286,
+   "rmtree (3)": 1.0,
+   "run_script (33)": 0.7867526437870425,
+   "make_executable (6)": 0.7867526437870425,
+   "find_hooks (32)": 0.6828218007499286,
+   "run_hook (35)": 0.46957444453697117,
+   "run_script_with_context (34)": 0.572497975336063,
+   "generate_files (22)": 0.37168290237489615,
+   "find_template (36)": 0.37168290237489615,
+   "ensure_dir_is_templated (21)": 0.37168290237489615,
+   "render_and_create_dir (20)": 0.37168290237489615,
+   "make_sure_path_exists (4)": 0.37168290237489615,
+   "copy_without_render (16)": 0.37168290237489615,
+   "generate_file (19)": 0.37168290237489615
+  },
+  "tests": {
+   "Pass Test (2)": 0.24588602707254198,
+   "Pass Test (4)": 0.5267471847034847,
+   "Pass Test (6)": 1.0,
+   "Pass Test (7)": 1.0,
+   "Pass Test (8)": 0.24588602707254198,
+   "Pass Test (9)": 1.0,
+   "Pass Test (10)": 1.0,
+   "Pass Test (1)": 0.24704740814458773,
+   "Pass Test (3)": 0.24704740814458773,
+   "Pass Test (5)": 0.3164707120897566
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "work_in (5)": 1.0,
+   "rmtree (3)": 1.0,
+   "run_script (33)": 0.0,
+   "make_executable (6)": 0.0,
+   "find_hooks (32)": 0.0,
+   "run_hook (35)": 0.0,
+   "run_script_with_context (34)": 0.0,
+   "generate_files (22)": 0.0,
+   "find_template (36)": 0.0,
+   "ensure_dir_is_templated (21)": 0.0,
+   "render_and_create_dir (20)": 0.0,
+   "make_sure_path_exists (4)": 0.0,
+   "copy_without_render (16)": 0.0,
+   "generate_file (19)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0
+  }
+ }
+}

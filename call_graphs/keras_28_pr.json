@@ -1,0 +1,55 @@
+{
+ "PASS": {
+  "methods": {
+   "floatx (1606)": 1.0,
+   "epsilon (1604)": 1.0,
+   "image_data_format (1609)": 1.0,
+   "set_floatx (1607)": 1.0,
+   "set_epsilon (1605)": 1.0,
+   "set_image_data_format (1610)": 1.0,
+   "generate_legacy_interface (501)": 1.0,
+   "legacy_support (502)": 1.0,
+   "backend (1440)": 1.0,
+   "__init__ (303)": 0.0,
+   "__len__ (304)": 0.0,
+   "__getitem__ (306)": 0.0,
+   "_empty_batch (305)": 0.0,
+   "pad_sequences (299)": 0.39999999999999997,
+   "_remove_long_seq (302)": 0.19999999999999998,
+   "skipgrams (301)": 0.19999999999999998,
+   "make_sampling_table (300)": 0.19999999999999998
+  },
+  "tests": {
+   "Pass Test (2)": 1.0,
+   "Pass Test (3)": 1.0,
+   "Pass Test (4)": 1.0,
+   "Pass Test (5)": 0.9999999999999999,
+   "Pass Test (6)": 1.0
+  }
+ },
+ "FAIL": {
+  "methods": {
+   "floatx (1606)": 1.0,
+   "epsilon (1604)": 1.0,
+   "image_data_format (1609)": 1.0,
+   "set_floatx (1607)": 1.0,
+   "set_epsilon (1605)": 1.0,
+   "set_image_data_format (1610)": 1.0,
+   "generate_legacy_interface (501)": 1.0,
+   "legacy_support (502)": 1.0,
+   "backend (1440)": 1.0,
+   "__init__ (303)": 1.0,
+   "__len__ (304)": 1.0,
+   "__getitem__ (306)": 0.478347760772758,
+   "_empty_batch (305)": 0.478347760772758,
+   "pad_sequences (299)": 0.0,
+   "_remove_long_seq (302)": 0.0,
+   "skipgrams (301)": 0.0,
+   "make_sampling_table (300)": 0.0
+  },
+  "tests": {
+   "Fail Test (0)": 1.0,
+   "Fail Test (1)": 0.9227553571999123
+  }
+ }
+}
