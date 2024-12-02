@@ -198,6 +198,9 @@ def main(project_name, bug_id):
         with open(cg_lines_file, "w") as f:
             json.dump(lines, f, indent=1)
 
+    with open(report_file, "w") as f:
+        json.dump(report, f, indent=1)
+
 
 if __name__ == "__main__":
     args = argparse.ArgumentParser()
