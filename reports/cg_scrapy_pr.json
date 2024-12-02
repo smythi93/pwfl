@@ -61,15 +61,8 @@
   "check": "successful"
  },
  "scrapy_20": {
-  "check": "fail",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 222, in main\n    x_m_passing, x_t_passing = get_page_rank(\n                               ^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/dw-sfl/get_page_rank.py\", line 157, in get_page_rank\n    max_m = np.max(y_m)\n            ^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-   "ValueError: zero-size array to reduction operation maximum which has no identity\n"
-  ]
+  "check": "successful",
+  "time": 0.0001285076141357422
  },
  "scrapy_21": {
   "time": 0.0031070709228515625,
