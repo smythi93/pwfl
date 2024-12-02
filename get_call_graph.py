@@ -1,6 +1,8 @@
 import argparse
 import json
 import os
+import time
+import traceback
 from pathlib import Path
 from typing import Tuple, Dict, List, Set
 
@@ -14,21 +16,29 @@ from sflkitlib.events.event import (
     FunctionEnterEvent,
     FunctionErrorEvent,
     FunctionExitEvent,
+    LineEvent,
 )
 from tests4py.projects import TestStatus
 
 from get_analysis import get_event_files
 
 Function = Tuple[str, int, str, int]
+Line = Tuple[str, int]
 
 
 class CallGraphBuilder(Model):
     def __init__(self, factory):
         super().__init__(factory)
         self.graph: Dict[
-            int, Tuple[Function, Dict[int, Dict[str, Dict[str, int | List[int]]]]]
+            int,
+            Tuple[
+                Function,
+                Dict[str, int | List[int]],
+                Dict[int, Dict[str, Dict[str, int | List[int]]]],
+            ],
         ] = dict()
         self.call_stack: List[Function] = list()
+        self.lines: Dict[int, Tuple[Function, List[Line]]] = dict()
 
     def prepare(self, event_file):
         super().prepare(event_file)
@@ -36,6 +46,16 @@ class CallGraphBuilder(Model):
 
     def handle_event(self, event, scope: Scope = None) -> Set[AnalysisObject]:
         return set()
+
+    def handle_line_event(self, event):
+        event: LineEvent
+        if self.call_stack:
+            function_id = self.call_stack[-1][3]
+            if function_id not in self.lines:
+                self.lines[function_id] = (self.call_stack[-1], list())
+            line = (event.file, event.line)
+            if line not in self.lines[function_id][1]:
+                self.lines[function_id][1].append(line)
 
     def handle_function_enter_event(self, event):
         event: FunctionEnterEvent
@@ -45,7 +65,14 @@ class CallGraphBuilder(Model):
             caller = self.call_stack[-1]
             caller_id = caller[3]
             if caller_id not in self.graph:
-                self.graph[caller_id] = (caller, dict())
+                self.graph[caller_id] = (
+                    caller,
+                    {
+                        "PASS": {"count": 0, "ids": list()},
+                        "FAIL": {"count": 0, "ids": list()},
+                    },
+                    dict(),
+                )
             if function_id not in self.graph[caller_id][1]:
                 self.graph[caller_id][1][function_id] = {
                     "PASS": {"count": 0, "ids": list()},
@@ -72,7 +99,32 @@ class CallGraphBuilder(Model):
                     )
         self.call_stack.append(function)
         if function_id not in self.graph:
-            self.graph[function_id] = (function, dict())
+            self.graph[function_id] = (
+                function,
+                {
+                    "PASS": {"count": 0, "ids": list()},
+                    "FAIL": {"count": 0, "ids": list()},
+                },
+                dict(),
+            )
+        if self.current_event_file.failing:
+            self.graph[function_id][1]["FAIL"]["count"] += 1
+            if (
+                self.current_event_file.run_id
+                not in self.graph[function_id][1]["FAIL"]["ids"]
+            ):
+                self.graph[function_id][1]["FAIL"]["ids"].append(
+                    self.current_event_file.run_id
+                )
+        else:
+            self.graph[function_id][1]["PASS"]["count"] += 1
+            if (
+                self.current_event_file.run_id
+                not in self.graph[function_id][1]["PASS"]["ids"]
+            ):
+                self.graph[function_id][1]["PASS"]["ids"].append(
+                    self.current_event_file.run_id
+                )
 
     def handle_function_exit_event(self, event):
         event: FunctionExitEvent
@@ -98,25 +150,53 @@ def build_call_graph(project):
         with event_file:
             for event in event_file.load():
                 event.handle(model)
-    return model.graph
+    return model.graph, model.lines
 
 
 def main(project_name, bug_id):
     cg_dir = "call_graphs"
     os.makedirs(cg_dir, exist_ok=True)
 
+    report_dir = "reports"
+    os.makedirs(report_dir, exist_ok=True)
+    report_file = os.path.join(report_dir, f"cg_{project_name}.json")
+    if os.path.exists(report_file):
+        with open(report_file, "r") as f:
+            report = json.load(f)
+    else:
+        report = dict()
     for project in t4p.get_projects(project_name, bug_id):
         identifier = project.get_identifier()
+        if identifier not in report:
+            report[identifier] = dict()
+        cg_file = os.path.join(cg_dir, f"{identifier}.json")
+        cg_lines_file = os.path.join(cg_dir, f"{identifier}_lines.json")
         print(identifier)
         if (
             project.test_status_buggy != TestStatus.FAILING
             or project.test_status_fixed != TestStatus.PASSING
+            or (
+                "check" in report[identifier]
+                and report[identifier]["check"] == "successful"
+                and os.path.exists(cg_file)
+                and os.path.exists(cg_lines_file)
+            )
         ):
             continue
-        project.buggy = True
-        call_graph = build_call_graph(project)
-        with open(os.path.join(cg_dir, f"{identifier}.json"), "w") as f:
+        try:
+            start = time.time()
+            call_graph, lines = build_call_graph(project)
+            report[identifier]["time"] = time.time() - start
+        except Exception as e:
+            report[identifier]["check"] = "fail"
+            report[identifier]["error"] = traceback.format_exception(e)
+            continue
+        else:
+            report[identifier]["check"] = "successful"
+        with open(cg_file, "w") as f:
             json.dump(call_graph, f, indent=1)
+        with open(cg_lines_file, "w") as f:
+            json.dump(lines, f, indent=1)
 
 
 if __name__ == "__main__":

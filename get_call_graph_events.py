@@ -51,7 +51,7 @@ def create_config(
     return Config.create(
         path=str(src.absolute()),
         language="python",
-        events="function_enter,function_exit,function_error",
+        events="line,function_enter,function_exit,function_error",
         ignore_inner=str(
             project.project_name == "pysnooper"
         ),  # pysnooper defines a testcase function inside a
