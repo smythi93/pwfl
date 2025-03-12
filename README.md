@@ -1,4 +1,4 @@
-# Time-Weighted Fault Localization
+# Proximity-Weighted Fault Localization
 
 ## Abstract
 
@@ -11,8 +11,8 @@ The more recently a subject line is executed before the test fails, the higher i
 This way, code executed last before a failing assertion gets a higher weight than earlier (passing) assertions or test setup code.
 Once computed, the weight of lines can be integrated into any SFL metric.
    
-Our evaluation of time-weighted fault localization on 310 real-world programs shows that it vastly outperforms traditional fault localization techniques.
-On average per test subject, time-weighted fault localization ranks faulty lines higher by between 200% and 300%, _reducing the effort to find faulty locations by a factor of three to four._
+Our evaluation of proximity-weighted fault localization on 310 real-world programs shows that it vastly outperforms traditional and state-of-the-art fault localization techniques.
+On average, per test subject, proximity-weighted fault localization ranks faulty lines higher by between 200% and 300%, _reducing the effort to find faulty locations by a factor of three to four_.
 Our approach can be easily integrated into existing fault localization techniques to improve performance, making it a valuable addition to automated debugging.
 
 ## Setup
@@ -22,7 +22,7 @@ programs to collect the event data. The event data is a sequence of events that 
 subject.
 
 We have modified SFLKit to collect the execution features for the subjects. The modified version of SFLKit is available
-in the `sflkit-extension` directory. 
+in the `sflkit` directory. 
 
 As subjects of our evaluation, we leverage [Tests4Py](https://github.com/smythi93/Tests4Py).
 
@@ -33,13 +33,13 @@ Additionally, we have implemented multiple scripts to run the experiments and an
 To install the requirements, run the following command:
 
 ```bash
-python3 setup.py
+python setup.py
 ```
 
 We recommend using a virtual environment to install the requirements. To create a virtual environment, run the following command:
 
 ```bash
-python3 -m venv .venv
+python -m venv .venv
 ```
 
 To activate the virtual environment, run the following command:
@@ -53,7 +53,7 @@ source .venv/bin/activate
 
 ## Example
 
-If you want to check out how time-weighted fault localization works, we recommend checking out the example in `example.ipynb`.
+If you want to check out how proximity-weighted fault localization works, we recommend checking out the example in `example.ipynb`.
 
 ## Reproducing our Results
 
@@ -62,13 +62,13 @@ If you want to check out how time-weighted fault localization works, we recommen
 To collect the event data, run the following command:
 
 ```bash
-python3 get_events.py -p <project_name> [-b <bug_id>]
+python evaluation.py events -p <project_name> [-b <bug_id>]
 ```
 
 For instance, to collect the event data for bug 1 of the project `black`, run the following command:
 
 ```bash
-python3 get_events.py -p black -b 1
+python evaluation.py events -p black -b 1
 ```
 
 The collected event data will be stored in the `sflkit_events` directory.
@@ -89,7 +89,7 @@ Remove the `reports/report_<project_name>.json` file if you want to collect the 
 Next, you need to analyze the collected events by running:
 
 ```bash
-python3 get_analysis.py -p <project_name> [-i <bug_id>]
+python evaluation.py analyze -p <project_name> [-i <bug_id>]
 ```
 
 The analyzed events, i.e., the information to calculate the suspiciousness scores, including the weight, will get stored in the `analysis` directory.
@@ -99,7 +99,7 @@ The analyzed events, i.e., the information to calculate the suspiciousness score
 To evaluate the correlation and fault localization, run the following command:
 
 ```bash
-python3 get_metrics.py -p <project_name> [-i <bug_id>]
+python evaluation.py evaluate -p <project_name> [-i <bug_id>]
 ```
 
 The results of the correlation and fault localization will be stored in the `results` directory for each subject 
@@ -111,10 +111,23 @@ files in the `results` directory.
 To summarize the results of all subjects, run the following command:
 
 ```bash
-python3 get_summary.py
+python evaluation.py summarize
 ```
 
 The summarized results will be stored in a file called `summary.json`.
+
+### Reproducing the Results for PRFL
+
+To reproduce the results for PRFL, run the following steps:
+
+```bash
+python evaluation.py cg events -p <project_name> [-i <bug_id>]
+python evaluation.py cg build -p <project_name> [-i <bug_id>]
+python evaluation.py prfl build -p <project_name> [-i <bug_id>]
+python evaluation.py prfl evaluate -p <project_name> [-i <bug_id>]
+python evaluation.py summarize-prfl
+```
+
 
 ## License
 
