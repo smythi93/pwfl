@@ -251,7 +251,7 @@ def get_localization_prfl_text_table(
     line_for_each_metric_prfl,
 ):
     table = get_header_tex_table()
-    for d, distance in enumerate(distance_prfl_order):
+    for d, distance in enumerate(distance_prfl_order[1:]):
         for m, metric in enumerate(metric_order):
             if d % 2 == 1:
                 table += "\\rowcolor{row}\n"
@@ -313,9 +313,20 @@ def get_localization_prfl_text_table(
     return table
 
 
-def get_improvement_tex_table(improvements, order):
+def get_improvement_combined_table(improvements, improvements_prfl):
     table = get_header_tex_table_without_metric()
-    for d, distance in enumerate(order[1:]):
+    table += get_improvement_tex_table(improvements, distance_order)
+    table += "\\midrule\n"
+    table += get_improvement_tex_table(
+        improvements_prfl, distance_prfl_order, n=len(distance_order) - 1
+    )
+    table += "\\bottomrule\n\\end{tabular}\n"
+    return table
+
+
+def get_improvement_tex_table(improvements, order, n=0):
+    table = ""
+    for d, distance in enumerate(order[1:], start=n):
         if d % 2 == 1:
             table += "\\rowcolor{row}\n"
         table += f"    {tex_translation[distance]}"
@@ -364,22 +375,15 @@ def get_improvement_tex_table(improvements, order):
                     ) * 100
                     table += f" & {int(avg_percent)}\\%"
         table += " \\\\"
-        if d < len(order) - 1:
+        if d < len(order) - 1 + n:
             table += "\n"
         table += "[.2em]\n"
-
-    table += "\\bottomrule\n\\end{tabular}\n"
     return table
 
 
-def get_disadvantages_tex_table(improvements):
-    table = get_header_tex_table_without_metric()
-    for d, distance in enumerate(distance_order[1:]):
-        if d % 2 == 1:
-            table += "\\rowcolor{row}\n"
-        table += f"    {tex_translation[distance]}"
-        table += "\\rowstrut{}"
-        actual_decrease = {
+def get_disadvantages_combined_table(improvements, improvements_prfl):
+    actual_decrease = {
+        distance: {
             scenario: {
                 localization: [
                     improvement
@@ -393,26 +397,52 @@ def get_disadvantages_tex_table(improvements):
             }
             for scenario in scenario_order
         }
+        for distance in distance_order[1:]
+    }
+    for distance, distance_prfl in zip(distance_order[1:], distance_prfl_order[1:]):
         for scenario in scenario_order:
             for localization in localization_order:
-                avg_percent = (
-                    sum(actual_decrease[scenario][localization])
-                    / len(actual_decrease[scenario][localization])
-                    - 1
-                ) * 100
-                table += f" & ${int(avg_percent)}\\%$"
-        table += " \\\\"
-        if d < len(distance_order) - 1:
-            table += "\n"
-        table += "[.2em]\n"
-
+                for metric in metric_order:
+                    for improvement in improvements_prfl[distance_prfl][metric][
+                        scenario
+                    ][localization]:
+                        if 0 < improvement < 1:
+                            actual_decrease[distance][scenario][localization].append(
+                                improvement
+                            )
+    table = get_header_tex_table_without_metric()
+    table += get_disadvantages_tex_table(actual_decrease, distance_order)
     table += "\\bottomrule\n\\end{tabular}\n"
     return table
 
 
-def get_overhead_tex_table(overhead):
+def get_disadvantages_tex_table(actual_decrease, order, n=0):
+    table = ""
+    for d, distance in enumerate(order[1:], start=n):
+        if d % 2 == 1:
+            table += "\\rowcolor{row}\n"
+        table += f"    {tex_translation[distance]}"
+        table += "\\rowstrut{}"
+        for scenario in scenario_order:
+            for localization in localization_order:
+                avg_percent = (
+                    sum(actual_decrease[distance][scenario][localization])
+                    / len(actual_decrease[distance][scenario][localization])
+                    - 1
+                ) * 100
+                table += f" & ${int(avg_percent)}\\%$"
+        table += " \\\\"
+        if d < len(order) - 1 + n:
+            table += "\n"
+        table += "[.2em]\n"
+    return table
+
+
+def get_overhead_tex_table(overhead, average_times):
     table = (
-        "\\begin{tabular}{lrrrrr}\n"
+        "\\begin{tabular}{l"
+        + (">{\\raggedleft\\arraybackslash}p{1.35cm}" * (len(distance_order) - 1))
+        + "}\n"
         "    \\toprule\n"
         "    Stage & "
         + " & ".join(
@@ -448,16 +478,23 @@ def get_overhead_tex_table(overhead):
         if stage == "Suggest":
             table += "   \\rowcolor{row}"
         elif stage == "Overall":
-            table += "    \\midrule\n"
+            table += "    \\midrule\n    "
         else:
             table += "    "
-        table += f"{stage}\\rowstrut{{}}"
+        table += f"{stage}"
+        if stage != "Overall":
+            table += "\\rowstrut{}"
         for distance in distance_order[1:]:
             table += " & "
             overheads = overhead[distance][stage.lower()]
             avg_overhead = (sum(overheads) / len(overheads) - 1) * 100
             table += f"{avg_overhead:.2f}\\%"
         table += " \\\\\n"
+    table += "    \\rowcolor{row}Avg Time\\rowstrut{}"
+    for distance in distance_order[1:]:
+        table += " & "
+        table += f"{average_times[distance]:.1f}s"
+    table += " \\\\\n"
     table += "\\bottomrule\n\\end{tabular}\n"
     return table
 
@@ -472,6 +509,7 @@ def write_tex(
     improvements,
     improvements_prfl,
     overhead,
+    average_times,
 ):
     tex_output = Path("tex")
     if not tex_output.exists():
@@ -492,18 +530,15 @@ def write_tex(
     )
     with Path(tex_output, "localization-prfl.tex").open("w") as f:
         f.write(localization_prfl_table)
-    improvement_table = get_improvement_tex_table(improvements, distance_order)
+    improvement_table = get_improvement_combined_table(improvements, improvements_prfl)
     with Path(tex_output, "improvement.tex").open("w") as f:
         f.write(improvement_table)
-    improvement_prfl_table = get_improvement_tex_table(
-        improvements_prfl, distance_prfl_order
+    disadvantage_table = get_disadvantages_combined_table(
+        improvements, improvements_prfl
     )
-    with Path(tex_output, "improvement-prfl.tex").open("w") as f:
-        f.write(improvement_prfl_table)
-    disadvantage_table = get_disadvantages_tex_table(improvements)
     with Path(tex_output, "disadvantage.tex").open("w") as f:
         f.write(disadvantage_table)
-    times_table = get_overhead_tex_table(overhead)
+    times_table = get_overhead_tex_table(overhead, average_times)
     with Path(tex_output, "times.tex").open("w") as f:
         f.write(times_table)
 
@@ -588,6 +623,7 @@ def get_times():
             for distance in distance_order[1:]
         },
     }
+    average_times = {distance: [] for distance in distance_order[1:]}
     for subject in subjects:
         report = Path("reports", f"report_{subject}.json")
         analysis = Path("reports", f"analysis_{subject}.json")
@@ -642,14 +678,11 @@ def get_times():
                     run_times[project]["analysis"][distance]
                     / run_times[project]["analysis"]["line"]
                 )
-                overhead[distance]["suggest"].extend(
-                    [
+                for metric in metric_order:
+                    overhead[distance]["suggest"].append(
                         run_times[project]["suggest"][distance][metric]
                         / run_times[project]["suggest"]["line"][metric]
-                        for metric in metric_order
-                    ]
-                )
-                for metric in metric_order:
+                    )
                     overhead[distance]["overall"].append(
                         (
                             run_times[project]["test"]
@@ -662,7 +695,18 @@ def get_times():
                             + run_times[project]["suggest"]["line"][metric]
                         )
                     )
-    return run_times, overhead
+                    average_times[distance].append(
+                        (
+                            run_times[project]["test"]
+                            + run_times[project]["analysis"][distance]
+                            + run_times[project]["suggest"][distance][metric]
+                        )
+                    )
+    average_times = {
+        distance: sum(average_times[distance]) / len(average_times[distance])
+        for distance in distance_order[1:]
+    }
+    return run_times, overhead, average_times
 
 
 def interpret(tex=False):
@@ -685,7 +729,7 @@ def interpret(tex=False):
         improvements_prfl,
     ) = analyze(results_prfl, prfl=True)
 
-    runtimes, overhead = get_times()
+    runtimes, overhead, average_times = get_times()
     if tex:
         write_tex(
             results,
@@ -697,4 +741,5 @@ def interpret(tex=False):
             improvements,
             improvements_prfl,
             overhead,
+            average_times,
         )

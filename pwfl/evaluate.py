@@ -9,7 +9,7 @@ from sflkit.analysis.analysis_type import AnalysisType
 from sflkit.analysis.spectra import Spectrum
 from sflkit.evaluation import Rank, Scenario
 from sflkit.language.language import Language
-from sflkit.weights import TimeAnalyzer
+from sflkit.weights import ProximityAnalyzer
 from tests4py.projects import TestStatus
 
 from pwfl.analyze import distances
@@ -89,7 +89,7 @@ def evaluate(project_name, bug_id, start=None, end=None):
                 if model_class is None:
                     analyzer = Analyzer.load(analysis_file)
                 else:
-                    analyzer = TimeAnalyzer.load_with_dependencies(
+                    analyzer = ProximityAnalyzer.load_with_dependencies(
                         analysis_file, model_class
                     )
             else:

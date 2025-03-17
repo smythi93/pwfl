@@ -18,7 +18,7 @@ from sflkit.weights import (
     TestDefUsesModel,
     TestAssertDefUseModel,
     TestAssertDefUsesModel,
-    TimeAnalyzer,
+    ProximityAnalyzer,
 )
 from tests4py.projects import TestStatus, Project
 
@@ -104,7 +104,7 @@ def analyze_project(
             factory=LineFactory(),
         )
     else:
-        analyzer = TimeAnalyzer(
+        analyzer = ProximityAnalyzer(
             model_class,
             relevant_event_files=failing,
             irrelevant_event_files=passing,
