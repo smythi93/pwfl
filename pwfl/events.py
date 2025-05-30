@@ -19,7 +19,7 @@ from tests4py.sfl.constants import DEFAULT_EXCLUDES
 
 from pwfl.logger import LOGGER
 
-SFLKIT_LIB_ABS_PATH = (Path(__file__).parent / "sflkit-lib-extension").absolute()
+SFLKIT_LIB_ABS_PATH = (Path(__file__).parent / "sflkit-lib").absolute()
 
 
 def sflkit_env(environ: Environment):
@@ -65,9 +65,11 @@ def create_config(
         path=str(src.absolute()),
         language="python",
         events="line",
-        test_events="test_start,test_end,test_line,test_def,test_use,test_assert"
-        if test
-        else None,
+        test_events=(
+            "test_start,test_end,test_line,test_def,test_use,test_assert"
+            if test
+            else None
+        ),
         ignore_inner=str(
             project.project_name == "pysnooper"
         ),  # pysnooper defines a testcase function inside a

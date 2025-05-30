@@ -23,14 +23,14 @@ tex_translation = {
     "line_line": "\\PW{}$_L$",
     "line_defuse": "\\PW{}$_{DU}$",
     "line_defuses": "\\PW{}$_{DUU}$",
-    "line_assert_use": "\\PW{}$_{ADU}$",
-    "line_assert_uses": "\\PW{}$_{ADUU}$",
+    "line_assert_use": "\\PW{}$_{A_{DU}}$",
+    "line_assert_uses": "\\PW{}$_{A_{DUU}}$",
     "PRFL": "\\PRFL{}",
     "PRFL_line": "\\PRFL{}$_L$",
     "PRFL_defuse": "\\PRFL{}$_{DU}$",
     "PRFL_defuses": "\\PRFL{}$_{DUU}$",
-    "PRFL_assert_use": "\\PRFL{}$_{ADU}$",
-    "PRFL_assert_uses": "\\PRFL{}$_{ADUU}$",
+    "PRFL_assert_use": "\\PRFL{}$_{A_{DU}}$",
+    "PRFL_assert_uses": "\\PRFL{}$_{A_{DUU}}$",
 }
 
 scenario_order = [
@@ -54,7 +54,7 @@ localization_order = [
     "top-1",
     "top-5",
     "top-10",
-    "top-200",
+    #    "top-200",
     "exam",
     "wasted-effort",
 ]
@@ -63,46 +63,53 @@ localization_comp = [
     True,
     True,
     True,
-    True,
+    # True,
     False,
     False,
 ]
 
 
 def get_header_tex_table(metric=True):
+    columns_per_scenario = len(localization_order)
+    start = 3 if metric else 2
     return (
         (
-            "\\begin{tabular}{llrrrrrrrrrrrrrrrrrr}\n"
-            if metric
-            else "\\begin{tabular}{llrrrrrrrrrrrrrrrrr}\n"
+            f"\\begin{{tabular}}{{l{'l' if metric else ''}{'r' * columns_per_scenario * len(scenario_order)}}}\n"
         )
         + "    \\toprule\n\\multicolumn{1}{c}{\\multirow{4}*{Distance}} & "
         + ("\\multicolumn{1}{c}{\\multirow{4}*{Metric}} & " if metric else "")
         + (
-            "\\multicolumn{6}{c}{Best-Case Debugging} & \\multicolumn{6}{c}{Average-Case Debugging} & "
-            "\\multicolumn{6}{c}{Worst-Case Debugging} \\\\"
+            f"\\multicolumn{{{columns_per_scenario}}}{{c}}{{Best-Case Debugging}} & \\multicolumn{{{columns_per_scenario}}}{{c}}{{Average-Case Debugging}} & "
+            f"\\multicolumn{{{columns_per_scenario}}}{{c}}{{Worst-Case Debugging}} \\\\"
         )
-        + (
-            "\\cmidrule(lr){3-8}\\cmidrule(lr){9-14}\\cmidrule(lr){15-20}\n    & "
-            if metric
-            else "\\cmidrule(lr){2-7}\\cmidrule(lr){8-13}\\cmidrule(lr){14-19}\n    "
+        + "".join(
+            [
+                f"\\cmidrule(lr){{{start + i * columns_per_scenario}-{start + (i + 1) * columns_per_scenario - 1}}}"
+                for i in range(3)
+            ]
         )
+        + "\n    "
+        + ("&" if metric else "")
         + (
             (
-                " & \\multicolumn{4}{c}{Top-k} & \\multicolumn{1}{c}{\\multirow{2}*{\\EXAM{}}} & "
+                " & \\multicolumn{3}{c}{Top-k} & \\multicolumn{1}{c}{\\multirow{2}*{\\EXAM{}}} & "
                 "\\multicolumn{1}{c}{\\multirow{2}*{Effort}}\n"
             )
             * 3
         )
-        + (
-            "\\\\\\cmidrule{3-6}\\cmidrule{9-12}\\cmidrule{15-18}\n    &"
-            if metric
-            else "\\\\\\cmidrule{2-5}\\cmidrule{8-11}\\cmidrule{14-17}\n    "
+        + "\\\\"
+        + "".join(
+            [
+                f"\\cmidrule{{{start + i * columns_per_scenario}-{start + i * columns_per_scenario + 2}}}"
+                for i in range(3)
+            ]
         )
+        + "\n    "
+        + ("&" if metric else "")
         + (
             (
                 " & \\multicolumn{1}{c}{1} & \\multicolumn{1}{c}{5}"
-                " & \\multicolumn{1}{c}{10} & \\multicolumn{1}{c}{200} & &\n"
+                " & \\multicolumn{1}{c}{10} & &\n"
             )
             * 3
         )
@@ -240,7 +247,7 @@ def get_localization_tex_table(
             table += " \\\\"
             if m < len(metric_order) - 1:
                 table += "\n"
-        table += "[.2em]\n"
+        table += "[.1em]\n"
     table += "\\bottomrule\n\\end{tabular}\n"
     return table
 
