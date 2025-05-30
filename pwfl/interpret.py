@@ -18,7 +18,7 @@ tex_translation = {
     Scenario.WORST_CASE.value: "Worst Case Debugging",
     Scenario.AVG_CASE.value: "Average Case Debugging",
     "exam": "\\EXAM{}",
-    "wasted-effort": "W Effort",
+    "wasted-effort": "WE",
     "line": "w/o \\PW{}",
     "line_line": "\\PW{}$_L$",
     "line_defuse": "\\PW{}$_{DU}$",
@@ -92,8 +92,8 @@ def get_header_tex_table(metric=True):
         + ("&" if metric else "")
         + (
             (
-                " & \\multicolumn{3}{c}{Top-k} & \\multicolumn{1}{c}{\\multirow{2}*{\\EXAM{}}} & "
-                "\\multicolumn{1}{c}{\\multirow{2}*{Effort}}\n"
+                " & \\multicolumn{3}{c}{Top-k} & \\multicolumn{1}{c}{\\multirow{2}*{\\EXAM{}}}"
+                " & \\multicolumn{1}{c}{\\multirow{2}*{WE}}\n"
             )
             * 3
         )
@@ -109,7 +109,9 @@ def get_header_tex_table(metric=True):
         + (
             (
                 " & \\multicolumn{1}{c}{1} & \\multicolumn{1}{c}{5}"
-                " & \\multicolumn{1}{c}{10} & &\n"
+                " & \\multicolumn{1}{c}{10} &"
+                " &"
+                "\n"
             )
             * 3
         )
@@ -119,6 +121,50 @@ def get_header_tex_table(metric=True):
 
 def get_header_tex_table_without_metric():
     return get_header_tex_table(metric=False)
+
+
+def get_baseline_tex_table(
+    results,
+    results_prfl,
+):
+    table = get_header_tex_table()
+    order = [
+        (distance_order[0], results),
+        ("PRFL", results_prfl),
+    ]
+    for d, dr_pair in enumerate(order):
+        distance, result_lookup = dr_pair
+        for m, metric in enumerate(metric_order):
+            if d % 2 == 1:
+                table += "\\rowcolor{row}\n"
+            if m == len(metric_order) // 2:
+                table += f"    {tex_translation[distance]}"
+            else:
+                table += "    "
+            table += f" & {tex_translation[metric]}"
+            if metric == metric_order[0]:
+                table += "\\rowstrut{}"
+            for scenario in scenario_order:
+                for localization, comp in zip(localization_order, localization_comp):
+                    table += " & "
+                    if localization.startswith("top"):
+                        table += (
+                            f"{result_lookup[distance][metric][scenario][localization]['avg'] * 100:.1f}"
+                            "\\%"
+                        )
+                    elif localization == "exam":
+                        table += f"{result_lookup[distance][metric][scenario][localization]['avg']:.3f}"
+                    else:
+                        table += (
+                            f"{result_lookup[distance][metric][scenario][localization]['avg'] / 1000:.1f}"
+                            f"k"
+                        )
+            table += " \\\\"
+            if m < len(metric_order) - 1:
+                table += "\n"
+        table += "[.2em]\n"
+    table += "\\bottomrule\n\\end{tabular}\n"
+    return table
 
 
 def get_localization_tex_table(
@@ -131,8 +177,8 @@ def get_localization_tex_table(
     table = get_header_tex_table()
     prfl_results = results_prfl["PRFL"]
     order = [
-        (distance_order[0], results),
-        ("PRFL", results_prfl),
+        # (distance_order[0], results),
+        # ("PRFL", results_prfl),
     ] + [(distance, results) for distance in distance_order[1:]]
     for d, dr_pair in enumerate(order):
         distance, result_lookup = dr_pair
@@ -193,6 +239,11 @@ def get_localization_tex_table(
                                         "avg"
                                     ]
                                 )
+
+                    mark_as_best = (
+                        distance
+                        in best_for_each_metric[metric][scenario][localization][0][1]
+                    )
                     if comp:
                         mark_better_as_lines = (
                             result_lookup[distance][metric][scenario][localization][
@@ -221,9 +272,9 @@ def get_localization_tex_table(
                         )
                     table += " & "
                     if mark_better_as_lines:
-                        table += "\\underline{"
-                    if mark_better_as_prfl:
                         table += "\\textbf{"
+                    # if mark_better_as_prfl:
+                    #     table += "\\textbf{"
                     if mark_as_best:
                         table += "{\\color{best}"
                     if localization.startswith("top"):
@@ -240,14 +291,14 @@ def get_localization_tex_table(
                         )
                     if mark_as_best:
                         table += "}"
-                    if mark_better_as_prfl:
-                        table += "}"
+                    # if mark_better_as_prfl:
+                    #     table += "}"
                     if mark_better_as_lines:
                         table += "}"
             table += " \\\\"
             if m < len(metric_order) - 1:
                 table += "\n"
-        table += "[.1em]\n"
+        table += "[.2em]\n"
     table += "\\bottomrule\n\\end{tabular}\n"
     return table
 
@@ -471,11 +522,11 @@ def get_overhead_tex_table(overhead, average_times):
     #    f"{instrument_overhead:.2f}"
     #    "\\%} \\\\\n"
     # )
-    table += (
-        "    \\rowcolor{row} Test\\rowstrut{} & \\multicolumn{5}{c}{"
-        f"{test_overhead:.2f}"
-        "\\%} \\\\\n"
-    )
+    # table += (
+    #     "    \\rowcolor{row} Test\\rowstrut{} & \\multicolumn{5}{c}{"
+    #     f"{test_overhead:.2f}"
+    #     "\\%} \\\\\n"
+    # )
 
     for stage in [
         "Analyze",
@@ -489,7 +540,7 @@ def get_overhead_tex_table(overhead, average_times):
         else:
             table += "    "
         table += f"{stage}"
-        if stage != "Overall":
+        if stage == "Suggest":
             table += "\\rowstrut{}"
         for distance in distance_order[1:]:
             table += " & "
@@ -521,6 +572,9 @@ def write_tex(
     tex_output = Path("tex")
     if not tex_output.exists():
         tex_output.mkdir()
+    baseline_table = get_baseline_tex_table(results, results_prfl)
+    with Path(tex_output, "baseline.tex").open("w") as f:
+        f.write(baseline_table)
     localization_table = get_localization_tex_table(
         results,
         best_for_each_metric,

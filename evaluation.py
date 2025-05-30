@@ -6,7 +6,7 @@ from pwfl.cg import build_call_graph, get_call_graph_events
 from pwfl.check import check_events, check_cg_build, check_cg_events, check_cg_pr
 from pwfl.evaluate import evaluate
 from pwfl.events import get_events
-from pwfl.interprete import interpret
+from pwfl.interpret import interpret
 from pwfl.prfl import build_pr, evaluate_prfl
 from pwfl.summarize import summarize_all, summarize_prfl_all
 from pwfl.tests import get_results, analyze_file
