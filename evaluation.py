@@ -9,6 +9,7 @@ from pwfl.events import get_events
 from pwfl.interpret import interpret
 from pwfl.prfl import build_pr, evaluate_prfl
 from pwfl.summarize import summarize_all, summarize_prfl_all
+from pwfl.purification import get_tcp_events
 from pwfl.tests import get_results, analyze_file
 
 
@@ -32,14 +33,31 @@ def get_parser():
         dest="tests_command", required=True, help="sub-command help"
     )
     tests_get = tests_command.add_parser("get", help="get values of all subjects")
-    tests_analyze = tests_command.add_parser("analyze", help="analyze values")
+    tests_get.add_argument(
+        "--skip",
+        default=False,
+        action="store_true",
+        dest="skip",
+        help="skip subjects with non-failing tests",
+    )
 
+    tests_analyze = tests_command.add_parser("analyze", help="analyze values")
     tests_analyze.add_argument(
         "-f", type=str, default=None, dest="file", help="file to analyze"
     )
 
     # Events parser
     events = command.add_parser("events", help="analyze events")
+
+    # TCP parser
+    tcp = command.add_parser("tcp", help="test case purification with event collection")
+    tcp.add_argument(
+        "--disable_slicing",
+        default=True,
+        action="store_false",
+        dest="enable_slicing",
+        help="enable dynamic slicing during purification",
+    )
 
     # Analysis parser
     analysis = command.add_parser("analyze", help="analyze projects")
@@ -74,6 +92,7 @@ def get_parser():
     for subparser in [
         tests_get,
         events,
+        tcp,
         analysis,
         evaluate,
         cg_events,
@@ -116,13 +135,25 @@ def main(args=None):
     elif arguments.command == "tests":
         if arguments.tests_command == "get":
             get_results(
-                arguments.project_name, arguments.bug_id, arguments.start, arguments.end
+                arguments.project_name,
+                arguments.bug_id,
+                arguments.start,
+                arguments.end,
+                arguments.skip,
             )
         elif arguments.tests_command == "analyze":
             analyze_file(arguments.file)
     elif arguments.command == "events":
         get_events(
             arguments.project_name, arguments.bug_id, arguments.start, arguments.end
+        )
+    elif arguments.command == "tcp":
+        get_tcp_events(
+            arguments.project_name,
+            arguments.bug_id,
+            arguments.start,
+            arguments.end,
+            arguments.enable_slicing,
         )
     elif arguments.command == "analysis":
         analyze(

@@ -1,0 +1,153 @@
+3. TEST CASE PURIFICATION
+In this section, we propose the concept of spectrum driven
+test case purification (test case purification for short) for
+fault localization. We first present the framework in Section
+3.1. Then we show the details of the three main phases in
+Sections 3.2, 3.3, and 3.4, respectively. Finally, we discuss
+the extensibility of test case purification in Section 3.5.
+3.1 Framework
+The main goal of test case purification is to generate purified
+test cases from each failing test case. A purified test case is
+a short test case with only one assertion and is generated
+by removing several statements from the original failing test
+case. We employ such purified test cases to improve existing
+techniques on fault localization.
+Figure 2 illustrates the framework of test case purification
+for fault localization. This framework consists of three ma-
+jor phases: test case atomization, test case slicing, and rank
+refinement. Given a specific technique on fault localization,
+the input of test case purification is a subject program with
+its test suite and the final output is a ranking of statements.
+Both the input and the output are the same as those in typi-
+cal fault localization techniques, e.g., Tarantula and Ochiai.
+In test case atomization, each original failing test case
+with k assertions is replaced by k single-assertion test cases.
+A single-assertion test case is a copy of the original test
+case, but only one out of k original assertions is kept. In
+test case slicing, each single-assertion test case is treated
+as a program. We use dynamic slicing technique to remove
+irrelevant statements in each single-assertion test case. Then
+short test cases are generated as purified test cases. In rank
+refinement, we re-rank the statements in an existing fault
+localization technique based on the spectra of all the purified
+test cases.
+In our work, test case purification for fault localization is
+run automatically. We describe the implementation details
+in Section 4.3.
+3.2 Test Case Atomization
+The goal of test case atomization is to generate a set of test
+cases for each failing test case. As the term atomization
+suggests, we consider each assertion has an atomic part in
+a test case. Given a failing test case with k assertions, we
+create k copies for this test case and we transform k − 1
+assertions into regular test case statements for each copy (no
+exception from the assertion reaches the testing framework if
+the assertion fails). To transform an assertion into a regular
+test case statement, we surround this assertion with a try-
+catch structure shown in Figure 3.
+In Java, the class java.lang.Throwable is a superclass of all
+the exceptions. As mentioned in Section 2.1, an exception
+will be thrown to the test case if an assertion is not satisfied.
+Based on the above structure, the exception will be caught as
+throwable and the test case will not be interrupted1. Based
+on the surrounding structure in Figure 3, a set of k single-
+assertion test cases are created to replace each originally
+failing test case. A failing test case with only one assertion
+will be kept without handling.
+Note that in JUnit, two kinds of interruptions will stop the
+execution of a test case, namely a failure and an error. A fail-
+ure is caused by an unsatisfied assertion, which is designed
+by developers; an error is caused by a fault, which is not
+considered by developers [10]. Thus, an error may appear
+in any statement of a test case. In test case atomization, we
+only deal with the failures (in assertions) in JUnit. If an er-
+ror appears, the execution of a single-assertion test case will
+be aborted because an error usually causes severe problems,
+which are beyond the expected test cases by developers.
+After generating single-assertion test cases, we compile and
+execute all the single-assertion test cases. Meanwhile, we
+collect the failing ones among these test cases; for each fail-
+ing single-assertion test case, we record its position that
+aborts the execution. This position is referred as a broken
+statement. For example, a broken statement in a single-
+assertion test case could be an assertion (i.e., the exact as-
+sertion left in the test case) or a statement that throws an
+unexpected error. Finally, each failing single-assertion test
+case as well as its broken position is collected.
+3.3 Test Case Slicing
+The goal of test case slicing is to generate purified test
+cases before collecting their spectra. Given a failing single-
+assertion test case resulting from test case atomization, we
+slice this test case by removing irrelevant statements.
+Program slicing can be mainly divided into two categories:
+static slicing [5] and dynamic slicing [38]. Informally, static
+slicing keeps all the possible statements based on static data
+and control dependencies while dynamic slicing keeps the ac-
+tually executed statements in the dynamic execution (with
+dynamic data and control dependencies). In test case slicing,
+we use a dynamic slicing technique to remove statements in
+test cases since dynamic slicing may lead to more removal
+of statements [38]. In dynamic slicing, a slicing criterion
+should be specified before execution the program. A slicing
+criterion is defined as a pair < b, V >, where b is a state-
+ment in the object program and V is a set of variables to be
+observed at b.
+We perform dynamic slicing and slice single-assertion test
+cases during its execution by the Junit framework. Our
+slicing criterion for a test case is its broken assertion with
+all the variables at this statement. Then we execute the
+dynamic slicing technique to collect the statements that will
+be removed. After the slicing, each failing single-assertion
+test case in test case atomization is updated with a purified
+test case. Then we execute these purified test cases on the
+project program and record the spectra for next phase.
+3.4 Rank Refinement
+The goal of rank refinement is to re-rank the statements by
+an existing fault localization technique with the spectra in
+the phase of test case slicing.
+In all the purified test cases, we keep only one test case
+if two or more than test cases have the same spectrum. As
+mentioned in Section 3.3, all the purified test cases are failing
+test cases. Let S be a set of candidate statements. We
+define the ratio of a statement s ∈ S. First, for a statement
+s ∈ S that is covered during the execution of all the purified
+test cases, ratio(s) = βef (s)
+βef (s)+βnf (s) , where βef (s) and βnf (s)
+are the numbers of test cases covering and non-covering s.
+Second, for a statement s that is not covered by any purified
+test case, we directly set ratio(s) = 0.
+The output of an existing fault localization technique, such
+Tarantula or Ochiai, is the suspiciousness values for all the
+candidate statements. Let susp(s) be the suspiciousness
+value of a statement s ∈ S in a fault localization technique.
+Then we normalize the susp(s) as 0 to 1 for all the state-
+ments in S. The normalized suspiciousness value is defined
+as norm(s) = susp(s)−min(S)
+max(S)−min(S) , where min(S) and max(S)
+denote the minimum score and the maximum score for all
+the statements in S, respectively.
+For each statement s ∈ S, both ratio(s) and norm(s) is
+between 0 and 1 (both inclusive). Then we refine the ranking
+of each statement s by combining ratio(s) and norm(s). The
+final score of s is defined as score(s) = norm(s) × 1+ratio(s)
+2 .
+Then for all the statements s ∈ S, the final score score(s) is
+between 0 and 1 (both inclusive). Based on the final scores
+of all the statements, we re-rank the statements as the result
+of fault localization by test case purification.
+3.5 Discussion
+Basic fault localization technique. Test case purifica-
+tion modifies the existing test cases. Consequently, the spec-
+tra are changed and the suspicious statements according to
+a fault localization technique (e.g., Tarantula) are re-ranked.
+Many other fault localization techniques can be used instead,
+such as Ochiai, Jaccard, and SBI. We examine the results
+for six fault localization techniques in Section 5.
+Method of rank refinement. We define the new score of
+each statement s as score(s). This definition can be replaced
+by other formulae, for example, the average of norm(s) and
+ratio(s), i.e., norm(s)+ratio(s)
+2 , or the geometric mean, i.e.,
+2×norm(s)×ratio(s)
+norm(s)+ratio(s) . Results of such refinement methods can
+be further explored.

@@ -5,7 +5,7 @@ from pathlib import Path
 
 import seaborn as sns
 import tests4py.api as t4p
-from tests4py.projects import Project
+from tests4py.projects import Project, TestStatus
 
 from pwfl.logger import LOGGER
 
@@ -106,9 +106,15 @@ def analyze_subject(project: Project, visitor: Visitor):
                     continue
 
 
-def get_results(project_name=None, bug_id=None, start=0, end=None):
+def get_results(project_name=None, bug_id=None, start=0, end=None, skip=False):
     visitor = Visitor()
     for project in t4p.get_projects(project_name, bug_id):
+        if skip and (
+            project.test_status_buggy != TestStatus.FAILING
+            or project.test_status_fixed != TestStatus.PASSING
+            or project.project_name == "pandas"
+        ):
+            continue
         if start is not None and project.bug_id < start:
             continue
         if end is not None and project.bug_id > end:
@@ -123,7 +129,7 @@ def get_results(project_name=None, bug_id=None, start=0, end=None):
         except:
             continue
     print_results(visitor)
-    with open("../study_results.json", "w") as f:
+    with open(f"../study_results{'_skipped' if skip else ''}.json", "w") as f:
         json.dump(visitor.dump(), f, indent=1)
 
 

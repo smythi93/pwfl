@@ -19,16 +19,20 @@ from tests4py.sfl.constants import DEFAULT_EXCLUDES
 
 from pwfl.logger import LOGGER
 
-SFLKIT_LIB_ABS_PATH = (Path(__file__).parent / "sflkit-lib").absolute()
+SFLKIT_LIB_ABS_PATH = (Path(__file__).parent.parent / "sflkit-lib").absolute()
 
 
 def sflkit_env(environ: Environment):
-    subprocess.check_call(
+    result = subprocess.run(
         [PYTHON, "-m", "pip", "install", SFLKIT_LIB_ABS_PATH],
         env=environ,
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
     )
+    if result.returncode != 0:
+        raise RuntimeError(
+            f"Failed to install sflkit-lib: {result.stdout.decode()}\n{result.stderr.decode()}"
+        )
 
 
 environment.sflkit_env = sflkit_env
