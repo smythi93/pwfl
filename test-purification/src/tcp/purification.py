@@ -9,14 +9,63 @@ The main phases are:
 """
 
 import ast
+import hashlib
+import json
 import os
+import re
+import shutil
+import string
 import subprocess
-import tempfile
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Set
 
 from .logger import LOGGER
 from .slicer import PytestSlicer
+
+
+def safe_name(s: str):
+    s = s.encode("ascii", "ignore")
+    if len(s) > 255:
+        return hashlib.md5(s).hexdigest()
+    s = s.decode("ascii")
+    for c in string.punctuation:
+        if c in s:
+            s = s.replace(c, "_")
+    s = s.replace(" ", "_")
+    return s
+
+
+
+class AtomizedTest:
+    """
+    Represents an atomized test with one target assertion.
+
+    Atomized tests preserve the original line numbers and state by:
+    - Wrapping non-target assertions in try-except to prevent failure
+    - Keeping all function calls to preserve side effects
+    - Maintaining the exact same line structure as the original test
+
+    Attributes:
+        code: The atomized test code
+        assertion_line: Line number of the target assertion (in original file)
+        failing_line: Line number where the failure actually occurred (may differ from assertion_line)
+        test_name: Name of the test function
+        class_name: Name of the containing class (None for module-level functions)
+    """
+
+    def __init__(
+        self,
+        code: str,
+        assertion_line: int,
+        test_name: str,
+        class_name: Optional[str] = None,
+        failing_line: Optional[int] = None,
+    ):
+        self.code = code
+        self.assertion_line = assertion_line
+        self.failing_line = failing_line if failing_line is not None else assertion_line
+        self.test_name = test_name
+        self.class_name = class_name
 
 
 # ============================================================================
@@ -66,10 +115,8 @@ class ParameterizeFinder(ast.NodeVisitor):
                     else:
                         return None
 
-                    # Second arg: parameter values (list or iterable)
-                    param_values_node = decorator.args[1]
-                    # For now, we'll just mark that it's parameterized
-                    # Actual values will be extracted from test ID
+                    # Note: Parameter values are extracted from test ID later,
+                    # not from the AST decorator arguments
                     return ParameterizeInfo(param_names, [])
 
         return None
@@ -149,8 +196,14 @@ class FunctionFinder(ast.NodeVisitor):
 
 class AssertionAtomizer(ast.NodeTransformer):
     """
-    Transform a test function to wrap non-target assertions in try-except.
-    This is used in the first phase to identify which assertions fail.
+    Transform a test function to neutralize non-target assertions while preserving side effects.
+
+    - Non-target `assert` statements are wrapped in try-except to prevent failures
+      while preserving any side effects from function calls in the assertion
+    - Non-target assertion method calls (like self.assertEqual) are also wrapped in try-except
+    - This ensures line numbers are preserved and test state remains consistent
+    - The target assertion runs normally and can fail if it should
+
     Handles both module-level functions and class methods.
     """
 
@@ -180,18 +233,50 @@ class AssertionAtomizer(ast.NodeTransformer):
         return node
 
     def visit_Assert(self, node: ast.Assert):
-        """Wrap non-target assertions in try-except."""
+        """Wrap non-target assertions in try-except to preserve side effects and prevent failures."""
         if self.in_target_function and node.lineno != self.target_assertion_line:
-            return self._wrap_in_try_except(node)
+            # Wrap in try-except to preserve side effects while preventing failure
+            # try:
+            #     assert condition
+            # except:
+            #     pass
+            try_node = ast.Try(
+                body=[node],
+                handlers=[
+                    ast.ExceptHandler(
+                        type=None,  # Catch all exceptions
+                        name=None,
+                        body=[ast.Pass()],
+                    )
+                ],
+                orelse=[],
+                finalbody=[],
+            )
+            return ast.copy_location(try_node, node)
         return node
 
     def visit_Expr(self, node: ast.Expr):
-        """Wrap non-target assertion calls in try-except."""
+        """Wrap non-target assertion method calls in try-except to prevent failures."""
         if self.in_target_function and isinstance(node.value, ast.Call):
             func_name = self._get_func_name(node.value.func)
             if func_name and "assert" in func_name.lower():
                 if node.lineno != self.target_assertion_line:
-                    return self._wrap_in_try_except(node)
+                    # Assertion method calls (like self.assertEqual) need to be wrapped
+                    # in try-except to prevent them from failing the test
+                    # This preserves any side effects in the arguments
+                    try_node = ast.Try(
+                        body=[node],
+                        handlers=[
+                            ast.ExceptHandler(
+                                type=None,  # Catch all exceptions
+                                name=None,
+                                body=[ast.Pass()],
+                            )
+                        ],
+                        orelse=[],
+                        finalbody=[],
+                    )
+                    return ast.copy_location(try_node, node)
         return node
 
     @staticmethod
@@ -202,24 +287,6 @@ class AssertionAtomizer(ast.NodeTransformer):
         elif isinstance(node, ast.Attribute):
             return node.attr
         return None
-
-    @staticmethod
-    def _wrap_in_try_except(node: ast.stmt):
-        """Wrap a statement in try-except to catch assertion failures."""
-        # Create try-except block
-        try_node = ast.Try(
-            body=[node],
-            handlers=[
-                ast.ExceptHandler(
-                    type=ast.Name(id="Exception", ctx=ast.Load()),
-                    name=None,
-                    body=[ast.Pass()],
-                )
-            ],
-            orelse=[],
-            finalbody=[],
-        )
-        return ast.copy_location(try_node, node)
 
 
 class SingleAssertionExtractor(ast.NodeTransformer):
@@ -324,69 +391,16 @@ class SingleAssertionExtractor(ast.NodeTransformer):
         return None
 
 
-class ParameterReplacer(ast.NodeTransformer):
-    """
-    Replace parameter references with concrete values in a de-parameterized test.
-    Also removes the @pytest.mark.parametrize decorator.
-    """
-
-    def __init__(
-        self, test_name: str, param_names: List[str], param_values: Dict[str, Any]
-    ):
-        self.test_name = test_name
-        self.param_names = param_names
-        self.param_values = param_values
-        self.in_target_function = False
-
-    def visit_FunctionDef(self, node: ast.FunctionDef):
-        """Remove parametrize decorator and update function signature."""
-        if node.name == self.test_name:
-            self.in_target_function = True
-
-            # Remove @pytest.mark.parametrize decorator
-            new_decorators = []
-            for decorator in node.decorator_list:
-                if not self._is_parametrize_decorator(decorator):
-                    new_decorators.append(decorator)
-            node.decorator_list = new_decorators
-
-            # Remove parameter arguments from function signature
-            new_args = []
-            for arg in node.args.args:
-                if arg.arg not in self.param_names:
-                    new_args.append(arg)
-            node.args.args = new_args
-
-            # Transform the body
-            node = self.generic_visit(node)
-            self.in_target_function = False
-            return node
-
-        return self.generic_visit(node)
-
-    def visit_Name(self, node: ast.Name):
-        """Replace parameter names with concrete values."""
-        if self.in_target_function and node.id in self.param_names:
-            # Replace with constant value
-            value = self.param_values.get(node.id)
-            if value is not None:
-                return ast.Constant(value=value)
-        return node
-
-    @staticmethod
-    def _is_parametrize_decorator(decorator: ast.expr) -> bool:
-        """Check if a decorator is @pytest.mark.parametrize."""
-        if isinstance(decorator, ast.Call):
-            if isinstance(decorator.func, ast.Attribute):
-                if (
-                    isinstance(decorator.func.value, ast.Attribute)
-                    and isinstance(decorator.func.value.value, ast.Name)
-                    and decorator.func.value.value.id == "pytest"
-                    and decorator.func.value.attr == "mark"
-                    and decorator.func.attr == "parametrize"
-                ):
-                    return True
-        return False
+# NOTE: ParameterReplacer is no longer used. We now keep parameterized tests as-is
+# and include the parameter suffix in the test pattern when running tests.
+# This is simpler and more reliable than trying to de-parameterize tests.
+#
+# class ParameterReplacer(ast.NodeTransformer):
+#     """
+#     Replace parameter references with concrete values in a de-parameterized test.
+#     Also removes the @pytest.mark.parametrize decorator.
+#     """
+#     ... (implementation commented out)
 
 
 # ============================================================================
@@ -513,6 +527,7 @@ def _resolve_test_file_path(test_base: Path, test_file_rel: str) -> Path:
     # Check if test_file_rel starts with any suffix of test_base
     # e.g., test_base='tmp/cookiecutter_2/tests', test_file_rel='tests/test_hooks.py'
     # Should match on 'tests' and use 'test_hooks.py'
+    best_candidate = None
     for i in range(len(base_parts)):
         base_suffix = base_parts[i:]
 
@@ -522,15 +537,24 @@ def _resolve_test_file_path(test_base: Path, test_file_rel: str) -> Path:
                 # Found overlap, use the non-overlapping part
                 remaining_parts = rel_parts[len(base_suffix) :]
                 candidate = test_base / Path(*remaining_parts)
+                # Prefer this candidate (whether it exists or not) since we found overlap
+                best_candidate = candidate
                 if candidate.exists():
                     return candidate
+
+    # If we found an overlap candidate (even if file doesn't exist yet), use it
+    if best_candidate:
+        return best_candidate
 
     # If no overlap found, just concatenate
     return test_base / test_file_rel
 
 
 def _build_sliced_code(
-    original_code: str, relevant_lines: Set[int], test_name: str
+    original_code: str,
+    relevant_lines: Set[int],
+    test_name: str,
+    class_name: Optional[str] = None,
 ) -> str:
     """
     Build sliced code from original code and relevant lines.
@@ -542,6 +566,7 @@ def _build_sliced_code(
         original_code: Original test code
         relevant_lines: Set of relevant line numbers (from slicer)
         test_name: Name of the test function
+        class_name: Optional name of the class containing the test
 
     Returns:
         Sliced code as a string
@@ -549,7 +574,7 @@ def _build_sliced_code(
     tree = ast.parse(original_code)
 
     # Use StatementFilter to remove irrelevant statements
-    filtered_tree = StatementFilter(relevant_lines, test_name).visit(tree)
+    filtered_tree = StatementFilter(relevant_lines, test_name, class_name).visit(tree)
 
     # Unparse and return
     return ast.unparse(filtered_tree)
@@ -557,7 +582,7 @@ def _build_sliced_code(
 
 class StatementFilter(ast.NodeTransformer):
     """
-    Filter AST to keep only relevant statements based on line numbers.
+    Filter AST to keep only relevant statements based on the line numbers.
 
     This ensures the sliced code remains syntactically valid by:
     - Keeping function/class definitions that contain relevant statements
@@ -565,9 +590,12 @@ class StatementFilter(ast.NodeTransformer):
     - Removing statements not in the relevant set
     """
 
-    def __init__(self, relevant_lines: Set[int], test_name: str):
+    def __init__(
+        self, relevant_lines: Set[int], test_name: str, class_name: Optional[str] = None
+    ):
         self.relevant_lines = relevant_lines
         self.test_name = test_name
+        self.class_name = class_name
         self.in_target_test = False
 
     def visit_FunctionDef(self, node: ast.FunctionDef) -> Optional[ast.FunctionDef]:
@@ -578,10 +606,7 @@ class StatementFilter(ast.NodeTransformer):
             node.body = self._filter_statements(node.body)
             self.in_target_test = False
             return node
-        elif not self.in_target_test:
-            # Keep helper functions/fixtures if they're in relevant lines
-            if self._has_relevant_lines(node):
-                return node
+        elif not self.in_target_test and node.name.startswith("test_"):
             return None
         return node
 
@@ -595,16 +620,15 @@ class StatementFilter(ast.NodeTransformer):
             node.body = self._filter_statements(node.body)
             self.in_target_test = False
             return node
-        elif not self.in_target_test:
-            # Keep helper functions if they're in relevant lines
-            if self._has_relevant_lines(node):
-                return node
+        elif not self.in_target_test and node.name.startswith("test_"):
             return None
         return node
 
     def visit_ClassDef(self, node: ast.ClassDef) -> Optional[ast.ClassDef]:
-        """Visit class definitions - keep if it has relevant content."""
+        """Visit class definitions - keep if it's the target class or has relevant content."""
         if self._has_relevant_lines(node):
+            # Keep the class and filter its contents
+            # noinspection PyTypeChecker
             return self.generic_visit(node)
         return None
 
@@ -656,6 +680,7 @@ class StatementFilter(ast.NodeTransformer):
             return True  # Keep nodes without line numbers (e.g., arguments)
 
         # Check if this node's line is in the relevant set
+        # noinspection PyUnresolvedReferences
         if node.lineno in self.relevant_lines:
             return True
 
@@ -669,10 +694,13 @@ class StatementFilter(ast.NodeTransformer):
 
     def _has_relevant_lines(self, node: ast.AST) -> bool:
         """Check if a node or any of its children have relevant lines."""
-        for child in ast.walk(node):
-            if hasattr(child, "lineno") and child.lineno in self.relevant_lines:
-                return True
-        return False
+        if self.in_target_test:
+            for child in ast.walk(node):
+                # noinspection PyUnresolvedReferences
+                if hasattr(child, "lineno") and child.lineno in self.relevant_lines:
+                    return True
+            return False
+        return True
 
 
 def purify_tests(
@@ -683,32 +711,57 @@ def purify_tests(
     test_base: Optional[Path] = None,
     venv_python: str = "python",
     venv: Optional[dict] = None,
-) -> Dict[str, List[Path]]:
+) -> Dict[str, List[tuple[Path, Optional[str]]]]:
     """
     Purify failing tests.
 
     Args:
         src_dir: Source directory containing tests
         dst_dir: Destination directory for purified tests
-        failing_tests: List of failing test identifiers (e.g., "test_file.py::test_name")
+        failing_tests: List of failing test identifiers (e.g., "test_file.py::test_name[params]")
         enable_slicing: Whether to enable dynamic slicing
         test_base: Base directory for tests (defaults to src_dir if None)
         venv_python: Path to virtual environment Python (defaults to sys.executable)
         venv: Environment variables for subprocesses (defaults to os.environ)
 
     Returns:
-        Dictionary mapping test identifiers to lists of purified test files
+        Dictionary mapping test identifiers to lists of (purified_file, param_suffix) tuples.
+        For parameterized tests, param_suffix contains the parameter values (e.g., "param1-param2").
+        For non-parameterized tests, param_suffix is None.
     """
     venv = venv or os.environ.copy()
+
+    # Check if required pytest plugins are installed in the venv and install if not
+    subprocess.run(
+        [
+            venv_python,
+            "-m",
+            "pip",
+            "install",
+            "pytest",
+            "pytest-json-report",
+            "pytest-cov",
+            "coverage",
+        ],
+        capture_output=True,
+        text=True,
+        env=venv,
+    )
 
     # If test_base is not provided, use src_dir
     if test_base is None:
         test_base = src_dir
 
     # Create destination directory
+    shutil.rmtree(dst_dir, ignore_errors=True)
     dst_dir.mkdir(parents=True, exist_ok=True)
 
     result = {}
+
+    deactivate_tests: dict[str, tuple[ast.AST, list[tuple[Optional[str], str]]]] = {}
+    successfully_purified: dict[str, set[tuple[Optional[str], str]]] = (
+        {}
+    )  # Track which tests were purified
 
     for test_id in failing_tests:
         # Parse test identifier
@@ -730,6 +783,10 @@ def purify_tests(
         if len(parts) < 2:
             continue
 
+        # test_file_rel should be relative to test_base
+        # e.g., if test_base=/project/tests and test_id=tests/test_foo.py::test_bar
+        # then test_file_rel should be "test_foo.py" not "tests/test_foo.py"
+        # to avoid copying to dst_dir/tests/test_foo.py when dst_dir already points to tests/
         test_file_rel = parts[0]
 
         # Determine if this is a class method or module-level function
@@ -737,14 +794,18 @@ def purify_tests(
             # Class method: file::class::method
             class_name = parts[1]
             test_name = parts[2]
+            test_pattern = f"{class_name}::{test_name}"
         elif len(parts) == 2:
             # Module-level function: file::function
             class_name = None
             test_name = parts[1]
+            test_pattern = test_name
         else:
             # Unknown format, skip
             continue
 
+        if param_suffix is not None:
+            test_pattern += f"[{param_suffix}]"
         # Resolve the actual test file path
         # Handle overlapping paths between test_base and test_file_rel
         test_file = _resolve_test_file_path(test_base, test_file_rel)
@@ -752,10 +813,25 @@ def purify_tests(
         if not test_file.exists():
             continue
 
+        # Compute the path relative to test_base for proper copying
+        # This ensures we don't get double nesting (e.g., tests/tests/test.py)
+        try:
+            test_file_rel_to_base = test_file.relative_to(test_base)
+        except ValueError:
+            # If test_file is not under test_base, use the original test_file_rel
+            test_file_rel_to_base = Path(test_file_rel)
+
         # Read the test file
         with open(test_file) as f:
             source = f.read()
             tree = ast.parse(source)
+
+        # Use the normalized relative path as the key
+        test_file_key = str(test_file_rel_to_base)
+        if test_file_key not in deactivate_tests:
+            deactivate_tests[test_file_key] = (tree, [(class_name, test_name)])
+        else:
+            deactivate_tests[test_file_key][1].append((class_name, test_name))
 
         # Find the test function (handles both module-level and class methods)
         finder = FunctionFinder(target_test=test_name)
@@ -801,217 +877,460 @@ def purify_tests(
         if not assertion_finder.assertions:
             continue
 
-        # Phase 1: Atomization - Create wrapped versions and check which fail
-        failing_assertion_lines = _find_failing_assertions(
-            test_file, assertion_finder.assertions, src_dir, venv_python, venv
+        # Phase 1: Atomization - Create atomized tests and check which fail
+        atomized_tests = _find_failing_assertions(
+            test_file,
+            assertion_finder.assertions,
+            test_pattern,
+            src_dir,
+            venv_python,
+            venv,
         )
 
-        # Phase 2: Create single-assertion tests
+        # Phase 2: Process each atomized test (optionally apply slicing)
         purified_files = []
 
-        for assertion_line, _ in assertion_finder.assertions:
-            # Only process assertions that actually fail (if we could determine this)
-            if (
-                failing_assertion_lines
-                and assertion_line not in failing_assertion_lines
-            ):
-                continue
-
-            # Extract single assertion test
-            extractor = SingleAssertionExtractor(test_name, assertion_line, class_name)
-            single_tree = extractor.visit(ast.parse(source))
-            single_code = ast.unparse(single_tree)
+        for assertion_line, atomized_test in atomized_tests.items():
+            # Start with atomized code (has correct line numbers)
+            code = atomized_test.code
 
             # Apply slicing if enabled
             if enable_slicing:
-                # Write temporary file for slicing
-                with tempfile.NamedTemporaryFile(
-                    mode="w", suffix=".py", delete=False
-                ) as tmp:
-                    tmp.write(single_code)
-                    tmp_path = Path(tmp.name)
+                # Write atomized test to temporary file IN THE SAME DIRECTORY
+                # This is critical so tests can find relative resources
+                # Use absolute path to avoid issues with subprocess cwd
+                import uuid
+
+                tmp_filename = f"tmp_slice_{uuid.uuid4().hex[:8]}_{test_file.name}"
+                tmp_path = (test_file.parent / tmp_filename).resolve()  # Absolute path
+                tmp_path.write_text(code)
 
                 try:
-                    # Find the assertion line in the new file
-                    # (it will be different after unparsing)
-                    new_tree = ast.parse(single_code)
-                    new_finder = FunctionFinder(target_test=test_name)
-                    new_finder.visit(new_tree)
+                    # Use PytestSlicer to perform dynamic slicing
+                    # IMPORTANT: tmp_path contains the ATOMIZED test code
+                    # This ensures the slicer/tracer analyzes the version with:
+                    # - Try-except wrapped non-target assertions
+                    # - Preserved line numbers matching the original file
+                    # - Correct side effects
+                    #
+                    # Use failing_line for slicing since that's where the test actually fails
+                    # (could be the assertion itself or a line before it)
+                    slice_target_line = atomized_test.failing_line
+                    LOGGER.info(
+                        f"Slicing {test_name} at line {slice_target_line} "
+                        f"(assertion at line {assertion_line})"
+                    )
+                    slicer = PytestSlicer(
+                        tmp_path,
+                        python_executable=venv_python,
+                        env=venv,
+                        base_dir=src_dir,
+                    )
 
-                    if test_name in new_finder.test_functions:
-                        new_func = new_finder.test_functions[test_name]
-                        new_assertion_finder = AssertionFinder()
-                        new_assertion_finder.visit(new_func)
+                    # Perform slicing using the failing line
+                    slice_results = slicer.slice_test(
+                        test_pattern=test_pattern,
+                        target_line=slice_target_line,
+                    )
 
-                        if new_assertion_finder.assertions:
-                            # Should be only one assertion now
-                            new_assertion_line = new_assertion_finder.assertions[0][0]
-
-                            # Use PytestSlicer to perform dynamic slicing
-                            LOGGER.info(
-                                f"Slicing {test_name} at assertion line {new_assertion_line}"
-                            )
-                            slicer = PytestSlicer(
-                                tmp_path, python_executable=venv_python, env=venv
-                            )
-
-                            # Build test pattern for pytest
-                            test_pattern = f"{tmp_path}::{test_name}"
-
-                            # Perform slicing
-                            slice_results = slicer.slice_test(
-                                test_pattern=test_pattern,
-                                target_line=new_assertion_line,
-                            )
-
-                            # Extract sliced code from results
-                            if new_assertion_line in slice_results.get("slices", {}):
-                                relevant_lines = set(
-                                    slice_results["slices"][new_assertion_line][
-                                        "relevant_lines"
-                                    ]
-                                )
-                                sliced_code = _build_sliced_code(
-                                    single_code, relevant_lines, test_name
-                                )
-                            else:
-                                LOGGER.warning(
-                                    f"No slice found for line {new_assertion_line}, "
-                                    "keeping original code"
-                                )
-                                sliced_code = single_code
-                        else:
-                            sliced_code = single_code
+                    # Extract sliced code from results
+                    if slice_target_line in slice_results.get("slices", {}):
+                        relevant_lines = set(
+                            slice_results["slices"][slice_target_line]["relevant_lines"]
+                        )
+                        sliced_code = _build_sliced_code(
+                            code, relevant_lines, test_name, class_name
+                        )
                     else:
-                        sliced_code = single_code
+                        LOGGER.warning(
+                            f"No slice found for line {slice_target_line}, "
+                            "keeping atomized code"
+                        )
+                        sliced_code = code
                 except Exception as e:
                     LOGGER.error(f"Error during slicing: {e}")
-                    sliced_code = single_code
+                    sliced_code = code
                 finally:
-                    tmp_path.unlink()
+                    tmp_path.unlink(missing_ok=True)
             else:
-                sliced_code = single_code
-
-            # Apply parameter replacement if test is parameterized
-            if param_info and param_values_dict:
-                # De-parameterize the test by replacing parameters with concrete values
-                param_tree = ast.parse(sliced_code)
-                replacer = ParameterReplacer(
-                    test_name, param_info.param_names, param_values_dict
-                )
-                param_tree = replacer.visit(param_tree)
-                sliced_code = ast.unparse(param_tree)
+                sliced_code = code
 
             # Create purified test file
-            # Include parameter suffix in filename if present
+            # Note: We keep parameterized tests as-is (don't replace parameters)
+            # Each parameter combination gets its own file because they may behave differently:
+            # - Different assertions may fail
+            # - Different execution paths
+            # - Different slicing results
             if param_suffix:
-                purified_name = (
+                # Include parameter suffix in filename for clarity
+                purified_name = safe_name(
                     f"{test_file.stem}_{test_name}_{param_suffix}"
-                    f"_assertion_{assertion_line}{test_file.suffix}"
-                )
+                    f"_assertion_{assertion_line}"
+                ) + f"{test_file.suffix}"
             else:
-                purified_name = (
+                purified_name = safe_name(
                     f"{test_file.stem}_{test_name}_assertion_{assertion_line}"
-                    f"{test_file.suffix}"
-                )
-            purified_path = dst_dir / purified_name
-            purified_path.write_text(sliced_code)
-            purified_files.append(purified_path)
+                ) + f"{test_file.suffix}"
 
-        # Copy the original test file to destination and disable the original test
+            # Preserve subdirectory structure from original test file
+            # e.g., if test_file_key = "t/test_a.py", purified file goes in dst_dir/t/
+            test_subdir = Path(test_file_key).parent
+            purified_path = dst_dir / test_subdir / purified_name
+
+            # Ensure subdirectory exists
+            purified_path.parent.mkdir(parents=True, exist_ok=True)
+            purified_path.write_text(sliced_code)
+
+            # Store with test pattern that includes parameter suffix if present
+            purified_files.append((purified_path, param_suffix))
+
+        # Mark this test as successfully purified if we created purified files
+        if purified_files:
+            # Map original test_id to list of (purified_file, param_suffix) tuples
+            # This preserves the parameter information for later test execution
+            result[test_id] = purified_files
+            # Track that this test was successfully purified
+            if test_file_key not in successfully_purified:
+                successfully_purified[test_file_key] = set()
+            successfully_purified[test_file_key].add((class_name, test_name))
+        else:
+            # Test couldn't be purified - map to original file (will be copied without disabling)
+            dst_test_file = dst_dir / test_file_key
+            # Store as tuple for consistency (file, param_suffix)
+            result[test_id] = [(dst_test_file, param_suffix)]
+
+    # Copy original test files and handle disabling
+    for test_file_rel, (tree, tests) in deactivate_tests.items():
         dst_test_file = dst_dir / test_file_rel
         dst_test_file.parent.mkdir(parents=True, exist_ok=True)
 
-        # Rename the original test function to disable it
-        disabler = TestDisabler(test_name, class_name=class_name)
-        disabled_tree = disabler.visit(tree)
-        dst_test_file.write_text(ast.unparse(disabled_tree))
+        # Determine which tests should be disabled (only those successfully purified)
+        tests_to_disable = []
+        if test_file_rel in successfully_purified:
+            purified_tests = successfully_purified[test_file_rel]
+            # Only disable tests that were successfully purified
+            tests_to_disable = [test for test in tests if test in purified_tests]
 
-        result[test_id] = purified_files
+        if tests_to_disable:
+            # Disable only the successfully purified tests
+            disabler = TestDisabler(tests_to_disable)
+            disabled_tree = disabler.visit(tree)
+            dst_test_file.write_text(ast.unparse(disabled_tree))
+        else:
+            # No tests to disable - copy original file as-is
+            dst_test_file.write_text(ast.unparse(tree))
 
     return result
+
+
+def _extract_failing_line_from_json_report(
+    json_report_path: Path, test_file_path: Path, assertions: list[tuple[int, ast.AST]]
+) -> Optional[int]:
+    """
+    Extract the actual failing line number from pytest JSON report.
+
+    Parses the JSON report to find the line IN THE TEST FILE where the failure occurred.
+    If the crash happens in another module, we trace back to find the line in the test
+    file that called into that module.
+
+    For multi-line assertions, maps the failing line to the assertion's start line.
+
+    Args:
+        json_report_path: Path to the JSON report file
+        test_file_path: Path to the test file (to filter traceback entries)
+        assertions: List of (line_number, ast_node) tuples for assertions in original file
+
+    Returns:
+        Line number (start line) of the failing assertion, or None if not found
+    """
+
+    try:
+        with open(json_report_path) as f:
+            report = json.load(f)
+
+        # Look for failed tests in the report
+        tests = report.get("tests", [])
+        if not tests:
+            return None
+
+        # Get the first (and should be only) test since we run with specific test selector
+        test = tests[0]
+
+        # Check if the test failed
+        if test.get("outcome") not in ["failed", "error"]:
+            return None
+
+        # Extract the traceback information from the call phase
+        call = test.get("call", {})
+
+        # Try to get crash information - but only if it's in the test file
+        crash = call.get("crash", {})
+        if crash:
+            crash_path = crash.get("path", "")
+            lineno = crash.get("lineno")
+            # Check if the crash is in the test file
+            if lineno and crash_path and Path(crash_path).name == test_file_path.name:
+                # Map to assertion start line if this is within a multi-line assertion
+                return _map_to_assertion_start_line(int(lineno), assertions)
+
+        # Parse longrepr to find line numbers in the test file
+        # longrepr contains the formatted traceback as a string
+        longrepr = call.get("longrepr", "")
+
+        if isinstance(longrepr, str) and longrepr:
+            # Parse the traceback string to find all references to the test file
+            # The traceback shows the call stack, we want the LAST occurrence in the test file
+            # because that's where the test called into external code (or where it fails)
+            test_filename = test_file_path.name
+
+            # Split longrepr into lines and parse for file references
+            # Format is typically:
+            # "    /path/to/tmpXXX.py:123: in test_function"
+            # or
+            # "tmpXXX.py:123: AssertionError"
+            test_file_lines = []
+            for line in longrepr.split("\n"):
+                # Look for pattern: filename:line number
+                match = re.search(rf"{re.escape(test_filename)}:(\d+)", line)
+                if match:
+                    test_file_lines.append(int(match.group(1)))
+
+            if test_file_lines:
+                # Return the LAST line number from the test file in the traceback
+                # This is the deepest point in the test before calling external code
+                failing_line = test_file_lines[-1]
+                # Map to assertion start line if this is within a multi-line assertion
+                return _map_to_assertion_start_line(failing_line, assertions)
+
+        # Try traceback field if available (structured format)
+        # This is more reliable if available
+        traceback = call.get("traceback", [])
+        if traceback:
+            # Find all entries from the test file
+            test_file_entries = []
+            for entry in traceback:
+                if isinstance(entry, dict):
+                    entry_path = entry.get("path", "")
+                    lineno = entry.get("lineno")
+                    # Check if this entry is from the test file
+                    if lineno and entry_path:
+                        # Compare by filename to handle temp file paths
+                        if Path(entry_path).name == test_file_path.name:
+                            test_file_entries.append(int(lineno))
+
+            # Return the last line from the test file in the traceback
+            # This represents the deepest call in the test before jumping to other modules
+            if test_file_entries:
+                failing_line = test_file_entries[-1]
+                # Map to assertion start line if this is within a multi-line assertion
+                return _map_to_assertion_start_line(failing_line, assertions)
+
+        return None
+
+    except (
+        FileNotFoundError,
+        json.JSONDecodeError,
+        KeyError,
+        ValueError,
+        AttributeError,
+    ):
+        return None
+
+
+def _map_to_assertion_start_line(
+    failing_line: int, assertions: list[tuple[int, ast.AST]]
+) -> int:
+    """
+    Map a failing line to the start line of the assertion that contains it.
+
+    This handles multi-line assertions where the failure might occur on any line
+    within the assertion, but we need to return the start line for comparison.
+
+    Args:
+        failing_line: The line number where the failure occurred
+        assertions: List of (start_line, ast_node) tuples
+
+    Returns:
+        The start line of the assertion containing the failing line, or the failing_line itself
+    """
+    for assertion_start, assertion_node in assertions:
+        # Get the end line of this assertion
+        if hasattr(assertion_node, "end_lineno") and assertion_node.end_lineno:
+            assertion_end = assertion_node.end_lineno
+        else:
+            assertion_end = assertion_start
+
+        # Check if failing_line is within this assertion's range
+        if assertion_start <= failing_line <= assertion_end:
+            return assertion_start
+
+    # If not found in any assertion range, return the failing line as-is
+    # (it might be a non-assertion failure like a function call)
+    return failing_line
 
 
 def _find_failing_assertions(
     test_file: Path,
     assertions: list[tuple[int, ast.AST]],
+    test_pattern: str,
     src_dir: Path,
     venv_python: str = "python",
     venv: Optional[dict] = None,
-) -> set[int]:
+) -> dict[int, AtomizedTest]:
     """
-    Find which assertions actually fail by wrapping others in try-except.
-    Returns set of line numbers for failing assertions.
+    Find which assertions actually fail and create atomized tests for them.
+
+    Returns atomized tests (with try-except wrapped non-target assertions) that preserve:
+    - Original line numbers
+    - Side effects from all assertions
+    - Ability to run and detect which assertion fails
+
+    Args:
+        test_file: Path to the original test file
+        assertions: List of (line_number, ast_node) tuples for assertions
+        test_pattern: Pytest pattern for the specific test (e.g., "TestClass::test_method")
+        src_dir: Source directory for running tests
+        venv_python: Path to Python executable
+        venv: Environment variables for subprocess
+
+    Returns:
+        Dictionary mapping assertion line numbers to AtomizedTest objects.
+        Key = assertion_line (the target assertion being tested)
+        Value = AtomizedTest (contains code, assertion_line, failing_line, etc.)
     """
-    failing_lines = set()
+    atomized_tests = {}
     venv = venv or os.environ.copy()
 
     with open(test_file) as f:
         source = f.read()
 
     for assertion_line, _ in assertions:
-        # Create atomized version (wrap other assertions)
+        # Create atomized version (wrap other assertions in try-except)
         atomizer = AssertionAtomizer(assertion_line)
         atomized_tree = atomizer.visit(ast.parse(source))
+        atomized_code = ast.unparse(atomized_tree)
 
-        # Write to temp file and run
-        with tempfile.NamedTemporaryFile(mode="w", suffix=".py", delete=False) as tmp:
-            tmp.write(ast.unparse(atomized_tree))
-            tmp_path = Path(tmp.name)
+        # Write to temp file IN THE SAME DIRECTORY as test file
+        # This is critical so tests can find relative resources (data files, configs, etc.)
+        # Use absolute paths to avoid issues with subprocess cwd
+        import uuid
+
+        tmp_filename = f".tmp_atomized_{uuid.uuid4().hex[:8]}_{test_file.name}"
+        tmp_path = (test_file.parent / tmp_filename).resolve()  # Absolute path
+        tmp_path.write_text(atomized_code)
+
+        # Create temp file for JSON report (can be anywhere, use absolute path)
+        json_report_filename = f".tmp_report_{uuid.uuid4().hex[:8]}.json"
+        json_report_path = (
+            test_file.parent / json_report_filename
+        ).resolve()  # Absolute path
 
         try:
-            # Run the test with pytest
+            # Run only the specific test with pytest and generate JSON report
+            # Use absolute path for test selector
+            test_selector = f"{tmp_path}::{test_pattern}"
+
             result = subprocess.run(
-                [venv_python, "-m", "pytest", str(tmp_path), "-v", "--tb=short"],
-                capture_output=True,
-                text=True,
+                [
+                    venv_python,
+                    "-m",
+                    "pytest",
+                    test_selector,
+                    "-q",
+                    "--import-mode=importlib",  # Prevent package import issues with temp files
+                    "--json-report",
+                    f"--json-report-file={json_report_path}",
+                    "--no-cov",  # Disable coverage to speed up execution
+                ],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
                 cwd=src_dir,
                 env=venv,
             )
 
-            # If test fails, this assertion is failing
+            # If test fails, this assertion is failing - create AtomizedTest
             if result.returncode != 0:
-                failing_lines.add(assertion_line)
+                actual_failing_line = _extract_failing_line_from_json_report(
+                    json_report_path, tmp_path, assertions
+                )
+                if actual_failing_line:
+                    # Create AtomizedTest object with the code and line numbers
+                    # assertion_line is the target assertion we're testing
+                    # failing_line is where the failure actually occurred
+                    # Extract test name and class name from test_pattern
+                    if "::" in test_pattern:
+                        parts = test_pattern.split("::")
+                        if len(parts) == 2:
+                            class_name, test_name = parts[0], parts[1]
+                        else:
+                            class_name, test_name = None, parts[0]
+                    else:
+                        class_name, test_name = None, test_pattern
 
+                    atomized_test = AtomizedTest(
+                        code=atomized_code,
+                        assertion_line=assertion_line,  # Target assertion line
+                        test_name=test_name,
+                        class_name=class_name,
+                        failing_line=actual_failing_line,  # Actual failure line
+                    )
+                    # Key by the target assertion line (what we're testing)
+                    atomized_tests[assertion_line] = atomized_test
         finally:
-            tmp_path.unlink()
+            # Clean up temp files
+            tmp_path.unlink(missing_ok=True)
+            json_report_path.unlink(missing_ok=True)
 
-    # If we couldn't determine any failing assertions, assume all fail
-    if not failing_lines:
-        failing_lines = {line for line, _ in assertions}
+    # If we couldn't determine any failing assertions, create atomized tests for all
+    if not atomized_tests:
+        for assertion_line, _ in assertions:
+            atomizer = AssertionAtomizer(assertion_line)
+            atomized_tree = atomizer.visit(ast.parse(source))
+            atomized_code = ast.unparse(atomized_tree)
 
-    return failing_lines
+            # Extract test name and class name from test_pattern
+            if "::" in test_pattern:
+                parts = test_pattern.split("::")
+                if len(parts) == 2:
+                    class_name, test_name = parts[0], parts[1]
+                else:
+                    class_name, test_name = None, parts[0]
+            else:
+                class_name, test_name = None, test_pattern
+
+            atomized_test = AtomizedTest(
+                code=atomized_code,
+                assertion_line=assertion_line,
+                test_name=test_name,
+                class_name=class_name,
+            )
+            atomized_tests[assertion_line] = atomized_test
+
+    return atomized_tests
 
 
 class TestDisabler(ast.NodeTransformer):
     """Rename a test function to disable it (handles both module-level and class methods)."""
 
-    def __init__(self, test_name: str, class_name: Optional[str] = None):
-        self.test_name = test_name
-        self.class_name = class_name
-        self.in_target_class = False
+    def __init__(self, tests: list[tuple[Optional[str], str]]):
+        self.tests = tests
+        self.current_class = None
 
     def visit_ClassDef(self, node: ast.ClassDef):
         """Visit class definitions."""
-        if self.class_name and node.name == self.class_name:
-            self.in_target_class = True
-            node = self.generic_visit(node)
-            self.in_target_class = False
-            return node
-        return self.generic_visit(node)
+        # Check if this class matches any target class in tests
+        old_name = self.current_class
+        self.current_class = node.name
+        node = self.generic_visit(node)
+        self.current_class = old_name
+        return node
 
     def visit_FunctionDef(self, node: ast.FunctionDef):
         """Rename the test function."""
         # If we're looking for a class method, only rename inside the target class
-        if self.class_name:
-            if self.in_target_class and node.name == self.test_name:
-                node.name = f"original_{node.name}_disabled"
-        # If no class specified, rename module-level functions
-        elif node.name == self.test_name:
-            node.name = f"original_{node.name}_disabled"
+        for class_name, test_name in self.tests:
+            if node.name == test_name:
+                if class_name is None or class_name == self.current_class:
+                    node.name = f"disabled_{node.name}"
+                    break
         return node
-
-
-# ============================================================================
-# Complete Pipeline
-# ============================================================================

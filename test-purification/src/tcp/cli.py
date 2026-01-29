@@ -5,7 +5,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from tcp.logger import LOGGER
+from tcp.logger import LOGGER, debug
 
 
 def main():
@@ -87,11 +87,7 @@ Examples:
 
     # Configure logging
     if args.verbose:
-        import logging
-
-        LOGGER.setLevel(logging.DEBUG)
-        for handler in LOGGER.handlers:
-            handler.setLevel(logging.DEBUG)
+        debug()
 
     # Validate paths
     if not args.src_dir.exists():

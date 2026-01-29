@@ -11,18 +11,148 @@ import shutil
 import time
 import traceback
 from pathlib import Path
+from typing import Optional
 
 import tests4py.api as t4p
-from tests4py import sfl
+from sflkit import Config
+from sflkit.runners import PytestRunner
+from tests4py.environment import env_on, activate_venv
 from tests4py.projects import TestStatus, Project
-
-from pwfl.events import (
-    sflkit_instrument,
+from tests4py.sfl import (
+    SFLInstrumentReport,
+    instrument,
+    get_events_path,
+    SFLEventsReport,
+    DEFAULT_TIME_OUT,
 )
+from tests4py.sfl.constants import DEFAULT_EXCLUDES
+from tests4py.tests.utils import get_pytest_skip
+
 from pwfl.logger import LOGGER
 
 # Import purify_tests from the tcp package
 from tcp.purification import purify_tests
+
+
+def create_config(
+    project: Project,
+    src: Path,
+    dst: Path,
+    metrics: str = None,
+    events_path: Optional[Path] = None,
+    mapping: Optional[Path] = None,
+    include_suffix: bool = False,
+):
+    if project.included_files:
+        includes = project.included_files
+        excludes = project.excluded_files
+    elif project.excluded_files:
+        includes = list()
+        excludes = project.excluded_files
+    else:
+        includes = list()
+        excludes = DEFAULT_EXCLUDES
+    if project.project_name in ("calculator", "markup"):
+        project.test_base = Path("tests")
+    test_files = list({str(file.split("::")[0]) for file in project.test_cases})
+    return Config.create(
+        path=str(src.absolute()),
+        language="python",
+        events="line",
+        test_events="test_start,test_end,test_line,test_def,test_use,test_assert",
+        ignore_inner=str(
+            project.project_name == "pysnooper"
+        ),  # pysnooper defines a testcase function inside a
+        # testcase, which it traces. With the instrumentation, the trace is not correct because the correct trace is
+        # asserted. Hence, inner functions are ignored.
+        metrics=metrics or "",
+        predicates="line",
+        passing=str(
+            get_events_path(
+                project=project,
+                passing=True,
+                events_path=events_path,
+                include_suffix=include_suffix,
+            )
+        ),
+        failing=str(
+            get_events_path(
+                project=project,
+                passing=False,
+                events_path=events_path,
+                include_suffix=include_suffix,
+            )
+        ),
+        working=str(dst.absolute()),
+        include='"' + '","'.join(includes) + '"',
+        exclude='"' + '","'.join(excludes) + '"',
+        test_files='"' + '","'.join(test_files) + '"',
+        mapping_path=str(mapping.absolute()) if mapping else "",
+    )
+
+
+def sflkit_instrument(
+    project: Project,
+    src: os.PathLike,
+    dst: os.PathLike,
+    mapping: os.PathLike = None,
+    report: SFLInstrumentReport = None,
+):
+    report = report or SFLInstrumentReport()
+    work_dir = Path(src)
+    try:
+        if dst is None:
+            raise ValueError("Destination required for instrument")
+        report.project = project
+        instrument(
+            create_config(
+                project,
+                work_dir,
+                Path(dst),
+                mapping=Path(mapping) if mapping else None,
+            ),
+        )
+        report.successful = True
+    except BaseException as e:
+        report.raised = e
+        report.successful = False
+    return report
+
+
+def sflkit_unittest(
+    work_dir: os.PathLike,
+    project: Project,
+    output: Path = None,
+):
+    report = SFLEventsReport()
+    work_dir = Path(work_dir)
+    try:
+        if output is None:
+            output = get_events_path(project, include_suffix=True)
+        report.project = project
+        environ = env_on(project)
+        environ = activate_venv(work_dir, environ)
+        runner = PytestRunner(timeout=DEFAULT_TIME_OUT)
+        k = None
+        if project.skip_tests:
+            k = get_pytest_skip(project.skip_tests)
+        files = project.relevant_test_files
+        runner.run(
+            directory=work_dir,
+            output=output,
+            files=files,
+            base=project.test_base,
+            environ=environ,
+            k=k,
+        )
+        report.successful = True
+        report.passing = runner.passing_tests
+        report.failing = runner.failing_tests
+        report.undefined = runner.undefined_tests
+    except BaseException as e:
+        report.raised = e
+        report.successful = False
+    return report
 
 
 def parse_test_id(test_id: str) -> tuple:
@@ -56,50 +186,6 @@ def parse_test_id(test_id: str) -> tuple:
     else:
         # Unknown format
         return None, None, None, None
-
-
-def get_venv_python(project: Project) -> Path:
-    """
-    Get the path to the Python executable in the project's virtual environment.
-
-    Args:
-        project: The tests4py project
-
-    Returns:
-        Path to the Python executable in the venv
-    """
-    venv_location = (
-        Path.home()
-        / ".t4p"
-        / "projects"
-        / project.project_name
-        / f"venv_{project.bug_id}"
-    )
-    return venv_location / "bin" / "python"
-
-
-def get_venv_environment(project: Project) -> dict:
-    """
-    Get the environment variables for running tests in the project's venv.
-
-    Args:
-        project: The tests4py project
-
-    Returns:
-        Dictionary of environment variables
-    """
-    venv_location = (
-        Path.home()
-        / ".t4p"
-        / "projects"
-        / project.project_name
-        / f"venv_{project.bug_id}"
-    )
-
-    env = os.environ.copy()
-    env["VIRTUAL_ENV"] = str(venv_location)
-    env["PATH"] = f"{venv_location / 'bin'}:{env.get('PATH', '')}"
-    return env
 
 
 def purify_and_collect_events(
@@ -150,37 +236,26 @@ def purify_and_collect_events(
         report[identifier]["checkout"] = "cached"
 
     # Step 2: Build the project (creates venv)
-    venv_location = (
-        Path.home()
-        / ".t4p"
-        / "projects"
-        / project.project_name
-        / f"venv_{project.bug_id}"
-    )
-    if not venv_location.exists():
-        start = time.time()
-        r = t4p.build(original_checkout)
-        report[identifier]["time"]["build"] = time.time() - start
-        if not r.successful:
-            report[identifier]["build"] = "failed"
-            report[identifier]["error"] = traceback.format_exception(r.raised)
-            return events_base
-        report[identifier]["build"] = "successful"
-    else:
-        report[identifier]["build"] = "cached"
+    start = time.time()
+    r = t4p.build(original_checkout)
+    report[identifier]["time"]["build"] = time.time() - start
+    if not r.successful:
+        report[identifier]["build"] = "failed"
+        report[identifier]["error"] = traceback.format_exception(r.raised)
+        return events_base
+    report[identifier]["build"] = "successful"
+
+    venv_env = env_on(project)
+    venv_env = activate_venv(original_checkout, venv_env)
 
     # Step 3: Purify the failing tests
     start = time.time()
     purified_tests_dir = Path("tmp", f"{identifier}_purified")
     purified_tests_dir.mkdir(parents=True, exist_ok=True)
 
-    # Get venv Python and environment
-    venv_python = str(get_venv_python(project))
-    venv_env = get_venv_environment(project)
-
     # Get test base directory
     # Handle special cases for calculator and markup
-    if project.project_name in ("calculator", "markup"):
+    if project.project_name in ("calculator", "markup", "thefuck"):
         project.test_base = Path("tests")
     test_base = original_checkout / (project.test_base or Path("tests"))
 
@@ -191,14 +266,19 @@ def purify_and_collect_events(
             failing_tests=project.test_cases,
             enable_slicing=enable_slicing,
             test_base=test_base,
-            venv_python=venv_python,
             venv=venv_env,
         )
         report[identifier]["time"]["purification"] = time.time() - start
         report[identifier]["purification"] = "successful"
         report[identifier]["purified_tests"] = {
-            test_id: [str(p.relative_to(purified_tests_dir)) for p in paths]
-            for test_id, paths in purified_mapping.items()
+            test_id: [
+                {
+                    "file": str(purified_file.relative_to(purified_tests_dir)),
+                    "params": param_suffix
+                }
+                for purified_file, param_suffix in file_param_tuples
+            ]
+            for test_id, file_param_tuples in purified_mapping.items()
         }
     except Exception as e:
         report[identifier]["time"]["purification"] = time.time() - start
@@ -209,13 +289,13 @@ def purify_and_collect_events(
 
     # Step 4: Create a modified checkout with purified tests
     # Copy the original checkout to a new location
-    sfl_path = Path("tmp", f"sfl_{identifier}_purified")
-    if sfl_path.exists():
-        shutil.rmtree(sfl_path)
-    shutil.copytree(original_checkout, sfl_path, symlinks=True)
+    tcp_path = Path("tmp", f"{identifier}_tcp")
+    if tcp_path.exists():
+        shutil.rmtree(tcp_path)
+    shutil.copytree(original_checkout, tcp_path, symlinks=True)
 
     # Replace test files with purified versions
-    test_base_sfl = sfl_path / (project.test_base or Path("tests"))
+    test_base_sfl = tcp_path / (project.test_base or Path("tests"))
 
     # Ensure test_base_sfl exists
     test_base_sfl.mkdir(parents=True, exist_ok=True)
@@ -232,175 +312,98 @@ def purify_and_collect_events(
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(item, dst)
 
-    # Step 5: Instrument the code with sflkit
-    start = time.time()
-    mapping = Path("mappings", f"{project}_tcp.json")
-    mapping.parent.mkdir(parents=True, exist_ok=True)
-
-    # Build list of purified test files for instrumentation
-    purified_test_files = set()
-    for test_id, purified_files in purified_mapping.items():
-        for purified_file in purified_files:
-            purified_test_files.add(purified_file.name)
-
-    # Also include the original test file (which now has disabled tests)
-    original_test_files = set()
-    for test_id in purified_mapping.keys():
-        parts = test_id.split("::")
-        original_test_files.add(parts[0])
-
-    # Combine purified and original test files
-    all_test_files = list(purified_test_files | original_test_files)
-
-    # Temporarily modify project.test_cases for config generation
-    # This ensures sflkit knows about all test files
-    purified_test_list = []
-    for test_id, purified_files in purified_mapping.items():
+    # Step 5: Get the new failing tests after purification
+    failing_tests = []
+    relevant_files = (
+        set(project.relevant_test_files) if project.relevant_test_files else set()
+    )
+    for test_id in project.test_cases:
         file_path, class_name, test_name, param_suffix = parse_test_id(test_id)
-
         if file_path is None:
             continue
+        # get correct test id for purified tests
+        if test_id not in purified_mapping:
+            continue
 
-        for purified_file in purified_files:
+        # purified_mapping[test_id] is now a list of (purified_file, param_suffix) tuples
+        for purified_file, purified_param_suffix in purified_mapping[test_id]:
+            # Get relative path from purified_tests_dir
+            rel_path = purified_file.relative_to(purified_tests_dir)
+
+            # Construct the full path in tcp_path
+            purified_file_full = test_base_sfl / rel_path
+
+            # Get path relative to tcp_path (project root) for test ID
+            purified_file_rel = purified_file_full.relative_to(tcp_path)
+
+            # Build base test ID
             if class_name:
-                # Class method: file::class::method
-                purified_test_id = f"{purified_file.name}::{class_name}::{test_name}"
+                # Class method: relative_path::class::method
+                base_test_id = f"{purified_file_rel}::{class_name}::{test_name}"
             else:
-                # Module-level function: file::function
-                purified_test_id = f"{purified_file.name}::{test_name}"
-            purified_test_list.append(purified_test_id)
+                # Module-level function: relative_path::function
+                base_test_id = f"{purified_file_rel}::{test_name}"
 
-    project.test_cases = purified_test_list
+            # Add parameter suffix if present (for parameterized tests)
+            if purified_param_suffix:
+                purified_test_id = f"{base_test_id}[{purified_param_suffix}]"
+            else:
+                purified_test_id = base_test_id
 
+            failing_tests.append(purified_test_id)
+            relevant_files.add(purified_test_id)
+
+    # Step 6: Instrument the code with sflkit
+    LOGGER.info(f"Purified tests: {failing_tests}")
+    LOGGER.info(f"Relevant files: {relevant_files}")
+    project.test_cases = failing_tests
+    project.relevant_test_files = relevant_files
+    mapping = Path("mappings", f"{project}_tcp.json")
+    sfl_path = Path("tmp", f"sfl_{identifier}_tcp")
+    start = time.time()
     r = sflkit_instrument(
-        sfl_path,
         project,
+        tcp_path,
+        sfl_path,
         mapping=mapping,
-        test=True,
     )
     report[identifier]["time"]["instrument"] = time.time() - start
-
     if r.successful:
-        report[identifier]["instrument"] = "successful"
+        report[identifier]["build"] = "successful"
     else:
-        report[identifier]["instrument"] = "failed"
+        report[identifier]["build"] = "failed"
         report[identifier]["error"] = traceback.format_exception(r.raised)
         return events_base
 
-    # Save the mapping
-    if mapping.exists():
-        with open(mapping, "r") as f:
-            mapping_content = json.load(f)
-        with open(mapping, "w") as f:
-            json.dump(mapping_content, f, indent=1)
+    with open(mapping, "r") as f:
+        mapping_content = json.load(f)
+    with open(mapping, "w") as f:
+        json.dump(mapping_content, f, indent=1)
 
-    # Step 6: Collect events by running tests
+    # Step 7: Run tests to collect events
     shutil.rmtree(events_base, ignore_errors=True)
-
-    # Handle ansible special case
     if project.project_name == "ansible":
+        """
+        When ansible is executed it sometimes loads the original version.
+        Even though it is never installed and the virtual environment clearly
+        contains the instrumented version.
+        This prevents an event collection.
+        Removing the original version fixes this problem.
+        """
         shutil.rmtree(original_checkout, ignore_errors=True)
-
     start = time.time()
-
-    # Create a modified project with purified test cases
-    # We need to update the test_cases to point to the purified test files
-    # Each purified test keeps the same test function name but is in a new file
-
-    # Build list of purified test identifiers
-    # Format can be:
-    #   - filename::test_function (2 parts - module-level)
-    #   - filename::ClassName::test_method (3 parts - class method)
-    #   - Can include parameter suffix in original ID but not in purified ID
-    purified_test_list = []
-    for test_id, purified_files in purified_mapping.items():
-        file_path, class_name, test_name, param_suffix = parse_test_id(test_id)
-
-        if file_path is None:
-            continue
-
-        for purified_file in purified_files:
-            if class_name:
-                # Class method
-                purified_test_id = f"{purified_file.name}::{class_name}::{test_name}"
-            else:
-                # Module-level function
-                purified_test_id = f"{purified_file.name}::{test_name}"
-            purified_test_list.append(purified_test_id)
-
-    # Temporarily replace project test_cases with purified tests
-    original_test_cases = project.test_cases
-    project.test_cases = purified_test_list
-
-    # Run sflkit_unittest with purified tests
-    r = sfl.sflkit_unittest(
+    r = sflkit_unittest(
         sfl_path,
+        project,
         output=events_base,
-        relevant_tests=True,
-        all_tests=False,
-        include_suffix=True,
     )
-
-    # Restore original test cases
-    project.test_cases = original_test_cases
-
     report[identifier]["time"]["test"] = time.time() - start
-
     if r.successful:
         report[identifier]["test"] = "successful"
     else:
         report[identifier]["test"] = "failed"
         report[identifier]["error"] = traceback.format_exception(r.raised)
         return events_base
-
-    # Step 7: Verify events were collected
-    checks = True
-
-    # Check that we have events for purified tests
-    if not (events_base / "failing").exists() or not os.listdir(
-        events_base / "failing"
-    ):
-        report[identifier]["check_failing"] = "empty"
-        checks = False
-    else:
-        # Verify that purified tests generated events
-        from sflkit.runners import Runner
-
-        missing_tests = []
-        for test_id, purified_files in purified_mapping.items():
-            file_path, class_name, test_name, param_suffix = parse_test_id(test_id)
-
-            if file_path is None:
-                continue
-
-            for purified_file in purified_files:
-                if class_name:
-                    # Class method
-                    purified_test_id = (
-                        f"{purified_file.name}::{class_name}::{test_name}"
-                    )
-                else:
-                    # Module-level function
-                    purified_test_id = f"{purified_file.name}::{test_name}"
-
-                safe_test = Runner.safe(purified_test_id)
-                if not (events_base / "failing" / safe_test).exists():
-                    missing_tests.append(purified_test_id)
-
-        if missing_tests:
-            report[identifier]["missing_purified_tests"] = missing_tests
-            LOGGER.warning(f"Missing events for {len(missing_tests)} purified tests")
-
-    if not (events_base / "passing").exists() or not os.listdir(
-        events_base / "passing"
-    ):
-        report[identifier]["check_passing"] = "empty"
-        checks = False
-
-    if checks:
-        report[identifier]["check"] = "successful"
-    else:
-        report[identifier]["check"] = "failed"
 
     return events_base
 

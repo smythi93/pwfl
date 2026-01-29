@@ -24,6 +24,7 @@ classifiers = [
 ]
 dependencies = [
     "pytest>=8.3.4",
+    "coverage>=7.13.2",
 ]
 
 [project.scripts]

@@ -14,14 +14,14 @@ Usage:
 from __future__ import annotations
 
 import ast
-import sys
 import json
 import subprocess
-import tempfile
+import sys
+import coverage
+from collections import defaultdict
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, Set, List, Tuple, Optional, Any
-from dataclasses import dataclass, field
-from collections import defaultdict
 
 from tcp.logger import LOGGER
 
@@ -184,8 +184,10 @@ class DynamicTracer:
         test_file: Path,
         python_executable: str = None,
         env: Optional[Dict[str, str]] = None,
+        base_dir: Optional[Path] = None,
     ):
         self.test_file = test_file
+        self.base_dir = base_dir or test_file.parent  # Default to test file directory
         self.graph = DependencyGraph()
         self.python_executable = python_executable or sys.executable
         self.env = env
@@ -197,10 +199,12 @@ class DynamicTracer:
 
     def trace_execution(self, test_pattern: Optional[str] = None) -> DependencyGraph:
         """
-        Execute tests with tracing enabled and build dependency graph.
+        Execute tests with coverage tracking and build dependency graph.
+
+        Uses pytest-cov to collect coverage data via subprocess (supports venv).
 
         This performs DYNAMIC ANALYSIS (runtime):
-        - Which lines were actually executed
+        - Which lines were actually executed (via coverage.py)
 
         STATIC ANALYSIS is done BEFORE tracing:
         - Variable definitions/uses (from AST)
@@ -223,54 +227,72 @@ class DynamicTracer:
         variable_events = tracker.events
         LOGGER.debug(f"Found {len(variable_events)} variable events")
 
-        # Create a simplified tracing script (only captures executed lines)
-        trace_script = self._create_trace_script(test_pattern)
+        # Run pytest with coverage via subprocess (DYNAMIC ANALYSIS)
+        # Create coverage data file in SAME DIRECTORY as test file
+        # This ensures coverage.py can properly resolve paths
+        import uuid
 
-        with tempfile.TemporaryDirectory() as tmpdir:
-            trace_file = Path(tmpdir) / "tracer.py"
-            trace_file.write_text(trace_script)
-            output_file = Path(tmpdir) / "trace_output.json"
+        coverage_filename = f"tmp_coverage_{uuid.uuid4().hex[:8]}"
+        coverage_data_file = (self.test_file.parent / coverage_filename).resolve()
 
-            # Run the test with tracing (DYNAMIC ANALYSIS)
+        try:
+            # Build pytest command with coverage
+            # Use absolute path for test file to avoid path resolution issues
+            test_file_abs = self.test_file.resolve()
+
             cmd = [
                 self.python_executable,
-                str(trace_file),
-                str(self.test_file),
-                str(output_file),
+                "-m",
+                "pytest",
+                (
+                    f"{test_file_abs}::{test_pattern}"
+                    if test_pattern
+                    else str(test_file_abs)
+                ),  # Use absolute path
+                "-q",
+                f"--cov={self.test_file.parent}",
+                "--cov-report=",  # No report output
             ]
 
-            if test_pattern:
-                cmd.append(test_pattern)
+            # Set coverage data file location
+            env = (self.env or {}).copy()
+            env["COVERAGE_FILE"] = str(coverage_data_file)
 
             try:
-                LOGGER.debug(f"Running trace: {test_pattern or 'all tests'}")
+                LOGGER.debug(f"Running coverage: {test_pattern or 'all tests'}")
+                LOGGER.debug(f"Working directory: {self.base_dir}")
+                LOGGER.debug(f"Test file: {test_file_abs}")
                 result = subprocess.run(
                     cmd,
-                    check=True,
                     capture_output=True,
                     text=True,
                     timeout=30,
-                    env=self.env,
+                    env=env,
+                    cwd=self.base_dir,  # Execute from base directory
                 )
-            except subprocess.CalledProcessError as e:
-                LOGGER.error(f"Trace execution failed: {e.stderr}")
-                if e.stdout:
-                    LOGGER.error(f"Stdout: {e.stdout}")
-                raise
+                LOGGER.debug(f"Coverage collection completed (rc={result.returncode})")
+                if result.returncode != 0:
+                    LOGGER.debug(f"stderr: {result.stderr}")
             except subprocess.TimeoutExpired:
-                LOGGER.error("Trace execution timed out")
+                LOGGER.error("Coverage collection timed out")
+                raise
+            except Exception as e:
+                LOGGER.error(f"Coverage collection failed: {e}")
                 raise
 
-            # Load trace data
-            if output_file.exists():
-                trace_data = json.loads(output_file.read_text())
-                LOGGER.debug(
-                    f"Captured {len(trace_data.get('executed_lines', []))} executed lines"
-                )
-                # Build graph with both static and dynamic data
+            # Parse coverage data to get executed lines
+            try:
+                executed_lines = self._parse_coverage_data(coverage_data_file)
+                LOGGER.debug(f"Captured {len(executed_lines)} executed lines")
+
+                trace_data = {"executed_lines": sorted(executed_lines)}
                 self._build_graph_from_trace(trace_data, variable_events, source_code)
-            else:
-                LOGGER.warning(f"Trace output file not found: {output_file}")
+            except Exception as e:
+                LOGGER.error(f"Failed to parse coverage data: {e}")
+                raise
+        finally:
+            # Clean up coverage data file
+            coverage_data_file.unlink(missing_ok=True)
 
         # Add control dependencies (static analysis)
         LOGGER.debug("Adding control dependencies (static analysis)")
@@ -282,52 +304,53 @@ class DynamicTracer:
 
         return self.graph
 
-    def _create_trace_script(self, test_pattern: Optional[str]) -> str:
-        """Create a Python script that traces test execution."""
-        return """
-import sys
-import json
-import trace
-import ast
-from pathlib import Path
+    def _parse_coverage_data(self, coverage_file: Path) -> Set[int]:
+        """
+        Parse coverage.py data file to extract executed lines.
 
-test_file = Path(sys.argv[1])
-output_file = Path(sys.argv[2])
-test_pattern = sys.argv[3] if len(sys.argv) > 3 else None
+        Args:
+            coverage_file: Path to .coverage data file
 
-# Variables to track
-trace_data = {
-    'executed_lines': [],
-}
+        Returns:
+            Set of executed line numbers for the test file
+        """
+        if not coverage_file.exists():
+            LOGGER.warning(f"Coverage file not found: {coverage_file}")
+            return set()
 
-# Use coverage tracer to get executed lines
-tracer = trace.Trace(count=1, trace=0)
+        try:
+            # Load coverage data
+            cov = coverage.Coverage(data_file=str(coverage_file))
+            cov.load()
 
-# Execute the test
-if test_pattern:
-    import pytest
-    result = tracer.runfunc(pytest.main, ['-xvs', test_pattern])
-else:
-    import pytest
-    result = tracer.runfunc(pytest.main, ['-xvs', str(test_file)])
+            # Get data object
+            data = cov.get_data()
 
-# Get executed lines - look for any file path containing the test file name
-results = tracer.results()
-test_file_name = test_file.name
-test_file_abs = str(test_file.resolve())
-executed_lines_set = set()
+            # Find executed lines for our test file
+            executed_lines = set()
+            test_file_abs = str(self.test_file.resolve())
+            test_file_name = self.test_file.name
 
-# results.counts is a dict of (filename, lineno) -> count
-for (filename, line_no), count in results.counts.items():
-    # Check if this is our test file
-    if test_file_name in filename or test_file_abs in filename:
-        executed_lines_set.add(line_no)
+            # coverage.py stores files by absolute path
+            for filename in data.measured_files():
+                # Match by absolute path or filename
+                if test_file_abs in filename or test_file_name in filename:
+                    lines = data.lines(filename)
+                    if lines:
+                        executed_lines.update(lines)
+                        LOGGER.debug(f"Found {len(lines)} executed lines in {filename}")
+                        break
 
-trace_data['executed_lines'] = sorted(executed_lines_set)
+            return executed_lines
 
-# Save trace data
-output_file.write_text(json.dumps(trace_data))
-"""
+        except ImportError:
+            LOGGER.error(
+                "coverage.py not installed. Install with: pip install coverage"
+            )
+            raise
+        except Exception as e:
+            LOGGER.error(f"Failed to parse coverage data: {e}")
+            raise
 
     def _build_graph_from_trace(
         self, trace_data: Dict, variable_events: List[Tuple], source_code: str
@@ -446,16 +469,28 @@ class ControlFlowVisitor(ast.NodeVisitor):
 
 
 class PytestSlicer:
-    """Slices test code based on assertions."""
+    """
+    Slices test code based on assertions.
+
+    The test_file parameter can be:
+    - Original test file (when used standalone)
+    - Atomized test file (when used from purification pipeline)
+
+    When used with atomized tests, the line numbers in the results
+    correspond to the original test file since atomization preserves
+    line numbers.
+    """
 
     def __init__(
         self,
         test_file: Path,
         python_executable: str = None,
         env: Optional[Dict[str, str]] = None,
+        base_dir: Optional[Path] = None,
     ):
         self.test_file = test_file
-        self.tracer = DynamicTracer(test_file, python_executable, env)
+        self.base_dir = base_dir or test_file.parent  # Default to test file directory
+        self.tracer = DynamicTracer(test_file, python_executable, env, base_dir)
 
     def slice_test(
         self, test_pattern: Optional[str] = None, target_line: Optional[int] = None
