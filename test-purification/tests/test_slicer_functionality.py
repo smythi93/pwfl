@@ -36,8 +36,8 @@ def test_math():
         test_file = tmp_path / "test_simple.py"
         test_file.write_text(test_code)
 
-        slicer = PytestSlicer(test_file)
-        results = slicer.slice_test(f"{test_file}::test_math")
+        slicer = PytestSlicer(test_file, base_dir=tmp_path)
+        results = slicer.slice_test("test_math")
 
         # Verify basic structure
         assert "slices" in results
@@ -46,7 +46,7 @@ def test_math():
 
         # Verify execution occurred
         executed_lines = results["graph"]["executed_lines"]
-        assert len(executed_lines) >= 4, "Should execute at least 4 lines"
+        assert len(executed_lines) == 5, "Should execute at least 4 lines"
 
     def test_slicer_with_conditional(self, tmp_path):
         """Test slicer handles conditional logic."""
@@ -62,8 +62,8 @@ def test_conditional():
         test_file = tmp_path / "test_cond.py"
         test_file.write_text(test_code)
 
-        slicer = PytestSlicer(test_file)
-        results = slicer.slice_test(f"{test_file}::test_conditional")
+        slicer = PytestSlicer(test_file, base_dir=tmp_path)
+        results = slicer.slice_test("test_conditional")
 
         assert "slices" in results
         assert len(results["slices"]) > 0
@@ -84,8 +84,8 @@ def test_loop():
         test_file = tmp_path / "test_loop.py"
         test_file.write_text(test_code)
 
-        slicer = PytestSlicer(test_file)
-        results = slicer.slice_test(f"{test_file}::test_loop")
+        slicer = PytestSlicer(test_file, base_dir=tmp_path)
+        results = slicer.slice_test("test_loop")
 
         assert "slices" in results
         assert len(results["slices"]) > 0
@@ -106,8 +106,8 @@ def test_augmented():
         test_file = tmp_path / "test_aug.py"
         test_file.write_text(test_code)
 
-        slicer = PytestSlicer(test_file)
-        results = slicer.slice_test(f"{test_file}::test_augmented")
+        slicer = PytestSlicer(test_file, base_dir=tmp_path)
+        results = slicer.slice_test("test_augmented")
 
         assert "slices" in results
         assert len(results["slices"]) > 0
@@ -128,8 +128,8 @@ def test_annotations():
         test_file = tmp_path / "test_anno.py"
         test_file.write_text(test_code)
 
-        slicer = PytestSlicer(test_file)
-        results = slicer.slice_test(f"{test_file}::test_annotations")
+        slicer = PytestSlicer(test_file, base_dir=tmp_path)
+        results = slicer.slice_test("test_annotations")
 
         assert "slices" in results
         assert len(results["slices"]) > 0
@@ -150,8 +150,8 @@ class TestClass:
         test_file = tmp_path / "test_class.py"
         test_file.write_text(test_code)
 
-        slicer = PytestSlicer(test_file)
-        results = slicer.slice_test(f"{test_file}::TestClass::test_method")
+        slicer = PytestSlicer(test_file, base_dir=tmp_path)
+        results = slicer.slice_test("TestClass::test_method")
 
         assert "slices" in results
         assert len(results["slices"]) > 0
@@ -172,8 +172,8 @@ def test_nested():
         test_file = tmp_path / "test_nested.py"
         test_file.write_text(test_code)
 
-        slicer = PytestSlicer(test_file)
-        results = slicer.slice_test(f"{test_file}::test_nested")
+        slicer = PytestSlicer(test_file, base_dir=tmp_path)
+        results = slicer.slice_test("test_nested")
 
         assert "slices" in results
         assert len(results["slices"]) > 0
@@ -205,8 +205,8 @@ def test_import():
             test_file = tmp_path / "test_import.py"
             test_file.write_text(test_code)
 
-            slicer = PytestSlicer(test_file)
-            results = slicer.slice_test(f"{test_file}::test_import")
+            slicer = PytestSlicer(test_file, base_dir=tmp_path)
+            results = slicer.slice_test("test_import")
 
             assert "slices" in results
             assert len(results["slices"]) > 0, "Should handle imported function"
@@ -229,8 +229,8 @@ def test_deps():
         test_file = tmp_path / "test_deps.py"
         test_file.write_text(test_code)
 
-        slicer = PytestSlicer(test_file)
-        results = slicer.slice_test(f"{test_file}::test_deps")
+        slicer = PytestSlicer(test_file, base_dir=tmp_path)
+        results = slicer.slice_test("test_deps")
 
         # Verify graph structure
         assert "graph" in results
@@ -254,8 +254,8 @@ def test_subset():
         test_file = tmp_path / "test_subset.py"
         test_file.write_text(test_code)
 
-        slicer = PytestSlicer(test_file)
-        results = slicer.slice_test(f"{test_file}::test_subset")
+        slicer = PytestSlicer(test_file, base_dir=tmp_path)
+        results = slicer.slice_test("test_subset")
 
         executed = set(results["graph"]["executed_lines"])
 
@@ -279,8 +279,8 @@ def test_multi():
         test_file = tmp_path / "test_multi.py"
         test_file.write_text(test_code)
 
-        slicer = PytestSlicer(test_file)
-        results = slicer.slice_test(f"{test_file}::test_multi")
+        slicer = PytestSlicer(test_file, base_dir=tmp_path)
+        results = slicer.slice_test("test_multi")
 
         # May have multiple slices or just one
         assert "slices" in results
@@ -297,8 +297,8 @@ def test_comprehension():
         test_file = tmp_path / "test_comp.py"
         test_file.write_text(test_code)
 
-        slicer = PytestSlicer(test_file)
-        results = slicer.slice_test(f"{test_file}::test_comprehension")
+        slicer = PytestSlicer(test_file, base_dir=tmp_path)
+        results = slicer.slice_test("test_comprehension")
 
         assert "slices" in results
         assert len(results["slices"]) > 0
@@ -320,11 +320,11 @@ def test_complex():
         test_file = tmp_path / "test_complex.py"
         test_file.write_text(test_code)
 
-        slicer = PytestSlicer(test_file)
+        slicer = PytestSlicer(test_file, base_dir=tmp_path)
 
         # Should not raise exception
         try:
-            results = slicer.slice_test(f"{test_file}::test_complex")
+            results = slicer.slice_test("test_complex")
             assert "slices" in results
         except Exception as e:
             pytest.fail(f"Slicer should not crash on complex code: {e}")

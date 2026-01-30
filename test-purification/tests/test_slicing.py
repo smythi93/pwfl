@@ -141,8 +141,8 @@ def test_multi_assertions():
 
         # Should create 3 purified files (one per assertion)
         assert "test_multi.py::test_multi_assertions" in result
-        purified_files = result["test_multi.py::test_multi_assertions"]
-        assert len(purified_files) == 3
+        file_param_tuples = result["test_multi.py::test_multi_assertions"]
+        assert len(file_param_tuples) == 3
 
 
 def test_dynamic_slicing_tracer():
@@ -167,12 +167,15 @@ def test_simple():
         assert tracer.test_file == test_file
 
         # Run trace execution to verify it works
-        graph = tracer.trace_execution(f"{test_file}::test_simple")
+        graph = tracer.trace_execution(f"test_simple")
 
         # Verify graph was created
         assert graph is not None
         assert len(graph.executed_lines) > 0
+        assert {2, 3, 4, 5, 6} == graph.executed_lines
         assert len(graph.statements) > 0
+        for i in {2, 3, 4, 5, 6}:
+            assert i in graph.statements
 
 
 def test_slicing_preserves_functionality():
@@ -214,12 +217,12 @@ def test_calculator():
 
         # The sliced test should still be valid Python
         assert "test_calc.py::test_calculator" in result
-        purified_files = result["test_calc.py::test_calculator"]
+        file_param_tuples = result["test_calc.py::test_calculator"]
 
-        for pf in purified_files:
-            if pf.exists():
+        for purified_file, param_suffix in file_param_tuples:
+            if purified_file.exists():
                 # Read and try to parse the sliced code
-                with open(pf, "r") as f:
+                with open(purified_file, "r") as f:
                     sliced_code = f.read()
                 # Should parse without syntax errors
                 ast.parse(sliced_code)
@@ -252,7 +255,7 @@ def test_with_irrelevant_code():
     junk_upper = junk.upper()
     
     # Single assertion using only result
-    assert result == 30
+    assert result == 40
 """
 
     # Expected purified test - exact content after slicing
@@ -261,7 +264,7 @@ def test_with_irrelevant_code():
     x = 10
     y = 20
     result = x + y
-    assert result == 30
+    assert result == 40
 """
 
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -282,10 +285,10 @@ def test_with_irrelevant_code():
 
         # Should create 1 purified file (single assertion)
         assert "test_oracle.py::test_with_irrelevant_code" in result
-        purified_files = result["test_oracle.py::test_with_irrelevant_code"]
-        assert len(purified_files) == 1
+        file_param_tuples = result["test_oracle.py::test_with_irrelevant_code"]
+        assert len(file_param_tuples) == 1
 
-        purified_file = purified_files[0]
+        purified_file, param_suffix = file_param_tuples[0]
         assert purified_file.exists()
 
         with open(purified_file, "r") as f:
@@ -332,7 +335,7 @@ def test_calculation():
     temp = unused * 2
     
     # Assertion
-    assert result == 15
+    assert result == 20
 """
 
     # Expected purified test after slicing - exact content we expect
@@ -342,7 +345,7 @@ def test_calculation():
     x = 5
     y = 10
     result = x + y
-    assert result == 15
+    assert result == 20
 """
 
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -362,10 +365,10 @@ def test_calculation():
         )
 
         assert "test_exact.py::test_calculation" in result
-        purified_files = result["test_exact.py::test_calculation"]
-        assert len(purified_files) == 1
+        file_param_tuples = result["test_exact.py::test_calculation"]
+        assert len(file_param_tuples) == 1
 
-        purified_file = purified_files[0]
+        purified_file, param_suffix = file_param_tuples[0]
         with open(purified_file, "r") as f:
             purified_code = f.read()
 
@@ -485,16 +488,19 @@ def test_three_calculations():
         )
 
         assert "test_multi_oracle.py::test_three_calculations" in result
-        purified_files = sorted(result["test_multi_oracle.py::test_three_calculations"])
+        file_param_tuples = sorted(
+            result["test_multi_oracle.py::test_three_calculations"]
+        )
 
         # CRUCIAL CHECK 1: Must create exactly 3 purified files
-        assert len(purified_files) == 3, (
+        assert len(file_param_tuples) == 3, (
             f"CRITICAL FAILURE: Expected 3 purified files (one per assertion), "
-            f"got {len(purified_files)}"
+            f"got {len(file_param_tuples)}"
         )
 
         # CRUCIAL CHECK 2: Verify content of each atomized test
-        for idx, purified_file in enumerate(purified_files):
+        for idx, file_param_tuple in enumerate(file_param_tuples):
+            purified_file, _ = file_param_tuple
             with open(purified_file, "r") as f:
                 purified_code = f.read()
 
@@ -610,7 +616,7 @@ def test_simple_math():
     x = 100
     y = x * 2
     
-    assert c == 7
+    assert c == 6
 """
 
     # Exact expected oracle after slicing
@@ -619,7 +625,7 @@ def test_simple_math():
     a = 3
     b = 4
     c = a + b
-    assert c == 7
+    assert c == 6
 """
 
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -638,10 +644,11 @@ def test_simple_math():
         )
 
         assert "test_simple.py::test_simple_math" in result
-        purified_files = result["test_simple.py::test_simple_math"]
-        assert len(purified_files) == 1
+        file_param_tuples = result["test_simple.py::test_simple_math"]
+        assert len(file_param_tuples) == 1
 
-        with open(purified_files[0], "r") as f:
+        purified_file, param_suffix = file_param_tuples[0]
+        with open(purified_file, "r") as f:
             purified_code = f.read()
 
         # Normalize and compare

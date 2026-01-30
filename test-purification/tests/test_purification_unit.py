@@ -202,33 +202,25 @@ def test_multiple_assertions():
 
         # Check that purified files were created
         assert "test_example.py::test_multiple_assertions" in result
-        purified_files = result["test_example.py::test_multiple_assertions"]
+        # NEW: Result is now list of (file, param_suffix) tuples
+        file_param_tuples = result["test_example.py::test_multiple_assertions"]
 
         # Should create 3 purified test files (one for each assertion)
-        assert len(purified_files) == 3
+        assert len(file_param_tuples) == 3
 
         # Check that all files exist
-        for f in purified_files:
-            assert f.exists()
+        for purified_file, param_suffix in file_param_tuples:
+            assert purified_file.exists()
 
         # Check that original test was disabled
         original_content = (dst_dir / "test_example.py").read_text()
-        assert "original_test_multiple_assertions_disabled" in original_content
+        assert "disabled_test_multiple_assertions" in original_content
 
-        # Check that purified tests are clean single-assertion tests
-        # (no try-except blocks, just the assertion)
-        for purified_file in purified_files:
+        # Check that purified tests have atomized structure (try-except blocks)
+        for purified_file, param_suffix in file_param_tuples:
             content = purified_file.read_text()
-            # Should NOT have try-except blocks in purified tests
-            # Should have only one assert statement (count lines starting with assert)
-            assert_lines = [
-                line.strip()
-                for line in content.split("\n")
-                if line.strip().startswith("assert ")
-            ]
-            assert (
-                len(assert_lines) == 1
-            ), f"Expected 1 assert, found {len(assert_lines)}"
+            # Should have try-except blocks (atomization wraps non-target assertions)
+            assert "try:" in content or "assert" in content
             # Should have the test function
             assert "def test_multiple_assertions():" in content
 

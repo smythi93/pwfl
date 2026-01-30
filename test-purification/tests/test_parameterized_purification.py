@@ -61,24 +61,19 @@ def test_parameter_id_parsing():
         assert param_values == ["1", "hello"]
 
 
-def test_parameter_replacer():
-    """Test that ParameterReplacer removes decorator and replaces params."""
-    from tcp.purification import ParameterReplacer
+def test_parameter_handling():
+    """Test that parameterized tests keep their parameters (not replaced)."""
+    # NOTE: ParameterReplacer is no longer used. We keep parameterized tests as-is.
+    # This test verifies the new approach where parameters are preserved.
 
     tree = ast.parse(TEST_CODE)
-    replacer = ParameterReplacer(
-        "test_click_invocation",
-        ["user_choice", "expected_value"],
-        {"user_choice": 1, "expected_value": "hello"},
-    )
-    new_tree = replacer.visit(tree)
-    new_code = ast.unparse(new_tree)
+    code = ast.unparse(tree)
 
-    # Verify decorator is removed
-    assert "@pytest.mark.parametrize" not in new_code
+    # Verify decorator is kept
+    assert "@pytest.mark.parametrize" in code
 
-    # Verify function signature changed
-    assert "def test_click_invocation(mocker):" in new_code
+    # Verify function signature unchanged
+    assert "def test_click_invocation(mocker, user_choice, expected_value):" in code
 
 
 def test_full_purify_parameterized():
@@ -107,18 +102,24 @@ def test_full_purify_parameterized():
         )
 
         assert test_id in result, f"Test ID {test_id} not in result"
-        purified_files = result[test_id]
+
+        # NEW: Result is now list of (file, param_suffix) tuples
+        file_param_tuples = result[test_id]
 
         # Should have 2 purified files (one per assertion)
-        assert len(purified_files) == 2, f"Expected 2 files, got {len(purified_files)}"
+        assert len(file_param_tuples) == 2, f"Expected 2 files, got {len(file_param_tuples)}"
 
-        # Check purified file names include parameter suffix
-        for purified_file in purified_files:
+        # Check purified file names and parameters
+        for purified_file, param_suffix in file_param_tuples:
+            # Verify it's a tuple with param_suffix
+            assert param_suffix == "1-hello", f"Expected param_suffix '1-hello', got {param_suffix}"
+
             assert "test_click" in purified_file.name
             assert "test_click_invocation" in purified_file.name
-            assert "1-hello" in purified_file.name  # Parameter suffix
+            assert "1_hello" in purified_file.name  # Parameter suffix (dashes replaced with underscores)
             assert "assertion" in purified_file.name
 
             content = purified_file.read_text()
-            # Should not have parametrize decorator
-            assert "@pytest.mark.parametrize" not in content
+            # NEW: Parameters are kept in code (not replaced)
+            assert "@pytest.mark.parametrize" in content
+            assert "def test_click_invocation(mocker, user_choice, expected_value):" in content

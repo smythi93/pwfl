@@ -35,7 +35,6 @@ def safe_name(s: str):
     return s
 
 
-
 class AtomizedTest:
     """
     Represents an atomized test with one target assertion.
@@ -703,13 +702,77 @@ class StatementFilter(ast.NodeTransformer):
         return True
 
 
+def _install_and_verify_packages(venv_python: str, venv: dict[str, str]):
+    # Check if required pytest plugins are installed in the venv and install if not
+    if venv_python is None:
+        venv_python = "python"
+    result = subprocess.run(
+        [
+            venv_python,
+            "-m",
+            "pip",
+            "install",
+            "pytest",
+            "pytest-json-report",
+            "pytest-cov",
+            "coverage",
+        ],
+        capture_output=True,
+        text=True,
+        env=venv,
+    )
+    if result.returncode != 0:
+        LOGGER.error(
+            f"Failed to install required packages in virtual environment: {result.stderr}"
+        )
+        raise RuntimeError("Failed to install required packages in virtual environment")
+    # Verify installation
+    result = subprocess.run(
+        [venv_python, "-m", "pytest", "--help"],
+        capture_output=True,
+        text=True,
+        env=venv,
+    )
+    if result.returncode != 0:
+        LOGGER.error(
+            f"Failed to verify pytest installation in virtual environment: {result.stderr}"
+        )
+        raise RuntimeError(
+            "Failed to verify pytest installation in virtual environment"
+        )
+    if "--cov=" not in result.stdout:
+        LOGGER.error(
+            "pytest-cov plugin not found in virtual environment pytest installation"
+        )
+        raise RuntimeError("pytest-cov plugin not found in virtual environment")
+    if "--json-report" not in result.stdout:
+        LOGGER.error(
+            "pytest-json-report plugin not found in virtual environment pytest installation"
+        )
+        raise RuntimeError("pytest-json-report plugin not found in virtual environment")
+
+    # get actual python
+    result = subprocess.run(
+        [venv_python, "-c", "import sys; print(sys.executable)"],
+        capture_output=True,
+        text=True,
+        env=venv,
+    )
+    if result.returncode != 0:
+        LOGGER.error(
+            f"Failed to get python executable in virtual environment: {result.stderr}"
+        )
+        raise RuntimeError("Failed to get python executable in virtual environment")
+    return result.stdout.strip()
+
+
 def purify_tests(
     src_dir: Path,
     dst_dir: Path,
     failing_tests: List[str],
     enable_slicing: bool = False,
     test_base: Optional[Path] = None,
-    venv_python: str = "python",
+    venv_python: str = None,
     venv: Optional[dict] = None,
 ) -> Dict[str, List[tuple[Path, Optional[str]]]]:
     """
@@ -731,22 +794,7 @@ def purify_tests(
     """
     venv = venv or os.environ.copy()
 
-    # Check if required pytest plugins are installed in the venv and install if not
-    subprocess.run(
-        [
-            venv_python,
-            "-m",
-            "pip",
-            "install",
-            "pytest",
-            "pytest-json-report",
-            "pytest-cov",
-            "coverage",
-        ],
-        capture_output=True,
-        text=True,
-        env=venv,
-    )
+    venv_python = _install_and_verify_packages(venv_python, venv)
 
     # If test_base is not provided, use src_dir
     if test_base is None:
@@ -963,14 +1011,20 @@ def purify_tests(
             # - Different slicing results
             if param_suffix:
                 # Include parameter suffix in filename for clarity
-                purified_name = safe_name(
-                    f"{test_file.stem}_{test_name}_{param_suffix}"
-                    f"_assertion_{assertion_line}"
-                ) + f"{test_file.suffix}"
+                purified_name = (
+                    safe_name(
+                        f"{test_file.stem}_{test_name}_{param_suffix}"
+                        f"_assertion_{assertion_line}"
+                    )
+                    + f"{test_file.suffix}"
+                )
             else:
-                purified_name = safe_name(
-                    f"{test_file.stem}_{test_name}_assertion_{assertion_line}"
-                ) + f"{test_file.suffix}"
+                purified_name = (
+                    safe_name(
+                        f"{test_file.stem}_{test_name}_assertion_{assertion_line}"
+                    )
+                    + f"{test_file.suffix}"
+                )
 
             # Preserve subdirectory structure from original test file
             # e.g., if test_file_key = "t/test_a.py", purified file goes in dst_dir/t/
@@ -1215,12 +1269,12 @@ def _find_failing_assertions(
         # Use absolute paths to avoid issues with subprocess cwd
         import uuid
 
-        tmp_filename = f".tmp_atomized_{uuid.uuid4().hex[:8]}_{test_file.name}"
+        tmp_filename = f"tmp_atomized_{uuid.uuid4().hex[:8]}_{test_file.name}"
         tmp_path = (test_file.parent / tmp_filename).resolve()  # Absolute path
         tmp_path.write_text(atomized_code)
 
         # Create temp file for JSON report (can be anywhere, use absolute path)
-        json_report_filename = f".tmp_report_{uuid.uuid4().hex[:8]}.json"
+        json_report_filename = f"tmp_report_{uuid.uuid4().hex[:8]}.json"
         json_report_path = (
             test_file.parent / json_report_filename
         ).resolve()  # Absolute path
@@ -1237,13 +1291,12 @@ def _find_failing_assertions(
                     "pytest",
                     test_selector,
                     "-q",
-                    "--import-mode=importlib",  # Prevent package import issues with temp files
                     "--json-report",
                     f"--json-report-file={json_report_path}",
                     "--no-cov",  # Disable coverage to speed up execution
                 ],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
+                capture_output=True,
+                text=True,
                 cwd=src_dir,
                 env=venv,
             )

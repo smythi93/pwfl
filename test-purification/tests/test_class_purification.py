@@ -81,13 +81,14 @@ def test_test_disabler():
     from tcp.purification import TestDisabler
 
     tree = ast.parse(TEST_CODE)
-    disabler = TestDisabler("test_find_hook", class_name="TestFindHooks")
+    # NEW: TestDisabler takes list of (class_name, test_name) tuples
+    disabler = TestDisabler([("TestFindHooks", "test_find_hook")])
     new_tree = disabler.visit(tree)
     new_code = ast.unparse(new_tree)
 
     # Verify test is disabled
-    assert "def original_test_find_hook_disabled" in new_code, "Test should be renamed"
-    assert "def test_find_hook" not in new_code, "Original test name should not exist"
+    assert "def disabled_test_find_hook" in new_code, "Test should be renamed"
+    assert "def test_find_hook(self):" not in new_code, "Original test name should not exist"
 
     # Verify other methods are not affected
     assert "def setup_method" in new_code, "setup_method should not be renamed"
@@ -120,15 +121,16 @@ def test_purify_tests_integration():
         )
 
         assert test_id in result, f"Should have result for {test_id}"
-        purified_files = result[test_id]
+        # NEW: Result is now list of (file, param_suffix) tuples
+        file_param_tuples = result[test_id]
 
         # Should have 2 purified files (one per assertion)
         assert (
-            len(purified_files) == 2
-        ), f"Expected 2 purified files, got {len(purified_files)}"
+            len(file_param_tuples) == 2
+        ), f"Expected 2 purified files, got {len(file_param_tuples)}"
 
         # Check purified file names
-        for purified_file in purified_files:
+        for purified_file, param_suffix in file_param_tuples:
             assert (
                 "test_hooks" in purified_file.name
             ), "Purified file should contain original filename"
@@ -157,5 +159,5 @@ def test_purify_tests_integration():
 
         disabled_content = disabled_file.read_text()
         assert (
-            "original_test_find_hook_disabled" in disabled_content
+            "disabled_test_find_hook" in disabled_content
         ), "Original test should be disabled"

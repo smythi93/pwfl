@@ -71,9 +71,7 @@ def test_with_loop():
     def test_slicer_standalone(self, example_test_file):
         """Test slicer works standalone without purification."""
         slicer = PytestSlicer(example_test_file)
-        results = slicer.slice_test(
-            f"{example_test_file}::test_simple_math", target_line=9
-        )
+        results = slicer.slice_test("test_simple_math", target_line=9)
 
         # Verify slice results structure
         assert "slices" in results, "Results should contain 'slices' key"
@@ -103,7 +101,7 @@ def test_with_loop():
 
         files = result["example_test.py::test_simple_math"]
         assert len(files) == 1, "Should create 1 purified file (1 assertion)"
-        assert files[0].exists(), "Purified file should exist"
+        assert files[0][0].exists(), "Purified file should exist"
 
     def test_purification_with_slicing_creates_files(self, example_test_file):
         """Test purification with slicing creates expected files."""
@@ -124,7 +122,7 @@ def test_with_loop():
 
         files = result["example_test.py::test_simple_math"]
         assert len(files) == 1, "Should create 1 sliced file"
-        assert files[0].exists(), "Sliced file should exist"
+        assert files[0][0].exists(), "Sliced file should exist"
 
     def test_sliced_code_has_fewer_lines(self, example_test_file):
         """Test that sliced code is typically shorter than unsliced."""
@@ -156,8 +154,8 @@ def test_with_loop():
         file_no_slice = result_no_slice["example_test.py::test_simple_math"][0]
         file_with_slice = result_with_slice["example_test.py::test_simple_math"][0]
 
-        content_no_slice = file_no_slice.read_text()
-        content_with_slice = file_with_slice.read_text()
+        content_no_slice = file_no_slice[0].read_text()
+        content_with_slice = file_with_slice[0].read_text()
 
         lines_no_slice = len(content_no_slice.splitlines())
         lines_with_slice = len(content_with_slice.splitlines())
@@ -186,7 +184,7 @@ def test_with_loop():
         # Parse all generated files
         for test_id, files in result.items():
             for f in files:
-                content = f.read_text()
+                content = f[0].read_text()
                 try:
                     tree = ast.parse(content)
                     assert tree is not None
@@ -208,7 +206,8 @@ def test_with_loop():
 
         # Check that sliced file still has the test function and assertion
         files = result["example_test.py::test_simple_math"]
-        content = files[0].read_text()
+        assert len(files) == 1, "Should preserve functionality"
+        content = files[0][0].read_text()
 
         assert "def test_simple_math" in content, "Should preserve test function"
         assert "assert c == 3" in content, "Should preserve assertion"
@@ -254,9 +253,7 @@ def test_two():
             example_test_file, python_executable=sys.executable, env=os.environ.copy()
         )
 
-        results = slicer.slice_test(
-            f"{example_test_file}::test_simple_math", target_line=9
-        )
+        results = slicer.slice_test("test_simple_math", target_line=9)
 
         # Should still work
         assert "slices" in results

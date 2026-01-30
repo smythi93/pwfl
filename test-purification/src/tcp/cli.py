@@ -115,10 +115,15 @@ Examples:
 
         # Print results
         total_purified = 0
-        for test_id, files in result.items():
+        for test_id, file_param_tuples in result.items():
             LOGGER.info(f"✓ {test_id}")
-            for f in files:
-                LOGGER.info(f"  → {f.relative_to(args.dst_dir)}")
+            # NEW: Unpack tuples (file, param_suffix)
+            for purified_file, param_suffix in file_param_tuples:
+                rel_path = purified_file.relative_to(args.dst_dir)
+                if param_suffix:
+                    LOGGER.info(f"  → {rel_path} [params: {param_suffix}]")
+                else:
+                    LOGGER.info(f"  → {rel_path}")
                 total_purified += 1
 
         LOGGER.info()
