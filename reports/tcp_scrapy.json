@@ -659,5 +659,239 @@
   },
   "test": "successful",
   "check": "successful"
+ },
+ "scrapy_33": {
+  "status": "completed",
+  "time": {
+   "purification": 9.142818212509155,
+   "instrument": 12.120060205459595,
+   "test": 19.774234294891357
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_pipeline_media.py::BaseMediaPipelineTestCase::test_default_item_completed": [
+    {
+     "file": "test_pipeline_media_test_default_item_completed_assertion_70.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_34": {
+  "status": "completed",
+  "time": {
+   "purification": 24.129971027374268,
+   "instrument": 12.252172231674194,
+   "test": 24.522948503494263
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_item.py::ItemTest::test_metaclass_with_fields_attribute": [
+    {
+     "file": "test_item_test_metaclass_with_fields_attribute_assertion_128.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_with_fields_attribute_assertion_129.py",
+     "params": null
+    }
+   ],
+   "tests/test_item.py::ItemTest::test_metaclass_multiple_inheritance_simple": [
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_simple_assertion_159.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_simple_assertion_160.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_simple_assertion_161.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_simple_assertion_167.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_simple_assertion_168.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_simple_assertion_169.py",
+     "params": null
+    }
+   ],
+   "tests/test_item.py::ItemTest::test_metaclass_multiple_inheritance_diamond": [
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_diamond_assertion_190.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_diamond_assertion_199.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_35": {
+  "status": "completed",
+  "time": {
+   "purification": 3.8688948154449463,
+   "instrument": 12.02371096611023,
+   "test": 6.719597101211548
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_crawler.py::CrawlerRunnerTestCase::test_spidermanager_deprecation": [
+    {
+     "file": "test_crawler_test_spidermanager_deprecation_assertion_101.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_36": {
+  "status": "completed",
+  "time": {
+   "purification": 14.540189266204834,
+   "instrument": 12.027500867843628,
+   "test": 11.041149616241455
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_utils_misc/__init__.py::UtilsMiscTestCase::test_create_instance": [
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_89.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_91.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_93.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_95.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_100.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_103.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_104.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_106.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_108.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_110.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_132.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_37": {
+  "status": "completed",
+  "time": {
+   "purification": 3.2390801906585693,
+   "instrument": 11.898255109786987,
+   "test": 17.674269199371338
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_http_request.py::RequestTest::test_url_no_scheme": [
+    {
+     "file": "test_http_request_test_url_no_scheme_assertion_56.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_38": {
+  "status": "skipped"
+ },
+ "scrapy_39": {
+  "status": "completed",
+  "time": {
+   "purification": 6.950458765029907,
+   "instrument": 11.998903512954712,
+   "test": 6.819003105163574
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_spider.py::DeprecationTest::test_make_requests_from_url_deprecated": [
+    {
+     "file": "test_spider_test_make_requests_from_url_deprecated_assertion_419.py",
+     "params": null
+    },
+    {
+     "file": "test_spider_test_make_requests_from_url_deprecated_assertion_427.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_40": {
+  "status": "completed",
+  "time": {
+   "purification": 2.699374198913574,
+   "instrument": 11.95415186882019,
+   "test": 63.91675567626953
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_exporters.py::PythonItemExporterTest::test_other_python_types_item": [
+    {
+     "file": "test_exporters_test_other_python_types_item_assertion_148.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  }
 }
