@@ -765,5 +765,44 @@
   },
   "test": "successful",
   "check": "successful"
+ },
+ "thefuck_26": {
+  "status": "completed",
+  "time": {
+   "purification": 5.911073923110962,
+   "instrument": 13.689241170883179,
+   "test": 8.359458446502686
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_vagrant_up.py::test_get_new_command[command3-new_command3]": [
+    {
+     "file": "rules/test_vagrant_up_test_get_new_command_command3_new_command3_assertion_33.py",
+     "params": "command3-new_command3"
+    }
+   ],
+   "tests/rules/test_vagrant_up.py::test_get_new_command[command0-vagrant up && vagrant ssh]": [
+    {
+     "file": "rules/test_vagrant_up_test_get_new_command_command0_vagrant_up____vagrant_ssh_assertion_33.py",
+     "params": "command0-vagrant up && vagrant ssh"
+    }
+   ],
+   "tests/rules/test_vagrant_up.py::test_get_new_command[command1-new_command1]": [
+    {
+     "file": "rules/test_vagrant_up_test_get_new_command_command1_new_command1_assertion_33.py",
+     "params": "command1-new_command1"
+    }
+   ],
+   "tests/rules/test_vagrant_up.py::test_get_new_command[command2-vagrant up && vagrant rdp]": [
+    {
+     "file": "rules/test_vagrant_up_test_get_new_command_command2_vagrant_up____vagrant_rdp_assertion_33.py",
+     "params": "command2-vagrant up && vagrant rdp"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  }
 }
