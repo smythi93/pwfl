@@ -1,0 +1,382 @@
+{
+ "matplotlib_1": {
+  "status": "completed",
+  "time": {
+   "purification": 6.420996189117432,
+   "instrument": 28.345196962356567,
+   "test": 28.397576093673706
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_bbox_tight.py::test_noop_tight_bbox": [
+    {
+     "file": "test_bbox_tight_test_noop_tight_bbox_assertion_133.py",
+     "params": null
+    },
+    {
+     "file": "test_bbox_tight_test_noop_tight_bbox_assertion_134.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_2": {
+  "status": "completed",
+  "time": {
+   "purification": 13.359177112579346,
+   "instrument": 28.606465339660645,
+   "test": 75.68542194366455
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_unfilled": [
+    {
+     "file": "test_axes_test_scatter_unfilled_assertion_1844.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_3": {
+  "status": "completed",
+  "time": {
+   "purification": 4.175477743148804,
+   "instrument": 27.876151084899902,
+   "test": 20.857670307159424
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_marker.py::test_marker_fillstyle": [
+    {
+     "file": "test_marker_test_marker_fillstyle_assertion_13.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_4": {
+  "status": "completed",
+  "time": {
+   "purification": 15.901401996612549,
+   "instrument": 28.573395252227783,
+   "test": 3.477731466293335
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_vlines_default": [
+    {
+     "file": "test_axes_test_vlines_default_assertion_3822.py",
+     "params": null
+    }
+   ],
+   "lib/matplotlib/tests/test_axes.py::test_hlines_default": [
+    {
+     "file": "test_axes_test_hlines_default_assertion_3869.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_5": {
+  "status": "completed",
+  "time": {
+   "purification": 15.887847185134888,
+   "instrument": 28.877591371536255,
+   "test": 74.63532185554504
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_linewidths": [
+    {
+     "file": "test_axes_test_scatter_linewidths_assertion_1994.py",
+     "params": null
+    },
+    {
+     "file": "test_axes_test_scatter_linewidths_assertion_1998.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_6": {
+  "status": "completed",
+  "time": {
+   "purification": 0.9913158416748047,
+   "instrument": 28.631901741027832,
+   "test": 71.76717925071716
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_7": {
+  "status": "skipped"
+ },
+ "matplotlib_8": {
+  "status": "completed",
+  "time": {
+   "purification": 41.23261213302612,
+   "instrument": 29.864661931991577,
+   "test": 3.522932529449463
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_unautoscaley[True]": [
+    {
+     "file": "test_axes_test_unautoscaley_True_assertion_6228.py",
+     "params": "True"
+    }
+   ],
+   "lib/matplotlib/tests/test_axes.py::test_unautoscalex[True]": [
+    {
+     "file": "test_axes_test_unautoscalex_True_assertion_6243.py",
+     "params": "True"
+    }
+   ],
+   "lib/matplotlib/tests/test_axes.py::test_unautoscaley[None]": [
+    {
+     "file": "test_axes_test_unautoscaley_None_assertion_6228.py",
+     "params": "None"
+    }
+   ],
+   "lib/matplotlib/tests/test_axes.py::test_unautoscalex[None]": [
+    {
+     "file": "test_axes_test_unautoscalex_None_assertion_6243.py",
+     "params": "None"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_9": {
+  "status": "completed",
+  "time": {
+   "purification": 0.5902836322784424,
+   "instrument": 29.190079927444458,
+   "test": 113.11528706550598
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_10": {
+  "status": "completed",
+  "time": {
+   "purification": 10.863434791564941,
+   "instrument": 28.294066905975342,
+   "test": 3.452005624771118
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_offset_text_visible": [
+    {
+     "file": "test_axes_test_offset_text_visible_assertion_5507.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_11": {
+  "status": "completed",
+  "time": {
+   "purification": 4.855823516845703,
+   "instrument": 29.09755563735962,
+   "test": 121.14443826675415
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_text.py::test_non_default_dpi[empty]": [
+    {
+     "file": "test_text_test_non_default_dpi_empty_assertion_337.py",
+     "params": "empty"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_12": {
+  "status": "completed",
+  "time": {
+   "purification": 1.4236295223236084,
+   "instrument": 28.83506441116333,
+   "test": 50.62074375152588
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_13": {
+  "status": "completed",
+  "time": {
+   "purification": 3.666185140609741,
+   "instrument": 28.707176685333252,
+   "test": 109.77301239967346
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_path.py::test_make_compound_path_stops": [
+    {
+     "file": "test_path_test_make_compound_path_stops_assertion_154.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_14": {
+  "status": "completed",
+  "time": {
+   "purification": 4.775278091430664,
+   "instrument": 28.77669858932495,
+   "test": 120.58130764961243
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_text.py::test_fontproperties_kwarg_precedence": [
+    {
+     "file": "test_text_test_fontproperties_kwarg_precedence_assertion_664.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_15": {
+  "status": "completed",
+  "time": {
+   "purification": 14.182801246643066,
+   "instrument": 28.86705183982849,
+   "test": 2.679267644882202
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_colors.py::test_SymLogNorm": [
+    {
+     "file": "test_colors_test_SymLogNorm_assertion_405.py",
+     "params": null
+    },
+    {
+     "file": "test_colors_test_SymLogNorm_assertion_413.py",
+     "params": null
+    },
+    {
+     "file": "test_colors_test_SymLogNorm_assertion_421.py",
+     "params": null
+    },
+    {
+     "file": "test_colors_test_SymLogNorm_assertion_427.py",
+     "params": null
+    }
+   ],
+   "lib/matplotlib/tests/test_colors.py::test_SymLogNorm_single_zero": [
+    {
+     "file": "test_colors_test_SymLogNorm_single_zero_assertion_448.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_16": {
+  "status": "completed",
+  "time": {
+   "purification": 6.170477867126465,
+   "instrument": 28.95225691795349,
+   "test": 55.06097221374512
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_int[clim0]": [
+    {
+     "file": "test_colorbar_test_colorbar_int_clim0_assertion_593.py",
+     "params": "clim0"
+    }
+   ],
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_int[clim1]": [
+    {
+     "file": "test_colorbar_test_colorbar_int_clim1_assertion_593.py",
+     "params": "clim1"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_17": {
+  "status": "completed",
+  "time": {
+   "purification": 6.6144187450408936,
+   "instrument": 29.221073627471924,
+   "test": 61.479024171829224
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_int[clim0]": [
+    {
+     "file": "test_colorbar_test_colorbar_int_clim0_assertion_583.py",
+     "params": "clim0"
+    }
+   ],
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_int[clim1]": [
+    {
+     "file": "test_colorbar_test_colorbar_int_clim1_assertion_583.py",
+     "params": "clim1"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}
