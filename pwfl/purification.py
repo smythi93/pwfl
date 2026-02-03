@@ -14,8 +14,15 @@ from pathlib import Path
 from typing import Optional
 
 import tests4py.api as t4p
-from sflkit import Config
+from sflkit import Config, Analyzer
+from sflkit.analysis.analysis_type import AnalysisType
+from sflkit.analysis.factory import LineFactory
+from sflkit.analysis.spectra import Spectrum
+from sflkit.analysis.suggestion import Suggestion
+from sflkit.evaluation import Rank, Scenario
+from sflkit.language.language import Language
 from sflkit.runners import PytestRunner
+from sflkit.weights import ProximityAnalyzer
 from tests4py.environment import env_on, activate_venv
 from tests4py.projects import TestStatus, Project
 from tests4py.sfl import (
@@ -28,10 +35,11 @@ from tests4py.sfl import (
 from tests4py.sfl.constants import DEFAULT_EXCLUDES
 from tests4py.tests.utils import get_pytest_skip
 
+from pwfl.analyze import get_event_files, distances
 from pwfl.logger import LOGGER
 
 # Import purify_tests from the tcp package
-from tcp.purification import purify_tests
+from tcp.purification import purify_tests, rank_refinement
 
 
 def create_config(
@@ -52,7 +60,7 @@ def create_config(
     else:
         includes = list()
         excludes = DEFAULT_EXCLUDES
-    if project.project_name in ("calculator", "markup"):
+    if project.project_name in ("calculator", "markup", "thefuck"):
         project.test_base = Path("tests")
     test_files = list({str(file.split("::")[0]) for file in project.test_cases})
     return Config.create(
@@ -188,77 +196,50 @@ def parse_test_id(test_id: str) -> tuple:
         return None, None, None, None
 
 
-def purify_and_collect_events(
+def purify(
     project: Project,
     identifier: str,
     report: dict,
-    enable_slicing: bool = False,
+    enable_slicing: bool = True,
 ):
-    """
-    Purify tests and collect events for a single project.
-
-    This function:
-    1. Checks out and builds the project
-    2. Purifies the failing test cases
-    3. Instruments the code with purified tests
-    4. Runs tests once to collect both line and test events
-
-    Args:
-        project: The tests4py project
-        identifier: Project identifier string
-        report: Report dictionary to update
-        enable_slicing: Whether to enable dynamic slicing in purification
-
-    Returns:
-        Path to the events directory
-    """
-    events_base = Path(
-        "sflkit_events", project.project_name, "tcp", str(project.bug_id)
-    )
-
     # Initialize report for this project
     report[identifier]["time"] = dict()
 
     # Step 1: Checkout the project
-    start = time.time()
     original_checkout = Path("tmp", f"{identifier}")
     if not original_checkout.exists():
         r = t4p.checkout(project)
-        report[identifier]["time"]["checkout"] = time.time() - start
         if r.successful:
             report[identifier]["checkout"] = "successful"
         else:
             report[identifier]["checkout"] = "failed"
             report[identifier]["error"] = traceback.format_exception(r.raised)
-            return events_base
+            return None
         original_checkout = r.location
     else:
         report[identifier]["checkout"] = "cached"
 
-    # Step 2: Build the project (creates venv)
-    start = time.time()
     r = t4p.build(original_checkout)
-    report[identifier]["time"]["build"] = time.time() - start
     if not r.successful:
         report[identifier]["build"] = "failed"
         report[identifier]["error"] = traceback.format_exception(r.raised)
-        return events_base
+        return None
     report[identifier]["build"] = "successful"
 
     venv_env = env_on(project)
     venv_env = activate_venv(original_checkout, venv_env)
 
-    # Step 3: Purify the failing tests
-    start = time.time()
     purified_tests_dir = Path("tmp", f"{identifier}_purified")
     purified_tests_dir.mkdir(parents=True, exist_ok=True)
 
-    # Get test base directory
-    # Handle special cases for calculator and markup
     if project.project_name in ("calculator", "markup", "thefuck"):
         project.test_base = Path("tests")
     test_base = original_checkout / (project.test_base or Path("tests"))
+    if test_base.is_file():
+        test_base = test_base.parent
 
+    start = time.time()
+    # noinspection PyBroadException
     try:
         purified_mapping = purify_tests(
             src_dir=original_checkout,
@@ -274,45 +255,48 @@ def purify_and_collect_events(
             test_id: [
                 {
                     "file": str(purified_file.relative_to(purified_tests_dir)),
-                    "params": param_suffix
+                    "params": param_suffix,
                 }
                 for purified_file, param_suffix in file_param_tuples
             ]
             for test_id, file_param_tuples in purified_mapping.items()
         }
-    except Exception as e:
+        return purified_mapping
+    except:
         report[identifier]["time"]["purification"] = time.time() - start
         report[identifier]["purification"] = "failed"
         report[identifier]["error"] = traceback.format_exc()
-        LOGGER.error(f"Purification failed for {identifier}: {e}")
-        return events_base
+    return None
 
-    # Step 4: Create a modified checkout with purified tests
-    # Copy the original checkout to a new location
-    tcp_path = Path("tmp", f"{identifier}_tcp")
-    if tcp_path.exists():
-        shutil.rmtree(tcp_path)
-    shutil.copytree(original_checkout, tcp_path, symlinks=True)
 
-    # Replace test files with purified versions
-    test_base_sfl = tcp_path / (project.test_base or Path("tests"))
+def update_project_purified(
+    project: Project,
+    identifier: str,
+    purified_mapping: dict[str, list[tuple[Path, Optional[str]]]],
+):
+    purified_tests_dir = Path("tmp", f"{identifier}_purified")
+    path = Path("tmp", f"{identifier}_tcp")
+    # Copy project to tcp path
+    shutil.rmtree(path, ignore_errors=True)
+    shutil.copytree(
+        Path("tmp", f"{identifier}"),
+        path,
+    )
+    if project.project_name in ("calculator", "markup", "thefuck"):
+        project.test_base = Path("tests")
+    test_base_sfl = path / (project.test_base or Path("tests"))
+    try:
+        test_base_sfl.mkdir(parents=True, exist_ok=True)
+    except FileExistsError:
+        test_base_sfl = test_base_sfl.parent
 
-    # Ensure test_base_sfl exists
-    test_base_sfl.mkdir(parents=True, exist_ok=True)
-
-    # Copy ALL files from purified_tests_dir to test_base_sfl
-    # This includes both purified test files and modified original test files
-    # Need to handle both files in root and in subdirectories
     for item in purified_tests_dir.rglob("*"):
         if item.is_file():
-            # Get relative path from purified_tests_dir
             rel_path = item.relative_to(purified_tests_dir)
             dst = test_base_sfl / rel_path
-            # Ensure parent directory exists
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(item, dst)
 
-    # Step 5: Get the new failing tests after purification
     failing_tests = []
     relevant_files = (
         set(project.relevant_test_files) if project.relevant_test_files else set()
@@ -321,30 +305,16 @@ def purify_and_collect_events(
         file_path, class_name, test_name, param_suffix = parse_test_id(test_id)
         if file_path is None:
             continue
-        # get correct test id for purified tests
         if test_id not in purified_mapping:
             continue
-
-        # purified_mapping[test_id] is now a list of (purified_file, param_suffix) tuples
         for purified_file, purified_param_suffix in purified_mapping[test_id]:
-            # Get relative path from purified_tests_dir
             rel_path = purified_file.relative_to(purified_tests_dir)
-
-            # Construct the full path in tcp_path
             purified_file_full = test_base_sfl / rel_path
-
-            # Get path relative to tcp_path (project root) for test ID
-            purified_file_rel = purified_file_full.relative_to(tcp_path)
-
-            # Build base test ID
+            purified_file_rel = purified_file_full.relative_to(path)
             if class_name:
-                # Class method: relative_path::class::method
                 base_test_id = f"{purified_file_rel}::{class_name}::{test_name}"
             else:
-                # Module-level function: relative_path::function
                 base_test_id = f"{purified_file_rel}::{test_name}"
-
-            # Add parameter suffix if present (for parameterized tests)
             if purified_param_suffix:
                 purified_test_id = f"{base_test_id}[{purified_param_suffix}]"
             else:
@@ -352,18 +322,22 @@ def purify_and_collect_events(
 
             failing_tests.append(purified_test_id)
             relevant_files.add(purified_test_id)
-
-    # Step 6: Instrument the code with sflkit
-    LOGGER.info(f"Purified tests: {failing_tests}")
-    LOGGER.info(f"Relevant files: {relevant_files}")
     project.test_cases = failing_tests
     project.relevant_test_files = relevant_files
-    mapping = Path("mappings", f"{project}_tcp.json")
+
+
+def build(
+    project: Project,
+    identifier: str,
+    report: dict,
+):
+    mapping = Path("mappings", f"{identifier}_tcp.json")
+    src_path = Path("tmp", f"{identifier}_tcp")
     sfl_path = Path("tmp", f"sfl_{identifier}_tcp")
     start = time.time()
     r = sflkit_instrument(
         project,
-        tcp_path,
+        src_path,
         sfl_path,
         mapping=mapping,
     )
@@ -373,13 +347,22 @@ def purify_and_collect_events(
     else:
         report[identifier]["build"] = "failed"
         report[identifier]["error"] = traceback.format_exception(r.raised)
-        return events_base
 
     with open(mapping, "r") as f:
         mapping_content = json.load(f)
     with open(mapping, "w") as f:
         json.dump(mapping_content, f, indent=1)
 
+
+def collect(
+    project: Project,
+    identifier: str,
+    report: dict,
+):
+    sfl_path = Path("tmp", f"sfl_{identifier}_tcp")
+    events_base = Path(
+        "sflkit_events", project.project_name, "tcp", str(project.bug_id)
+    )
     # Step 7: Run tests to collect events
     shutil.rmtree(events_base, ignore_errors=True)
     if project.project_name == "ansible":
@@ -390,7 +373,7 @@ def purify_and_collect_events(
         This prevents an event collection.
         Removing the original version fixes this problem.
         """
-        shutil.rmtree(original_checkout, ignore_errors=True)
+        shutil.rmtree(Path("tmp", f"{identifier}"), ignore_errors=True)
     start = time.time()
     r = sflkit_unittest(
         sfl_path,
@@ -400,6 +383,26 @@ def purify_and_collect_events(
     report[identifier]["time"]["test"] = time.time() - start
     if r.successful:
         report[identifier]["test"] = "successful"
+
+        # For TCP, save mapping of event files to purified test names
+        if (events_base / "failing").exists():
+            test_event_mapping = {}
+            # Map each event file to its corresponding test name
+            # Event files are numbered starting from 0
+            # The test order matches project.test_cases
+            for run_id, filename in enumerate(
+                sorted(os.listdir(events_base / "failing"))
+            ):
+                if run_id < len(project.test_cases):
+                    test_name = project.test_cases[run_id]
+                    test_event_mapping[filename] = test_name
+
+            # Save the mapping
+            mapping_dir = Path("tcp_mappings")
+            mapping_dir.mkdir(exist_ok=True, parents=True)
+            mapping_file = mapping_dir / f"{identifier}.json"
+            with open(mapping_file, "w") as f:
+                json.dump(test_event_mapping, f, indent=1)
     else:
         report[identifier]["test"] = "failed"
         report[identifier]["error"] = traceback.format_exception(r.raised)
@@ -409,7 +412,7 @@ def purify_and_collect_events(
 
 
 def get_tcp_events(
-    project_name, bug_id=None, start=None, end=None, enable_slicing=False
+    project_name, bug_id=None, start=None, end=None, enable_slicing=True
 ):
     """
     Collect events using test case purification.
@@ -467,19 +470,347 @@ def get_tcp_events(
 
         # Run the purification and event collection pipeline
         try:
-            purify_and_collect_events(
+            purified_mapping = purify(
                 project,
                 identifier,
                 report,
                 enable_slicing=enable_slicing,
             )
+            if purified_mapping is None:
+                report[identifier]["status"] = "error"
+                continue
+
+            update_project_purified(
+                project,
+                identifier,
+                purified_mapping,
+            )
+            LOGGER.info(f"Updated project purified for {identifier}")
+
+            build(
+                project,
+                identifier,
+                report,
+            )
+            if report[identifier]["build"] != "successful":
+                report[identifier]["status"] = "error"
+                LOGGER.error(f"TCP Build failed for {identifier}")
+                continue
+            events_path = collect(
+                project,
+                identifier,
+                report,
+            )
+            if events_path is None:
+                report[identifier]["status"] = "error"
+                LOGGER.error(f"TCP Event collection failed for {identifier}")
+                continue
+            else:
+                LOGGER.info(f"TCP Event collection successful for {identifier}")
+
+            report[identifier]["check"] = "successful"
+            report[identifier]["status"] = "completed"
         except Exception as e:
             report[identifier]["status"] = "error"
             report[identifier]["error"] = traceback.format_exception(e)
-            LOGGER.error(f"Error processing {identifier}: {e}")
-
-        # Save report after each project
-        with open(report_file, "w") as f:
-            json.dump(report, f, indent=1)
+            LOGGER.error(f"Skipping {identifier} - {e}")
+        finally:
+            # Save report after each project
+            with open(report_file, "w") as f:
+                json.dump(report, f, indent=1)
 
     LOGGER.info(f"TCP event collection complete. Report saved to {report_file}")
+
+
+def tcp_analyze_project(
+    project: Project,
+    analysis_file: os.PathLike,
+    report: dict,
+    suffix: str,
+    identifier: str = None,
+    model_class=None,
+) -> Analyzer:
+    os.makedirs("analysis", exist_ok=True)
+    events = Path(
+        "sflkit_events",
+        project.project_name,
+        "tcp",
+        str(project.bug_id),
+    )
+    mapping_file = Path("mappings", f"{identifier}_tcp.json")
+    if not events.exists():
+        raise FileNotFoundError(f"Events not found for {project}")
+    if not mapping_file.exists():
+        raise FileNotFoundError(f"Mapping not found for {project}")
+    failing, passing, undefined = get_event_files(events, mapping_file)
+    start = time.time()
+    if model_class:
+        analyzer = ProximityAnalyzer(
+            model_class,
+            relevant_event_files=failing,
+            irrelevant_event_files=passing,
+            factory=LineFactory(),
+        )
+    else:
+        analyzer = Analyzer(
+            relevant_event_files=failing,
+            irrelevant_event_files=passing,
+            factory=LineFactory(),
+        )
+    analyzer.analyze()
+    report[project.get_identifier()][f"lines{suffix}"] = time.time() - start
+    analyzer.dump(analysis_file, indent=1)
+
+    identifier = project.get_identifier()
+    purified_spectra = []
+
+    # Load the test-event mapping if available
+    mapping_dir = Path("tcp_mappings")
+    tcp_mapping_file = mapping_dir / f"{identifier}_tcp.json"
+    test_event_mapping = {}
+    if tcp_mapping_file.exists():
+        with open(tcp_mapping_file, "r") as f:
+            test_event_mapping = json.load(f)
+
+    # Extract coverage from each failing event file (purified test)
+    for event_file in failing:
+        spectrum = {}
+
+        # Get the test name for this event file
+        event_filename = Path(event_file.path).name
+        test_name = test_event_mapping.get(event_filename, f"unknown_{event_filename}")
+        for ao in analyzer.get_analysis():
+            if event_file in ao.hits:
+                if ao.hits[event_file] > 0:
+                    # noinspection PyUnresolvedReferences
+                    spectrum[f"{ao.file}:{ao.line}"] = 1
+                else:
+                    # noinspection PyUnresolvedReferences
+                    spectrum[f"{ao.file}:{ao.line}"] = 0
+            else:
+                # noinspection PyUnresolvedReferences
+                spectrum[f"{ao.file}:{ao.line}"] = 0
+        purified_spectra.append(
+            {
+                "test_name": test_name,
+                "spectrum": spectrum,
+            }
+        )
+    # Save purified spectra to file
+    spectra_dir = Path("tcp_spectra")
+    spectra_dir.mkdir(exist_ok=True)
+    spectra_file = spectra_dir / f"{identifier}{suffix}.json"
+    with open(spectra_file, "w") as f:
+        json.dump(purified_spectra, f, indent=1)
+
+    LOGGER.info(f"Saved {len(purified_spectra)} purified spectra for {identifier}")
+
+    return analyzer
+
+
+# noinspection DuplicatedCode
+def tcp_analyze(project_name, bug_id=None, start=None, end=None):
+    report = dict()
+    report_dir = Path("reports")
+    os.makedirs(report_dir, exist_ok=True)
+    for project in t4p.get_projects(project_name, bug_id):
+        if start is not None and project.bug_id < start:
+            continue
+        if end is not None and project.bug_id > end:
+            continue
+        LOGGER.info(project)
+        if (
+            project.test_status_buggy != TestStatus.FAILING
+            or project.test_status_fixed != TestStatus.PASSING
+        ):
+            continue
+        identifier = project.get_identifier()
+        project.buggy = True
+        report[project.get_identifier()] = dict()
+        for suffix, model_class in distances:
+            analysis_file = Path("analysis", f"{project}{suffix}_tcp.json")
+            if analysis_file.exists():
+                continue
+            tcp_analyze_project(
+                project, analysis_file, report, suffix, identifier, model_class
+            )
+
+    with open(report_dir / f"analysis_{project_name}_tcp.json", "w") as f:
+        json.dump(report, f, indent=1)
+
+
+def tcp_get_results_for_type(
+    type_,
+    analyzer,
+    project,
+    location,
+    faulty_lines,
+    suffix: str,
+    eval_metric=max,
+):
+    results = dict()
+    times = dict()
+    for metric in [
+        Spectrum.Tarantula,
+        Spectrum.Ochiai,
+        Spectrum.DStar,
+        Spectrum.Naish2,
+        Spectrum.GP13,
+    ]:
+        results[metric.__name__] = dict()
+        time_start = time.time()
+        spectra: list[Spectrum] = analyzer.get_analysis_by_type(type_)
+        weighted_sus_locations = []
+        for spectrum in spectra:
+            suggestion = spectrum.get_suggestion(
+                metric=metric,
+                base_dir=location,
+                use_weight=False,
+            )
+            for location in suggestion.lines:
+                weighted_sus_locations.append(
+                    (location, suggestion.suspiciousness, spectrum.weight)
+                )
+        times[metric.__name__] = time.time() - time_start
+
+        suggestions = []
+        # If TCP, adjust ranks using rank_refinement
+        try:
+            # Build mapping: statement string -> (original Suggestion, Location)
+            stmt_to_location = {}
+            original_scores = {}
+            weights = {}
+
+            for line, sus, weight in weighted_sus_locations:
+                stmt = str(line)
+                stmt_to_location[stmt] = line
+                original_scores[stmt] = sus
+                weights[stmt] = weight
+
+            # Load purified spectra from saved file
+            identifier = project.get_identifier()
+            spectra_dir = Path("tcp_spectra")
+            spectra_file = spectra_dir / f"{identifier}{suffix}.json"
+
+            if not spectra_file.exists():
+                LOGGER.error(f"Warning: TCP spectra file not found: {spectra_file}")
+                LOGGER.error("Run analysis step first to generate TCP spectra")
+                raise FileNotFoundError(f"TCP spectra file not found: {spectra_file}")
+            else:
+                with open(spectra_file, "r") as f:
+                    purified_data = json.load(f)
+
+                # Extract just the spectra (without test names)
+                purified_spectra = [item["spectrum"] for item in purified_data]
+
+                # Apply rank refinement
+                if purified_spectra:
+                    refined_scores = rank_refinement(
+                        original_scores, purified_spectra, technique="combined"
+                    )
+
+                    # Rebuild suggestions as Suggestion objects with refined scores
+                    # Group by score (statements with same score go in one Suggestion)
+                    score_to_locations = {}
+                    for stmt, score in refined_scores.items():
+                        score *= weights.get(stmt, 1.0)  # Reapply weight if any
+                        if score not in score_to_locations:
+                            score_to_locations[score] = []
+                        if stmt in stmt_to_location:
+                            score_to_locations[score].append(stmt_to_location[stmt])
+
+                    # Create Suggestion objects sorted by score
+                    suggestions = [
+                        Suggestion(locations, score)
+                        for score, locations in sorted(
+                            score_to_locations.items(),
+                            key=lambda x: x[0],
+                            reverse=True,
+                        )
+                    ]
+
+                    LOGGER.info(
+                        f"TCP rank refinement applied {project}{suffix}: {len(purified_spectra)} spectra used"
+                    )
+                else:
+                    LOGGER.info(
+                        f"Warning: No purified spectra found in file for {project}{suffix}"
+                    )
+
+        except Exception as e:
+            LOGGER.error(f"TCP rank refinement failed: {e}")
+            raise e
+
+        if isinstance(analyzer, ProximityAnalyzer):
+            pass
+
+        rank = Rank(
+            suggestions, total_number_of_locations=project.loc, metric=eval_metric
+        )
+        for scenario in Scenario:
+            results[metric.__name__][scenario.value] = {
+                "top-1": rank.top_n(faulty_lines, 1, scenario, repeat=10000),
+                "top-5": rank.top_n(faulty_lines, 5, scenario, repeat=10000),
+                "top-10": rank.top_n(faulty_lines, 10, scenario, repeat=10000),
+                "top-200": rank.top_n(faulty_lines, 200, scenario, repeat=10000),
+                "exam": rank.exam(faulty_lines, scenario),
+                "wasted-effort": rank.wasted_effort(faulty_lines, scenario),
+            }
+    return results, times
+
+
+def tcp_evaluate(project_name, bug_id, start=None, end=None):
+    Language.PYTHON.setup()
+    os.makedirs("results", exist_ok=True)
+    reports_dir = Path("reports")
+    os.makedirs(reports_dir, exist_ok=True)
+    report_file = reports_dir / f"suggestion_{project_name}_tcp.json"
+    time_report = dict()
+    for project in t4p.get_projects(project_name, bug_id):
+        if start is not None and project.bug_id < start:
+            continue
+        if end is not None and project.bug_id > end:
+            continue
+        results_file = Path("results", f"{project.get_identifier()}_tcp.json")
+        if results_file.exists():
+            continue
+        results = dict()
+        LOGGER.info(project)
+        if (
+            project.test_status_buggy != TestStatus.FAILING
+            or project.test_status_fixed != TestStatus.PASSING
+        ):
+            continue
+        project.buggy = True
+        subject_results = dict()
+        subject_times = dict()
+        location = Path("tmp", project.get_identifier())
+        if not location.exists():
+            report = t4p.checkout(project)
+            if not report.successful:
+                raise report.raised
+            location = report.location
+        for suffix, model_class in distances:
+            analysis_file = Path("analysis", f"{project}{suffix}_tcp.json")
+            if analysis_file.exists():
+                if model_class is None:
+                    analyzer = Analyzer.load(analysis_file)
+                else:
+                    analyzer = ProximityAnalyzer.load_with_dependencies(
+                        analysis_file, model_class
+                    )
+            else:
+                continue
+            faulty_lines = set(t4p.get_faulty_lines(project))
+            (
+                subject_results[f"line{suffix}"],
+                subject_times[f"line{suffix}"],
+            ) = tcp_get_results_for_type(
+                AnalysisType.LINE, analyzer, project, location, faulty_lines, suffix
+            )
+        results[project.get_identifier()] = subject_results
+        time_report[project.get_identifier()] = subject_times
+        with open(results_file, "w") as f:
+            json.dump(results, f, indent=1)
+    with open(report_file, "w") as f:
+        json.dump(time_report, f, indent=1)

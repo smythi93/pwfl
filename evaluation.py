@@ -8,8 +8,8 @@ from pwfl.evaluate import evaluate
 from pwfl.events import get_events
 from pwfl.interpret import interpret
 from pwfl.prfl import build_pr, evaluate_prfl
-from pwfl.summarize import summarize_all, summarize_prfl_all
-from pwfl.purification import get_tcp_events
+from pwfl.summarize import summarize_all, summarize_prfl_all, summarize_tcp_all
+from pwfl.purification import get_tcp_events, tcp_analyze, tcp_evaluate
 from pwfl.tests import get_results, analyze_file
 
 
@@ -49,16 +49,6 @@ def get_parser():
     # Events parser
     events = command.add_parser("events", help="analyze events")
 
-    # TCP parser
-    tcp = command.add_parser("tcp", help="test case purification with event collection")
-    tcp.add_argument(
-        "--disable_slicing",
-        default=True,
-        action="store_false",
-        dest="enable_slicing",
-        help="enable dynamic slicing during purification",
-    )
-
     # Analysis parser
     analysis = command.add_parser("analyze", help="analyze projects")
 
@@ -81,9 +71,26 @@ def get_parser():
     prfl_build = prfl_command.add_parser("build", help="build pr")
     prfl_evaluate = prfl_command.add_parser("evaluate", help="evaluate prfl")
 
+    # tcp parser
+    tcp = command.add_parser("tcp", help="test case purification with event collection")
+    tcp_command = tcp.add_subparsers(
+        dest="tcp_command", required=True, help="sub-command help"
+    )
+    tcp_events = tcp_command.add_parser("events", help="get tcp events")
+    tcp_events.add_argument(
+        "--disable_slicing",
+        default=True,
+        action="store_false",
+        dest="enable_slicing",
+        help="disable dynamic slicing during purification",
+    )
+    tcp_analyze = tcp_command.add_parser("analyze", help="analyze tcp")
+    tcp_evaluate = tcp_command.add_parser("evaluate", help="evaluate tcp")
+
     # summarize parser
     command.add_parser("summarize", help="summarize results")
     command.add_parser("summarize-prfl", help="summarize prfl results")
+    command.add_parser("summarize-tcp", help="summarize tcp results")
 
     # interpret parser
     command.add_parser("interpret", help="interpret results and write tex tables")
@@ -92,13 +99,15 @@ def get_parser():
     for subparser in [
         tests_get,
         events,
-        tcp,
         analysis,
         evaluate,
         cg_events,
         cg_build,
         prfl_build,
         prfl_evaluate,
+        tcp_events,
+        tcp_analyze,
+        tcp_evaluate,
     ]:
         subparser.add_argument(
             "-p", type=str, default=None, dest="project_name", help="project name"
@@ -148,13 +157,22 @@ def main(args=None):
             arguments.project_name, arguments.bug_id, arguments.start, arguments.end
         )
     elif arguments.command == "tcp":
-        get_tcp_events(
-            arguments.project_name,
-            arguments.bug_id,
-            arguments.start,
-            arguments.end,
-            arguments.enable_slicing,
-        )
+        if arguments.tcp_command == "events":
+            get_tcp_events(
+                arguments.project_name,
+                arguments.bug_id,
+                arguments.start,
+                arguments.end,
+                arguments.enable_slicing,
+            )
+        elif arguments.tcp_command == "analyze":
+            tcp_analyze(
+                arguments.project_name, arguments.bug_id, arguments.start, arguments.end
+            )
+        elif arguments.tcp_command == "evaluate":
+            tcp_evaluate(
+                arguments.project_name, arguments.bug_id, arguments.start, arguments.end
+            )
     elif arguments.command == "analysis":
         analyze(
             arguments.project_name, arguments.bug_id, arguments.start, arguments.end
@@ -185,6 +203,8 @@ def main(args=None):
         summarize_all()
     elif arguments.command == "summarize-prfl":
         summarize_prfl_all()
+    elif arguments.command == "summarize-tcp":
+        summarize_tcp_all()
     elif arguments.command == "interpret":
         interpret(tex=True)
 

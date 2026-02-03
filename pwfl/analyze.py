@@ -11,7 +11,6 @@ from sflkit.analysis.factory import (
 )
 from sflkit.events.event_file import EventFile
 from sflkit.events.mapping import EventMapping
-from sflkit.model.model import Model
 from sflkit.weights import (
     TestLineModel,
     TestDefUseModel,
@@ -20,6 +19,7 @@ from sflkit.weights import (
     TestAssertDefUsesModel,
     ProximityAnalyzer,
 )
+from sflkit.weights.models import TestTimeModel
 from tests4py.projects import TestStatus, Project
 
 from pwfl.logger import LOGGER
@@ -82,7 +82,7 @@ def analyze_project(
     analysis_file: os.PathLike,
     report: dict,
     suffix: str,
-    model_class: Optional[type[Model]] = None,
+    model_class: Optional[type[TestTimeModel]] = None,
 ) -> Analyzer:
     os.makedirs("analysis", exist_ok=True)
     events = Path(

@@ -11,9 +11,7 @@ version = "0.0.1"
 authors = [
     { name = "Marius Smytzek", email = "marius.smytzek@cispa.de" },
 ]
-description = "TCP: Test Case Purification for Improving Fault Localization"
-readme = "README.md"
-license = { file = "LICENSE" }
+description = "TCP"
 requires-python = ">=3.10"
 classifiers = [
     "Intended Audience :: Science/Research",
@@ -22,16 +20,11 @@ classifiers = [
     "Topic :: Scientific/Engineering",
     "Topic :: Software Development :: Testing"
 ]
-dependencies = [
-    "pytest>=8.3.4",
-    "coverage>=7.13.2",
-]
-
-[project.scripts]
-tcp = "tcp.cli:main"
+dependencies = []
 
 [project.optional-dependencies]
 test = [
+    "pytest>=9.0.2",
     "pytest-cov>=6.0.0",
     "pytest-html>=4.1.1",
     "pytest-rerunfailures>=15.0",

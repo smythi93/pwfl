@@ -1,13 +1,11 @@
-"""Logging configuration for test purification."""
-
 import logging
 
-# Create logger
 LOGGER = logging.getLogger("tcp")
-LOGGER.setLevel(logging.INFO)
+logging.basicConfig(
+    level=logging.INFO, format="%(name)s :: %(levelname)-8s :: %(message)s"
+)
 
 
-# Add handler to logger
 def debug():
     LOGGER.setLevel(logging.DEBUG)
     for handler in LOGGER.handlers:

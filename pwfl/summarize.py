@@ -138,3 +138,50 @@ def summarize_prfl_all():
                     )
     with open("summary_prfl.json", "w") as f:
         json.dump(results, f, indent=1)
+
+
+def summarize_tcp_all():
+    results_dir = Path("results")
+    if not results_dir.exists():
+        return
+    results = {
+        "subjects": list(),
+        **{
+            dependency: {
+                metric: {
+                    scenario: {m: {"avg": 0.0, "all": list()} for m in localizations}
+                    for scenario in scenarios
+                }
+                for metric in metrics
+            }
+            for dependency in dependency_types
+        },
+    }
+    number_of_subjects = 0
+    for subject in subjects:
+        for i in range(100):
+            subject_results = results_dir / f"{subject}_{i}_tcp.json"
+            if not subject_results.exists():
+                continue
+            with subject_results.open() as f:
+                subject_data = json.load(f)
+            for s in subject_data:
+                results["subjects"].append(s)
+                number_of_subjects += 1
+                for dependency in dependency_types:
+                    for m in metrics:
+                        for sce in scenarios:
+                            for loc in localizations:
+                                results[dependency][m][sce][loc]["all"].append(
+                                    subject_data[s][dependency][m][sce][loc]
+                                )
+    for dependency in dependency_types:
+        for m in metrics:
+            for sce in scenarios:
+                for loc in localizations:
+                    results[dependency][m][sce][loc]["avg"] = (
+                        sum(results[dependency][m][sce][loc]["all"])
+                        / number_of_subjects
+                    )
+    with open("summary_tcp.json", "w") as f:
+        json.dump(results, f, indent=1)
