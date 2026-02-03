@@ -281,6 +281,7 @@ def update_project_purified(
     shutil.copytree(
         Path("tmp", f"{identifier}"),
         path,
+        ignore_dangling_symlinks=True,
     )
     if project.project_name in ("calculator", "markup", "thefuck"):
         project.test_base = Path("tests")

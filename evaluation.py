@@ -3,7 +3,13 @@ import sys
 
 from pwfl.analyze import analyze
 from pwfl.cg import build_call_graph, get_call_graph_events
-from pwfl.check import check_events, check_cg_build, check_cg_events, check_cg_pr
+from pwfl.check import (
+    check_events,
+    check_cg_build,
+    check_cg_events,
+    check_cg_pr,
+    check_tcp,
+)
 from pwfl.evaluate import evaluate
 from pwfl.events import get_events
 from pwfl.interpret import interpret
@@ -26,6 +32,7 @@ def get_parser():
     check.add_argument("--cg-build", action="store_true", help="check CG build")
     check.add_argument("--cg-events", action="store_true", help="check CG events")
     check.add_argument("--cg-pr", action="store_true", help="check CG PR")
+    check.add_argument("--tcp", action="store_true", help="check TCP events")
 
     # Tests parser
     tests = command.add_parser("tests", help="analyze tests for motivation study")
@@ -131,6 +138,7 @@ def main(args=None):
                 arguments.cg_build,
                 arguments.cg_events,
                 arguments.cg_pr,
+                arguments.tcp,
             ]
         )
         if arguments.events or fallback:
@@ -141,6 +149,8 @@ def main(args=None):
             check_cg_events(arguments.directory)
         if arguments.cg_pr or fallback:
             check_cg_pr(arguments.directory)
+        if arguments.tcp or fallback:
+            check_tcp(arguments.directory)
     elif arguments.command == "tests":
         if arguments.tests_command == "get":
             get_results(

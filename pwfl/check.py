@@ -8,6 +8,7 @@ PATTERN_CG_BUILD = re.compile(r"cg_(?P<name>[^.]*)_build\.json")
 PATTERN_CG = re.compile(r"cg_(?P<name>[^.]*)\.json")
 PATTERN_CG_PR = re.compile(r"cg_(?P<name>[^.]*)_pr\.json")
 PATTERN_EVENTS = re.compile(r"report_(?P<name>[^.]*)\.json")
+PATTERN_TCP = re.compile(r"tcp_(?P<name>[^.]*)\.json")
 
 
 def check_cg(msg, pattern, need_investigation_file, directory=None):
@@ -101,5 +102,14 @@ def check_events(directory=None):
         "Checking events reports",
         PATTERN_EVENTS,
         "need_investigation.json",
+        directory,
+    )
+
+
+def check_tcp(directory=None):
+    check_cg(
+        "Checking TCP reports",
+        PATTERN_TCP,
+        "need_investigation_tcp.json",
         directory,
     )
