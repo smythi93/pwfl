@@ -161,7 +161,7 @@ class TestLineModel(TestFunctionModel):
         self.adjust_weights_for_tests(event_file)
         if event_file.failing:
             distances = self.get_distances()
-            max_distance = max(max(distances.values()), 0) + 1
+            max_distance = max(max(distances.values() or [0]), 0) + 1
             for analyses in distances:
                 analyses.weight *= 1 - distances[analyses] / max_distance
                 analyses.set_weight(event_file)
@@ -223,7 +223,7 @@ class TestDefUseModel(TestFunctionModel):
         self.adjust_weights_for_tests(event_file)
         if event_file.failing:
             distances = self.get_distances()
-            max_distance = max(max(distances.values()), 0) + 1
+            max_distance = max(max(distances.values() or [0]), 0) + 1
             for analyses in distances:
                 analyses.weight *= 1 - distances[analyses] / max_distance
                 analyses.set_weight(event_file)
@@ -289,7 +289,7 @@ class TestAssertDefUseModel(TestDefUseModel):
         self.adjust_weights_for_tests(event_file)
         if event_file.failing:
             distances = self.get_distances()
-            max_distance = max(max(distances.values()), 0) + 1
+            max_distance = max(max(distances.values() or [0]), 0) + 1
             for analyses in distances:
                 analyses.weight *= 1 - distances[analyses] / max_distance
                 analyses.set_weight(event_file)
