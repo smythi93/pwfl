@@ -427,6 +427,11 @@ class StatementFilter(ast.NodeTransformer):
             return node
         return None
 
+    def visit(self, node: ast.AST) -> ast.AST:
+        node = super().visit(node)
+        if hasattr(node, "body") and (not node.body):
+            node.body = [ast.Pass()]
+
     def visit_Import(self, node: ast.Import) -> ast.Import:
         return node
 
