@@ -630,5 +630,34 @@
   },
   "test": "successful",
   "check": "successful"
+ },
+ "scrapy_32": {
+  "status": "completed",
+  "time": {
+   "purification": 6.909814357757568,
+   "instrument": 12.124728918075562,
+   "test": 11.570617914199829
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_crawler.py::CrawlerProcessTest::test_crawler_process_accepts_dict": [
+    {
+     "file": "test_crawler_test_crawler_process_accepts_dict_assertion_111.py",
+     "params": null
+    },
+    {
+     "file": "test_crawler_test_crawler_process_accepts_dict_assertion_112.py",
+     "params": null
+    },
+    {
+     "file": "test_crawler_test_crawler_process_accepts_dict_assertion_116.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  }
 }
