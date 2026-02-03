@@ -378,5 +378,293 @@
   },
   "test": "successful",
   "check": "successful"
+ },
+ "matplotlib_18": {
+  "status": "completed",
+  "time": {
+   "purification": 11.094005584716797,
+   "instrument": 29.486817598342896,
+   "test": 3.275008201599121
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_polar_no_data": [
+    {
+     "file": "test_axes_test_polar_no_data_assertion_2222.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_19": {
+  "status": "completed",
+  "time": {
+   "purification": 11.926038026809692,
+   "instrument": 30.480414867401123,
+   "test": 3.404494285583496
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_polar_no_data": [
+    {
+     "file": "test_axes_test_polar_no_data_assertion_2251.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_20": {
+  "status": "completed",
+  "time": {
+   "purification": 10.711374044418335,
+   "instrument": 28.93482804298401,
+   "test": 3.1695587635040283
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_invisible_axes": [
+    {
+     "file": "test_axes_test_invisible_axes_assertion_6636.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_21": {
+  "status": "completed",
+  "time": {
+   "purification": 13.414613962173462,
+   "instrument": 29.1395423412323,
+   "test": 3.4002389907836914
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_boxplot_marker_behavior": [
+    {
+     "file": "test_axes_test_boxplot_marker_behavior_assertion_2715.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_22": {
+  "status": "completed",
+  "time": {
+   "purification": 31.86885690689087,
+   "instrument": 30.291139841079712,
+   "test": 3.4251620769500732
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_hist_datetime_datasets_bins[datetime.datetime]": [
+    {
+     "file": "test_axes_test_hist_datetime_datasets_bins_datetime_datetime_assertion_1774.py",
+     "params": "datetime.datetime"
+    },
+    {
+     "file": "test_axes_test_hist_datetime_datasets_bins_datetime_datetime_assertion_1777.py",
+     "params": "datetime.datetime"
+    }
+   ],
+   "lib/matplotlib/tests/test_axes.py::test_hist_datetime_datasets_bins[np.datetime64]": [
+    {
+     "file": "test_axes_test_hist_datetime_datasets_bins_np_datetime64_assertion_1774.py",
+     "params": "np.datetime64"
+    },
+    {
+     "file": "test_axes_test_hist_datetime_datasets_bins_np_datetime64_assertion_1777.py",
+     "params": "np.datetime64"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_23": {
+  "status": "completed",
+  "time": {
+   "purification": 15.393060445785522,
+   "instrument": 30.385916233062744,
+   "test": 3.3482725620269775
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_aspect_nonlinear_adjustable_datalim": [
+    {
+     "file": "test_axes_test_aspect_nonlinear_adjustable_datalim_assertion_6564.py",
+     "params": null
+    },
+    {
+     "file": "test_axes_test_aspect_nonlinear_adjustable_datalim_assertion_6565.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_24": {
+  "status": "completed",
+  "time": {
+   "purification": 8.20556116104126,
+   "instrument": 30.431272268295288,
+   "test": 3.1040563583374023
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_set_ticks_inverted": [
+    {
+     "file": "test_axes_test_set_ticks_inverted_assertion_6420.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_25": {
+  "status": "completed",
+  "time": {
+   "purification": 3.2770352363586426,
+   "instrument": 30.462637424468994,
+   "test": 35.718586444854736
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_collections.py::test_EventCollection_nosort": [
+    {
+     "file": "test_collections_test_EventCollection_nosort_assertion_730.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_26": {
+  "status": "completed",
+  "time": {
+   "purification": 8.400313377380371,
+   "instrument": 29.907028675079346,
+   "test": 3.2212085723876953
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_set_ticks_inverted": [
+    {
+     "file": "test_axes_test_set_ticks_inverted_assertion_6441.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_27": {
+  "status": "completed",
+  "time": {
+   "purification": 8.948824882507324,
+   "instrument": 29.990211725234985,
+   "test": 46.875531911849976
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_label": [
+    {
+     "file": "test_colorbar_test_colorbar_label_assertion_574.py",
+     "params": null
+    },
+    {
+     "file": "test_colorbar_test_colorbar_label_assertion_579.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_28": {
+  "status": "completed",
+  "time": {
+   "purification": 1.0641028881072998,
+   "instrument": 30.716362953186035,
+   "test": 19.37589120864868
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_29": {
+  "status": "completed",
+  "time": {
+   "purification": 30.35431408882141,
+   "instrument": 30.529943227767944,
+   "test": 3.146364450454712
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_inverted_cla": [
+    {
+     "file": "test_axes_test_inverted_cla_assertion_256.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "matplotlib_30": {
+  "status": "completed",
+  "time": {
+   "purification": 3.5903306007385254,
+   "instrument": 30.269817352294922,
+   "test": 2.4343626499176025
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_colors.py::test_makeMappingArray[1-result2]": [
+    {
+     "file": "test_colors_test_makeMappingArray_1_result2_assertion_26.py",
+     "params": "1-result2"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  }
 }

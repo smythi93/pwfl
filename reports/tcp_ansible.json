@@ -257,5 +257,50 @@
   },
   "test": "successful",
   "check": "successful"
+ },
+ "ansible_10": {
+  "status": "completed",
+  "time": {
+   "purification": 5.4331347942352295,
+   "instrument": 1111.8819782733917,
+   "test": 29.26091456413269
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/modules/system/test_pamd.py::PamdServiceTestCase::test_remove_first_rule": [
+    {
+     "file": "modules/system/test_pamd_test_remove_first_rule_assertion_365.py",
+     "params": null
+    },
+    {
+     "file": "modules/system/test_pamd_test_remove_first_rule_assertion_367.py",
+     "params": null
+    }
+   ],
+   "test/units/modules/system/test_pamd.py::PamdServiceTestCase::test_remove_last_rule": [
+    {
+     "file": "modules/system/test_pamd_test_remove_last_rule_assertion_370.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "ansible_11": {
+  "status": "completed",
+  "time": {
+   "purification": 0.7459065914154053,
+   "instrument": 1096.140400648117,
+   "test": 94.34419679641724
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
  }
 }
