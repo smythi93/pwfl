@@ -1,0 +1,53 @@
+{
+ "sanic_1": {
+  "status": "error",
+  "time": {},
+  "checkout": "cached",
+  "build": "failed",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 340, in build\n    subprocess.check_call(\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-r', PosixPath('tmp/sanic_1/tests4py_requirements.txt')]' returned non-zero exit status 1.\n"
+  ]
+ },
+ "sanic_2": {
+  "status": "skipped"
+ },
+ "sanic_3": {
+  "status": "error",
+  "time": {},
+  "checkout": "cached",
+  "build": "failed",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 340, in build\n    subprocess.check_call(\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-r', PosixPath('tmp/sanic_3/tests4py_requirements.txt')]' returned non-zero exit status 1.\n"
+  ]
+ },
+ "sanic_4": {
+  "status": "error",
+  "time": {},
+  "checkout": "cached",
+  "build": "failed",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 340, in build\n    subprocess.check_call(\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-r', PosixPath('tmp/sanic_4/tests4py_requirements.txt')]' returned non-zero exit status 1.\n"
+  ]
+ },
+ "sanic_5": {
+  "status": "error",
+  "time": {},
+  "checkout": "cached",
+  "build": "failed",
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 340, in build\n    subprocess.check_call(\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-r', PosixPath('tmp/sanic_5/tests4py_requirements.txt')]' returned non-zero exit status 1.\n"
+  ]
+ }
+}

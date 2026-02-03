@@ -1,0 +1,198 @@
+{
+ "keras_1": {
+  "status": "completed",
+  "time": {
+   "purification": 45.71117854118347,
+   "instrument": 27.180461168289185,
+   "test": 156.94779872894287
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/initializers_test.py::test_statefulness[uniform]": [
+    {
+     "file": "keras/initializers_test_test_statefulness_uniform_assertion_162.py",
+     "params": "uniform"
+    }
+   ],
+   "tests/keras/initializers_test.py::test_statefulness[orthogonal]": [
+    {
+     "file": "keras/initializers_test_test_statefulness_orthogonal_assertion_162.py",
+     "params": "orthogonal"
+    }
+   ],
+   "tests/keras/initializers_test.py::test_statefulness[truncated_normal]": [
+    {
+     "file": "keras/initializers_test_test_statefulness_truncated_normal_assertion_162.py",
+     "params": "truncated_normal"
+    }
+   ],
+   "tests/keras/initializers_test.py::test_statefulness[normal]": [
+    {
+     "file": "keras/initializers_test_test_statefulness_normal_assertion_162.py",
+     "params": "normal"
+    }
+   ],
+   "tests/keras/initializers_test.py::test_statefulness[variance_scaling]": [
+    {
+     "file": "keras/initializers_test_test_statefulness_variance_scaling_assertion_162.py",
+     "params": "variance_scaling"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_2": {
+  "status": "completed",
+  "time": {
+   "purification": 20.57541584968567,
+   "instrument": 28.02247428894043,
+   "test": 635.380078792572
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/backend/backend_test.py::TestBackend::test_in_top_k": [
+    {
+     "file": "keras/backend/backend_test_test_in_top_k_assertion_1174.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_in_top_k_assertion_1189.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_3": {
+  "status": "completed",
+  "time": {
+   "purification": 18.80961298942566,
+   "instrument": 27.042555809020996,
+   "test": 72.08099842071533
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/test_sequential_model.py::test_clone_functional_model_with_multi_outputs": [
+    {
+     "file": "keras/test_sequential_model_test_clone_functional_model_with_multi_outputs_assertion_365.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_clone_functional_model_with_multi_outputs_assertion_366.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_4": {
+  "status": "completed",
+  "time": {
+   "purification": 0.25360536575317383,
+   "instrument": 26.31110429763794,
+   "test": 78.0768814086914
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_5": {
+  "status": "completed",
+  "time": {
+   "purification": 38.0199179649353,
+   "instrument": 27.842963933944702,
+   "test": 181.008642911911
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/utils/data_utils_test.py::test_data_utils": [
+    {
+     "file": "keras/utils/data_utils_test_test_data_utils_assertion_102.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_6": {
+  "status": "completed",
+  "time": {
+   "purification": 9.891069650650024,
+   "instrument": 29.704129695892334,
+   "test": 60.05485248565674
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_loss_masking.py::test_masking_is_all_zeros": [
+    {
+     "file": "test_loss_masking_test_masking_is_all_zeros_assertion_34.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_7": {
+  "status": "skipped"
+ },
+ "keras_8": {
+  "status": "completed",
+  "time": {
+   "purification": 10.245852947235107,
+   "instrument": 27.872175693511963,
+   "test": 123.14586067199707
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/engine/test_topology.py::test_layer_sharing_at_heterogeneous_depth_order": [
+    {
+     "file": "keras/engine/test_topology_test_layer_sharing_at_heterogeneous_depth_order_assertion_797.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_9": {
+  "status": "completed",
+  "time": {
+   "purification": 10.017218351364136,
+   "instrument": 27.96049404144287,
+   "test": 21.193430185317993
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_doc_auto_generation.py::test_doc_lists[docs_descriptor1]": [
+    {
+     "file": "test_doc_auto_generation_test_doc_lists_docs_descriptor1_assertion_355.py",
+     "params": "docs_descriptor1"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}

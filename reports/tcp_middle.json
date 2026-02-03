@@ -1,0 +1,44 @@
+{
+ "middle_1": {
+  "status": "completed",
+  "time": {
+   "purification": 0.889892578125,
+   "instrument": 8.262992858886719,
+   "test": 2.6766412258148193
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_middle.py::TestMiddle::test_middle_213": [
+    {
+     "file": "test_middle_test_middle_213_assertion_23.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "middle_2": {
+  "status": "completed",
+  "time": {
+   "purification": 0.8910222053527832,
+   "instrument": 7.2270424365997314,
+   "test": 2.209604024887085
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_middle.py::TestMiddle::test_middle_213": [
+    {
+     "file": "test_middle_test_middle_213_assertion_23.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}
