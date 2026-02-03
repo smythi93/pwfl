@@ -261,5 +261,374 @@
   },
   "test": "successful",
   "check": "successful"
+ },
+ "scrapy_16": {
+  "status": "completed",
+  "time": {
+   "purification": 30.791930437088013,
+   "instrument": 13.711719989776611,
+   "test": 28.576501846313477
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_canonicalize_url_unicode_query_string": [
+    {
+     "file": "test_utils_url_test_canonicalize_url_unicode_query_string_assertion_138.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_canonicalize_url_unicode_query_string_assertion_141.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_normalize_percent_encoding_in_paths": [
+    {
+     "file": "test_utils_url_test_normalize_percent_encoding_in_paths_assertion_159.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_normalize_percent_encoding_in_paths_assertion_163.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_normalize_percent_encoding_in_paths_assertion_167.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_normalize_percent_encoding_in_query_arguments": [
+    {
+     "file": "test_utils_url_test_normalize_percent_encoding_in_query_arguments_assertion_171.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_canonicalize_idns": [
+    {
+     "file": "test_utils_url_test_canonicalize_idns_assertion_225.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_canonicalize_idns_assertion_228.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_canonicalize_urlparsed": [
+    {
+     "file": "test_utils_url_test_canonicalize_urlparsed_assertion_241.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_canonicalize_urlparsed_assertion_243.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_canonicalize_parse_url": [
+    {
+     "file": "test_utils_url_test_canonicalize_parse_url_assertion_250.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_canonicalize_parse_url_assertion_252.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_safe_characters_unicode": [
+    {
+     "file": "test_utils_url_test_safe_characters_unicode_assertion_217.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_17": {
+  "status": "completed",
+  "time": {
+   "purification": 4.155825138092041,
+   "instrument": 12.549653768539429,
+   "test": 6.007382154464722
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_utils_response.py::ResponseUtilsTest::test_response_status_message": [
+    {
+     "file": "test_utils_response_test_response_status_message_assertion_85.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_18": {
+  "status": "completed",
+  "time": {
+   "purification": 2.3379056453704834,
+   "instrument": 13.71057415008545,
+   "test": 7.773666858673096
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_responsetypes.py::ResponseTypesTest::test_from_content_disposition": [
+    {
+     "file": "test_responsetypes_test_from_content_disposition_assertion_35.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_19": {
+  "status": "completed",
+  "time": {
+   "purification": 11.715110301971436,
+   "instrument": 12.61987018585205,
+   "test": 13.678257703781128
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_http_cookies.py::WrappedRequestTest::test_get_full_url": [
+    {
+     "file": "test_http_cookies_test_get_full_url_assertion_17.py",
+     "params": null
+    }
+   ],
+   "tests/test_http_cookies.py::WrappedRequestTest::test_get_host": [
+    {
+     "file": "test_http_cookies_test_get_host_assertion_21.py",
+     "params": null
+    }
+   ],
+   "tests/test_http_cookies.py::WrappedRequestTest::test_get_type": [
+    {
+     "file": "test_http_cookies_test_get_type_assertion_25.py",
+     "params": null
+    }
+   ],
+   "tests/test_http_cookies.py::WrappedRequestTest::test_get_origin_req_host": [
+    {
+     "file": "test_http_cookies_test_get_origin_req_host_assertion_38.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_20": {
+  "status": "completed",
+  "time": {
+   "purification": 2.431286573410034,
+   "instrument": 12.529263973236084,
+   "test": 16.776067972183228
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_spider.py::SitemapSpiderTest::test_get_sitemap_urls_from_robotstxt": [
+    {
+     "file": "test_spider_test_get_sitemap_urls_from_robotstxt_assertion_339.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_21": {
+  "status": "completed",
+  "time": {
+   "purification": 0.4273221492767334,
+   "instrument": 12.391510248184204,
+   "test": 10.359570980072021
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_22": {
+  "status": "completed",
+  "time": {
+   "purification": 0.4413785934448242,
+   "instrument": 12.56729507446289,
+   "test": 9.74375867843628
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_23": {
+  "status": "completed",
+  "time": {
+   "purification": 12.480318069458008,
+   "instrument": 12.363071203231812,
+   "test": 12.467377185821533
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_downloadermiddleware_httpproxy.py::TestDefaultHeadersMiddleware::test_proxy_auth": [
+    {
+     "file": "test_downloadermiddleware_httpproxy_test_proxy_auth_assertion_53.py",
+     "params": null
+    },
+    {
+     "file": "test_downloadermiddleware_httpproxy_test_proxy_auth_assertion_54.py",
+     "params": null
+    },
+    {
+     "file": "test_downloadermiddleware_httpproxy_test_proxy_auth_assertion_55.py",
+     "params": null
+    }
+   ],
+   "tests/test_downloadermiddleware_httpproxy.py::TestDefaultHeadersMiddleware::test_proxy_auth_empty_passwd": [
+    {
+     "file": "test_downloadermiddleware_httpproxy_test_proxy_auth_empty_passwd_assertion_61.py",
+     "params": null
+    },
+    {
+     "file": "test_downloadermiddleware_httpproxy_test_proxy_auth_empty_passwd_assertion_62.py",
+     "params": null
+    },
+    {
+     "file": "test_downloadermiddleware_httpproxy_test_proxy_auth_empty_passwd_assertion_63.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_24": {
+  "status": "skipped"
+ },
+ "scrapy_25": {
+  "status": "skipped"
+ },
+ "scrapy_26": {
+  "status": "completed",
+  "time": {
+   "purification": 9.764186143875122,
+   "instrument": 12.333147048950195,
+   "test": 31.16534447669983
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_settings/__init__.py::BaseSettingsTest::test_getcomposite": [
+    {
+     "file": "test_settings/__init___test_getcomposite_assertion_262.py",
+     "params": null
+    },
+    {
+     "file": "test_settings/__init___test_getcomposite_assertion_263.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_27": {
+  "status": "completed",
+  "time": {
+   "purification": 2.6772642135620117,
+   "instrument": 22.78196954727173,
+   "test": 4.77315354347229
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_downloadermiddleware_redirect.py::RedirectMiddlewareTest::test_request_meta_handling": [
+    {
+     "file": "test_downloadermiddleware_redirect_test_request_meta_handling_assertion_148.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_28": {
+  "status": "skipped"
+ },
+ "scrapy_29": {
+  "status": "completed",
+  "time": {
+   "purification": 0.42316198348999023,
+   "instrument": 12.545982837677002,
+   "test": 5.3287975788116455
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_30": {
+  "status": "completed",
+  "time": {
+   "purification": 4.075886487960815,
+   "instrument": 12.66325330734253,
+   "test": 10.231931924819946
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_command_version.py::VersionTest::test_output": [
+    {
+     "file": "test_command_version_test_output_assertion_17.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_31": {
+  "status": "completed",
+  "time": {
+   "purification": 7.424917459487915,
+   "instrument": 12.145717144012451,
+   "test": 9.530207872390747
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_downloadermiddleware_cookies.py::CookiesMiddlewareTest::test_do_not_break_on_non_utf8_header": [
+    {
+     "file": "test_downloadermiddleware_cookies_test_do_not_break_on_non_utf8_header_assertion_45.py",
+     "params": null
+    },
+    {
+     "file": "test_downloadermiddleware_cookies_test_do_not_break_on_non_utf8_header_assertion_49.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  }
 }

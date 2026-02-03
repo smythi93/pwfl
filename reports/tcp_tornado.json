@@ -1,0 +1,372 @@
+{
+ "tornado_1": {
+  "status": "completed",
+  "time": {
+   "purification": 1.030874490737915,
+   "instrument": 7.1154680252075195,
+   "test": 13.218414783477783
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/websocket_test.py::WebSocketTest::test_nodelay": [
+    {
+     "file": "websocket_test_test_nodelay_assertion_576.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_2": {
+  "status": "completed",
+  "time": {
+   "purification": 11.084460735321045,
+   "instrument": 7.7771196365356445,
+   "test": 19.051337242126465
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/httpclient_test.py::HTTPClientCommonTestCase::test_redirect_put_without_body": [
+    {
+     "file": "httpclient_test_test_redirect_put_without_body_assertion_323.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_3": {
+  "status": "completed",
+  "time": {
+   "purification": 0.19937539100646973,
+   "instrument": 6.8263726234436035,
+   "test": 13.26403021812439
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_4": {
+  "status": "completed",
+  "time": {
+   "purification": 8.73349118232727,
+   "instrument": 8.713541746139526,
+   "test": 10.53740382194519
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/web_test.py::StaticFileTest::test_static_with_range_neg_past_start": [
+    {
+     "file": "web_test_test_static_with_range_neg_past_start_assertion_1287.py",
+     "params": null
+    },
+    {
+     "file": "web_test_test_static_with_range_neg_past_start_assertion_1290.py",
+     "params": null
+    },
+    {
+     "file": "web_test_test_static_with_range_neg_past_start_assertion_1291.py",
+     "params": null
+    },
+    {
+     "file": "web_test_test_static_with_range_neg_past_start_assertion_1292.py",
+     "params": null
+    }
+   ],
+   "tornado/test/web_test.py::StaticFileTest::test_static_unsatisfiable_range_end_less_than_start": [
+    {
+     "file": "web_test_test_static_unsatisfiable_range_end_less_than_start_assertion_1316.py",
+     "params": null
+    },
+    {
+     "file": "web_test_test_static_unsatisfiable_range_end_less_than_start_assertion_1317.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_5": {
+  "status": "completed",
+  "time": {
+   "purification": 1.705854892730713,
+   "instrument": 6.989996910095215,
+   "test": 15.094335556030273
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/ioloop_test.py::TestPeriodicCallbackMath::test_clock_backwards": [
+    {
+     "file": "ioloop_test_test_clock_backwards_assertion_837.py",
+     "params": null
+    },
+    {
+     "file": "ioloop_test_test_clock_backwards_assertion_845.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_6": {
+  "status": "completed",
+  "time": {
+   "purification": 1.3763301372528076,
+   "instrument": 7.090567111968994,
+   "test": 2.352776527404785
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/asyncio_test.py::LeakTest::test_ioloop_close_leak": [
+    {
+     "file": "asyncio_test_test_ioloop_close_leak_assertion_146.py",
+     "params": null
+    }
+   ],
+   "tornado/test/asyncio_test.py::LeakTest::test_asyncio_close_leak": [
+    {
+     "file": "asyncio_test_test_asyncio_close_leak_assertion_160.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_7": {
+  "status": "completed",
+  "time": {
+   "purification": 1.0213713645935059,
+   "instrument": 6.94969916343689,
+   "test": 13.982966184616089
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/ioloop_test.py::TestIOLoopFutures::test_run_in_executor_native": [
+    {
+     "file": "ioloop_test_test_run_in_executor_native_assertion_649.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_8": {
+  "status": "completed",
+  "time": {
+   "purification": 0.9634089469909668,
+   "instrument": 7.138474702835083,
+   "test": 9.82278823852539
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/websocket_test.py::WebSocketTest::test_missing_websocket_key": [
+    {
+     "file": "websocket_test_test_missing_websocket_key_assertion_201.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_9": {
+  "status": "completed",
+  "time": {
+   "purification": 0.8684022426605225,
+   "instrument": 7.639089584350586,
+   "test": 9.665982246398926
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/httputil_test.py::TestUrlConcat::test_url_concat_none_params": [
+    {
+     "file": "httputil_test_test_url_concat_none_params_assertion_74.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_10": {
+  "status": "completed",
+  "time": {
+   "purification": 1.0039589405059814,
+   "instrument": 7.208669185638428,
+   "test": 14.304397106170654
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/websocket_test.py::WebSocketTest::test_render_message": [
+    {
+     "file": "websocket_test_test_render_message_assertion_241.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_11": {
+  "status": "completed",
+  "time": {
+   "purification": 1.0896353721618652,
+   "instrument": 17.630882501602173,
+   "test": 7.911751747131348
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/httpserver_test.py::HTTPServerRawTest::test_chunked_request_uppercase": [
+    {
+     "file": "httpserver_test_test_chunked_request_uppercase_assertion_461.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_12": {
+  "status": "completed",
+  "time": {
+   "purification": 32.62321329116821,
+   "instrument": 7.157148838043213,
+   "test": 21.697237253189087
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/auth_test.py::AuthTest::test_facebook_login": [
+    {
+     "file": "auth_test_test_facebook_login_assertion_401.py",
+     "params": null
+    },
+    {
+     "file": "auth_test_test_facebook_login_assertion_402.py",
+     "params": null
+    },
+    {
+     "file": "auth_test_test_facebook_login_assertion_404.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_13": {
+  "status": "completed",
+  "time": {
+   "purification": 1.4350552558898926,
+   "instrument": 7.176298141479492,
+   "test": 10.687674045562744
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/http1connection_test.py::HTTP1ConnectionTest::test_http10_no_content_length": [
+    {
+     "file": "http1connection_test_test_http10_no_content_length_assertion_60.py",
+     "params": null
+    },
+    {
+     "file": "http1connection_test_test_http10_no_content_length_assertion_61.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_14": {
+  "status": "completed",
+  "time": {
+   "purification": 1.626967191696167,
+   "instrument": 6.858567953109741,
+   "test": 10.366511344909668
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/ioloop_test.py::TestIOLoopCurrent::test_force_current": [
+    {
+     "file": "ioloop_test_test_force_current_assertion_444.py",
+     "params": null
+    },
+    {
+     "file": "ioloop_test_test_force_current_assertion_449.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_15": {
+  "status": "completed",
+  "time": {
+   "purification": 1.816744089126587,
+   "instrument": 7.452259063720703,
+   "test": 7.150477409362793
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tornado/test/web_test.py::StaticFileTest::test_path_traversal_protection": [
+    {
+     "file": "web_test_test_path_traversal_protection_assertion_1191.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "tornado_16": {
+  "status": "completed",
+  "time": {
+   "purification": 0.20934295654296875,
+   "instrument": 7.02281641960144,
+   "test": 1.6492905616760254
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ }
+}
