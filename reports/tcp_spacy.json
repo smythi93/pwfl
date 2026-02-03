@@ -68,5 +68,107 @@
   "purified_tests": {},
   "test": "successful",
   "check": "successful"
+ },
+ "spacy_5": {
+  "status": "completed",
+  "time": {
+   "purification": 0.41315603256225586,
+   "instrument": 18.418527126312256,
+   "test": 9.225316047668457
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "spacy_6": {
+  "status": "skipped"
+ },
+ "spacy_7": {
+  "status": "completed",
+  "time": {
+   "purification": 19.7322256565094,
+   "instrument": 36.64486289024353,
+   "test": 25.57732391357422
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "spacy/tests/doc/test_span.py::test_filter_spans": [
+    {
+     "file": "doc/test_span_test_filter_spans_assertion_262.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "spacy_8": {
+  "status": "completed",
+  "time": {
+   "purification": 4.641847848892212,
+   "instrument": 17.64790916442871,
+   "test": 20.17689847946167
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "spacy/tests/matcher/test_matcher_logic.py::test_matcher_remove": [
+    {
+     "file": "matcher/test_matcher_logic_test_matcher_remove_assertion_151.py",
+     "params": null
+    },
+    {
+     "file": "matcher/test_matcher_logic_test_matcher_remove_assertion_153.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "spacy_9": {
+  "status": "completed",
+  "time": {
+   "purification": 5.442949533462524,
+   "instrument": 36.625104665756226,
+   "test": 31.03324866294861
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "spacy/tests/pipeline/test_tagger.py::test_tagger_warns_no_lemma_lookups": [
+    {
+     "file": "pipeline/test_tagger_test_tagger_warns_no_lemma_lookups_assertion_12.py",
+     "params": null
+    },
+    {
+     "file": "pipeline/test_tagger_test_tagger_warns_no_lemma_lookups_assertion_22.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "spacy_10": {
+  "status": "completed",
+  "time": {
+   "purification": 0.4282817840576172,
+   "instrument": 61.41405916213989,
+   "test": 56.880706548690796
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
  }
 }

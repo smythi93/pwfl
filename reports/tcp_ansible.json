@@ -302,5 +302,167 @@
   "purified_tests": {},
   "test": "successful",
   "check": "successful"
+ },
+ "ansible_12": {
+  "status": "completed",
+  "time": {
+   "purification": 13.298367977142334,
+   "instrument": 28.06139588356018,
+   "test": 209.0840539932251
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/plugins/lookup/test_env.py::test_env_var_value[foo-bar]": [
+    {
+     "file": "plugins/lookup/test_env_test_env_var_value_foo_bar_assertion_23.py",
+     "params": "foo-bar"
+    }
+   ],
+   "test/units/plugins/lookup/test_env.py::test_env_var_value[equation-a=b*100]": [
+    {
+     "file": "plugins/lookup/test_env_test_env_var_value_equation_a_b_100_assertion_23.py",
+     "params": "equation-a=b*100"
+    }
+   ],
+   "test/units/plugins/lookup/test_env.py::test_utf8_env_var_value[simple_var-alpha-\\u03b2-gamma]": [
+    {
+     "file": "plugins/lookup/test_env_test_utf8_env_var_value_simple_var_alpha__u03b2_gamma_assertion_35.py",
+     "params": "simple_var-alpha-\\u03b2-gamma"
+    }
+   ],
+   "test/units/plugins/lookup/test_env.py::test_utf8_env_var_value[the_var-\\xe3n\\u02c8si\\u03b2le]": [
+    {
+     "file": "plugins/lookup/test_env_test_utf8_env_var_value_the_var__xe3n_u02c8si_u03b2le_assertion_35.py",
+     "params": "the_var-\\xe3n\\u02c8si\\u03b2le"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "ansible_13": {
+  "status": "completed",
+  "time": {
+   "purification": 26.942313194274902,
+   "instrument": 19.27875590324402,
+   "test": 172.87882328033447
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/cli/test_galaxy.py::test_collection_install_with_url": [
+    {
+     "file": "cli/test_galaxy_test_collection_install_with_url_assertion_904.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "ansible_14": {
+  "status": "completed",
+  "time": {
+   "purification": 9.096723794937134,
+   "instrument": 20.707762718200684,
+   "test": 59.16343331336975
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/galaxy/test_api.py::test_get_role_versions_pagination[responses1]": [
+    {
+     "file": "galaxy/test_api_test_get_role_versions_pagination_responses1_assertion_909.py",
+     "params": "responses1"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "ansible_15": {
+  "status": "completed",
+  "time": {
+   "purification": 0.713714599609375,
+   "instrument": 1056.1522326469421,
+   "test": 9.928320169448853
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "ansible_16": {
+  "status": "completed",
+  "time": {
+   "purification": 2.6420562267303467,
+   "instrument": 35.75190997123718,
+   "test": 9.952051639556885
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/module_utils/facts/hardware/test_linux_get_cpu_info.py::test_get_cpu_info_missing_arch": [
+    {
+     "file": "module_utils/facts/hardware/test_linux_get_cpu_info_test_get_cpu_info_missing_arch_assertion_36.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "ansible_17": {
+  "status": "completed",
+  "time": {
+   "purification": 6.867067575454712,
+   "instrument": 36.649493932724,
+   "test": 55.04564642906189
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/module_utils/facts/test_facts.py::TestFactsLinuxHardwareGetMountFacts::test_get_mount_facts": [
+    {
+     "file": "module_utils/facts/test_facts_test_get_mount_facts_assertion_564.py",
+     "params": null
+    },
+    {
+     "file": "module_utils/facts/test_facts_test_get_mount_facts_assertion_565.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "ansible_18": {
+  "status": "completed",
+  "time": {
+   "purification": 2.9753503799438477,
+   "instrument": 15.239164113998413,
+   "test": 1.7553493976593018
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/module_utils/test_distribution_version.py::test_distribution_version[stdin29-Kali 2020.2]": [
+    {
+     "file": "module_utils/test_distribution_version_test_distribution_version_stdin29_Kali_2020_2_assertion_1965.py",
+     "params": "stdin29-Kali 2020.2"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  }
 }
