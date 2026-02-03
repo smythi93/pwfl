@@ -1,0 +1,29 @@
+{
+ "expression_1": {
+  "status": "completed",
+  "time": {
+   "purification": 2.417135000228882,
+   "instrument": 64.91183090209961,
+   "test": 3.9941186904907227
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_evaluate.py::TestEvaluate::test_eval_div_error": [
+    {
+     "file": "test_evaluate_test_eval_div_error_assertion_14.py",
+     "params": null
+    }
+   ],
+   "tests/test_expression.py::TestExpr::test_div_error": [
+    {
+     "file": "test_expression_test_div_error_assertion_17.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}

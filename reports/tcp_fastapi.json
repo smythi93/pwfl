@@ -1,0 +1,488 @@
+{
+ "fastapi_1": {
+  "status": "completed",
+  "time": {
+   "purification": 3.3417205810546875,
+   "instrument": 20.671836614608765,
+   "test": 6.948742866516113
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_jsonable_encoder.py::test_encode_model_with_default": [
+    {
+     "file": "test_jsonable_encoder_test_encode_model_with_default_assertion_134.py",
+     "params": null
+    },
+    {
+     "file": "test_jsonable_encoder_test_encode_model_with_default_assertion_135.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_2": {
+  "status": "completed",
+  "time": {
+   "purification": 2.012146472930908,
+   "instrument": 20.59202527999878,
+   "test": 14.897603034973145
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_ws_router.py::test_router_ws_depends_with_override": [
+    {
+     "file": "test_ws_router_test_router_ws_depends_with_override_assertion_92.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_3": {
+  "status": "completed",
+  "time": {
+   "purification": 10.782132148742676,
+   "instrument": 21.47985029220581,
+   "test": 9.119178056716919
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_serialize_response_model.py::test_valid": [
+    {
+     "file": "test_serialize_response_model_test_valid_assertion_92.py",
+     "params": null
+    }
+   ],
+   "tests/test_serialize_response_model.py::test_coerce": [
+    {
+     "file": "test_serialize_response_model_test_coerce_assertion_98.py",
+     "params": null
+    }
+   ],
+   "tests/test_serialize_response_model.py::test_validlist": [
+    {
+     "file": "test_serialize_response_model_test_validlist_assertion_108.py",
+     "params": null
+    }
+   ],
+   "tests/test_serialize_response_model.py::test_validdict": [
+    {
+     "file": "test_serialize_response_model_test_validdict_assertion_118.py",
+     "params": null
+    }
+   ],
+   "tests/test_serialize_response_model.py::test_valid_exclude_unset": [
+    {
+     "file": "test_serialize_response_model_test_valid_exclude_unset_assertion_128.py",
+     "params": null
+    }
+   ],
+   "tests/test_serialize_response_model.py::test_coerce_exclude_unset": [
+    {
+     "file": "test_serialize_response_model_test_coerce_exclude_unset_assertion_134.py",
+     "params": null
+    }
+   ],
+   "tests/test_serialize_response_model.py::test_validlist_exclude_unset": [
+    {
+     "file": "test_serialize_response_model_test_validlist_exclude_unset_assertion_140.py",
+     "params": null
+    }
+   ],
+   "tests/test_serialize_response_model.py::test_validdict_exclude_unset": [
+    {
+     "file": "test_serialize_response_model_test_validdict_exclude_unset_assertion_150.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_4": {
+  "status": "completed",
+  "time": {
+   "purification": 1.695676565170288,
+   "instrument": 21.651455640792847,
+   "test": 2.5821588039398193
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_param_in_path_and_dependency.py::test_reused_param": [
+    {
+     "file": "test_param_in_path_and_dependency_test_reused_param_assertion_88.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_5": {
+  "status": "completed",
+  "time": {
+   "purification": 2.075690984725952,
+   "instrument": 22.563924074172974,
+   "test": 7.671608924865723
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_filter_pydantic_sub_model.py::test_filter_sub_model": [
+    {
+     "file": "test_filter_pydantic_sub_model_test_filter_sub_model_assertion_87.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_6": {
+  "status": "completed",
+  "time": {
+   "purification": 6.499517917633057,
+   "instrument": 20.16568398475647,
+   "test": 9.247865915298462
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_forms_from_non_typing_sequences.py::test_python_list_param_as_form": [
+    {
+     "file": "test_forms_from_non_typing_sequences_test_python_list_param_as_form_assertion_29.py",
+     "params": null
+    },
+    {
+     "file": "test_forms_from_non_typing_sequences_test_python_list_param_as_form_assertion_30.py",
+     "params": null
+    }
+   ],
+   "tests/test_forms_from_non_typing_sequences.py::test_python_set_param_as_form": [
+    {
+     "file": "test_forms_from_non_typing_sequences_test_python_set_param_as_form_assertion_37.py",
+     "params": null
+    },
+    {
+     "file": "test_forms_from_non_typing_sequences_test_python_set_param_as_form_assertion_38.py",
+     "params": null
+    }
+   ],
+   "tests/test_forms_from_non_typing_sequences.py::test_python_tuple_param_as_form": [
+    {
+     "file": "test_forms_from_non_typing_sequences_test_python_tuple_param_as_form_assertion_45.py",
+     "params": null
+    },
+    {
+     "file": "test_forms_from_non_typing_sequences_test_python_tuple_param_as_form_assertion_46.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_7": {
+  "status": "completed",
+  "time": {
+   "purification": 2.6880786418914795,
+   "instrument": 19.982640266418457,
+   "test": 5.9800050258636475
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_multi_body_errors.py::test_jsonable_encoder_requiring_error": [
+    {
+     "file": "test_multi_body_errors_test_jsonable_encoder_requiring_error_assertion_154.py",
+     "params": null
+    },
+    {
+     "file": "test_multi_body_errors_test_jsonable_encoder_requiring_error_assertion_155.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_8": {
+  "status": "completed",
+  "time": {
+   "purification": 3.7472801208496094,
+   "instrument": 20.321359157562256,
+   "test": 17.505382537841797
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_custom_route_class.py::test_route_classes": [
+    {
+     "file": "test_custom_route_class_test_route_classes_assertion_112.py",
+     "params": null
+    },
+    {
+     "file": "test_custom_route_class_test_route_classes_assertion_113.py",
+     "params": null
+    },
+    {
+     "file": "test_custom_route_class_test_route_classes_assertion_114.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_9": {
+  "status": "completed",
+  "time": {
+   "purification": 2.832820177078247,
+   "instrument": 21.18849515914917,
+   "test": 8.706721067428589
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_request_body_parameters_media_type.py::test_openapi_schema": [
+    {
+     "file": "test_request_body_parameters_media_type_test_openapi_schema_assertion_60.py",
+     "params": null
+    },
+    {
+     "file": "test_request_body_parameters_media_type_test_openapi_schema_assertion_64.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_10": {
+  "status": "completed",
+  "time": {
+   "purification": 1.3670711517333984,
+   "instrument": 21.085948944091797,
+   "test": 16.316842079162598
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_skip_defaults.py::test_return_defaults": [
+    {
+     "file": "test_skip_defaults_test_return_defaults_assertion_29.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_11": {
+  "status": "completed",
+  "time": {
+   "purification": 14.121551275253296,
+   "instrument": 20.566572904586792,
+   "test": 11.143957138061523
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_union_body.py::test_item_openapi_schema": [
+    {
+     "file": "test_union_body_test_item_openapi_schema_assertion_111.py",
+     "params": null
+    },
+    {
+     "file": "test_union_body_test_item_openapi_schema_assertion_112.py",
+     "params": null
+    }
+   ],
+   "tests/test_union_body.py::test_post_other_item": [
+    {
+     "file": "test_union_body_test_post_other_item_assertion_117.py",
+     "params": null
+    },
+    {
+     "file": "test_union_body_test_post_other_item_assertion_118.py",
+     "params": null
+    }
+   ],
+   "tests/test_union_body.py::test_post_item": [
+    {
+     "file": "test_union_body_test_post_item_assertion_123.py",
+     "params": null
+    },
+    {
+     "file": "test_union_body_test_post_item_assertion_124.py",
+     "params": null
+    }
+   ],
+   "tests/test_union_inherited_body.py::test_inherited_item_openapi_schema": [
+    {
+     "file": "test_union_inherited_body_test_inherited_item_openapi_schema_assertion_125.py",
+     "params": null
+    },
+    {
+     "file": "test_union_inherited_body_test_inherited_item_openapi_schema_assertion_126.py",
+     "params": null
+    }
+   ],
+   "tests/test_union_inherited_body.py::test_post_extended_item": [
+    {
+     "file": "test_union_inherited_body_test_post_extended_item_assertion_132.py",
+     "params": null
+    },
+    {
+     "file": "test_union_inherited_body_test_post_extended_item_assertion_133.py",
+     "params": null
+    }
+   ],
+   "tests/test_union_inherited_body.py::test_post_item": [
+    {
+     "file": "test_union_inherited_body_test_post_item_assertion_139.py",
+     "params": null
+    },
+    {
+     "file": "test_union_inherited_body_test_post_item_assertion_140.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_12": {
+  "status": "completed",
+  "time": {
+   "purification": 2.458796501159668,
+   "instrument": 20.77781844139099,
+   "test": 29.929099559783936
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_security_http_bearer_optional.py::test_security_http_bearer_incorrect_scheme_credentials": [
+    {
+     "file": "test_security_http_bearer_optional_test_security_http_bearer_incorrect_scheme_credentials_assertion_67.py",
+     "params": null
+    },
+    {
+     "file": "test_security_http_bearer_optional_test_security_http_bearer_incorrect_scheme_credentials_assertion_68.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_13": {
+  "status": "completed",
+  "time": {
+   "purification": 1.8691356182098389,
+   "instrument": 21.04490613937378,
+   "test": 6.664307355880737
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_additional_responses_router.py::test_openapi_schema": [
+    {
+     "file": "test_additional_responses_router_test_openapi_schema_assertion_77.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_14": {
+  "status": "completed",
+  "time": {
+   "purification": 1.9180305004119873,
+   "instrument": 21.46133303642273,
+   "test": 11.402663469314575
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_additional_properties.py::test_additional_properties_schema": [
+    {
+     "file": "test_additional_properties_test_additional_properties_schema_assertion_104.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_15": {
+  "status": "completed",
+  "time": {
+   "purification": 2.5525143146514893,
+   "instrument": 20.279606819152832,
+   "test": 6.775045156478882
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_ws_router.py::test_router": [
+    {
+     "file": "test_ws_router_test_router_assertion_46.py",
+     "params": null
+    }
+   ],
+   "tests/test_ws_router.py::test_prefix_router": [
+    {
+     "file": "test_ws_router_test_prefix_router_assertion_53.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "fastapi_16": {
+  "status": "completed",
+  "time": {
+   "purification": 1.3117358684539795,
+   "instrument": 32.360950231552124,
+   "test": 5.149443626403809
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_jsonable_encoder.py::test_encode_model_with_config": [
+    {
+     "file": "test_jsonable_encoder_test_encode_model_with_config_assertion_87.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}

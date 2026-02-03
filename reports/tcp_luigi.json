@@ -1,0 +1,666 @@
+{
+ "luigi_1": {
+  "status": "completed",
+  "time": {
+   "purification": 2.0303966999053955,
+   "instrument": 20.27097773551941,
+   "test": 26.00071430206299
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/server_test.py::MetricsHandlerTest::test_get": [
+    {
+     "file": "server_test_test_get_assertion_468.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_2": {
+  "status": "skipped"
+ },
+ "luigi_3": {
+  "status": "completed",
+  "time": {
+   "purification": 0.3771030902862549,
+   "instrument": 21.849090099334717,
+   "test": 53.195446491241455
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_4": {
+  "status": "completed",
+  "time": {
+   "purification": 2.1636273860931396,
+   "instrument": 19.125123977661133,
+   "test": 5.3410844802856445
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/contrib/redshift_test.py::TestS3CopyToTable::test_s3_copy_with_nonetype_columns": [
+    {
+     "file": "contrib/redshift_test_test_s3_copy_with_nonetype_columns_assertion_349.py",
+     "params": null
+    },
+    {
+     "file": "contrib/redshift_test_test_s3_copy_with_nonetype_columns_assertion_360.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_5": {
+  "status": "completed",
+  "time": {
+   "purification": 1.7622551918029785,
+   "instrument": 20.957871675491333,
+   "test": 3.791844606399536
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/util_test.py::BasicsTest::test_inherits_has_effect_MRO": [
+    {
+     "file": "util_test_test_inherits_has_effect_MRO_assertion_100.py",
+     "params": null
+    }
+   ],
+   "test/util_test.py::BasicsTest::test_requires_has_effect_MRO": [
+    {
+     "file": "util_test_test_requires_has_effect_MRO_assertion_175.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_6": {
+  "status": "error",
+  "time": {
+   "purification": 2.907445192337036,
+   "instrument": 5.3719799518585205
+  },
+  "checkout": "cached",
+  "build": "failed",
+  "purification": "successful",
+  "purified_tests": {
+   "test/parameter_test.py::TestParametersHashability::test_list_dict": [
+    {
+     "file": "parameter_test_test_list_dict_assertion_385.py",
+     "params": null
+    }
+   ],
+   "test/parameter_test.py::TestParametersHashability::test_tuple_dict": [
+    {
+     "file": "parameter_test_test_tuple_dict_assertion_408.py",
+     "params": null
+    }
+   ]
+  },
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/pwfl/pwfl/purification.py\", line 490, in get_tcp_events\n    build(\n",
+   "  File \"/home/smytzek/pwfl/pwfl/purification.py\", line 351, in build\n    with open(mapping, \"r\") as f:\n         ^^^^^^^^^^^^^^^^^^\n",
+   "FileNotFoundError: [Errno 2] No such file or directory: 'mappings/luigi_6_tcp.json'\n"
+  ]
+ },
+ "luigi_7": {
+  "status": "completed",
+  "time": {
+   "purification": 2.6904847621917725,
+   "instrument": 19.92266583442688,
+   "test": 139.26224827766418
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/scheduler_api_test.py::SchedulerApiTest::test_status_wont_override": [
+    {
+     "file": "scheduler_api_test_test_status_wont_override_assertion_111.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_8": {
+  "status": "completed",
+  "time": {
+   "purification": 2.6937174797058105,
+   "instrument": 20.517245531082153,
+   "test": 2.846461057662964
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/contrib/redshift_test.py::TestS3CopyToTable::test_s3_copy_to_temp_table": [
+    {
+     "file": "contrib/redshift_test_test_s3_copy_to_temp_table_assertion_188.py",
+     "params": null
+    }
+   ],
+   "test/contrib/redshift_test.py::TestS3CopyToSchemaTable::test_s3_copy_to_table": [
+    {
+     "file": "contrib/redshift_test_test_s3_copy_to_table_assertion_212.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_9": {
+  "status": "completed",
+  "time": {
+   "purification": 7.146658658981323,
+   "instrument": 22.186659574508667,
+   "test": 18.396506309509277
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/execution_summary_test.py::ExecutionSummaryTest::test_status_with_task_retry": [
+    {
+     "file": "execution_summary_test_test_status_with_task_retry_assertion_1109.py",
+     "params": null
+    },
+    {
+     "file": "execution_summary_test_test_status_with_task_retry_assertion_1110.py",
+     "params": null
+    },
+    {
+     "file": "execution_summary_test_test_status_with_task_retry_assertion_1116.py",
+     "params": null
+    },
+    {
+     "file": "execution_summary_test_test_status_with_task_retry_assertion_1119.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_10": {
+  "status": "completed",
+  "time": {
+   "purification": 1.4579083919525146,
+   "instrument": 20.412877798080444,
+   "test": 4.08449125289917
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/scheduler_test.py::SchedulerWorkerTest::test_get_pending_tasks_with_many_done_tasks": [
+    {
+     "file": "scheduler_test_test_get_pending_tasks_with_many_done_tasks_assertion_241.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_11": {
+  "status": "completed",
+  "time": {
+   "purification": 2.817807912826538,
+   "instrument": 20.746875047683716,
+   "test": 108.79980230331421
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/scheduler_api_test.py::SchedulerApiTest::test_batch_ignore_items_not_ready": [
+    {
+     "file": "scheduler_api_test_test_batch_ignore_items_not_ready_assertion_206.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_12": {
+  "status": "completed",
+  "time": {
+   "purification": 1.095975637435913,
+   "instrument": 40.52068209648132,
+   "test": 1.2816710472106934
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/hdfs_client_test.py::HdfsClientTest::test_get_autoconfig_client_cached": [
+    {
+     "file": "hdfs_client_test_test_get_autoconfig_client_cached_assertion_12.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_13": {
+  "status": "completed",
+  "time": {
+   "purification": 1.2163715362548828,
+   "instrument": 20.54963707923889,
+   "test": 24.658349752426147
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/file_test.py::FileSystemTest::test_move_to_new_dir": [
+    {
+     "file": "file_test_test_move_to_new_dir_assertion_309.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_14": {
+  "status": "completed",
+  "time": {
+   "purification": 2.967050790786743,
+   "instrument": 20.829477071762085,
+   "test": 90.55138325691223
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/central_planner_test.py::CentralPlannerTest::test_no_crash_on_only_disable_hard_timeout": [
+    {
+     "file": "central_planner_test_test_no_crash_on_only_disable_hard_timeout_assertion_1146.py",
+     "params": null
+    },
+    {
+     "file": "central_planner_test_test_no_crash_on_only_disable_hard_timeout_assertion_1150.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_15": {
+  "status": "completed",
+  "time": {
+   "purification": 4.577197790145874,
+   "instrument": 31.19822406768799,
+   "test": 85.4342451095581
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/central_planner_test.py::CentralPlannerTest::test_assistants_dont_nurture_finished_statuses": [
+    {
+     "file": "central_planner_test_test_assistants_dont_nurture_finished_statuses_assertion_1126.py",
+     "params": null
+    },
+    {
+     "file": "central_planner_test_test_assistants_dont_nurture_finished_statuses_assertion_1128.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_16": {
+  "status": "completed",
+  "time": {
+   "purification": 1.9496045112609863,
+   "instrument": 18.207027673721313,
+   "test": 76.23949813842773
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/central_planner_test.py::CentralPlannerTest::test_re_enable_failed_task_assistant": [
+    {
+     "file": "central_planner_test_test_re_enable_failed_task_assistant_assertion_299.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_17": {
+  "status": "skipped"
+ },
+ "luigi_18": {
+  "status": "completed",
+  "time": {
+   "purification": 2.439046621322632,
+   "instrument": 18.992753267288208,
+   "test": 76.32805371284485
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/central_planner_test.py::CentralPlannerTest::test_no_automatic_re_enable_after_auto_then_manual_disable": [
+    {
+     "file": "central_planner_test_test_no_automatic_re_enable_after_auto_then_manual_disable_assertion_705.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_19": {
+  "status": "completed",
+  "time": {
+   "purification": 2.049595355987549,
+   "instrument": 19.57498335838318,
+   "test": 77.1952793598175
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/central_planner_test.py::CentralPlannerTest::test_automatic_re_enable_with_one_failure_allowed": [
+    {
+     "file": "central_planner_test_test_automatic_re_enable_with_one_failure_allowed_assertion_676.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_20": {
+  "status": "skipped"
+ },
+ "luigi_21": {
+  "status": "skipped"
+ },
+ "luigi_22": {
+  "status": "completed",
+  "time": {
+   "purification": 0.3447551727294922,
+   "instrument": 18.10391902923584,
+   "test": 1.9084877967834473
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_23": {
+  "status": "completed",
+  "time": {
+   "purification": 6.609125375747681,
+   "instrument": 18.98313045501709,
+   "test": 33.77505111694336
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/worker_external_task_test.py::WorkerExternalTaskTest::test_external_dependency_already_complete": [
+    {
+     "file": "worker_external_task_test_test_external_dependency_already_complete_assertion_106.py",
+     "params": null
+    },
+    {
+     "file": "worker_external_task_test_test_external_dependency_already_complete_assertion_107.py",
+     "params": null
+    },
+    {
+     "file": "worker_external_task_test_test_external_dependency_already_complete_assertion_114.py",
+     "params": null
+    }
+   ],
+   "test/worker_external_task_test.py::WorkerExternalTaskTest::test_external_dependency_completes_later": [
+    {
+     "file": "worker_external_task_test_test_external_dependency_completes_later_assertion_127.py",
+     "params": null
+    },
+    {
+     "file": "worker_external_task_test_test_external_dependency_completes_later_assertion_137.py",
+     "params": null
+    },
+    {
+     "file": "worker_external_task_test_test_external_dependency_completes_later_assertion_138.py",
+     "params": null
+    },
+    {
+     "file": "worker_external_task_test_test_external_dependency_completes_later_assertion_145.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_24": {
+  "status": "skipped"
+ },
+ "luigi_25": {
+  "status": "skipped"
+ },
+ "luigi_26": {
+  "status": "completed",
+  "time": {
+   "purification": 1.2069282531738281,
+   "instrument": 18.573764085769653,
+   "test": 1.795006275177002
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/contrib/hadoop_jar_test.py::HadoopJarJobTaskTest::test_missing_jar": [
+    {
+     "file": "contrib/hadoop_jar_test_test_missing_jar_assertion_58.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_27": {
+  "status": "completed",
+  "time": {
+   "purification": 0.3782963752746582,
+   "instrument": 18.46550488471985,
+   "test": 24.465880393981934
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_28": {
+  "status": "completed",
+  "time": {
+   "purification": 4.4438488483428955,
+   "instrument": 18.747180700302124,
+   "test": 6.221540212631226
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/contrib/hive_test.py::HiveCommandClientTest::test_table_exists": [
+    {
+     "file": "contrib/hive_test_test_table_exists_assertion_111.py",
+     "params": null
+    }
+   ],
+   "test/contrib/hive_test.py::HiveCommandClientTest::test_apacheclient_table_exists": [
+    {
+     "file": "contrib/hive_test_test_apacheclient_table_exists_assertion_175.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_29": {
+  "status": "completed",
+  "time": {
+   "purification": 0.9249279499053955,
+   "instrument": 18.186091899871826,
+   "test": 2.1956963539123535
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/task_test.py::TaskTest::test_external_tasks_loadable": [
+    {
+     "file": "task_test_test_external_tasks_loadable_assertion_61.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_30": {
+  "status": "completed",
+  "time": {
+   "purification": 2.5287859439849854,
+   "instrument": 18.650995016098022,
+   "test": 2.8495969772338867
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_event_callbacks.py::TestEventCallbacks::test_failure": [
+    {
+     "file": "test_event_callbacks_test_failure_assertion_87.py",
+     "params": null
+    }
+   ],
+   "test/test_event_callbacks.py::TestEventCallbacks::test_processing_time_handler_failure": [
+    {
+     "file": "test_event_callbacks_test_processing_time_handler_failure_assertion_127.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_31": {
+  "status": "completed",
+  "time": {
+   "purification": 1.5274584293365479,
+   "instrument": 18.306050777435303,
+   "test": 12.69027590751648
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/central_planner_test.py::CentralPlannerTest::test_assistant_get_work_external_task": [
+    {
+     "file": "central_planner_test_test_assistant_get_work_external_task_assertion_193.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_32": {
+  "status": "completed",
+  "time": {
+   "purification": 0.33641791343688965,
+   "instrument": 18.167584657669067,
+   "test": 1.7013845443725586
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "luigi_33": {
+  "status": "completed",
+  "time": {
+   "purification": 5.355112075805664,
+   "instrument": 18.720731258392334,
+   "test": 23.80409026145935
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/parameter_test.py::ParameterTest::test_insignificant_parameter": [
+    {
+     "file": "parameter_test_test_insignificant_parameter_assertion_280.py",
+     "params": null
+    },
+    {
+     "file": "parameter_test_test_insignificant_parameter_assertion_283.py",
+     "params": null
+    },
+    {
+     "file": "parameter_test_test_insignificant_parameter_assertion_284.py",
+     "params": null
+    },
+    {
+     "file": "parameter_test_test_insignificant_parameter_assertion_285.py",
+     "params": null
+    }
+   ],
+   "test/parameter_test.py::ParameterTest::test_local_insignificant_param": [
+    {
+     "file": "parameter_test_test_local_insignificant_param_assertion_305.py",
+     "params": null
+    }
+   ],
+   "test/parameter_test.py::TestRemoveGlobalParameters::test_global_significant_param": [
+    {
+     "file": "parameter_test_test_global_significant_param_assertion_428.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}
