@@ -1,0 +1,48 @@
+{
+ "black_1": {
+  "status": "skipped"
+ },
+ "black_2": {
+  "status": "completed",
+  "time": {
+   "purification": 8.114356279373169,
+   "instrument": 22.20529842376709,
+   "test": 194.93007850646973
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_fmtonoff4": [
+    {
+     "file": "test_black_test_fmtonoff4_assertion_639.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_fmtonoff4_assertion_640.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_fmtonoff4_assertion_641.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_3": {
+  "status": "completed",
+  "time": {
+   "purification": 0.4197883605957031,
+   "instrument": 21.535549640655518,
+   "test": 193.13063216209412
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ }
+}

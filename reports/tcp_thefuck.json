@@ -804,5 +804,315 @@
   },
   "test": "successful",
   "check": "successful"
+ },
+ "thefuck_27": {
+  "status": "completed",
+  "time": {
+   "purification": 4.604098320007324,
+   "instrument": 13.799148559570312,
+   "test": 8.23308253288269
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_open.py::test_get_new_command[command6-xdg-open http://foo.io]": [
+    {
+     "file": "rules/test_open_test_get_new_command_command6_xdg_open_http___foo_io_assertion_31.py",
+     "params": "command6-xdg-open http://foo.io"
+    }
+   ],
+   "tests/rules/test_open.py::test_get_new_command[command7-gnome-open http://foo.io]": [
+    {
+     "file": "rules/test_open_test_get_new_command_command7_gnome_open_http___foo_io_assertion_31.py",
+     "params": "command7-gnome-open http://foo.io"
+    }
+   ],
+   "tests/rules/test_open.py::test_get_new_command[command8-kde-open http://foo.io]": [
+    {
+     "file": "rules/test_open_test_get_new_command_command8_kde_open_http___foo_io_assertion_31.py",
+     "params": "command8-kde-open http://foo.io"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_28": {
+  "status": "completed",
+  "time": {
+   "purification": 17.290531635284424,
+   "instrument": 14.01115345954895,
+   "test": 64.97266674041748
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test0]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test0_assertion_230.py",
+     "params": "test0"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test1]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test1_assertion_230.py",
+     "params": "test1"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test7]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test7_assertion_230.py",
+     "params": "test7"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test8]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test8_assertion_230.py",
+     "params": "test8"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test15]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test15_assertion_230.py",
+     "params": "test15"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test16]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test16_assertion_230.py",
+     "params": "test16"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test19]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test19_assertion_230.py",
+     "params": "test19"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test20]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test20_assertion_230.py",
+     "params": "test20"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_29": {
+  "status": "completed",
+  "time": {
+   "purification": 5.687541961669922,
+   "instrument": 13.87109375,
+   "test": 18.64405369758606
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_types.py::test_update_settings": [
+    {
+     "file": "test_types_test_update_settings_assertion_15.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils.py::test_wrap_settings[override2-old2-new2]": [
+    {
+     "file": "test_utils_test_wrap_settings_override2_old2_new2_assertion_16.py",
+     "params": "override2-old2-new2"
+    }
+   ],
+   "tests/test_utils.py::test_wrap_settings[override1-old1-new1]": [
+    {
+     "file": "test_utils_test_wrap_settings_override1_old1_new1_assertion_16.py",
+     "params": "override1-old1-new1"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_30": {
+  "status": "completed",
+  "time": {
+   "purification": 27.84332299232483,
+   "instrument": 14.455423831939697,
+   "test": 51.46056008338928
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_fix_file.py::test_not_file[test1]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test1_assertion_181.py",
+     "params": "test1"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test4]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test4_assertion_181.py",
+     "params": "test4"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test15]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test15_assertion_181.py",
+     "params": "test15"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test19]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test19_assertion_181.py",
+     "params": "test19"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test13]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test13_assertion_181.py",
+     "params": "test13"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test7]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test7_assertion_181.py",
+     "params": "test7"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test14]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test14_assertion_181.py",
+     "params": "test14"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test17]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test17_assertion_181.py",
+     "params": "test17"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test18]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test18_assertion_181.py",
+     "params": "test18"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test11]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test11_assertion_181.py",
+     "params": "test11"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test3]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test3_assertion_181.py",
+     "params": "test3"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test9]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test9_assertion_181.py",
+     "params": "test9"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test6]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test6_assertion_181.py",
+     "params": "test6"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test8]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test8_assertion_181.py",
+     "params": "test8"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test12]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test12_assertion_181.py",
+     "params": "test12"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test16]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test16_assertion_181.py",
+     "params": "test16"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test5]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test5_assertion_181.py",
+     "params": "test5"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test10]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test10_assertion_181.py",
+     "params": "test10"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test2]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test2_assertion_181.py",
+     "params": "test2"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test0]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test0_assertion_181.py",
+     "params": "test0"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_31": {
+  "status": "completed",
+  "time": {
+   "purification": 1.9631624221801758,
+   "instrument": 13.845633506774902,
+   "test": 5.069908142089844
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_git_diff_staged.py::test_get_new_command[command1-git diff --staged foo]": [
+    {
+     "file": "rules/test_git_diff_staged_test_get_new_command_command1_git_diff___staged_foo_assertion_26.py",
+     "params": "command1-git diff --staged foo"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_32": {
+  "status": "completed",
+  "time": {
+   "purification": 5.540691137313843,
+   "instrument": 13.763506174087524,
+   "test": 2.830301523208618
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_ls_lah.py::test_match": [
+    {
+     "file": "rules/test_ls_lah_test_match_assertion_10.py",
+     "params": null
+    },
+    {
+     "file": "rules/test_ls_lah_test_match_assertion_11.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  }
 }
