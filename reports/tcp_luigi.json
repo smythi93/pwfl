@@ -90,13 +90,12 @@
   "check": "successful"
  },
  "luigi_6": {
-  "status": "error",
+  "status": "running",
   "time": {
-   "purification": 2.222043991088867,
-   "instrument": 5.088084697723389
+   "purification": 30.171419143676758
   },
   "checkout": "cached",
-  "build": "failed",
+  "build": "successful",
   "purification": "successful",
   "purified_tests": {
    "test/parameter_test.py::TestParametersHashability::test_list_dict": [
@@ -111,13 +110,7 @@
      "params": null
     }
    ]
-  },
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/pwfl/purification.py\", line 491, in get_tcp_events\n    build(\n",
-   "  File \"/home/smytzek/pwfl/pwfl/purification.py\", line 352, in build\n    with open(mapping, \"r\") as f:\n         ^^^^^^^^^^^^^^^^^^\n",
-   "FileNotFoundError: [Errno 2] No such file or directory: 'mappings/luigi_6_tcp.json'\n"
-  ]
+  }
  },
  "luigi_7": {
   "status": "completed",

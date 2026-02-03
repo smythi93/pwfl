@@ -439,12 +439,18 @@ class StatementFilter(ast.NodeTransformer):
             if self._is_relevant(stmt):
                 if isinstance(stmt, (ast.If, ast.While, ast.For, ast.AsyncFor)):
                     stmt.body = self._filter_statements(stmt.body)
+                    if not stmt.body:
+                        stmt.body = [ast.Pass()]
                     if hasattr(stmt, "orelse") and stmt.orelse:
                         stmt.orelse = self._filter_statements(stmt.orelse)
                 elif isinstance(stmt, ast.With):
                     stmt.body = self._filter_statements(stmt.body)
+                    if not stmt.body:
+                        stmt.body = [ast.Pass()]
                 elif isinstance(stmt, ast.Try):
                     stmt.body = self._filter_statements(stmt.body)
+                    if not stmt.body:
+                        stmt.body = [ast.Pass()]
                     stmt.handlers = [self._filter_handler(h) for h in stmt.handlers]
                     if hasattr(stmt, "orelse") and stmt.orelse:
                         stmt.orelse = self._filter_statements(stmt.orelse)
