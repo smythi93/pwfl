@@ -25,3 +25,27 @@ def fix_sanic(project, original_checkout):
                         '\n    "http3==0.6.*",\n    "requests==2.*",',
                     )
                 )
+            # copy sanic lib files to tests4py_venv/lib
+            import shutil
+
+            lib_path = os.path.join(original_checkout, "tests4py_venv", "lib")
+            # find the python version folder
+            python_version_folder = None
+            for folder in os.listdir(lib_path):
+                if folder.startswith("python"):
+                    python_version_folder = folder
+                    break
+            if not python_version_folder:
+                return
+            site_packages_path = os.path.join(
+                lib_path, python_version_folder, "site-packages"
+            )
+            sanic_path = os.path.join(__file__, "..", "projects", "sanic_lib_files")
+            for file in os.listdir(sanic_path):
+                # copy tree if directory
+                src_path = os.path.join(sanic_path, file)
+                dst_path = os.path.join(site_packages_path, file)
+                if os.path.isdir(src_path):
+                    shutil.copytree(src_path, dst_path, dirs_exist_ok=True)
+                else:
+                    shutil.copy2(src_path, dst_path)
