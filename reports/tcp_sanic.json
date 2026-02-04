@@ -78,11 +78,11 @@
   "check": "successful"
  },
  "sanic_4": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 2.685189962387085,
-   "instrument": 9.011191129684448,
-   "test": 0.798961877822876
+   "purification": 2.7941739559173584,
+   "instrument": 10.155253648757935,
+   "test": 88.32396030426025
   },
   "checkout": "cached",
   "build": "successful",
@@ -96,6 +96,6 @@
    ]
   },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  }
 }
