@@ -23,6 +23,7 @@ from sflkit.evaluation import Rank, Scenario
 from sflkit.language.language import Language
 from sflkit.runners import PytestRunner
 from sflkit.weights import ProximityAnalyzer
+from sflkitlib.events import EventType
 from tests4py.environment import env_on, activate_venv
 from tests4py.projects import TestStatus, Project
 from tests4py.sfl import (
@@ -595,7 +596,7 @@ def tcp_analyze_project(
         # Get the test name for this event file
         event_filename = Path(event_file.path).name
         test_name = test_event_mapping.get(event_filename, f"unknown_{event_filename}")
-        for ao in analyzer.get_analysis():
+        for ao in analyzer.get_analysis_by_type(AnalysisType.LINE):
             if event_file in ao.hits:
                 if ao.hits[event_file] > 0:
                     # noinspection PyUnresolvedReferences
