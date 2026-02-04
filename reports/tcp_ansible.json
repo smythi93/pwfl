@@ -292,16 +292,21 @@
  "ansible_11": {
   "status": "error",
   "time": {
-   "purification": 0.7459065914154053,
-   "instrument": 1096.140400648117,
-   "test": 94.34419679641724
+   "purification": 0.5044047832489014,
+   "instrument": 557.4523899555206
   },
   "checkout": "cached",
-  "build": "successful",
+  "build": "failed",
   "purification": "successful",
   "purified_tests": {},
-  "test": "successful",
-  "check": "failed"
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/pwfl/pwfl/purification.py\", line 116, in sflkit_instrument\n    instrument(\n",
+   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
+   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
+  ]
  },
  "ansible_12": {
   "status": "completed",
@@ -387,26 +392,30 @@
  "ansible_15": {
   "status": "error",
   "time": {
-   "purification": 0.713714599609375,
-   "instrument": 1056.1522326469421,
-   "test": 9.928320169448853
+   "purification": 0.5044126510620117,
+   "instrument": 543.7233603000641
   },
   "checkout": "cached",
-  "build": "successful",
+  "build": "failed",
   "purification": "successful",
   "purified_tests": {},
-  "test": "successful",
-  "check": "failed"
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/pwfl/pwfl/purification.py\", line 116, in sflkit_instrument\n    instrument(\n",
+   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
+   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
+  ]
  },
  "ansible_16": {
   "status": "error",
   "time": {
-   "purification": 2.6420562267303467,
-   "instrument": 35.75190997123718,
-   "test": 9.952051639556885
+   "purification": 1.8433136940002441,
+   "instrument": 26.12660026550293
   },
   "checkout": "cached",
-  "build": "successful",
+  "build": "failed",
   "purification": "successful",
   "purified_tests": {
    "test/units/module_utils/facts/hardware/test_linux_get_cpu_info.py::test_get_cpu_info_missing_arch": [
@@ -416,8 +425,14 @@
     }
    ]
   },
-  "test": "successful",
-  "check": "failed"
+  "error": [
+   "Traceback (most recent call last):\n",
+   "  File \"/home/smytzek/pwfl/pwfl/purification.py\", line 116, in sflkit_instrument\n    instrument(\n",
+   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/sfl/utils.py\", line 120, in instrument\n    raise report.raised\n",
+   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
+   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
+   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
+  ]
  },
  "ansible_17": {
   "status": "completed",
