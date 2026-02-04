@@ -1,0 +1,174 @@
+{
+ "spacy_1": {
+  "status": "completed",
+  "time": {
+   "purification": 3.023822784423828,
+   "instrument": 19.92810368537903,
+   "test": 2.6170105934143066
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "spacy/tests/test_errors.py::test_add_codes": [
+    {
+     "file": "test_errors_test_add_codes_assertion_13.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "spacy_2": {
+  "status": "completed",
+  "time": {
+   "purification": 4.888268709182739,
+   "instrument": 19.93021535873413,
+   "test": 9.870292901992798
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "spacy/tests/regression/test_issue5137.py::test_issue5137": [
+    {
+     "file": "regression/test_issue5137_test_issue5137_assertion_33.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "spacy_3": {
+  "status": "completed",
+  "time": {
+   "purification": 0.2798349857330322,
+   "instrument": 14.054548740386963,
+   "test": 3.3363919258117676
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "spacy_4": {
+  "status": "completed",
+  "time": {
+   "purification": 0.2675504684448242,
+   "instrument": 13.551674127578735,
+   "test": 4.968276023864746
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "spacy_5": {
+  "status": "completed",
+  "time": {
+   "purification": 0.2851879596710205,
+   "instrument": 19.41172480583191,
+   "test": 6.410243988037109
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "spacy_6": {
+  "status": "skipped"
+ },
+ "spacy_7": {
+  "status": "completed",
+  "time": {
+   "purification": 14.614929914474487,
+   "instrument": 25.60344433784485,
+   "test": 18.393175840377808
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "spacy/tests/doc/test_span.py::test_filter_spans": [
+    {
+     "file": "doc/test_span_test_filter_spans_assertion_262.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "spacy_8": {
+  "status": "completed",
+  "time": {
+   "purification": 4.528139591217041,
+   "instrument": 25.549863815307617,
+   "test": 14.396130323410034
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "spacy/tests/matcher/test_matcher_logic.py::test_matcher_remove": [
+    {
+     "file": "matcher/test_matcher_logic_test_matcher_remove_assertion_151.py",
+     "params": null
+    },
+    {
+     "file": "matcher/test_matcher_logic_test_matcher_remove_assertion_153.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "spacy_9": {
+  "status": "completed",
+  "time": {
+   "purification": 5.562130451202393,
+   "instrument": 25.478013515472412,
+   "test": 22.032548427581787
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "spacy/tests/pipeline/test_tagger.py::test_tagger_warns_no_lemma_lookups": [
+    {
+     "file": "pipeline/test_tagger_test_tagger_warns_no_lemma_lookups_assertion_12.py",
+     "params": null
+    },
+    {
+     "file": "pipeline/test_tagger_test_tagger_warns_no_lemma_lookups_assertion_22.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "spacy_10": {
+  "status": "completed",
+  "time": {
+   "purification": 0.29672694206237793,
+   "instrument": 52.71930122375488,
+   "test": 40.81934213638306
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ }
+}
