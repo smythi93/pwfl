@@ -70,8 +70,10 @@ def main():
         example = analysis_path / f"{subject}_buggy_tcp.json"
         if example.exists():
             print(f"Removing files for {subject}...")
-            subprocess.run(["rm", analysis_path / f"{subject}_buggy*_tcp.json"])
-            subprocess.run(["rm", result_path / f"{subject}_tcp.json"])
+            subprocess.run(
+                f"rm {analysis_path / f'{subject}_buggy*_tcp.json'}", shell=True
+            )
+            subprocess.run(f"rm {result_path / f'{subject}_tcp.json'}", shell=True)
 
 
 if __name__ == "__main__":
