@@ -37,6 +37,7 @@ from tests4py.tests.utils import get_pytest_skip
 
 from pwfl.analyze import get_event_files, distances
 from pwfl.logger import LOGGER
+from pwfl.utils import fix_sanic
 
 # Import purify_tests from the tcp package
 from tcp.purification import purify_tests, rank_refinement
@@ -219,11 +220,25 @@ def purify(
     else:
         report[identifier]["checkout"] = "cached"
 
-    r = t4p.build(original_checkout)
-    if not r.successful:
-        report[identifier]["build"] = "failed"
-        report[identifier]["error"] = traceback.format_exception(r.raised)
-        return None
+    if project.project_name == "sanic":
+        fix_sanic(
+            project=project,
+            original_checkout=original_checkout,
+        )
+
+    venv_location = (
+        Path.home()
+        / ".t4p"
+        / "projects"
+        / project.project_name
+        / f"venv_{project.bug_id}"
+    )
+    if not venv_location.exists():
+        r = t4p.build(original_checkout)
+        if not r.successful:
+            report[identifier]["build"] = "failed"
+            report[identifier]["error"] = traceback.format_exception(r.raised)
+            return None
     report[identifier]["build"] = "successful"
 
     venv_env = env_on(project)
