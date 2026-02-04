@@ -1,4 +1,5 @@
 import argparse
+import logging
 import sys
 
 from pwfl.analyze import analyze
@@ -13,6 +14,9 @@ from pwfl.check import (
 from pwfl.evaluate import evaluate
 from pwfl.events import get_events
 from pwfl.interpret import interpret
+from pwfl import logger as pwfl_logger
+from sflkit import logger as sflkit_logger
+from tcp import logger as tcp_logger
 from pwfl.prfl import build_pr, evaluate_prfl
 from pwfl.summarize import summarize_all, summarize_prfl_all, summarize_tcp_all
 from pwfl.purification import get_tcp_events, tcp_analyze, tcp_evaluate
@@ -21,6 +25,9 @@ from pwfl.tests import get_results, analyze_file
 
 def get_parser():
     argument_parser = argparse.ArgumentParser(description="Evaluate PWFL")
+    argument_parser.add_argument(
+        "-v", "--verbose", action="store_true", help="increase output verbosity"
+    )
     command = argument_parser.add_subparsers(
         dest="command", required=True, help="sub-command help"
     )
@@ -131,6 +138,12 @@ def get_parser():
 def main(args=None):
     argument_parser = get_parser()
     arguments = argument_parser.parse_args(args or sys.argv[1:])
+    if arguments.verbose:
+        pwfl_logger.debug()
+        sflkit_logger.LOGGER.setLevel(logging.DEBUG)
+        for handler in sflkit_logger.LOGGER.handlers:
+            handler.setLevel(logging.DEBUG)
+        tcp_logger.debug()
     if arguments.command == "check":
         fallback = not any(
             [

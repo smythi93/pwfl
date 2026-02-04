@@ -226,19 +226,11 @@ def purify(
             original_checkout=original_checkout,
         )
 
-    venv_location = (
-        Path.home()
-        / ".t4p"
-        / "projects"
-        / project.project_name
-        / f"venv_{project.bug_id}"
-    )
-    if not venv_location.exists():
-        r = t4p.build(original_checkout)
-        if not r.successful:
-            report[identifier]["build"] = "failed"
-            report[identifier]["error"] = traceback.format_exception(r.raised)
-            return None
+    r = t4p.build(original_checkout)
+    if not r.successful:
+        report[identifier]["build"] = "failed"
+        report[identifier]["error"] = traceback.format_exception(r.raised)
+        return None
     if project.project_name == "sanic":
         fix_sanic_after(
             project=project,
@@ -362,6 +354,11 @@ def build(
         sfl_path,
         mapping=mapping,
     )
+    if project.project_name == "sanic":
+        fix_sanic_after(
+            project=project,
+            original_checkout=sfl_path,
+        )
     report[identifier]["time"]["instrument"] = time.time() - start
     if r.successful:
         report[identifier]["build"] = "successful"
