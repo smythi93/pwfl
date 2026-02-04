@@ -759,8 +759,9 @@ def tcp_get_results_for_type(
             LOGGER.error(f"TCP rank refinement failed: {e}")
             raise e
 
-        if isinstance(analyzer, ProximityAnalyzer):
-            pass
+        LOGGER.info(
+            f"Generated {len(suggestions)} suggestions for {project}{suffix} using {metric.__name__}"
+        )
 
         rank = Rank(
             suggestions, total_number_of_locations=project.loc, metric=eval_metric
