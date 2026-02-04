@@ -650,6 +650,20 @@ def purify_tests(
                         sliced_code = _build_sliced_code(
                             code, relevant_lines, test_name, class_name
                         )
+                        if not _test_code_fails(
+                            sliced_code,
+                            test_file,
+                            test_pattern,
+                            src_dir,
+                            venv_python,
+                            venv,
+                        ):
+                            LOGGER.warning(
+                                f"Sliced code for line {slice_target_line} does not fail, removing other test functions but keeping atomized code"
+                            )
+                            sliced_code = _remove_other_test_functions(
+                                code, test_name, class_name
+                            )
                     else:
                         LOGGER.warning(
                             f"No slice found for line {slice_target_line}, removing other test functions but keeping atomized code"
@@ -754,6 +768,35 @@ def _map_to_assertion_start_line(
         if assertion_start <= failing_line <= assertion_end:
             return assertion_start
     return failing_line
+
+
+def _test_code_fails(
+    code: str,
+    test_file: Path,
+    test_pattern: str,
+    src_dir: Path,
+    venv_python: str,
+    venv: dict,
+) -> bool:
+    import uuid
+
+    tmp_filename = f"tmp_test_{uuid.uuid4().hex[:8]}_{test_file.name}"
+    tmp_path = (test_file.parent / tmp_filename).resolve()
+    tmp_path.write_text(code)
+
+    try:
+        test_selector = f"{tmp_path}::{test_pattern}"
+        result = subprocess.run(
+            [venv_python, "-m", "pytest", test_selector, "-q"],
+            capture_output=True,
+            text=True,
+            cwd=src_dir,
+            env=venv,
+        )
+        return result.returncode != 0
+    finally:
+        tmp_path.unlink(missing_ok=True)
+    return False
 
 
 def _find_failing_assertions(
