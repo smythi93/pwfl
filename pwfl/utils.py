@@ -40,7 +40,13 @@ def fix_sanic(project, original_checkout):
             site_packages_path = os.path.join(
                 lib_path, python_version_folder, "site-packages"
             )
-            sanic_path = os.path.join(__file__, "..", "..", "sanic-libs")
+            # get sanic-libs path relative to __file__ parent
+            sanic_path = os.path.join(
+                os.path.dirname(__file__),
+                "..",
+                "external_libs",
+                "sanic-libs",
+            )
             for file in os.listdir(sanic_path):
                 # copy tree if directory
                 src_path = os.path.join(sanic_path, file)
