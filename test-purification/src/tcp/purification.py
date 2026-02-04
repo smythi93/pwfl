@@ -419,18 +419,11 @@ class StatementFilter(ast.NodeTransformer):
             return None
         return node
 
-    def visit_ClassDef(self, node: ast.ClassDef) -> Optional[ast.ClassDef]:
-        if self._has_relevant_lines(node):
-            node = self.generic_visit(node)
-            if hasattr(node, "body") and (not node.body):
-                node.body = [ast.Pass()]
-            return node
-        return None
-
     def visit(self, node: ast.AST) -> ast.AST:
         node = super().visit(node)
         if hasattr(node, "body") and (not node.body):
             node.body = [ast.Pass()]
+        return node
 
     def visit_Import(self, node: ast.Import) -> ast.Import:
         return node
