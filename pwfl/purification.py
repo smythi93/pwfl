@@ -321,6 +321,8 @@ def update_project_purified(
         if test_id not in purified_mapping:
             continue
         for purified_file, purified_param_suffix in purified_mapping[test_id]:
+            if test_id in relevant_files:
+                relevant_files.remove(test_id)
             rel_path = purified_file.relative_to(purified_tests_dir)
             purified_file_full = test_base_sfl / rel_path
             purified_file_rel = purified_file_full.relative_to(path)
