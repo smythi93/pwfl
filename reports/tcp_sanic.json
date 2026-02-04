@@ -76,5 +76,26 @@
   },
   "test": "successful",
   "check": "successful"
+ },
+ "sanic_4": {
+  "status": "completed",
+  "time": {
+   "purification": 2.685189962387085,
+   "instrument": 9.011191129684448,
+   "test": 0.798961877822876
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_requests.py::test_url_for_without_server_name": [
+    {
+     "file": "test_requests_test_url_for_without_server_name_assertion_2118.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  }
 }
