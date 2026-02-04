@@ -1,42 +1,81 @@
 {
  "sanic_1": {
-  "status": "error",
-  "time": {},
+  "status": "completed",
+  "time": {
+   "purification": 2.7714576721191406,
+   "instrument": 8.633529424667358,
+   "test": 19.36969566345215
+  },
   "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 340, in build\n    subprocess.check_call(\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
-   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-r', PosixPath('tmp/sanic_1/tests4py_requirements.txt')]' returned non-zero exit status 1.\n"
-  ]
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_blueprints.py::test_bp_middleware_order": [
+    {
+     "file": "test_blueprints_test_bp_middleware_order_assertion_304.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "sanic_2": {
   "status": "skipped"
  },
  "sanic_3": {
-  "status": "error",
-  "time": {},
+  "status": "completed",
+  "time": {
+   "purification": 5.563543796539307,
+   "instrument": 8.749483108520508,
+   "test": 14.442595958709717
+  },
   "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 340, in build\n    subprocess.check_call(\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
-   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-r', PosixPath('tmp/sanic_3/tests4py_requirements.txt')]' returned non-zero exit status 1.\n"
-  ]
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_url_for.py::test_routes_with_host": [
+    {
+     "file": "test_url_for_test_routes_with_host_assertion_9.py",
+     "params": null
+    },
+    {
+     "file": "test_url_for_test_routes_with_host_assertion_10.py",
+     "params": null
+    },
+    {
+     "file": "test_url_for_test_routes_with_host_assertion_11.py",
+     "params": null
+    },
+    {
+     "file": "test_url_for_test_routes_with_host_assertion_12.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "sanic_4": {
-  "status": "error",
-  "time": {},
+  "status": "completed",
+  "time": {
+   "purification": 1.9328999519348145,
+   "instrument": 8.730856895446777,
+   "test": 0.7290894985198975
+  },
   "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 340, in build\n    subprocess.check_call(\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
-   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-r', PosixPath('tmp/sanic_4/tests4py_requirements.txt')]' returned non-zero exit status 1.\n"
-  ]
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_requests.py::test_url_for_without_server_name": [
+    {
+     "file": "test_requests_test_url_for_without_server_name_assertion_2118.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "sanic_5": {
   "status": "error",
