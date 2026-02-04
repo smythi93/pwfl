@@ -56,27 +56,6 @@
   "test": "successful",
   "check": "successful"
  },
- "sanic_4": {
-  "status": "completed",
-  "time": {
-   "purification": 1.9328999519348145,
-   "instrument": 8.730856895446777,
-   "test": 0.7290894985198975
-  },
-  "checkout": "cached",
-  "build": "successful",
-  "purification": "successful",
-  "purified_tests": {
-   "tests/test_requests.py::test_url_for_without_server_name": [
-    {
-     "file": "test_requests_test_url_for_without_server_name_assertion_2118.py",
-     "params": null
-    }
-   ]
-  },
-  "test": "successful",
-  "check": "successful"
- },
  "sanic_5": {
   "status": "completed",
   "time": {
