@@ -24,18 +24,18 @@
   "status": "skipped"
  },
  "luigi_3": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.3771030902862549,
-   "instrument": 21.849090099334717,
-   "test": 53.195446491241455
+   "purification": 0.31708717346191406,
+   "instrument": 41.96428942680359,
+   "test": 53.24100089073181
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "luigi_4": {
   "status": "completed",
@@ -404,18 +404,18 @@
   "status": "skipped"
  },
  "luigi_22": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.3447551727294922,
-   "instrument": 18.10391902923584,
-   "test": 1.9084877967834473
+   "purification": 0.22560882568359375,
+   "instrument": 23.42013430595398,
+   "test": 1.8164997100830078
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "luigi_23": {
   "status": "completed",
@@ -492,18 +492,18 @@
   "check": "successful"
  },
  "luigi_27": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.3782963752746582,
-   "instrument": 18.46550488471985,
-   "test": 24.465880393981934
+   "purification": 0.24434876441955566,
+   "instrument": 25.11557650566101,
+   "test": 23.303520441055298
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "luigi_28": {
   "status": "completed",
@@ -581,11 +581,11 @@
   "check": "successful"
  },
  "luigi_31": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 1.5274584293365479,
-   "instrument": 18.306050777435303,
-   "test": 12.69027590751648
+   "purification": 0.9272143840789795,
+   "instrument": 22.903407096862793,
+   "test": 12.237289905548096
   },
   "checkout": "cached",
   "build": "successful",
@@ -599,21 +599,21 @@
    ]
   },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "luigi_32": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.33641791343688965,
-   "instrument": 18.167584657669067,
-   "test": 1.7013845443725586
+   "purification": 0.2060546875,
+   "instrument": 22.672727346420288,
+   "test": 1.6041157245635986
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "luigi_33": {
   "status": "completed",
