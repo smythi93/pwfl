@@ -752,7 +752,9 @@ def tcp_get_results_for_type(
                     LOGGER.info(
                         f"Warning: No purified spectra found in file for {project}{suffix}"
                     )
-
+                    suggestions = analyzer.get_sorted_suggestions(
+                        location, metric, type_
+                    )
         except Exception as e:
             LOGGER.error(f"TCP rank refinement failed: {e}")
             raise e
