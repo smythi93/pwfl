@@ -641,15 +641,30 @@
   "check": "successful"
  },
  "matplotlib_4": {
-  "status": "error",
-  "time": {},
+  "status": "completed",
+  "time": {
+   "purification": 10.122528076171875,
+   "instrument": 20.759454488754272,
+   "test": 10.401049852371216
+  },
   "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/Users/marius/Desktop/work/projects/dw-sfl/.venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
-   "  File \"/Users/marius/.pyenv/versions/3.11.1/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
-   "subprocess.CalledProcessError: Command '['python', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
-  ]
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_vlines_default": [
+    {
+     "file": "test_axes_test_vlines_default_assertion_3822.py",
+     "params": null
+    }
+   ],
+   "lib/matplotlib/tests/test_axes.py::test_hlines_default": [
+    {
+     "file": "test_axes_test_hlines_default_assertion_3869.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  }
 }
