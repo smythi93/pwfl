@@ -935,13 +935,13 @@
   "check": "successful"
  },
  "thefuck_30": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 27.84332299232483,
-   "instrument": 14.455423831939697,
-   "test": 51.46056008338928
+   "purification": 19.947447061538696,
+   "instrument": 10.09424877166748,
+   "test": 36.800185203552246
   },
-  "checkout": "successful",
+  "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {
@@ -1067,7 +1067,7 @@
    ]
   },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "thefuck_31": {
   "status": "completed",
