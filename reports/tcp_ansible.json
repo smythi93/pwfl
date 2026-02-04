@@ -301,7 +301,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "ansible_12": {
   "status": "completed",
@@ -396,7 +396,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "ansible_16": {
   "status": "error",
@@ -417,7 +417,7 @@
    ]
   },
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "ansible_17": {
   "status": "completed",

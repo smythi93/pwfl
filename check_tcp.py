@@ -18,6 +18,7 @@ def main():
                     report_data = json.load(f)
                 if subject.stem in report_data:
                     report_data[subject.stem]["status"] = "error"
+                    report_data[subject.stem]["check"] = "failed"
                     with open(reports_path / f"tcp_{subject_name}.json", "w") as f:
                         json.dump(report_data, f, indent=1)
 
