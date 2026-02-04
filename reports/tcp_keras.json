@@ -194,5 +194,1239 @@
   },
   "test": "successful",
   "check": "successful"
+ },
+ "keras_10": {
+  "status": "completed",
+  "time": {
+   "purification": 28.307798624038696,
+   "instrument": 26.821692943572998,
+   "test": 130.83245992660522
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/engine/test_training.py::test_sample_weights": [
+    {
+     "file": "keras/engine/test_training_test_sample_weights_assertion_1585.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_sample_weights_assertion_1589.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_sample_weights_assertion_1595.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_11": {
+  "status": "completed",
+  "time": {
+   "purification": 9.704160451889038,
+   "instrument": 27.325639009475708,
+   "test": 67.74159860610962
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/integration_tests/test_image_data_tasks.py::test_image_data_generator_training": [
+    {
+     "file": "integration_tests/test_image_data_tasks_test_image_data_generator_training_assertion_75.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_12": {
+  "status": "skipped"
+ },
+ "keras_13": {
+  "status": "completed",
+  "time": {
+   "purification": 301.32237434387207,
+   "instrument": 34.59164524078369,
+   "test": 295.63963651657104
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/engine/test_training.py::test_model_methods": [
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_245.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_248.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_256.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_259.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_267.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_270.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_289.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_304.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_316.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_319.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_454.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_455.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_456.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_467.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_468.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_469.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_480.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_481.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_482.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_516.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_518.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_530.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_542.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_550.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_563.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_571.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_14": {
+  "status": "completed",
+  "time": {
+   "purification": 27.828325986862183,
+   "instrument": 27.503315210342407,
+   "test": 63.64266085624695
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/metrics_test.py::test_sparse_top_k_categorical_accuracy[y_pred1-y_true1]": [
+    {
+     "file": "keras/metrics_test_test_sparse_top_k_categorical_accuracy_y_pred1_y_true1_assertion_111.py",
+     "params": "y_pred1-y_true1"
+    },
+    {
+     "file": "keras/metrics_test_test_sparse_top_k_categorical_accuracy_y_pred1_y_true1_assertion_115.py",
+     "params": "y_pred1-y_true1"
+    },
+    {
+     "file": "keras/metrics_test_test_sparse_top_k_categorical_accuracy_y_pred1_y_true1_assertion_119.py",
+     "params": "y_pred1-y_true1"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_15": {
+  "status": "skipped"
+ },
+ "keras_16": {
+  "status": "completed",
+  "time": {
+   "purification": 41.702903747558594,
+   "instrument": 27.58756709098816,
+   "test": 45.25568342208862
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/test_sequential_model.py::test_sequential": [
+    {
+     "file": "keras/test_sequential_model_test_sequential_assertion_173.py",
+     "params": null
+    }
+   ],
+   "tests/keras/test_sequential_model.py::test_sequential_deferred_build": [
+    {
+     "file": "keras/test_sequential_model_test_sequential_deferred_build_assertion_433.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_17": {
+  "status": "skipped"
+ },
+ "keras_18": {
+  "status": "completed",
+  "time": {
+   "purification": 18.291266679763794,
+   "instrument": 27.99127507209778,
+   "test": 253.07238721847534
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/backend/backend_test.py::TestBackend::test_function_tf_run_options_with_run_metadata": [
+    {
+     "file": "keras/backend/backend_test_test_function_tf_run_options_with_run_metadata_assertion_546.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_function_tf_run_options_with_run_metadata_assertion_547.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_function_tf_run_options_with_run_metadata_assertion_553.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_function_tf_run_options_with_run_metadata_assertion_554.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_19": {
+  "status": "completed",
+  "time": {
+   "purification": 27.21803045272827,
+   "instrument": 26.984381675720215,
+   "test": 348.635986328125
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/layers/recurrent_test.py::test_inconsistent_output_state_size": [
+    {
+     "file": "keras/layers/recurrent_test_test_inconsistent_output_state_size_assertion_951.py",
+     "params": null
+    },
+    {
+     "file": "keras/layers/recurrent_test_test_inconsistent_output_state_size_assertion_953.py",
+     "params": null
+    },
+    {
+     "file": "keras/layers/recurrent_test_test_inconsistent_output_state_size_assertion_956.py",
+     "params": null
+    },
+    {
+     "file": "keras/layers/recurrent_test_test_inconsistent_output_state_size_assertion_963.py",
+     "params": null
+    }
+   ],
+   "tests/keras/layers/recurrent_test.py::test_minimal_rnn_cell_non_layer_multiple_states": [
+    {
+     "file": "keras/layers/recurrent_test_test_minimal_rnn_cell_non_layer_multiple_states_assertion_502.py",
+     "params": null
+    }
+   ],
+   "tests/keras/layers/recurrent_test.py::test_stacked_rnn_compute_output_shape": [
+    {
+     "file": "keras/layers/recurrent_test_test_stacked_rnn_compute_output_shape_assertion_686.py",
+     "params": null
+    },
+    {
+     "file": "keras/layers/recurrent_test_test_stacked_rnn_compute_output_shape_assertion_699.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_20": {
+  "status": "completed",
+  "time": {
+   "purification": 0.25368332862854004,
+   "instrument": 27.493646383285522,
+   "test": 284.14756321907043
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_21": {
+  "status": "completed",
+  "time": {
+   "purification": 4.215115308761597,
+   "instrument": 22.734781980514526,
+   "test": 76.59337568283081
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/test_callbacks.py::test_EarlyStopping_final_weights_when_restoring_model_weights": [
+    {
+     "file": "keras/test_callbacks_test_EarlyStopping_final_weights_when_restoring_model_weights_assertion_405.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_22": {
+  "status": "completed",
+  "time": {
+   "purification": 7.607645034790039,
+   "instrument": 22.61347007751465,
+   "test": 43.86413884162903
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/layers/core_test.py::test_sequential_as_downstream_of_masking_layer": [
+    {
+     "file": "keras/layers/core_test_test_sequential_as_downstream_of_masking_layer_assertion_368.py",
+     "params": null
+    },
+    {
+     "file": "keras/layers/core_test_test_sequential_as_downstream_of_masking_layer_assertion_369.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_23": {
+  "status": "completed",
+  "time": {
+   "purification": 64.7286307811737,
+   "instrument": 23.7201828956604,
+   "test": 83.48136734962463
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/test_sequential_model.py::test_nested_sequential_deferred_build": [
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_436.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_437.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_438.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_439.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_440.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_441.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_446.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_447.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_448.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_449.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_450.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_451.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_455.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_456.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_457.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_460.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_461.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_sequential_model_test_nested_sequential_deferred_build_assertion_462.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_24": {
+  "status": "completed",
+  "time": {
+   "purification": 13.839743852615356,
+   "instrument": 24.378530025482178,
+   "test": 79.40345239639282
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/test_callbacks.py::test_TensorBoard_multi_input_output": [
+    {
+     "file": "keras/test_callbacks_test_TensorBoard_multi_input_output_assertion_691.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_callbacks_test_TensorBoard_multi_input_output_assertion_693.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_25": {
+  "status": "completed",
+  "time": {
+   "purification": 31.327358961105347,
+   "instrument": 24.869701623916626,
+   "test": 38.60513639450073
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/applications/imagenet_utils_test.py::test_preprocess_input": [
+    {
+     "file": "keras/applications/imagenet_utils_test_test_preprocess_input_assertion_14.py",
+     "params": null
+    },
+    {
+     "file": "keras/applications/imagenet_utils_test_test_preprocess_input_assertion_15.py",
+     "params": null
+    },
+    {
+     "file": "keras/applications/imagenet_utils_test_test_preprocess_input_assertion_23.py",
+     "params": null
+    },
+    {
+     "file": "keras/applications/imagenet_utils_test_test_preprocess_input_assertion_24.py",
+     "params": null
+    },
+    {
+     "file": "keras/applications/imagenet_utils_test_test_preprocess_input_assertion_29.py",
+     "params": null
+    },
+    {
+     "file": "keras/applications/imagenet_utils_test_test_preprocess_input_assertion_30.py",
+     "params": null
+    },
+    {
+     "file": "keras/applications/imagenet_utils_test_test_preprocess_input_assertion_38.py",
+     "params": null
+    },
+    {
+     "file": "keras/applications/imagenet_utils_test_test_preprocess_input_assertion_39.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_26": {
+  "status": "completed",
+  "time": {
+   "purification": 59.15114903450012,
+   "instrument": 27.889261960983276,
+   "test": 269.3336696624756
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/backend/backend_test.py::TestBackend::test_rnn_additional_states": [
+    {
+     "file": "keras/backend/backend_test_test_rnn_additional_states_assertion_623.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_rnn_additional_states_assertion_645.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_rnn_additional_states_assertion_668.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_rnn_additional_states_assertion_669.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_rnn_additional_states_assertion_670.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_rnn_additional_states_assertion_671.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_rnn_additional_states_assertion_673.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_rnn_additional_states_assertion_674.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_rnn_additional_states_assertion_675.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_rnn_additional_states_assertion_676.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_27": {
+  "status": "completed",
+  "time": {
+   "purification": 23.36894130706787,
+   "instrument": 20.093587636947632,
+   "test": 68.39194059371948
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/layers/wrappers_test.py::test_Bidirectional_updates": [
+    {
+     "file": "keras/layers/wrappers_test_test_Bidirectional_updates_assertion_571.py",
+     "params": null
+    },
+    {
+     "file": "keras/layers/wrappers_test_test_Bidirectional_updates_assertion_572.py",
+     "params": null
+    }
+   ],
+   "tests/keras/layers/wrappers_test.py::test_Bidirectional_losses": [
+    {
+     "file": "keras/layers/wrappers_test_test_Bidirectional_losses_assertion_582.py",
+     "params": null
+    },
+    {
+     "file": "keras/layers/wrappers_test_test_Bidirectional_losses_assertion_589.py",
+     "params": null
+    },
+    {
+     "file": "keras/layers/wrappers_test_test_Bidirectional_losses_assertion_590.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_28": {
+  "status": "completed",
+  "time": {
+   "purification": 54.71139049530029,
+   "instrument": 21.055575609207153,
+   "test": 55.39668893814087
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/preprocessing/sequence_test.py::test_TimeSeriesGenerator_doesnt_miss_any_sample": [
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeSeriesGenerator_doesnt_miss_any_sample_assertion_192.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeSeriesGenerator_doesnt_miss_any_sample_assertion_199.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeSeriesGenerator_doesnt_miss_any_sample_assertion_237.py",
+     "params": null
+    }
+   ],
+   "tests/keras/preprocessing/sequence_test.py::test_TimeseriesGenerator": [
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_108.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_109.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_112.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_114.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_117.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_123.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_124.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_127.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_135.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_141.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_146.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_147.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_150.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_157.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_158.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_161.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_170.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_171.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_173.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/sequence_test_test_TimeseriesGenerator_assertion_179.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_29": {
+  "status": "completed",
+  "time": {
+   "purification": 29.167856216430664,
+   "instrument": 20.324630975723267,
+   "test": 44.77732539176941
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/metrics_test.py::test_stateful_metrics[dict]": [
+    {
+     "file": "keras/metrics_test_test_stateful_metrics_dict_assertion_188.py",
+     "params": "dict"
+    },
+    {
+     "file": "keras/metrics_test_test_stateful_metrics_dict_assertion_193.py",
+     "params": "dict"
+    },
+    {
+     "file": "keras/metrics_test_test_stateful_metrics_dict_assertion_194.py",
+     "params": "dict"
+    },
+    {
+     "file": "keras/metrics_test_test_stateful_metrics_dict_assertion_205.py",
+     "params": "dict"
+    },
+    {
+     "file": "keras/metrics_test_test_stateful_metrics_dict_assertion_210.py",
+     "params": "dict"
+    },
+    {
+     "file": "keras/metrics_test_test_stateful_metrics_dict_assertion_211.py",
+     "params": "dict"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_30": {
+  "status": "completed",
+  "time": {
+   "purification": 14.268218517303467,
+   "instrument": 22.68242049217224,
+   "test": 54.95091795921326
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/engine/test_training.py::test_model_with_external_loss": [
+    {
+     "file": "keras/engine/test_training_test_model_with_external_loss_assertion_904.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_with_external_loss_assertion_946.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_with_external_loss_assertion_947.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_with_external_loss_assertion_948.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_31": {
+  "status": "completed",
+  "time": {
+   "purification": 7.570160865783691,
+   "instrument": 22.767674207687378,
+   "test": 162.89756798744202
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/backend/backend_test.py::TestBackend::test_ctc": [
+    {
+     "file": "keras/backend/backend_test_test_ctc_assertion_1476.py",
+     "params": null
+    },
+    {
+     "file": "keras/backend/backend_test_test_ctc_assertion_1502.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_32": {
+  "status": "completed",
+  "time": {
+   "purification": 13.982377529144287,
+   "instrument": 22.20913338661194,
+   "test": 63.832430839538574
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/test_callbacks.py::test_ReduceLROnPlateau_patience": [
+    {
+     "file": "keras/test_callbacks_test_ReduceLROnPlateau_patience_assertion_371.py",
+     "params": null
+    }
+   ],
+   "tests/keras/test_callbacks.py::test_ReduceLROnPlateau_backwards_compatibility": [
+    {
+     "file": "keras/test_callbacks_test_ReduceLROnPlateau_backwards_compatibility_assertion_381.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_callbacks_test_ReduceLROnPlateau_backwards_compatibility_assertion_382.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_callbacks_test_ReduceLROnPlateau_backwards_compatibility_assertion_383.py",
+     "params": null
+    },
+    {
+     "file": "keras/test_callbacks_test_ReduceLROnPlateau_backwards_compatibility_assertion_384.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_33": {
+  "status": "completed",
+  "time": {
+   "purification": 5.51028037071228,
+   "instrument": 21.805869817733765,
+   "test": 23.190317630767822
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/preprocessing/text_test.py::test_text_to_word_sequence_multichar_split": [
+    {
+     "file": "keras/preprocessing/text_test_test_text_to_word_sequence_multichar_split_assertion_78.py",
+     "params": null
+    }
+   ],
+   "tests/keras/preprocessing/text_test.py::test_text_to_word_sequence_unicode_multichar_split": [
+    {
+     "file": "keras/preprocessing/text_test_test_text_to_word_sequence_unicode_multichar_split_assertion_88.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_34": {
+  "status": "completed",
+  "time": {
+   "purification": 0.22294092178344727,
+   "instrument": 24.0827534198761,
+   "test": 21.918925046920776
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_35": {
+  "status": "completed",
+  "time": {
+   "purification": 21.736997842788696,
+   "instrument": 23.142309427261353,
+   "test": 48.69648504257202
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/preprocessing/image_test.py::TestImage::test_directory_iterator": [
+    {
+     "file": "keras/preprocessing/image_test_test_directory_iterator_assertion_213.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/image_test_test_directory_iterator_assertion_214.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/image_test_test_directory_iterator_assertion_215.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/image_test_test_directory_iterator_assertion_230.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/image_test_test_directory_iterator_assertion_232.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/image_test_test_directory_iterator_assertion_233.py",
+     "params": null
+    },
+    {
+     "file": "keras/preprocessing/image_test_test_directory_iterator_assertion_259.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_36": {
+  "status": "completed",
+  "time": {
+   "purification": 0.2287130355834961,
+   "instrument": 21.240946531295776,
+   "test": 144.42536187171936
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_37": {
+  "status": "completed",
+  "time": {
+   "purification": 6.745772838592529,
+   "instrument": 21.8969087600708,
+   "test": 54.20965600013733
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/layers/wrappers_test.py::test_Bidirectional_state_reuse": [
+    {
+     "file": "keras/layers/wrappers_test_test_Bidirectional_state_reuse_assertion_340.py",
+     "params": null
+    },
+    {
+     "file": "keras/layers/wrappers_test_test_Bidirectional_state_reuse_assertion_341.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_38": {
+  "status": "completed",
+  "time": {
+   "purification": 15.073688268661499,
+   "instrument": 28.257294416427612,
+   "test": 351.5298843383789
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/layers/recurrent_test.py::test_minimal_rnn_cell_layer": [
+    {
+     "file": "keras/layers/recurrent_test_test_minimal_rnn_cell_layer_assertion_521.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_39": {
+  "status": "completed",
+  "time": {
+   "purification": 0.42942309379577637,
+   "instrument": 29.10562777519226,
+   "test": 77.08509230613708
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_40": {
+  "status": "completed",
+  "time": {
+   "purification": 5.1419517993927,
+   "instrument": 29.154540538787842,
+   "test": 322.7065198421478
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/layers/recurrent_test.py::test_stacked_rnn_compute_output_shape": [
+    {
+     "file": "keras/layers/recurrent_test_test_stacked_rnn_compute_output_shape_assertion_610.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_41": {
+  "status": "completed",
+  "time": {
+   "purification": 0.4427926540374756,
+   "instrument": 29.28153967857361,
+   "test": 45.42179226875305
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_42": {
+  "status": "completed",
+  "time": {
+   "purification": 107.42523241043091,
+   "instrument": 31.577234745025635,
+   "test": 153.73718762397766
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/engine/test_training.py::test_model_methods": [
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_207.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_210.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_218.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_221.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_229.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_232.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_251.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_263.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_275.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_278.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_392.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_393.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_401.py",
+     "params": null
+    },
+    {
+     "file": "keras/engine/test_training_test_model_methods_assertion_402.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_43": {
+  "status": "completed",
+  "time": {
+   "purification": 12.538142681121826,
+   "instrument": 28.30005717277527,
+   "test": 72.18726372718811
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/utils/np_utils_test.py::test_to_categorical": [
+    {
+     "file": "keras/utils/np_utils_test_test_to_categorical_assertion_21.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_44": {
+  "status": "completed",
+  "time": {
+   "purification": 83.28500175476074,
+   "instrument": 28.890005826950073,
+   "test": 325.1535110473633
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/keras/layers/recurrent_test.py::test_trainability[SimpleRNN]": [
+    {
+     "file": "keras/layers/recurrent_test_test_trainability_SimpleRNN_assertion_224.py",
+     "params": "SimpleRNN"
+    },
+    {
+     "file": "keras/layers/recurrent_test_test_trainability_SimpleRNN_assertion_225.py",
+     "params": "SimpleRNN"
+    }
+   ],
+   "tests/keras/layers/recurrent_test.py::test_trainability[GRU]": [
+    {
+     "file": "keras/layers/recurrent_test_test_trainability_GRU_assertion_224.py",
+     "params": "GRU"
+    },
+    {
+     "file": "keras/layers/recurrent_test_test_trainability_GRU_assertion_225.py",
+     "params": "GRU"
+    }
+   ],
+   "tests/keras/layers/recurrent_test.py::test_trainability[LSTM]": [
+    {
+     "file": "keras/layers/recurrent_test_test_trainability_LSTM_assertion_224.py",
+     "params": "LSTM"
+    },
+    {
+     "file": "keras/layers/recurrent_test_test_trainability_LSTM_assertion_225.py",
+     "params": "LSTM"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "keras_45": {
+  "status": "completed",
+  "time": {
+   "purification": 0.43743228912353516,
+   "instrument": 28.052932024002075,
+   "test": 275.8554675579071
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
  }
 }
