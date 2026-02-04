@@ -42,7 +42,7 @@
   "check": "successful"
  },
  "spacy_3": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.2823190689086914,
    "instrument": 14.272706270217896,
@@ -53,10 +53,10 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "spacy_4": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.27102017402648926,
    "instrument": 24.146610498428345,
@@ -67,10 +67,10 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "spacy_5": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.26886510848999023,
    "instrument": 13.655462503433228,
@@ -81,7 +81,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "spacy_6": {
   "status": "skipped"
@@ -158,7 +158,7 @@
   "check": "successful"
  },
  "spacy_10": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.29291415214538574,
    "instrument": 53.035717248916626,
@@ -169,6 +169,6 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  }
 }

@@ -306,7 +306,8 @@
    "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
    "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
-  ]
+  ],
+  "check": "failed"
  },
  "ansible_12": {
   "status": "completed",
@@ -406,7 +407,8 @@
    "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
    "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
-  ]
+  ],
+  "check": "failed"
  },
  "ansible_16": {
   "status": "error",
@@ -432,7 +434,8 @@
    "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 363, in build\n    subprocess.check_call(\n",
    "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
    "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-e', '.']' returned non-zero exit status 1.\n"
-  ]
+  ],
+  "check": "failed"
  },
  "ansible_17": {
   "status": "completed",

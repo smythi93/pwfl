@@ -95,7 +95,7 @@
   "check": "successful"
  },
  "keras_4": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.2504618167877197,
    "instrument": 48.51789975166321,
@@ -106,7 +106,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "keras_5": {
   "status": "completed",
@@ -514,7 +514,7 @@
   "check": "successful"
  },
  "keras_20": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.31745004653930664,
    "instrument": 40.330424547195435,
@@ -525,7 +525,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "keras_21": {
   "status": "completed",
@@ -1109,7 +1109,7 @@
   "check": "successful"
  },
  "keras_34": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.2710909843444824,
    "instrument": 28.546509981155396,
@@ -1120,7 +1120,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "keras_35": {
   "status": "completed",
@@ -1168,7 +1168,7 @@
   "check": "successful"
  },
  "keras_36": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.26502203941345215,
    "instrument": 28.14754009246826,
@@ -1179,7 +1179,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "keras_37": {
   "status": "completed",
@@ -1228,7 +1228,7 @@
   "check": "successful"
  },
  "keras_39": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.4964480400085449,
    "instrument": 38.87379837036133,
@@ -1239,7 +1239,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "keras_40": {
   "status": "completed",
@@ -1263,7 +1263,7 @@
   "check": "successful"
  },
  "keras_41": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.5239670276641846,
    "instrument": 39.06487822532654,
@@ -1274,7 +1274,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "keras_42": {
   "status": "completed",
@@ -1416,7 +1416,7 @@
   "check": "successful"
  },
  "keras_45": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.4830775260925293,
    "instrument": 41.61250376701355,
@@ -1427,6 +1427,6 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  }
 }
