@@ -78,15 +78,24 @@
   "check": "successful"
  },
  "sanic_5": {
-  "status": "error",
-  "time": {},
+  "status": "completed",
+  "time": {
+   "purification": 1.597649335861206,
+   "instrument": 12.546140670776367,
+   "test": 3.6914119720458984
+  },
   "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 340, in build\n    subprocess.check_call(\n",
-   "  File \"/home/smytzek/.pyenv/versions/3.11.4/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\n",
-   "subprocess.CalledProcessError: Command '['python3', '-m', 'pip', 'install', '-r', PosixPath('tmp/sanic_5/tests4py_requirements.txt')]' returned non-zero exit status 1.\n"
-  ]
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_logging.py::test_logging_modified_root_logger_config": [
+    {
+     "file": "test_logging_test_logging_modified_root_logger_config_assertion_115.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  }
 }
