@@ -44,7 +44,6 @@ def fix_sanic(project, original_checkout):
             sanic_path = os.path.join(
                 os.path.dirname(__file__),
                 "..",
-                "external_libs",
                 "sanic-libs",
             )
             for file in os.listdir(sanic_path):
