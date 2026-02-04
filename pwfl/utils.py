@@ -25,6 +25,11 @@ def fix_sanic(project, original_checkout):
                         '\n    "http3==0.6.*",\n    "requests==2.*",',
                     )
                 )
+
+
+def fix_sanic_after(project, original_checkout):
+    if project.project_name == "sanic":
+        if project.bug_id == 4:
             # copy sanic lib files to tests4py_venv/lib
             import shutil
 
@@ -34,7 +39,7 @@ def fix_sanic(project, original_checkout):
             for folder in os.listdir(lib_path):
                 if folder.startswith("python"):
                     python_version_folder = folder
-                    break
+                break
             if not python_version_folder:
                 return
             site_packages_path = os.path.join(

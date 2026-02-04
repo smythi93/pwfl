@@ -23,7 +23,6 @@ from sflkit.evaluation import Rank, Scenario
 from sflkit.language.language import Language
 from sflkit.runners import PytestRunner
 from sflkit.weights import ProximityAnalyzer
-from sflkitlib.events import EventType
 from tests4py.environment import env_on, activate_venv
 from tests4py.projects import TestStatus, Project
 from tests4py.sfl import (
@@ -38,7 +37,7 @@ from tests4py.tests.utils import get_pytest_skip
 
 from pwfl.analyze import get_event_files, distances
 from pwfl.logger import LOGGER
-from pwfl.utils import fix_sanic
+from pwfl.utils import fix_sanic, fix_sanic_after
 
 # Import purify_tests from the tcp package
 from tcp.purification import purify_tests, rank_refinement
@@ -240,6 +239,11 @@ def purify(
             report[identifier]["build"] = "failed"
             report[identifier]["error"] = traceback.format_exception(r.raised)
             return None
+    if project.project_name == "sanic":
+        fix_sanic_after(
+            project=project,
+            original_checkout=original_checkout,
+        )
     report[identifier]["build"] = "successful"
 
     venv_env = env_on(project)

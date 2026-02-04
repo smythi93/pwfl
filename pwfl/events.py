@@ -18,7 +18,7 @@ from tests4py.sfl import SFLInstrumentReport, instrument, get_events_path
 from tests4py.sfl.constants import DEFAULT_EXCLUDES
 
 from pwfl.logger import LOGGER
-from pwfl.utils import fix_sanic
+from pwfl.utils import fix_sanic, fix_sanic_after
 
 SFLKIT_LIB_ABS_PATH = (Path(__file__).parent.parent / "sflkit-lib").absolute()
 
@@ -185,6 +185,11 @@ def get_events_project(
         if not r.successful:
             report[identifier]["error"] = traceback.format_exception(r.raised)
             return events_base
+    if project.project_name == "sanic":
+        fix_sanic_after(
+            project=project,
+            original_checkout=original_checkout,
+        )
 
     mapping = os.path.join("mappings", f"{project}{suffix}.json")
     sfl_path = os.path.join("tmp", f"sfl_{identifier}")

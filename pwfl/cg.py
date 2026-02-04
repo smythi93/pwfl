@@ -29,7 +29,7 @@ from tests4py.sfl.constants import DEFAULT_EXCLUDES
 from pwfl.analyze import get_event_files
 from pwfl.events import sflkit_env
 from pwfl.logger import LOGGER
-from pwfl.utils import fix_sanic
+from pwfl.utils import fix_sanic, fix_sanic_after
 
 Function = Tuple[str, int, str, int]
 Line = Tuple[str, int]
@@ -339,6 +339,11 @@ def get_events(
     mapping = os.path.join("mappings", f"{project}_cg.json")
     sfl_path = os.path.join("tmp", f"sfl_{identifier}_cg")
     r = sflkit_instrument(sfl_path, project, mapping=mapping)
+    if project.project_name == "sanic":
+        fix_sanic_after(
+            project=project,
+            original_checkout=original_checkout,
+        )
     if r.successful:
         report[identifier][f"build"] = "successful"
     else:
