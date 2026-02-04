@@ -402,6 +402,7 @@ class PytestRunner(Runner):
         )
         LOGGER.debug(f"pytest collection finished with {process.returncode}")
         if process.returncode != 0:
+            LOGGER.debug(f"Command: python3 -m pytest --collect-only {' '.join(c)}")
             LOGGER.debug(process.stderr.decode("utf8"))
             LOGGER.debug(process.stdout.decode("utf8"))
         tests = PytestStructure.parse_tests(process.stdout.decode("utf8"))
