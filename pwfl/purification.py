@@ -293,6 +293,7 @@ def update_project_purified(
     shutil.copytree(
         Path("tmp", f"{identifier}"),
         path,
+        symlinks=True,
         ignore_dangling_symlinks=True,
     )
     if project.project_name in ("calculator", "markup", "thefuck"):
