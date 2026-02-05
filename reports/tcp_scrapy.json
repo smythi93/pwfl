@@ -446,32 +446,39 @@
   "check": "successful"
  },
  "scrapy_21": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.9506266117095947,
-   "instrument": 16.440826892852783,
-   "test": 9.981107711791992
+   "purification": 1.3873112201690674,
+   "instrument": 12.774585962295532,
+   "test": 11.139582633972168
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "tests/test_downloadermiddleware_robotstxt.py::RobotsTxtMiddlewareTest::test_robotstxt_immediate_error": [
+    {
+     "file": "test_downloadermiddleware_robotstxt.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "scrapy_22": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.53035569190979,
-   "instrument": 18.641427993774414,
-   "test": 9.762810707092285
+   "purification": 0.4123098850250244,
+   "instrument": 12.4993896484375,
+   "test": 9.440154552459717
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "scrapy_23": {
   "status": "completed",
@@ -572,18 +579,25 @@
   "status": "skipped"
  },
  "scrapy_29": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.5247933864593506,
-   "instrument": 16.31650137901306,
-   "test": 5.3815741539001465
+   "purification": 3.2237119674682617,
+   "instrument": 12.88072943687439,
+   "test": 5.380755186080933
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "tests/test_utils_request.py::UtilsRequestTest::test_request_httprepr_for_non_http_request": [
+    {
+     "file": "test_utils_request_test_request_httprepr_for_non_http_request_assertion_76.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "scrapy_30": {
   "status": "completed",
