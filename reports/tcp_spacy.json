@@ -42,7 +42,7 @@
   "check": "successful"
  },
  "spacy_3": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.4035985469818115,
    "instrument": 28.412948846817017,
@@ -53,7 +53,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "spacy_4": {
   "status": "completed",
