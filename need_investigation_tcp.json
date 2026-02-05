@@ -1,15 +1,6 @@
 {
  "errors": [
   [
-   "ansible_11",
-   [
-    "Traceback (most recent call last):\n",
-    "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-    "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-    "ValueError: No Tests4Py project found in tmp/ansible_11, no tests4py_info\n"
-   ]
-  ],
-  [
    "ansible_12",
    [
     "Traceback (most recent call last):\n",
