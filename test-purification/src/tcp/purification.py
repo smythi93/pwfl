@@ -833,7 +833,7 @@ def _find_failing_line_for_test_without_assertions(
     junit_xml_path = (test_file.parent / junit_xml_filename).resolve()
 
     try:
-        test_selector = f"{test_file}::{test_pattern}"
+        test_selector = f"{test_file.resolve()}::{test_pattern}"
         result = subprocess.run(
             [
                 venv_python,
