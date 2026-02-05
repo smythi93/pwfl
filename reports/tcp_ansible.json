@@ -356,77 +356,133 @@
   "check": "successful"
  },
  "ansible_13": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_13, no tests4py_info\n"
-  ]
+  "status": "completed",
+  "time": {
+   "purification": 27.63677978515625,
+   "instrument": 20.190125942230225,
+   "test": 171.07287168502808
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/cli/test_galaxy.py::test_collection_install_with_url": [
+    {
+     "file": "cli/test_galaxy_test_collection_install_with_url_assertion_904.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_14": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_14, no tests4py_info\n"
-  ]
+  "status": "completed",
+  "time": {
+   "purification": 10.304794788360596,
+   "instrument": 19.390052795410156,
+   "test": 58.65792798995972
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/galaxy/test_api.py::test_get_role_versions_pagination[responses1]": [
+    {
+     "file": "galaxy/test_api_test_get_role_versions_pagination_responses1_assertion_909.py",
+     "params": "responses1"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_15": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_15, no tests4py_info\n"
-  ],
-  "check": "failed"
+  "status": "completed",
+  "time": {
+   "purification": 3.299464702606201,
+   "instrument": 862.9665596485138,
+   "test": 9.647361516952515
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/modules/network/eos/test_eos_eapi.py::TestEosEapiModule::test_eos_eapi_vrf": [
+    {
+     "file": "modules/network/eos/test_eos_eapi_test_eos_eapi_vrf_assertion_81.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_16": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_16, no tests4py_info\n"
-  ],
-  "check": "failed"
+  "status": "completed",
+  "time": {
+   "purification": 3.6804330348968506,
+   "instrument": 36.17378091812134,
+   "test": 8.857483625411987
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/module_utils/facts/hardware/test_linux_get_cpu_info.py::test_get_cpu_info_missing_arch": [
+    {
+     "file": "module_utils/facts/hardware/test_linux_get_cpu_info_test_get_cpu_info_missing_arch_assertion_36.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_17": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_17, no tests4py_info\n"
-  ]
+  "status": "completed",
+  "time": {
+   "purification": 8.160930395126343,
+   "instrument": 36.74186849594116,
+   "test": 53.82944202423096
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/module_utils/facts/test_facts.py::TestFactsLinuxHardwareGetMountFacts::test_get_mount_facts": [
+    {
+     "file": "module_utils/facts/test_facts_test_get_mount_facts_assertion_564.py",
+     "params": null
+    },
+    {
+     "file": "module_utils/facts/test_facts_test_get_mount_facts_assertion_565.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_18": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_18, no tests4py_info\n"
-  ]
+  "status": "completed",
+  "time": {
+   "purification": 3.609602928161621,
+   "instrument": 15.612695693969727,
+   "test": 1.7208855152130127
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/module_utils/test_distribution_version.py::test_distribution_version[stdin29-Kali 2020.2]": [
+    {
+     "file": "module_utils/test_distribution_version_test_distribution_version_stdin29_Kali_2020_2_assertion_1965.py",
+     "params": "stdin29-Kali 2020.2"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  }
 }
