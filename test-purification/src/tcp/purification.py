@@ -30,14 +30,19 @@ class AtomizedTest:
     def __init__(
         self,
         code: str,
-        assertion_line: int,
+        assertion_line: Optional[int],
         test_name: str,
         class_name: Optional[str] = None,
         failing_line: Optional[int] = None,
     ):
         self.code = code
         self.assertion_line = assertion_line
-        self.failing_line = failing_line if failing_line is not None else assertion_line
+        if failing_line is not None:
+            self.failing_line = failing_line
+        elif assertion_line is not None:
+            self.failing_line = assertion_line
+        else:
+            self.failing_line = None
         self.test_name = test_name
         self.class_name = class_name
 
@@ -611,15 +616,22 @@ def purify_tests(
         assertion_finder = AssertionFinder()
         assertion_finder.visit(test_func)
         if not assertion_finder.assertions:
-            continue
-        atomized_tests = _find_failing_assertions(
-            test_file,
-            assertion_finder.assertions,
-            test_pattern,
-            src_dir,
-            venv_python,
-            venv,
-        )
+            atomized_tests = _find_failing_line_for_test_without_assertions(
+                test_file,
+                test_pattern,
+                src_dir,
+                venv_python,
+                venv,
+            )
+        else:
+            atomized_tests = _find_failing_assertions(
+                test_file,
+                assertion_finder.assertions,
+                test_pattern,
+                src_dir,
+                venv_python,
+                venv,
+            )
         purified_files = []
         for assertion_line, atomized_test in atomized_tests.items():
             code = atomized_test.code
@@ -796,7 +808,76 @@ def _test_code_fails(
         return result.returncode != 0
     finally:
         tmp_path.unlink(missing_ok=True)
-    return False
+
+
+def _find_failing_line_for_test_without_assertions(
+    test_file: Path,
+    test_pattern: str,
+    src_dir: Path,
+    venv_python: str = "python",
+    venv: Optional[dict] = None,
+) -> dict[int, AtomizedTest]:
+    """
+    Find the failing line for a test that has no assertions.
+    Returns a dict with a single entry using a dummy key (0) since there's no assertion line.
+    """
+    atomized_tests = {}
+    venv = venv or os.environ.copy()
+
+    with open(test_file) as f:
+        source = f.read()
+
+    import uuid
+
+    junit_xml_filename = f"tmp_report_{uuid.uuid4().hex[:8]}.xml"
+    junit_xml_path = (test_file.parent / junit_xml_filename).resolve()
+
+    try:
+        test_selector = f"{test_file}::{test_pattern}"
+        result = subprocess.run(
+            [
+                venv_python,
+                "-m",
+                "pytest",
+                test_selector,
+                "-q",
+                f"--junitxml={junit_xml_path}",
+            ],
+            capture_output=True,
+            text=True,
+            cwd=src_dir,
+            env=venv,
+        )
+
+        if result.returncode != 0:
+            # Test failed, extract the failing line
+            actual_failing_line = _extract_failing_line_from_junit_xml(
+                junit_xml_path, test_file, []
+            )
+
+            if actual_failing_line:
+                if "::" in test_pattern:
+                    parts = test_pattern.split("::")
+                    if len(parts) == 2:
+                        class_name, test_name = (parts[0], parts[1])
+                    else:
+                        class_name, test_name = (None, parts[0])
+                else:
+                    class_name, test_name = (None, test_pattern)
+
+                atomized_test = AtomizedTest(
+                    code=source,
+                    assertion_line=None,  # No assertion in this test
+                    test_name=test_name,
+                    class_name=class_name,
+                    failing_line=actual_failing_line,
+                )
+                # Use the failing line as the key since there's no assertion line
+                atomized_tests[actual_failing_line] = atomized_test
+    finally:
+        junit_xml_path.unlink(missing_ok=True)
+
+    return atomized_tests
 
 
 def _find_failing_assertions(
