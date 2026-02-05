@@ -42,18 +42,18 @@
   "check": "successful"
  },
  "tornado_3": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.2445530891418457,
-   "instrument": 7.520078420639038,
-   "test": 13.260965585708618
+   "purification": 0.19081449508666992,
+   "instrument": 6.6986024379730225,
+   "test": 12.300745487213135
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "tornado_4": {
   "status": "completed",
@@ -356,17 +356,17 @@
   "check": "successful"
  },
  "tornado_16": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.27994704246520996,
-   "instrument": 7.318443775177002,
-   "test": 1.5560083389282227
+   "purification": 0.20824599266052246,
+   "instrument": 6.705052375793457,
+   "test": 1.5101659297943115
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  }
 }
