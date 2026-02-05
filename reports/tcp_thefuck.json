@@ -1,0 +1,1118 @@
+{
+ "thefuck_1": {
+  "status": "completed",
+  "time": {
+   "purification": 1.8971574306488037,
+   "instrument": 10.476127862930298,
+   "test": 1.7964065074920654
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_pip_unknown_command.py::test_get_new_command[pip un+install thefuck-un+install-uninstall-pip uninstall thefuck]": [
+    {
+     "file": "rules/test_pip_unknown_command_test_get_new_command_pip_un_install_thefuck_un_install_uninstall_pip_uninstall_thefuck_assertion_36.py",
+     "params": "pip un+install thefuck-un+install-uninstall-pip uninstall thefuck"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_2": {
+  "status": "completed",
+  "time": {
+   "purification": 2.137702465057373,
+   "instrument": 10.342150688171387,
+   "test": 15.01167368888855
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_utils.py::test_get_all_executables_pathsep[C:\\\\\\\\foo;C:\\\\\\\\bar;C:\\\\\\\\baz;C:\\\\\\\\foo\\\\\\\\bar-;]": [
+    {
+     "file": "test_utils_test_get_all_executables_pathsep_C_____foo_C_____bar_C_____baz_C_____foo____bar___assertion_94.py",
+     "params": "C:\\\\\\\\foo;C:\\\\\\\\bar;C:\\\\\\\\baz;C:\\\\\\\\foo\\\\\\\\bar-;"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_3": {
+  "status": "completed",
+  "time": {
+   "purification": 3.4290084838867188,
+   "instrument": 9.96878170967102,
+   "test": 16.534977912902832
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/shells/test_fish.py::TestFish::test_info": [
+    {
+     "file": "shells/test_fish_test_info_assertion_118.py",
+     "params": null
+    },
+    {
+     "file": "shells/test_fish_test_info_assertion_119.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_4": {
+  "status": "completed",
+  "time": {
+   "purification": 25.78715467453003,
+   "instrument": 10.391319990158081,
+   "test": 16.437274932861328
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/shells/test_fish.py::TestFish::test_get_aliases": [
+    {
+     "file": "shells/test_fish_test_get_aliases_assertion_62.py",
+     "params": null
+    },
+    {
+     "file": "shells/test_fish_test_get_aliases_assertion_75.py",
+     "params": null
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[fuck-fish -ic \"fuck\"]": [
+    {
+     "file": "shells/test_fish_test_from_shell_fuck_fish__ic__fuck__assertion_50.py",
+     "params": "fuck-fish -ic \"fuck\""
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[find-find]": [
+    {
+     "file": "shells/test_fish_test_from_shell_find_find_assertion_50.py",
+     "params": "find-find"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[funced-fish -ic \"funced\"]": [
+    {
+     "file": "shells/test_fish_test_from_shell_funced_fish__ic__funced__assertion_50.py",
+     "params": "funced-fish -ic \"funced\""
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[cd-cd]": [
+    {
+     "file": "shells/test_fish_test_from_shell_cd_cd_assertion_50.py",
+     "params": "cd-cd"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[grep-grep]": [
+    {
+     "file": "shells/test_fish_test_from_shell_grep_grep_assertion_50.py",
+     "params": "grep-grep"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[man-man]": [
+    {
+     "file": "shells/test_fish_test_from_shell_man_man_assertion_50.py",
+     "params": "man-man"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[pwd-pwd]": [
+    {
+     "file": "shells/test_fish_test_from_shell_pwd_pwd_assertion_50.py",
+     "params": "pwd-pwd"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[vim-vim]": [
+    {
+     "file": "shells/test_fish_test_from_shell_vim_vim_assertion_50.py",
+     "params": "vim-vim"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[ls-ls]": [
+    {
+     "file": "shells/test_fish_test_from_shell_ls_ls_assertion_50.py",
+     "params": "ls-ls"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[g-git]": [
+    {
+     "file": "shells/test_fish_test_from_shell_g_git_assertion_50.py",
+     "params": "g-git"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[math \"2 + 2\"-fish -ic \"math \\\\\"2 + 2\\\\\"\"]": [
+    {
+     "file": "shells/test_fish_test_from_shell_math__2___2__fish__ic__math____2___2_____assertion_50.py",
+     "params": "math \"2 + 2\"-fish -ic \"math \\\\\"2 + 2\\\\\"\""
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[open-open]": [
+    {
+     "file": "shells/test_fish_test_from_shell_open_open_assertion_50.py",
+     "params": "open-open"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[awk-awk]": [
+    {
+     "file": "shells/test_fish_test_from_shell_awk_awk_assertion_50.py",
+     "params": "awk-awk"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_from_shell[ll-fish -ic \"ll\"]": [
+    {
+     "file": "shells/test_fish_test_from_shell_ll_fish__ic__ll__assertion_50.py",
+     "params": "ll-fish -ic \"ll\""
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_5": {
+  "status": "completed",
+  "time": {
+   "purification": 1.8553402423858643,
+   "instrument": 10.001024007797241,
+   "test": 7.48000168800354
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_git_push.py::test_match_bitbucket": [
+    {
+     "file": "rules/test_git_push_test_match_bitbucket_assertion_39.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_6": {
+  "status": "completed",
+  "time": {
+   "purification": 1.8927600383758545,
+   "instrument": 10.101467609405518,
+   "test": 3.8666977882385254
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_git_branch_exists.py::test_get_new_command[git checkout -b \"let's-push-this\"-let's-push-this-let\\\\'s-push-this]": [
+    {
+     "file": "rules/test_git_branch_exists_test_get_new_command_git_checkout__b__let_s_push_this__let_s_push_this_let___s_push_this_assertion_41.py",
+     "params": "git checkout -b \"let's-push-this\"-let's-push-this-let\\\\'s-push-this"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_7": {
+  "status": "completed",
+  "time": {
+   "purification": 1.8600873947143555,
+   "instrument": 10.451736211776733,
+   "test": 3.0541610717773438
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_php_s.py::test_match[command1]": [
+    {
+     "file": "rules/test_php_s_test_match_command1_assertion_11.py",
+     "params": "command1"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_8": {
+  "status": "completed",
+  "time": {
+   "purification": 5.00727105140686,
+   "instrument": 10.088067531585693,
+   "test": 4.066608428955078
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_dnf_no_such_command.py::test_get_new_command[dnf isntall vim-No such command: isntall. Please use /usr/bin/dnf --help\\nIt could be a DNF plugin command, try: \"dnf install 'dnf-command(isntall)'\"\\n-dnf install vim]": [
+    {
+     "file": "rules/test_dnf_no_such_command_test_get_new_command_dnf_isntall_vim_No_such_command__isntall__Please_use__usr_bin_dnf___help_nIt_could_be_a_DNF_plugin_command__try___dnf_install__dnf_command_isntall____n_dnf_install_vim_assertion_190.py",
+     "params": "dnf isntall vim-No such command: isntall. Please use /usr/bin/dnf --help\\nIt could be a DNF plugin command, try: \"dnf install 'dnf-command(isntall)'\"\\n-dnf install vim"
+    }
+   ],
+   "tests/rules/test_dnf_no_such_command.py::test_get_new_command[dnf saerch vim-No such command: saerch. Please use /usr/bin/dnf --help\\nIt could be a DNF plugin command, try: \"dnf install 'dnf-command(saerch)'\"\\n-dnf search vim]": [
+    {
+     "file": "rules/test_dnf_no_such_command_test_get_new_command_dnf_saerch_vim_No_such_command__saerch__Please_use__usr_bin_dnf___help_nIt_could_be_a_DNF_plugin_command__try___dnf_install__dnf_command_saerch____n_dnf_search_vim_assertion_190.py",
+     "params": "dnf saerch vim-No such command: saerch. Please use /usr/bin/dnf --help\\nIt could be a DNF plugin command, try: \"dnf install 'dnf-command(saerch)'\"\\n-dnf search vim"
+    }
+   ],
+   "tests/rules/test_dnf_no_such_command.py::test_get_operations": [
+    {
+     "file": "rules/test_dnf_no_such_command_test_get_operations_assertion_179.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_9": {
+  "status": "completed",
+  "time": {
+   "purification": 3.6692962646484375,
+   "instrument": 9.826224327087402,
+   "test": 1.660315990447998
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_git_push.py::test_get_new_command": [
+    {
+     "file": "rules/test_git_push_test_get_new_command_assertion_26.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_10": {
+  "status": "completed",
+  "time": {
+   "purification": 3.2810046672821045,
+   "instrument": 9.908862590789795,
+   "test": 5.5260515213012695
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_man.py::test_get_new_command[command0-new_command0]": [
+    {
+     "file": "rules/test_man_test_get_new_command_command0_new_command0_assertion_35.py",
+     "params": "command0-new_command0"
+    }
+   ],
+   "tests/rules/test_man.py::test_get_new_command[command1-new_command1]": [
+    {
+     "file": "rules/test_man_test_get_new_command_command1_new_command1_assertion_35.py",
+     "params": "command1-new_command1"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_11": {
+  "status": "skipped"
+ },
+ "thefuck_12": {
+  "status": "completed",
+  "time": {
+   "purification": 11.004414319992065,
+   "instrument": 9.940411806106567,
+   "test": 5.638409614562988
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_no_command.py::test_not_match[vim file.py-vim: not found-vim]": [
+    {
+     "file": "rules/test_no_command_test_not_match_vim_file_py_vim__not_found_vim_assertion_38.py",
+     "params": "vim file.py-vim: not found-vim"
+    }
+   ],
+   "tests/rules/test_no_command.py::test_not_match[qweqwe-qweqwe: not found-None]": [
+    {
+     "file": "rules/test_no_command_test_not_match_qweqwe_qweqwe__not_found_None_assertion_38.py",
+     "params": "qweqwe-qweqwe: not found-None"
+    }
+   ],
+   "tests/rules/test_no_command.py::test_not_match[vom file.py-some text-None]": [
+    {
+     "file": "rules/test_no_command_test_not_match_vom_file_py_some_text_None_assertion_38.py",
+     "params": "vom file.py-some text-None"
+    }
+   ],
+   "tests/rules/test_no_command.py::test_match[fucck-fucck: not found]": [
+    {
+     "file": "rules/test_no_command_test_match_fucck_fucck__not_found_assertion_27.py",
+     "params": "fucck-fucck: not found"
+    }
+   ],
+   "tests/rules/test_no_command.py::test_match[got commit-got: command not found]": [
+    {
+     "file": "rules/test_no_command_test_match_got_commit_got__command_not_found_assertion_27.py",
+     "params": "got commit-got: command not found"
+    }
+   ],
+   "tests/rules/test_no_command.py::test_match[vom file.py-vom: not found]": [
+    {
+     "file": "rules/test_no_command_test_match_vom_file_py_vom__not_found_assertion_27.py",
+     "params": "vom file.py-vom: not found"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_13": {
+  "status": "completed",
+  "time": {
+   "purification": 4.781445503234863,
+   "instrument": 9.967715978622437,
+   "test": 2.9778947830200195
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_git_branch_exists.py::test_match[git checkout bar-bar]": [
+    {
+     "file": "rules/test_git_branch_exists_test_match_git_checkout_bar_bar_assertion_23.py",
+     "params": "git checkout bar-bar"
+    }
+   ],
+   "tests/rules/test_git_branch_exists.py::test_get_new_command[git branch foo-foo]": [
+    {
+     "file": "rules/test_git_branch_exists_test_get_new_command_git_branch_foo_foo_assertion_34.py",
+     "params": "git branch foo-foo"
+    }
+   ],
+   "tests/rules/test_git_branch_exists.py::test_get_new_command[git checkout bar-bar]": [
+    {
+     "file": "rules/test_git_branch_exists_test_get_new_command_git_checkout_bar_bar_assertion_34.py",
+     "params": "git checkout bar-bar"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_14": {
+  "status": "completed",
+  "time": {
+   "purification": 6.259642839431763,
+   "instrument": 9.974161386489868,
+   "test": 11.298988580703735
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/shells/test_fish.py::TestFish::test_get_overridden_aliases[\\ncut,\\n\\ngit,\\tsed\\r]": [
+    {
+     "file": "shells/test_fish_test_get_overridden_aliases__ncut__n_ngit__tsed_r_assertion_31.py",
+     "params": "\\ncut,\\n\\ngit,\\tsed\\r"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_get_overridden_aliases[cut, git, sed]": [
+    {
+     "file": "shells/test_fish_test_get_overridden_aliases_cut__git__sed_assertion_31.py",
+     "params": "cut, git, sed"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_get_overridden_aliases[cut,git,sed]": [
+    {
+     "file": "shells/test_fish_test_get_overridden_aliases_cut_git_sed_assertion_31.py",
+     "params": "cut,git,sed"
+    }
+   ],
+   "tests/shells/test_fish.py::TestFish::test_get_overridden_aliases[ cut,\\tgit,sed\\n]": [
+    {
+     "file": "shells/test_fish_test_get_overridden_aliases__cut__tgit_sed_n_assertion_31.py",
+     "params": " cut,\\tgit,sed\\n"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_15": {
+  "status": "completed",
+  "time": {
+   "purification": 3.2218470573425293,
+   "instrument": 9.66797661781311,
+   "test": 3.3165793418884277
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_git_add.py::test_match[git submodule update unknown-unknown]": [
+    {
+     "file": "rules/test_git_add_test_match_git_submodule_update_unknown_unknown_assertion_16.py",
+     "params": "git submodule update unknown-unknown"
+    }
+   ],
+   "tests/rules/test_git_add.py::test_match[git commit unknown-unknown]": [
+    {
+     "file": "rules/test_git_add_test_match_git_commit_unknown_unknown_assertion_16.py",
+     "params": "git commit unknown-unknown"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_16": {
+  "status": "completed",
+  "time": {
+   "purification": 10.21714997291565,
+   "instrument": 10.049068450927734,
+   "test": 11.544464349746704
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/shells/test_bash.py::TestBash::test_app_alias_variables_correctly_set": [
+    {
+     "file": "shells/test_bash_test_app_alias_variables_correctly_set_assertion_51.py",
+     "params": null
+    },
+    {
+     "file": "shells/test_bash_test_app_alias_variables_correctly_set_assertion_52.py",
+     "params": null
+    },
+    {
+     "file": "shells/test_bash_test_app_alias_variables_correctly_set_assertion_53.py",
+     "params": null
+    }
+   ],
+   "tests/shells/test_zsh.py::TestZsh::test_app_alias_variables_correctly_set": [
+    {
+     "file": "shells/test_zsh_test_app_alias_variables_correctly_set_assertion_50.py",
+     "params": null
+    },
+    {
+     "file": "shells/test_zsh_test_app_alias_variables_correctly_set_assertion_51.py",
+     "params": null
+    },
+    {
+     "file": "shells/test_zsh_test_app_alias_variables_correctly_set_assertion_53.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_17": {
+  "status": "completed",
+  "time": {
+   "purification": 4.786357164382935,
+   "instrument": 9.699718475341797,
+   "test": 4.235633373260498
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/shells/test_bash.py::TestBash::test_get_aliases": [
+    {
+     "file": "shells/test_bash_test_get_aliases_assertion_37.py",
+     "params": null
+    }
+   ],
+   "tests/shells/test_bash.py::TestBash::test_from_shell[fuck-eval $(thefuck $(fc -ln -1))]": [
+    {
+     "file": "shells/test_bash_test_from_shell_fuck_eval___thefuck___fc__ln__1___assertion_28.py",
+     "params": "fuck-eval $(thefuck $(fc -ln -1))"
+    }
+   ],
+   "tests/shells/test_bash.py::TestBash::test_from_shell[ll-ls -alF]": [
+    {
+     "file": "shells/test_bash_test_from_shell_ll_ls__alF_assertion_28.py",
+     "params": "ll-ls -alF"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_18": {
+  "status": "completed",
+  "time": {
+   "purification": 2.2065298557281494,
+   "instrument": 10.137726783752441,
+   "test": 6.387409448623657
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_sudo.py::test_not_match": [
+    {
+     "file": "rules/test_sudo_test_not_match_assertion_22.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_19": {
+  "status": "completed",
+  "time": {
+   "purification": 4.706784963607788,
+   "instrument": 9.671115398406982,
+   "test": 5.985193729400635
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_git_push_force.py::test_get_new_command[command2-git push --force-with-lease nvbn master]": [
+    {
+     "file": "rules/test_git_push_force_test_get_new_command_command2_git_push___force_with_lease_nvbn_master_assertion_52.py",
+     "params": "command2-git push --force-with-lease nvbn master"
+    }
+   ],
+   "tests/rules/test_git_push_force.py::test_get_new_command[command1-git push --force-with-lease nvbn]": [
+    {
+     "file": "rules/test_git_push_force_test_get_new_command_command1_git_push___force_with_lease_nvbn_assertion_52.py",
+     "params": "command1-git push --force-with-lease nvbn"
+    }
+   ],
+   "tests/rules/test_git_push_force.py::test_get_new_command[command0-git push --force-with-lease]": [
+    {
+     "file": "rules/test_git_push_force_test_get_new_command_command0_git_push___force_with_lease_assertion_52.py",
+     "params": "command0-git push --force-with-lease"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_20": {
+  "status": "completed",
+  "time": {
+   "purification": 3.3239400386810303,
+   "instrument": 9.886440992355347,
+   "test": 3.3633275032043457
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_dirty_unzip.py::test_get_new_command[unzip foo\\\\ bar.zip-unzip foo\\\\ bar.zip -d 'foo bar']": [
+    {
+     "file": "rules/test_dirty_unzip_test_get_new_command_unzip_foo___bar_zip_unzip_foo___bar_zip__d__foo_bar__assertion_50.py",
+     "params": "unzip foo\\\\ bar.zip-unzip foo\\\\ bar.zip -d 'foo bar'"
+    }
+   ],
+   "tests/rules/test_dirty_unzip.py::test_get_new_command[unzip 'foo bar.zip'-unzip 'foo bar.zip' -d 'foo bar']": [
+    {
+     "file": "rules/test_dirty_unzip_test_get_new_command_unzip__foo_bar_zip__unzip__foo_bar_zip___d__foo_bar__assertion_50.py",
+     "params": "unzip 'foo bar.zip'-unzip 'foo bar.zip' -d 'foo bar'"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_21": {
+  "status": "completed",
+  "time": {
+   "purification": 1.8152117729187012,
+   "instrument": 9.614731073379517,
+   "test": 3.6548514366149902
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_git_fix_stash.py::test_not_match": [
+    {
+     "file": "rules/test_git_fix_stash_test_not_match_assertion_27.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_22": {
+  "status": "completed",
+  "time": {
+   "purification": 1.7962892055511475,
+   "instrument": 9.960137128829956,
+   "test": 3.549081802368164
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_types.py::TestSortedCorrectedCommandsSequence::test_with_blank": [
+    {
+     "file": "test_types_test_with_blank_assertion_49.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_23": {
+  "status": "completed",
+  "time": {
+   "purification": 8.801174640655518,
+   "instrument": 10.513326644897461,
+   "test": 10.927447080612183
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_utils.py::TestCache::test_when_etag_changed": [
+    {
+     "file": "test_utils_test_when_etag_changed_assertion_181.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_when_etag_changed_assertion_182.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils.py::TestCache::test_with_filled_cache": [
+    {
+     "file": "test_utils_test_with_filled_cache_assertion_176.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils.py::TestCache::test_with_blank_cache": [
+    {
+     "file": "test_utils_test_with_blank_cache_assertion_170.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_with_blank_cache_assertion_171.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_24": {
+  "status": "completed",
+  "time": {
+   "purification": 3.768476963043213,
+   "instrument": 9.711979150772095,
+   "test": 3.1745829582214355
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_types.py::TestCorrectedCommand::test_equality": [
+    {
+     "file": "test_types_test_equality_assertion_52.py",
+     "params": null
+    }
+   ],
+   "tests/test_types.py::TestCorrectedCommand::test_hashable": [
+    {
+     "file": "test_types_test_hashable_assertion_58.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_25": {
+  "status": "completed",
+  "time": {
+   "purification": 3.2436609268188477,
+   "instrument": 9.84762978553772,
+   "test": 4.906708240509033
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_mkdir_p.py::test_get_new_command[command2-./bin/hdfs dfs -mkdir -p foo/bar/baz]": [
+    {
+     "file": "rules/test_mkdir_p_test_get_new_command_command2___bin_hdfs_dfs__mkdir__p_foo_bar_baz_assertion_30.py",
+     "params": "command2-./bin/hdfs dfs -mkdir -p foo/bar/baz"
+    }
+   ],
+   "tests/rules/test_mkdir_p.py::test_get_new_command[command1-hdfs dfs -mkdir -p foo/bar/baz]": [
+    {
+     "file": "rules/test_mkdir_p_test_get_new_command_command1_hdfs_dfs__mkdir__p_foo_bar_baz_assertion_30.py",
+     "params": "command1-hdfs dfs -mkdir -p foo/bar/baz"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_26": {
+  "status": "completed",
+  "time": {
+   "purification": 6.045899152755737,
+   "instrument": 9.855947732925415,
+   "test": 6.114437818527222
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_vagrant_up.py::test_get_new_command[command3-new_command3]": [
+    {
+     "file": "rules/test_vagrant_up_test_get_new_command_command3_new_command3_assertion_33.py",
+     "params": "command3-new_command3"
+    }
+   ],
+   "tests/rules/test_vagrant_up.py::test_get_new_command[command0-vagrant up && vagrant ssh]": [
+    {
+     "file": "rules/test_vagrant_up_test_get_new_command_command0_vagrant_up____vagrant_ssh_assertion_33.py",
+     "params": "command0-vagrant up && vagrant ssh"
+    }
+   ],
+   "tests/rules/test_vagrant_up.py::test_get_new_command[command1-new_command1]": [
+    {
+     "file": "rules/test_vagrant_up_test_get_new_command_command1_new_command1_assertion_33.py",
+     "params": "command1-new_command1"
+    }
+   ],
+   "tests/rules/test_vagrant_up.py::test_get_new_command[command2-vagrant up && vagrant rdp]": [
+    {
+     "file": "rules/test_vagrant_up_test_get_new_command_command2_vagrant_up____vagrant_rdp_assertion_33.py",
+     "params": "command2-vagrant up && vagrant rdp"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_27": {
+  "status": "completed",
+  "time": {
+   "purification": 4.640969514846802,
+   "instrument": 9.757726907730103,
+   "test": 5.919562339782715
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_open.py::test_get_new_command[command6-xdg-open http://foo.io]": [
+    {
+     "file": "rules/test_open_test_get_new_command_command6_xdg_open_http___foo_io_assertion_31.py",
+     "params": "command6-xdg-open http://foo.io"
+    }
+   ],
+   "tests/rules/test_open.py::test_get_new_command[command7-gnome-open http://foo.io]": [
+    {
+     "file": "rules/test_open_test_get_new_command_command7_gnome_open_http___foo_io_assertion_31.py",
+     "params": "command7-gnome-open http://foo.io"
+    }
+   ],
+   "tests/rules/test_open.py::test_get_new_command[command8-kde-open http://foo.io]": [
+    {
+     "file": "rules/test_open_test_get_new_command_command8_kde_open_http___foo_io_assertion_31.py",
+     "params": "command8-kde-open http://foo.io"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_28": {
+  "status": "completed",
+  "time": {
+   "purification": 15.990495204925537,
+   "instrument": 10.08946967124939,
+   "test": 46.04984927177429
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test0]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test0_assertion_230.py",
+     "params": "test0"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test1]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test1_assertion_230.py",
+     "params": "test1"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test7]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test7_assertion_230.py",
+     "params": "test7"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test8]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test8_assertion_230.py",
+     "params": "test8"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test15]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test15_assertion_230.py",
+     "params": "test15"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test16]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test16_assertion_230.py",
+     "params": "test16"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test19]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test19_assertion_230.py",
+     "params": "test19"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_get_new_command_with_settings[test20]": [
+    {
+     "file": "rules/test_fix_file_test_get_new_command_with_settings_test20_assertion_230.py",
+     "params": "test20"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_29": {
+  "status": "completed",
+  "time": {
+   "purification": 5.350738048553467,
+   "instrument": 9.523925065994263,
+   "test": 13.058722019195557
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_types.py::test_update_settings": [
+    {
+     "file": "test_types_test_update_settings_assertion_15.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils.py::test_wrap_settings[override2-old2-new2]": [
+    {
+     "file": "test_utils_test_wrap_settings_override2_old2_new2_assertion_16.py",
+     "params": "override2-old2-new2"
+    }
+   ],
+   "tests/test_utils.py::test_wrap_settings[override1-old1-new1]": [
+    {
+     "file": "test_utils_test_wrap_settings_override1_old1_new1_assertion_16.py",
+     "params": "override1-old1-new1"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_30": {
+  "status": "completed",
+  "time": {
+   "purification": 28.0345196723938,
+   "instrument": 9.80882740020752,
+   "test": 37.94536995887756
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_fix_file.py::test_not_file[test1]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test1_assertion_181.py",
+     "params": "test1"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test4]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test4_assertion_181.py",
+     "params": "test4"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test15]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test15_assertion_181.py",
+     "params": "test15"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test19]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test19_assertion_181.py",
+     "params": "test19"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test13]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test13_assertion_181.py",
+     "params": "test13"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test7]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test7_assertion_181.py",
+     "params": "test7"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test14]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test14_assertion_181.py",
+     "params": "test14"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test17]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test17_assertion_181.py",
+     "params": "test17"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test18]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test18_assertion_181.py",
+     "params": "test18"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test11]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test11_assertion_181.py",
+     "params": "test11"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test3]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test3_assertion_181.py",
+     "params": "test3"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test9]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test9_assertion_181.py",
+     "params": "test9"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test6]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test6_assertion_181.py",
+     "params": "test6"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test8]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test8_assertion_181.py",
+     "params": "test8"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test12]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test12_assertion_181.py",
+     "params": "test12"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test16]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test16_assertion_181.py",
+     "params": "test16"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test5]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test5_assertion_181.py",
+     "params": "test5"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test10]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test10_assertion_181.py",
+     "params": "test10"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test2]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test2_assertion_181.py",
+     "params": "test2"
+    }
+   ],
+   "tests/rules/test_fix_file.py::test_not_file[test0]": [
+    {
+     "file": "rules/test_fix_file_test_not_file_test0_assertion_181.py",
+     "params": "test0"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_31": {
+  "status": "completed",
+  "time": {
+   "purification": 1.8124668598175049,
+   "instrument": 9.689129829406738,
+   "test": 4.015096664428711
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_git_diff_staged.py::test_get_new_command[command1-git diff --staged foo]": [
+    {
+     "file": "rules/test_git_diff_staged_test_get_new_command_command1_git_diff___staged_foo_assertion_26.py",
+     "params": "command1-git diff --staged foo"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "thefuck_32": {
+  "status": "completed",
+  "time": {
+   "purification": 4.867218017578125,
+   "instrument": 9.836211681365967,
+   "test": 2.035714864730835
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/rules/test_ls_lah.py::test_match": [
+    {
+     "file": "rules/test_ls_lah_test_match_assertion_10.py",
+     "params": null
+    },
+    {
+     "file": "rules/test_ls_lah_test_match_assertion_11.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}

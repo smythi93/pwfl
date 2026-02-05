@@ -1,0 +1,1157 @@
+{
+ "youtubedl_1": {
+  "status": "completed",
+  "time": {
+   "purification": 22.243475437164307,
+   "instrument": 20.104696035385132,
+   "test": 40.89816975593567
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_match_str": [
+    {
+     "file": "test_utils_test_match_str_assertion_1076.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_match_str_assertion_1080.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_2": {
+  "status": "completed",
+  "time": {
+   "purification": 0.20842933654785156,
+   "instrument": 20.032466411590576,
+   "test": 5.829181671142578
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_3": {
+  "status": "completed",
+  "time": {
+   "purification": 5.663601636886597,
+   "instrument": 18.88614583015442,
+   "test": 37.84593367576599
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_unescape_html": [
+    {
+     "file": "test_utils_test_unescape_html_assertion_282.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_4": {
+  "status": "completed",
+  "time": {
+   "purification": 1.8600215911865234,
+   "instrument": 17.96819281578064,
+   "test": 6.831257104873657
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_jsinterp.py::TestJSInterpreter::test_call": [
+    {
+     "file": "test_jsinterp_test_call_assertion_113.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_5": {
+  "status": "completed",
+  "time": {
+   "purification": 9.232050657272339,
+   "instrument": 16.8276584148407,
+   "test": 30.435625791549683
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_unified_timestamps": [
+    {
+     "file": "test_utils_test_unified_timestamps_assertion_311.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_6": {
+  "status": "completed",
+  "time": {
+   "purification": 5.362168550491333,
+   "instrument": 14.426189422607422,
+   "test": 22.185879707336426
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_parse_dfxp_time_expr": [
+    {
+     "file": "test_utils_test_parse_dfxp_time_expr_assertion_664.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_parse_dfxp_time_expr_assertion_665.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_7": {
+  "status": "completed",
+  "time": {
+   "purification": 3.191122055053711,
+   "instrument": 14.414697647094727,
+   "test": 20.477923154830933
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_js_to_json_realworld": [
+    {
+     "file": "test_utils_test_js_to_json_realworld_assertion_499.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_8": {
+  "status": "completed",
+  "time": {
+   "purification": 16.73460602760315,
+   "instrument": 14.197213649749756,
+   "test": 7.352017402648926
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_YoutubeDL.py::TestFormatSelection::test_youtube_format_selection": [
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_245.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_246.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_254.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_262.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_270.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_278.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_286.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_295.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_303.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_9": {
+  "status": "completed",
+  "time": {
+   "purification": 13.372705936431885,
+   "instrument": 13.769713401794434,
+   "test": 6.986432790756226
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_YoutubeDL.py::TestFormatSelection::test_youtube_format_selection": [
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_245.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_246.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_254.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_262.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_270.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_278.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_287.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_youtube_format_selection_assertion_295.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_10": {
+  "status": "completed",
+  "time": {
+   "purification": 135.04664516448975,
+   "instrument": 12.287784814834595,
+   "test": 48.72806763648987
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_js_to_json_realworld": [
+    {
+     "file": "test_utils_test_js_to_json_realworld_assertion_375.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_11": {
+  "status": "completed",
+  "time": {
+   "purification": 3.8629465103149414,
+   "instrument": 21.660868406295776,
+   "test": 45.060983657836914
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_str_to_int": [
+    {
+     "file": "test_utils_test_str_to_int_assertion_502.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_12": {
+  "status": "completed",
+  "time": {
+   "purification": 29.199600219726562,
+   "instrument": 22.993011951446533,
+   "test": 17.71626329421997
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_YoutubeDL.py::TestFormatSelection::test_format_selection_string_ops": [
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_253.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_259.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_262.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_268.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_274.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_277.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_283.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_289.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_292.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_298.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_304.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_307.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_selection_string_ops_assertion_310.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_13": {
+  "status": "completed",
+  "time": {
+   "purification": 13.862956047058105,
+   "instrument": 22.450916290283203,
+   "test": 42.90087270736694
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_urljoin": [
+    {
+     "file": "test_utils_test_urljoin_assertion_511.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_14": {
+  "status": "completed",
+  "time": {
+   "purification": 0.2035233974456787,
+   "instrument": 22.281928300857544,
+   "test": 11.287457466125488
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_15": {
+  "status": "completed",
+  "time": {
+   "purification": 21.72487735748291,
+   "instrument": 21.06712508201599,
+   "test": 39.064337730407715
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_js_to_json_edgecases": [
+    {
+     "file": "test_utils_test_js_to_json_edgecases_assertion_892.py",
+     "params": null
+    }
+   ],
+   "test/test_utils.py::TestUtil::test_js_to_json_realworld": [
+    {
+     "file": "test_utils_test_js_to_json_realworld_assertion_818.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_16": {
+  "status": "completed",
+  "time": {
+   "purification": 9.68770456314087,
+   "instrument": 20.357926607131958,
+   "test": 40.51993727684021
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_dfxp2srt": [
+    {
+     "file": "test_utils_test_dfxp2srt_assertion_1083.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_dfxp2srt_assertion_1098.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_dfxp2srt_assertion_1139.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_dfxp2srt_assertion_1159.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_17": {
+  "status": "completed",
+  "time": {
+   "purification": 6.024888515472412,
+   "instrument": 20.14699935913086,
+   "test": 38.59332799911499
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_cli_bool_option": [
+    {
+     "file": "test_utils_test_cli_bool_option_assertion_1185.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_18": {
+  "status": "completed",
+  "time": {
+   "purification": 6.9400107860565186,
+   "instrument": 19.606192350387573,
+   "test": 7.305058717727661
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_YoutubeDL.py::TestYoutubeDL::test_do_not_override_ie_key_in_url_transparent": [
+    {
+     "file": "test_YoutubeDL_test_do_not_override_ie_key_in_url_transparent_assertion_792.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_do_not_override_ie_key_in_url_transparent_assertion_793.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_do_not_override_ie_key_in_url_transparent_assertion_794.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_19": {
+  "status": "completed",
+  "time": {
+   "purification": 13.095614671707153,
+   "instrument": 20.108208656311035,
+   "test": 5.954066038131714
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_YoutubeDL.py::TestYoutubeDL::test_prepare_filename": [
+    {
+     "file": "test_YoutubeDL_test_prepare_filename_assertion_556.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_20": {
+  "status": "completed",
+  "time": {
+   "purification": 4.111315727233887,
+   "instrument": 20.12812876701355,
+   "test": 38.22196388244629
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_get_element_by_attribute": [
+    {
+     "file": "test_utils_test_get_element_by_attribute_assertion_1235.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_21": {
+  "status": "completed",
+  "time": {
+   "purification": 15.027466773986816,
+   "instrument": 18.869730949401855,
+   "test": 37.814210414886475
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_urljoin": [
+    {
+     "file": "test_utils_test_urljoin_assertion_458.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_urljoin_assertion_459.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_urljoin_assertion_460.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_22": {
+  "status": "completed",
+  "time": {
+   "purification": 29.681121110916138,
+   "instrument": 19.92544436454773,
+   "test": 19.022084951400757
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_YoutubeDL.py::TestYoutubeDL::test_match_filter": [
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_633.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_641.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_645.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_649.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_653.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_657.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_661.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_665.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_669.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_673.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_677.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_681.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_23": {
+  "status": "completed",
+  "time": {
+   "purification": 9.710886001586914,
+   "instrument": 19.06555485725403,
+   "test": 34.333213806152344
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_js_to_json_edgecases": [
+    {
+     "file": "test_utils_test_js_to_json_edgecases_assertion_795.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_24": {
+  "status": "completed",
+  "time": {
+   "purification": 5.2082743644714355,
+   "instrument": 18.804831504821777,
+   "test": 5.597159147262573
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_YoutubeDL.py::TestYoutubeDL::test_match_filter": [
+    {
+     "file": "test_YoutubeDL_test_match_filter_assertion_657.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_25": {
+  "status": "completed",
+  "time": {
+   "purification": 5.452469825744629,
+   "instrument": 17.747577905654907,
+   "test": 31.75243306159973
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_js_to_json_realworld": [
+    {
+     "file": "test_utils_test_js_to_json_realworld_assertion_716.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_26": {
+  "status": "completed",
+  "time": {
+   "purification": 4.670860528945923,
+   "instrument": 16.688587188720703,
+   "test": 28.201608180999756
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_js_to_json_realworld": [
+    {
+     "file": "test_utils_test_js_to_json_realworld_assertion_644.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_27": {
+  "status": "completed",
+  "time": {
+   "purification": 4.767817735671997,
+   "instrument": 14.955441236495972,
+   "test": 21.97660803794861
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_parse_dfxp_time_expr": [
+    {
+     "file": "test_utils_test_parse_dfxp_time_expr_assertion_670.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_28": {
+  "status": "completed",
+  "time": {
+   "purification": 4.038626432418823,
+   "instrument": 14.303602457046509,
+   "test": 21.118151426315308
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_unescape_html": [
+    {
+     "file": "test_utils_test_unescape_html_assertion_214.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_29": {
+  "status": "completed",
+  "time": {
+   "purification": 6.900634050369263,
+   "instrument": 14.387149333953857,
+   "test": 20.868224620819092
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_unified_dates": [
+    {
+     "file": "test_utils_test_unified_dates_assertion_239.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_30": {
+  "status": "completed",
+  "time": {
+   "purification": 18.013408184051514,
+   "instrument": 14.463196277618408,
+   "test": 10.822761297225952
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_YoutubeDL.py::TestFormatSelection::test_format_filtering": [
+    {
+     "file": "test_YoutubeDL_test_format_filtering_assertion_323.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_filtering_assertion_328.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_filtering_assertion_333.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_filtering_assertion_338.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_filtering_assertion_343.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_filtering_assertion_348.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_filtering_assertion_353.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_filtering_assertion_358.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_filtering_assertion_363.py",
+     "params": null
+    },
+    {
+     "file": "test_YoutubeDL_test_format_filtering_assertion_370.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_31": {
+  "status": "completed",
+  "time": {
+   "purification": 10.485416412353516,
+   "instrument": 11.563849687576294,
+   "test": 12.29056429862976
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_parse_duration": [
+    {
+     "file": "test_utils_test_parse_duration_assertion_224.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_parse_duration_assertion_225.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_32": {
+  "status": "completed",
+  "time": {
+   "purification": 2.8312292098999023,
+   "instrument": 11.378580808639526,
+   "test": 11.50970196723938
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_strip_jsonp": [
+    {
+     "file": "test_utils_test_strip_jsonp_assertion_285.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_strip_jsonp_assertion_289.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_33": {
+  "status": "completed",
+  "time": {
+   "purification": 2.7856318950653076,
+   "instrument": 11.76533579826355,
+   "test": 10.887498378753662
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_parse_iso8601": [
+    {
+     "file": "test_utils_test_parse_iso8601_assertion_292.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_34": {
+  "status": "completed",
+  "time": {
+   "purification": 1.4698243141174316,
+   "instrument": 11.187064170837402,
+   "test": 10.191352844238281
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_js_to_json": [
+    {
+     "file": "test_utils_test_js_to_json_assertion_339.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_35": {
+  "status": "completed",
+  "time": {
+   "purification": 3.5106449127197266,
+   "instrument": 11.279101133346558,
+   "test": 9.934360027313232
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_unified_dates": [
+    {
+     "file": "test_utils_test_unified_dates_assertion_141.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_36": {
+  "status": "completed",
+  "time": {
+   "purification": 1.8051037788391113,
+   "instrument": 10.514253616333008,
+   "test": 10.085434913635254
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_all_urls.py::TestAllURLsMatching::test_facebook_matching": [
+    {
+     "file": "test_all_urls_test_facebook_matching_assertion_102.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_37": {
+  "status": "completed",
+  "time": {
+   "purification": 1.8063323497772217,
+   "instrument": 9.870061874389648,
+   "test": 8.128105878829956
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_uppercase_escpae": [
+    {
+     "file": "test_utils_test_uppercase_escpae_assertion_285.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_38": {
+  "status": "completed",
+  "time": {
+   "purification": 1.2978999614715576,
+   "instrument": 9.65326189994812,
+   "test": 6.90512490272522
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_urlencode_postdata": [
+    {
+     "file": "test_utils_test_urlencode_postdata_assertion_270.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_39": {
+  "status": "completed",
+  "time": {
+   "purification": 5.20559549331665,
+   "instrument": 11.11401653289795,
+   "test": 10.313211441040039
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_limit_length": [
+    {
+     "file": "test_utils_test_limit_length_assertion_294.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_limit_length_assertion_295.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_limit_length_assertion_296.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_limit_length_assertion_298.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_40": {
+  "status": "completed",
+  "time": {
+   "purification": 1.2739694118499756,
+   "instrument": 9.721354007720947,
+   "test": 6.264365911483765
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_struct_unpack": [
+    {
+     "file": "test_utils_test_struct_unpack_assertion_245.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_41": {
+  "status": "completed",
+  "time": {
+   "purification": 2.5777792930603027,
+   "instrument": 9.324280738830566,
+   "test": 6.008800029754639
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_unified_dates": [
+    {
+     "file": "test_utils_test_unified_dates_assertion_130.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_42": {
+  "status": "completed",
+  "time": {
+   "purification": 5.295955181121826,
+   "instrument": 9.212076425552368,
+   "test": 6.837535619735718
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_fix_xml_ampersands": [
+    {
+     "file": "test_utils_test_fix_xml_ampersands_assertion_208.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_fix_xml_ampersands_assertion_210.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_fix_xml_ampersands_assertion_213.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_fix_xml_ampersands_assertion_216.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_test_fix_xml_ampersands_assertion_218.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "youtubedl_43": {
+  "status": "completed",
+  "time": {
+   "purification": 2.700531482696533,
+   "instrument": 8.882734298706055,
+   "test": 4.862550973892212
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/test_utils.py::TestUtil::test_url_basename": [
+    {
+     "file": "test_utils_test_url_basename_assertion_191.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}

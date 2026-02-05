@@ -1,0 +1,562 @@
+{
+ "black_1": {
+  "status": "skipped"
+ },
+ "black_2": {
+  "status": "completed",
+  "time": {
+   "purification": 6.97780442237854,
+   "instrument": 17.54547119140625,
+   "test": 142.57845306396484
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_fmtonoff4": [
+    {
+     "file": "test_black_test_fmtonoff4_assertion_639.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_fmtonoff4_assertion_640.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_fmtonoff4_assertion_641.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_3": {
+  "status": "completed",
+  "time": {
+   "purification": 0.30188536643981934,
+   "instrument": 17.189345359802246,
+   "test": 141.25979208946228
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_4": {
+  "status": "completed",
+  "time": {
+   "purification": 5.026066780090332,
+   "instrument": 17.099904537200928,
+   "test": 105.74667382240295
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_beginning_backslash": [
+    {
+     "file": "test_black_test_beginning_backslash_assertion_646.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_beginning_backslash_assertion_648.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_5": {
+  "status": "completed",
+  "time": {
+   "purification": 6.517192125320435,
+   "instrument": 16.91693878173828,
+   "test": 101.49853014945984
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_function_trailing_comma": [
+    {
+     "file": "test_black_test_function_trailing_comma_assertion_271.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_function_trailing_comma_assertion_272.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_function_trailing_comma_assertion_273.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_6": {
+  "status": "completed",
+  "time": {
+   "purification": 12.57702088356018,
+   "instrument": 16.94371747970581,
+   "test": 100.55139446258545
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_async_as_identifier": [
+    {
+     "file": "test_black_test_async_as_identifier_assertion_510.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_async_as_identifier_assertion_513.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_async_as_identifier_assertion_514.py",
+     "params": null
+    }
+   ],
+   "tests/test_black.py::BlackTestCase::test_python37": [
+    {
+     "file": "test_black_test_python37_assertion_525.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_python37_assertion_528.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_python37_assertion_529.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_7": {
+  "status": "completed",
+  "time": {
+   "purification": 3.327012062072754,
+   "instrument": 16.950222730636597,
+   "test": 98.33223676681519
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_tuple_assign": [
+    {
+     "file": "test_black_test_tuple_assign_assertion_549.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_8": {
+  "status": "completed",
+  "time": {
+   "purification": 7.018140554428101,
+   "instrument": 17.458657264709473,
+   "test": 100.15277862548828
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_comments7": [
+    {
+     "file": "test_black_test_comments7_assertion_395.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_comments7_assertion_396.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_comments7_assertion_397.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_9": {
+  "status": "completed",
+  "time": {
+   "purification": 4.84065055847168,
+   "instrument": 16.745182275772095,
+   "test": 97.99383783340454
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_python2_print_function": [
+    {
+     "file": "test_black_test_python2_print_function_assertion_469.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_python2_print_function_assertion_470.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_10": {
+  "status": "completed",
+  "time": {
+   "purification": 4.046766757965088,
+   "instrument": 16.975337982177734,
+   "test": 93.3736743927002
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_comment_indentation": [
+    {
+     "file": "test_black_test_comment_indentation_assertion_517.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_11": {
+  "status": "completed",
+  "time": {
+   "purification": 3.6824004650115967,
+   "instrument": 16.819971323013306,
+   "test": 92.26965260505676
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_comments6": [
+    {
+     "file": "test_black_test_comments6_assertion_369.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_12": {
+  "status": "completed",
+  "time": {
+   "purification": 9.084239721298218,
+   "instrument": 16.928513050079346,
+   "test": 77.44455909729004
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_bracket_match": [
+    {
+     "file": "test_black_test_bracket_match_assertion_460.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_bracket_match_assertion_461.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_bracket_match_assertion_462.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_13": {
+  "status": "completed",
+  "time": {
+   "purification": 5.929727077484131,
+   "instrument": 16.814316749572754,
+   "test": 74.67823648452759
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_python37": [
+    {
+     "file": "test_black_test_python37_assertion_418.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_python37_assertion_421.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_python37_assertion_422.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_14": {
+  "status": "completed",
+  "time": {
+   "purification": 7.327073097229004,
+   "instrument": 16.805078983306885,
+   "test": 71.32120966911316
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_get_future_imports": [
+    {
+     "file": "test_black_test_get_future_imports_assertion_741.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_get_future_imports_assertion_745.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_15": {
+  "status": "completed",
+  "time": {
+   "purification": 2.903571367263794,
+   "instrument": 16.929444551467896,
+   "test": 78.58264183998108
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_fmtonoff2": [
+    {
+     "file": "test_black_test_fmtonoff2_assertion_407.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_16": {
+  "status": "completed",
+  "time": {
+   "purification": 16.261975049972534,
+   "instrument": 17.279093980789185,
+   "test": 74.97933459281921
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_symlink_out_of_root_directory": [
+    {
+     "file": "test_black_test_symlink_out_of_root_directory_assertion_1186.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_symlink_out_of_root_directory_assertion_1187.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_symlink_out_of_root_directory_assertion_1188.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_symlink_out_of_root_directory_assertion_1201.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_symlink_out_of_root_directory_assertion_1202.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_symlink_out_of_root_directory_assertion_1203.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_symlink_out_of_root_directory_assertion_1204.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_symlink_out_of_root_directory_assertion_1205.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_symlink_out_of_root_directory_assertion_1206.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_17": {
+  "status": "completed",
+  "time": {
+   "purification": 9.088441610336304,
+   "instrument": 15.375854015350342,
+   "test": 76.37948679924011
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_empty": [
+    {
+     "file": "test_black_test_empty_assertion_107.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_empty_assertion_108.py",
+     "params": null
+    },
+    {
+     "file": "test_black_test_empty_assertion_109.py",
+     "params": null
+    }
+   ],
+   "tests/test_black.py::BlackTestCase::test_empty_ff": [
+    {
+     "file": "test_black_test_empty_ff_assertion_115.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_18": {
+  "status": "completed",
+  "time": {
+   "purification": 2.698385238647461,
+   "instrument": 15.23967432975769,
+   "test": 73.83279871940613
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_preserves_line_endings": [
+    {
+     "file": "test_black_test_preserves_line_endings_assertion_1121.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_19": {
+  "status": "completed",
+  "time": {
+   "purification": 2.601163387298584,
+   "instrument": 15.015701532363892,
+   "test": 47.612820863723755
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_comment_in_decorator": [
+    {
+     "file": "test_black_test_comment_in_decorator_assertion_633.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_20": {
+  "status": "completed",
+  "time": {
+   "purification": 2.578709363937378,
+   "instrument": 14.97582221031189,
+   "test": 45.94857978820801
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_expression_diff": [
+    {
+     "file": "test_black_test_expression_diff_assertion_215.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_21": {
+  "status": "skipped"
+ },
+ "black_22": {
+  "status": "completed",
+  "time": {
+   "purification": 2.5664703845977783,
+   "instrument": 14.93361520767212,
+   "test": 26.94447422027588
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_comments3": [
+    {
+     "file": "test_black_test_comments3_assertion_157.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "black_23": {
+  "status": "completed",
+  "time": {
+   "purification": 2.0065176486968994,
+   "instrument": 14.739931106567383,
+   "test": 23.77087664604187
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_python2": [
+    {
+     "file": "test_black_test_python2_assertion_187.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}
