@@ -42,18 +42,25 @@
   "check": "successful"
  },
  "tornado_3": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.19081449508666992,
-   "instrument": 6.6986024379730225,
-   "test": 12.300745487213135
+   "purification": 1.444711446762085,
+   "instrument": 7.418112516403198,
+   "test": 13.180132150650024
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "tornado/test/httpclient_test.py::SyncHTTPClientSubprocessTest::test_destructor_log": [
+    {
+     "file": "httpclient_test_test_destructor_log_assertion_707.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "tornado_4": {
   "status": "completed",
@@ -356,17 +363,24 @@
   "check": "successful"
  },
  "tornado_16": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.20824599266052246,
-   "instrument": 6.705052375793457,
-   "test": 1.5101659297943115
+   "purification": 1.3471097946166992,
+   "instrument": 9.245298624038696,
+   "test": 1.587052345275879
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "tornado/test/gen_test.py::WaitIteratorTest::test_no_ref": [
+    {
+     "file": "gen_test_test_no_ref_assertion_1259.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  }
 }
