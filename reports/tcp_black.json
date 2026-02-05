@@ -32,18 +32,25 @@
   "check": "successful"
  },
  "black_3": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.42287635803222656,
-   "instrument": 25.927166223526,
-   "test": 196.0088231563568
+   "purification": 3.8371713161468506,
+   "instrument": 23.952916383743286,
+   "test": 194.87580132484436
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "tests/test_black.py::BlackTestCase::test_invalid_config_return_code": [
+    {
+     "file": "test_black_test_invalid_config_return_code_assertion_162.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "black_4": {
   "status": "completed",
