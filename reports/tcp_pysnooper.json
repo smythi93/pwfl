@@ -1,0 +1,63 @@
+{
+ "pysnooper_1": {
+  "status": "skipped"
+ },
+ "pysnooper_2": {
+  "status": "completed",
+  "time": {
+   "purification": 3.137521743774414,
+   "instrument": 8.617727041244507,
+   "test": 7.476258754730225
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_pysnooper.py::test_custom_repr_single": [
+    {
+     "file": "test_pysnooper_test_custom_repr_single_assertion_1188.py",
+     "params": null
+    }
+   ],
+   "tests/test_pysnooper.py::test_custom_repr": [
+    {
+     "file": "test_pysnooper_test_custom_repr_assertion_1162.py",
+     "params": null
+    }
+   ],
+   "tests/test_pysnooper.py::test_disable": [
+    {
+     "file": "test_pysnooper_test_disable_assertion_1214.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "pysnooper_3": {
+  "status": "completed",
+  "time": {
+   "purification": 1.8697233200073242,
+   "instrument": 8.028627634048462,
+   "test": 2.5741355419158936
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_pysnooper.py::test_file_output": [
+    {
+     "file": "test_pysnooper_test_file_output_assertion_184.py",
+     "params": null
+    },
+    {
+     "file": "test_pysnooper_test_file_output_assertion_186.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}

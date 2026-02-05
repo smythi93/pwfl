@@ -1,0 +1,897 @@
+{
+ "scrapy_1": {
+  "status": "completed",
+  "time": {
+   "purification": 4.611570596694946,
+   "instrument": 16.07264280319214,
+   "test": 7.144716262817383
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_spidermiddleware_offsite.py::TestOffsiteMiddleware4::test_process_spider_output": [
+    {
+     "file": "test_spidermiddleware_offsite_test_process_spider_output_assertion_72.py",
+     "params": null
+    }
+   ],
+   "tests/test_spidermiddleware_offsite.py::TestOffsiteMiddleware5::test_get_host_regex": [
+    {
+     "file": "test_spidermiddleware_offsite_test_get_host_regex_assertion_82.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_2": {
+  "status": "completed",
+  "time": {
+   "purification": 6.432837009429932,
+   "instrument": 17.00667142868042,
+   "test": 15.882806539535522
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_utils_datatypes.py::LocalCacheTest::test_cache_without_limit": [
+    {
+     "file": "test_utils_datatypes_test_cache_without_limit_assertion_265.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_datatypes_test_cache_without_limit_assertion_267.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_datatypes_test_cache_without_limit_assertion_268.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_3": {
+  "status": "completed",
+  "time": {
+   "purification": 4.503301382064819,
+   "instrument": 15.689372539520264,
+   "test": 15.998481035232544
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_downloadermiddleware_redirect.py::RedirectMiddlewareTest::test_redirect_302_relative": [
+    {
+     "file": "test_downloadermiddleware_redirect_test_redirect_302_relative_assertion_118.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_4": {
+  "status": "completed",
+  "time": {
+   "purification": 3.7927825450897217,
+   "instrument": 16.766601085662842,
+   "test": 5.5112316608428955
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_contracts.py::ContractsManagerTest::test_errback": [
+    {
+     "file": "test_contracts_test_errback_assertion_203.py",
+     "params": null
+    },
+    {
+     "file": "test_contracts_test_errback_assertion_204.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_5": {
+  "status": "completed",
+  "time": {
+   "purification": 4.947485446929932,
+   "instrument": 17.950525999069214,
+   "test": 12.409143924713135
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_http_response.py::BaseResponseTest::test_follow_None_url": [
+    {
+     "file": "test_http_response_test_follow_None_url_assertion_160.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_6": {
+  "status": "skipped"
+ },
+ "scrapy_7": {
+  "status": "completed",
+  "time": {
+   "purification": 4.181820392608643,
+   "instrument": 19.051276922225952,
+   "test": 73.12376117706299
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_http_request.py::FormRequestTest::test_spaces_in_action": [
+    {
+     "file": "test_http_request_test_spaces_in_action_assertion_1007.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_8": {
+  "status": "completed",
+  "time": {
+   "purification": 6.313901424407959,
+   "instrument": 17.423731803894043,
+   "test": 20.05654764175415
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_item.py::ItemMetaTest::test_new_method_propagates_classcell": [
+    {
+     "file": "test_item_test_new_method_propagates_classcell_assertion_280.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_new_method_propagates_classcell_assertion_282.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_9": {
+  "status": "skipped"
+ },
+ "scrapy_10": {
+  "status": "completed",
+  "time": {
+   "purification": 7.446471929550171,
+   "instrument": 15.63289499282837,
+   "test": 20.634358644485474
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_downloadermiddleware_redirect.py::RedirectMiddlewareTest::test_latin1_location": [
+    {
+     "file": "test_downloadermiddleware_redirect_test_latin1_location_assertion_161.py",
+     "params": null
+    }
+   ],
+   "tests/test_downloadermiddleware_redirect.py::RedirectMiddlewareTest::test_utf8_location": [
+    {
+     "file": "test_downloadermiddleware_redirect_test_utf8_location_assertion_169.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_11": {
+  "status": "skipped"
+ },
+ "scrapy_12": {
+  "status": "skipped"
+ },
+ "scrapy_13": {
+  "status": "completed",
+  "time": {
+   "purification": 9.404759645462036,
+   "instrument": 18.08126139640808,
+   "test": 27.57235836982727
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_pipeline_images.py::ImagesPipelineTestCaseCustomSettings::test_different_settings_for_different_instances": [
+    {
+     "file": "test_pipeline_images_test_different_settings_for_different_instances_assertion_291.py",
+     "params": null
+    }
+   ],
+   "tests/test_pipeline_images.py::ImagesPipelineTestCaseCustomSettings::test_no_custom_settings_for_subclasses": [
+    {
+     "file": "test_pipeline_images_test_no_custom_settings_for_subclasses_assertion_333.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_14": {
+  "status": "skipped"
+ },
+ "scrapy_15": {
+  "status": "completed",
+  "time": {
+   "purification": 8.03273630142212,
+   "instrument": 18.39439845085144,
+   "test": 28.09208607673645
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_canonicalize_url_idna_exceptions": [
+    {
+     "file": "test_utils_url_test_canonicalize_url_idna_exceptions_assertion_270.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_canonicalize_url_idna_exceptions_assertion_275.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_16": {
+  "status": "completed",
+  "time": {
+   "purification": 45.90757393836975,
+   "instrument": 22.677858591079712,
+   "test": 32.43818545341492
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_canonicalize_url_unicode_query_string": [
+    {
+     "file": "test_utils_url_test_canonicalize_url_unicode_query_string_assertion_138.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_canonicalize_url_unicode_query_string_assertion_141.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_normalize_percent_encoding_in_paths": [
+    {
+     "file": "test_utils_url_test_normalize_percent_encoding_in_paths_assertion_159.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_normalize_percent_encoding_in_paths_assertion_163.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_normalize_percent_encoding_in_paths_assertion_167.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_normalize_percent_encoding_in_query_arguments": [
+    {
+     "file": "test_utils_url_test_normalize_percent_encoding_in_query_arguments_assertion_171.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_canonicalize_idns": [
+    {
+     "file": "test_utils_url_test_canonicalize_idns_assertion_225.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_canonicalize_idns_assertion_228.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_canonicalize_urlparsed": [
+    {
+     "file": "test_utils_url_test_canonicalize_urlparsed_assertion_241.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_canonicalize_urlparsed_assertion_243.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_canonicalize_parse_url": [
+    {
+     "file": "test_utils_url_test_canonicalize_parse_url_assertion_250.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_url_test_canonicalize_parse_url_assertion_252.py",
+     "params": null
+    }
+   ],
+   "tests/test_utils_url.py::CanonicalizeUrlTest::test_safe_characters_unicode": [
+    {
+     "file": "test_utils_url_test_safe_characters_unicode_assertion_217.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_17": {
+  "status": "completed",
+  "time": {
+   "purification": 5.275235891342163,
+   "instrument": 17.91401767730713,
+   "test": 7.58621883392334
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_utils_response.py::ResponseUtilsTest::test_response_status_message": [
+    {
+     "file": "test_utils_response_test_response_status_message_assertion_85.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_18": {
+  "status": "completed",
+  "time": {
+   "purification": 3.798837900161743,
+   "instrument": 16.65302586555481,
+   "test": 7.862637758255005
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_responsetypes.py::ResponseTypesTest::test_from_content_disposition": [
+    {
+     "file": "test_responsetypes_test_from_content_disposition_assertion_35.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_19": {
+  "status": "completed",
+  "time": {
+   "purification": 16.240272760391235,
+   "instrument": 20.115949392318726,
+   "test": 13.639199018478394
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_http_cookies.py::WrappedRequestTest::test_get_full_url": [
+    {
+     "file": "test_http_cookies_test_get_full_url_assertion_17.py",
+     "params": null
+    }
+   ],
+   "tests/test_http_cookies.py::WrappedRequestTest::test_get_host": [
+    {
+     "file": "test_http_cookies_test_get_host_assertion_21.py",
+     "params": null
+    }
+   ],
+   "tests/test_http_cookies.py::WrappedRequestTest::test_get_type": [
+    {
+     "file": "test_http_cookies_test_get_type_assertion_25.py",
+     "params": null
+    }
+   ],
+   "tests/test_http_cookies.py::WrappedRequestTest::test_get_origin_req_host": [
+    {
+     "file": "test_http_cookies_test_get_origin_req_host_assertion_38.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_20": {
+  "status": "completed",
+  "time": {
+   "purification": 4.953692436218262,
+   "instrument": 17.299391269683838,
+   "test": 17.527575969696045
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_spider.py::SitemapSpiderTest::test_get_sitemap_urls_from_robotstxt": [
+    {
+     "file": "test_spider_test_get_sitemap_urls_from_robotstxt_assertion_339.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_21": {
+  "status": "completed",
+  "time": {
+   "purification": 0.9506266117095947,
+   "instrument": 16.440826892852783,
+   "test": 9.981107711791992
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_22": {
+  "status": "completed",
+  "time": {
+   "purification": 0.53035569190979,
+   "instrument": 18.641427993774414,
+   "test": 9.762810707092285
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_23": {
+  "status": "completed",
+  "time": {
+   "purification": 17.752406358718872,
+   "instrument": 16.044553518295288,
+   "test": 12.312464714050293
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_downloadermiddleware_httpproxy.py::TestDefaultHeadersMiddleware::test_proxy_auth": [
+    {
+     "file": "test_downloadermiddleware_httpproxy_test_proxy_auth_assertion_53.py",
+     "params": null
+    },
+    {
+     "file": "test_downloadermiddleware_httpproxy_test_proxy_auth_assertion_54.py",
+     "params": null
+    },
+    {
+     "file": "test_downloadermiddleware_httpproxy_test_proxy_auth_assertion_55.py",
+     "params": null
+    }
+   ],
+   "tests/test_downloadermiddleware_httpproxy.py::TestDefaultHeadersMiddleware::test_proxy_auth_empty_passwd": [
+    {
+     "file": "test_downloadermiddleware_httpproxy_test_proxy_auth_empty_passwd_assertion_61.py",
+     "params": null
+    },
+    {
+     "file": "test_downloadermiddleware_httpproxy_test_proxy_auth_empty_passwd_assertion_62.py",
+     "params": null
+    },
+    {
+     "file": "test_downloadermiddleware_httpproxy_test_proxy_auth_empty_passwd_assertion_63.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_24": {
+  "status": "skipped"
+ },
+ "scrapy_25": {
+  "status": "skipped"
+ },
+ "scrapy_26": {
+  "status": "completed",
+  "time": {
+   "purification": 12.20123291015625,
+   "instrument": 15.65552306175232,
+   "test": 31.982568979263306
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_settings/__init__.py::BaseSettingsTest::test_getcomposite": [
+    {
+     "file": "test_settings/__init___test_getcomposite_assertion_262.py",
+     "params": null
+    },
+    {
+     "file": "test_settings/__init___test_getcomposite_assertion_263.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_27": {
+  "status": "completed",
+  "time": {
+   "purification": 4.098003387451172,
+   "instrument": 15.587733268737793,
+   "test": 5.142938613891602
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_downloadermiddleware_redirect.py::RedirectMiddlewareTest::test_request_meta_handling": [
+    {
+     "file": "test_downloadermiddleware_redirect_test_request_meta_handling_assertion_148.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_28": {
+  "status": "skipped"
+ },
+ "scrapy_29": {
+  "status": "completed",
+  "time": {
+   "purification": 0.5247933864593506,
+   "instrument": 16.31650137901306,
+   "test": 5.3815741539001465
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {},
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_30": {
+  "status": "completed",
+  "time": {
+   "purification": 5.5576136112213135,
+   "instrument": 17.597412586212158,
+   "test": 10.079450845718384
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_command_version.py::VersionTest::test_output": [
+    {
+     "file": "test_command_version_test_output_assertion_17.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_31": {
+  "status": "completed",
+  "time": {
+   "purification": 9.69063115119934,
+   "instrument": 16.357706546783447,
+   "test": 9.543678760528564
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_downloadermiddleware_cookies.py::CookiesMiddlewareTest::test_do_not_break_on_non_utf8_header": [
+    {
+     "file": "test_downloadermiddleware_cookies_test_do_not_break_on_non_utf8_header_assertion_45.py",
+     "params": null
+    },
+    {
+     "file": "test_downloadermiddleware_cookies_test_do_not_break_on_non_utf8_header_assertion_49.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_32": {
+  "status": "completed",
+  "time": {
+   "purification": 10.980399131774902,
+   "instrument": 15.932809829711914,
+   "test": 11.643970727920532
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_crawler.py::CrawlerProcessTest::test_crawler_process_accepts_dict": [
+    {
+     "file": "test_crawler_test_crawler_process_accepts_dict_assertion_111.py",
+     "params": null
+    },
+    {
+     "file": "test_crawler_test_crawler_process_accepts_dict_assertion_112.py",
+     "params": null
+    },
+    {
+     "file": "test_crawler_test_crawler_process_accepts_dict_assertion_116.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_33": {
+  "status": "completed",
+  "time": {
+   "purification": 10.485164165496826,
+   "instrument": 15.765735387802124,
+   "test": 19.897411346435547
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_pipeline_media.py::BaseMediaPipelineTestCase::test_default_item_completed": [
+    {
+     "file": "test_pipeline_media_test_default_item_completed_assertion_70.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_34": {
+  "status": "completed",
+  "time": {
+   "purification": 35.553791522979736,
+   "instrument": 16.43411350250244,
+   "test": 26.185337781906128
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_item.py::ItemTest::test_metaclass_with_fields_attribute": [
+    {
+     "file": "test_item_test_metaclass_with_fields_attribute_assertion_128.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_with_fields_attribute_assertion_129.py",
+     "params": null
+    }
+   ],
+   "tests/test_item.py::ItemTest::test_metaclass_multiple_inheritance_simple": [
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_simple_assertion_159.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_simple_assertion_160.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_simple_assertion_161.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_simple_assertion_167.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_simple_assertion_168.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_simple_assertion_169.py",
+     "params": null
+    }
+   ],
+   "tests/test_item.py::ItemTest::test_metaclass_multiple_inheritance_diamond": [
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_diamond_assertion_190.py",
+     "params": null
+    },
+    {
+     "file": "test_item_test_metaclass_multiple_inheritance_diamond_assertion_199.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_35": {
+  "status": "completed",
+  "time": {
+   "purification": 4.835352182388306,
+   "instrument": 15.242525577545166,
+   "test": 6.79733681678772
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_crawler.py::CrawlerRunnerTestCase::test_spidermanager_deprecation": [
+    {
+     "file": "test_crawler_test_spidermanager_deprecation_assertion_101.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_36": {
+  "status": "completed",
+  "time": {
+   "purification": 21.57115626335144,
+   "instrument": 15.883342027664185,
+   "test": 11.077256441116333
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_utils_misc/__init__.py::UtilsMiscTestCase::test_create_instance": [
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_89.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_91.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_93.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_95.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_100.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_103.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_104.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_106.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_108.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_110.py",
+     "params": null
+    },
+    {
+     "file": "test_utils_misc/__init___test_create_instance_assertion_132.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_37": {
+  "status": "completed",
+  "time": {
+   "purification": 3.8760244846343994,
+   "instrument": 14.958447217941284,
+   "test": 17.52413558959961
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_http_request.py::RequestTest::test_url_no_scheme": [
+    {
+     "file": "test_http_request_test_url_no_scheme_assertion_56.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_38": {
+  "status": "skipped"
+ },
+ "scrapy_39": {
+  "status": "completed",
+  "time": {
+   "purification": 8.913676977157593,
+   "instrument": 15.009950160980225,
+   "test": 6.812097072601318
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_spider.py::DeprecationTest::test_make_requests_from_url_deprecated": [
+    {
+     "file": "test_spider_test_make_requests_from_url_deprecated_assertion_419.py",
+     "params": null
+    },
+    {
+     "file": "test_spider_test_make_requests_from_url_deprecated_assertion_427.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "scrapy_40": {
+  "status": "completed",
+  "time": {
+   "purification": 3.4031035900115967,
+   "instrument": 15.683898687362671,
+   "test": 63.25912523269653
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_exporters.py::PythonItemExporterTest::test_other_python_types_item": [
+    {
+     "file": "test_exporters_test_other_python_types_item_assertion_148.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}
