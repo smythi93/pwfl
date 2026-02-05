@@ -24,18 +24,18 @@
   "status": "skipped"
  },
  "luigi_3": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.23083853721618652,
-   "instrument": 21.965637922286987,
-   "test": 54.70414853096008
+   "purification": 0.21579909324645996,
+   "instrument": 36.78395867347717,
+   "test": 50.337204694747925
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "luigi_4": {
   "status": "completed",
@@ -404,18 +404,25 @@
   "status": "skipped"
  },
  "luigi_22": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.2190380096435547,
-   "instrument": 25.04312515258789,
-   "test": 1.8666982650756836
+   "purification": 0.9757890701293945,
+   "instrument": 22.787637948989868,
+   "test": 1.784423828125
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "test/scheduler_test.py::SchedulerTest::test_worker_prune_after_init": [
+    {
+     "file": "scheduler_test_test_worker_prune_after_init_assertion_108.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "luigi_23": {
   "status": "completed",
@@ -492,18 +499,18 @@
   "check": "successful"
  },
  "luigi_27": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.9071793556213379,
-   "instrument": 29.242944717407227,
-   "test": 24.821887254714966
+   "purification": 0.2840592861175537,
+   "instrument": 23.27880597114563,
+   "test": 23.31847596168518
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "luigi_28": {
   "status": "completed",
@@ -602,18 +609,25 @@
   "check": "successful"
  },
  "luigi_32": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.24294495582580566,
-   "instrument": 28.625942707061768,
-   "test": 1.6403961181640625
+   "purification": 1.0389587879180908,
+   "instrument": 21.953465700149536,
+   "test": 1.6019952297210693
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "test/instance_test.py::InstanceTest::test_unhashable_type": [
+    {
+     "file": "instance_test_test_unhashable_type_assertion_96.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "luigi_33": {
   "status": "completed",
