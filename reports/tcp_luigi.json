@@ -24,18 +24,18 @@
   "status": "skipped"
  },
  "luigi_3": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.21579909324645996,
-   "instrument": 36.78395867347717,
-   "test": 50.337204694747925
+   "purification": 0.2183389663696289,
+   "instrument": 19.946147441864014,
+   "test": 50.91322708129883
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "luigi_4": {
   "status": "completed",
@@ -499,18 +499,18 @@
   "check": "successful"
  },
  "luigi_27": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.2840592861175537,
-   "instrument": 23.27880597114563,
-   "test": 23.31847596168518
+   "purification": 0.21895790100097656,
+   "instrument": 18.508730173110962,
+   "test": 31.713266611099243
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "luigi_28": {
   "status": "completed",

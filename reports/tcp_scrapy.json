@@ -467,15 +467,25 @@
   "check": "successful"
  },
  "scrapy_22": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 259.7846426963806
+   "purification": 3.240233898162842,
+   "instrument": 12.384822845458984,
+   "test": 9.452200174331665
   },
   "checkout": "cached",
   "build": "successful",
-  "purification": "failed",
-  "error": "Traceback (most recent call last):\n  File \"/Users/marius/Desktop/work/projects/dw-sfl/pwfl/purification.py\", line 256, in purify\n    purified_mapping = purify_tests(\n                       ^^^^^^^^^^^^^\n  File \"/Users/marius/Desktop/work/projects/dw-sfl/test-purification/src/tcp/purification.py\", line 604, in purify_tests\n    continue\n  File \"/Users/marius/Desktop/work/projects/dw-sfl/test-purification/src/tcp/purification.py\", line 604, in purify_tests\n    continue\n  File \"_pydevd_bundle/pydevd_cython_darwin_311_64.pyx\", line 1186, in _pydevd_bundle.pydevd_cython_darwin_311_64.SafeCallWrapper.__call__\n  File \"_pydevd_bundle/pydevd_cython_darwin_311_64.pyx\", line 627, in _pydevd_bundle.pydevd_cython_darwin_311_64.PyDBFrame.trace_dispatch\n  File \"_pydevd_bundle/pydevd_cython_darwin_311_64.pyx\", line 1103, in _pydevd_bundle.pydevd_cython_darwin_311_64.PyDBFrame.trace_dispatch\n  File \"_pydevd_bundle/pydevd_cython_darwin_311_64.pyx\", line 1065, in _pydevd_bundle.pydevd_cython_darwin_311_64.PyDBFrame.trace_dispatch\n  File \"_pydevd_bundle/pydevd_cython_darwin_311_64.pyx\", line 585, in _pydevd_bundle.pydevd_cython_darwin_311_64.PyDBFrame.do_wait_suspend\n  File \"/Users/marius/Applications/PyCharm.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 1195, in do_wait_suspend\n    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)\n  File \"/Users/marius/Applications/PyCharm.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 1210, in _do_wait_suspend\n    time.sleep(0.01)\nKeyboardInterrupt\n",
-  "check": "failed"
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_exporters.py::XmlItemExporterTest::test_nonstring_types_item": [
+    {
+     "file": "test_exporters_test_nonstring_types_item_assertion_381.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "scrapy_23": {
   "status": "completed",
