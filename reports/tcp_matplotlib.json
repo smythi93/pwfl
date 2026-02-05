@@ -143,7 +143,7 @@
   "status": "skipped"
  },
  "matplotlib_8": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 43.149484157562256,
    "instrument": 29.778578281402588,
@@ -179,7 +179,7 @@
    ]
   },
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "matplotlib_9": {
   "status": "completed",
