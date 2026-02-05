@@ -102,14 +102,25 @@
   "check": "successful"
  },
  "httpie_3": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 81.20979619026184
+   "purification": 2.3065474033355713,
+   "instrument": 7.610616683959961,
+   "test": 18.185826063156128
   },
   "checkout": "cached",
   "build": "successful",
-  "purification": "failed",
-  "error": "Traceback (most recent call last):\n  File \"/Users/marius/Desktop/work/projects/dw-sfl/pwfl/purification.py\", line 256, in purify\n    purified_mapping = purify_tests(\n                       ^^^^^^^^^^^^^\n  File \"/Users/marius/Desktop/work/projects/dw-sfl/test-purification/src/tcp/purification.py\", line 730, in purify_tests\n    disabler = TestDisabler(tests_to_disable)\n               ^^^^^^^^^^^^\n  File \"/Users/marius/Desktop/work/projects/dw-sfl/test-purification/src/tcp/purification.py\", line 730, in purify_tests\n    disabler = TestDisabler(tests_to_disable)\n               ^^^^^^^^^^^^\n  File \"_pydevd_bundle/pydevd_cython_darwin_311_64.pyx\", line 1186, in _pydevd_bundle.pydevd_cython_darwin_311_64.SafeCallWrapper.__call__\n  File \"_pydevd_bundle/pydevd_cython_darwin_311_64.pyx\", line 627, in _pydevd_bundle.pydevd_cython_darwin_311_64.PyDBFrame.trace_dispatch\n  File \"_pydevd_bundle/pydevd_cython_darwin_311_64.pyx\", line 1103, in _pydevd_bundle.pydevd_cython_darwin_311_64.PyDBFrame.trace_dispatch\n  File \"_pydevd_bundle/pydevd_cython_darwin_311_64.pyx\", line 1065, in _pydevd_bundle.pydevd_cython_darwin_311_64.PyDBFrame.trace_dispatch\n  File \"_pydevd_bundle/pydevd_cython_darwin_311_64.pyx\", line 585, in _pydevd_bundle.pydevd_cython_darwin_311_64.PyDBFrame.do_wait_suspend\n  File \"/Users/marius/Applications/PyCharm.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 1195, in do_wait_suspend\n    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)\n  File \"/Users/marius/Applications/PyCharm.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 1210, in _do_wait_suspend\n    time.sleep(0.01)\nKeyboardInterrupt\n"
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_sessions.py::TestSession::test_download_in_session": [
+    {
+     "file": "test_sessions_test_download_in_session_assertion_178.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "httpie_4": {
   "status": "completed",
