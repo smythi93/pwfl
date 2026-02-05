@@ -733,10 +733,34 @@ def purify_tests(
                     sliced_code = _remove_other_test_functions(
                         code, test_name, class_name
                     )
+                    if not _test_code_fails(
+                        sliced_code,
+                        test_file,
+                        test_pattern,
+                        src_dir,
+                        venv_python,
+                        venv,
+                    ):
+                        LOGGER.error(
+                            f"Purified code for test {test_id} does not fail after removing other test functions"
+                        )
+                        sliced_code = code
                 finally:
                     tmp_path.unlink(missing_ok=True)
             else:
                 sliced_code = _remove_other_test_functions(code, test_name, class_name)
+                if not _test_code_fails(
+                    sliced_code,
+                    test_file,
+                    test_pattern,
+                    src_dir,
+                    venv_python,
+                    venv,
+                ):
+                    LOGGER.error(
+                        f"Purified code for test {test_id} does not fail after removing other test functions"
+                    )
+                    sliced_code = code
             if param_suffix:
                 purified_name = (
                     safe_name(
