@@ -95,18 +95,25 @@
   "check": "successful"
  },
  "keras_4": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.2321176528930664,
-   "instrument": 38.11994385719299,
-   "test": 71.09922337532043
+   "purification": 10.741790771484375,
+   "instrument": 45.76227140426636,
+   "test": 77.08563661575317
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "tests/keras/optimizers_test.py::test_tfoptimizer_pass_correct_named_params_to_native_tensorflow_optimizer": [
+    {
+     "file": "keras/optimizers_test_test_tfoptimizer_pass_correct_named_params_to_native_tensorflow_optimizer_assertion_173.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "keras_5": {
   "status": "completed",
@@ -514,18 +521,25 @@
   "check": "successful"
  },
  "keras_20": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.2742187976837158,
-   "instrument": 47.0576958656311,
-   "test": 278.5655472278595
+   "purification": 5.818229913711548,
+   "instrument": 39.224427938461304,
+   "test": 286.7134602069855
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "tests/keras/layers/convolutional_test.py::test_conv2d_transpose_dilation": [
+    {
+     "file": "keras/layers/convolutional_test_test_conv2d_transpose_dilation_assertion_256.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "keras_21": {
   "status": "completed",
@@ -1109,18 +1123,25 @@
   "check": "successful"
  },
  "keras_34": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.2538447380065918,
-   "instrument": 28.169997215270996,
-   "test": 27.022451877593994
+   "purification": 5.279144048690796,
+   "instrument": 29.160526990890503,
+   "test": 22.428382873535156
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "tests/test_multiprocessing.py::test_multiprocessing_training": [
+    {
+     "file": "test_multiprocessing_test_multiprocessing_training_assertion_194.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "keras_35": {
   "status": "completed",
@@ -1168,18 +1189,25 @@
   "check": "successful"
  },
  "keras_36": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.31189489364624023,
-   "instrument": 28.55938148498535,
-   "test": 146.24158716201782
+   "purification": 8.329248905181885,
+   "instrument": 29.204920291900635,
+   "test": 146.27593731880188
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "tests/keras/layers/convolutional_test.py::test_separable_conv_1d": [
+    {
+     "file": "keras/layers/convolutional_test_test_separable_conv_1d_assertion_256.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "keras_37": {
   "status": "completed",
@@ -1228,18 +1256,25 @@
   "check": "successful"
  },
  "keras_39": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.49004507064819336,
-   "instrument": 43.30096912384033,
-   "test": 77.47860646247864
+   "purification": 6.051908731460571,
+   "instrument": 50.74682259559631,
+   "test": 84.65071821212769
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "tests/keras/utils/generic_utils_test.py::test_progbar": [
+    {
+     "file": "keras/utils/generic_utils_test_test_progbar_assertion_26.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "keras_40": {
   "status": "completed",
@@ -1263,18 +1298,31 @@
   "check": "successful"
  },
  "keras_41": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.5221648216247559,
-   "instrument": 49.783050537109375,
-   "test": 40.79279613494873
+   "purification": 11.441792488098145,
+   "instrument": 54.02660846710205,
+   "test": 62.20771503448486
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "tests/keras/utils/data_utils_test.py::test_generator_enqueuer_fail_threads": [
+    {
+     "file": "keras/utils/data_utils_test_test_generator_enqueuer_fail_threads_assertion_186.py",
+     "params": null
+    }
+   ],
+   "tests/keras/utils/data_utils_test.py::test_generator_enqueuer_fail_processes": [
+    {
+     "file": "keras/utils/data_utils_test_test_generator_enqueuer_fail_processes_assertion_195.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "keras_42": {
   "status": "completed",
@@ -1416,17 +1464,24 @@
   "check": "successful"
  },
  "keras_45": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.5199995040893555,
-   "instrument": 50.98407006263733,
-   "test": 271.0552031993866
+   "purification": 14.646198987960815,
+   "instrument": 30.058573246002197,
+   "test": 226.70953369140625
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "tests/keras/layers/recurrent_test.py::test_implementation_mode[LSTM]": [
+    {
+     "file": "keras/layers/recurrent_test_test_implementation_mode_LSTM_assertion_191.py",
+     "params": "LSTM"
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  }
 }
