@@ -90,55 +90,173 @@
   "check": "successful"
  },
  "ansible_5": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_5, no tests4py_info\n"
-  ]
+  "status": "completed",
+  "time": {
+   "purification": 2.196410894393921,
+   "instrument": 14.945602655410767,
+   "test": 22.230664253234863
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/module_utils/common/validation/test_check_required_arguments.py::test_check_required_arguments_missing_multiple": [
+    {
+     "file": "module_utils/common/validation/test_check_required_arguments_test_check_required_arguments_missing_multiple_assertion_73.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_6": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_6, no tests4py_info\n"
-  ]
+  "status": "completed",
+  "time": {
+   "purification": 114.98319339752197,
+   "instrument": 20.374699115753174,
+   "test": 95.74014019966125
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/galaxy/test_collection_install.py::test_build_requirement_from_path_with_manifest[1.1]": [
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_1_assertion_187.py",
+     "params": "1.1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_1_assertion_188.py",
+     "params": "1.1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_1_assertion_189.py",
+     "params": "1.1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_1_assertion_190.py",
+     "params": "1.1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_1_assertion_191.py",
+     "params": "1.1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_1_assertion_192.py",
+     "params": "1.1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_1_assertion_193.py",
+     "params": "1.1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_1_assertion_194.py",
+     "params": "1.1"
+    }
+   ],
+   "test/units/galaxy/test_collection_install.py::test_build_requirement_from_path_with_manifest[1]": [
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_assertion_187.py",
+     "params": "1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_assertion_188.py",
+     "params": "1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_assertion_189.py",
+     "params": "1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_assertion_190.py",
+     "params": "1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_assertion_191.py",
+     "params": "1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_assertion_192.py",
+     "params": "1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_assertion_193.py",
+     "params": "1"
+    },
+    {
+     "file": "galaxy/test_collection_install_test_build_requirement_from_path_with_manifest_1_assertion_194.py",
+     "params": "1"
+    }
+   ],
+   "test/units/galaxy/test_collection_install.py::test_add_collection_requirement_to_unknown_installed_version": [
+    {
+     "file": "galaxy/test_collection_install_test_add_collection_requirement_to_unknown_installed_version_assertion_545.py",
+     "params": null
+    },
+    {
+     "file": "galaxy/test_collection_install_test_add_collection_requirement_to_unknown_installed_version_assertion_547.py",
+     "params": null
+    },
+    {
+     "file": "galaxy/test_collection_install_test_add_collection_requirement_to_unknown_installed_version_assertion_550.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_7": {
   "status": "skipped"
  },
  "ansible_8": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_8, no tests4py_info\n"
-  ]
+  "status": "completed",
+  "time": {
+   "purification": 4.740987539291382,
+   "instrument": 28.195662260055542,
+   "test": 16.633745193481445
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/plugins/shell/test_powershell.py::test_join_path_unc": [
+    {
+     "file": "plugins/shell/test_powershell_test_join_path_unc_assertion_61.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_9": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_9, no tests4py_info\n"
-  ]
+  "status": "completed",
+  "time": {
+   "purification": 9.204843282699585,
+   "instrument": 942.6677458286285,
+   "test": 6.268625736236572
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/modules/packaging/os/test_redhat_subscription.py::test_redhat_subscribtion[test_registeration_username_password_pool_ids]": [
+    {
+     "file": "modules/packaging/os/test_redhat_subscription_test_redhat_subscribtion_test_registeration_username_password_pool_ids_assertion_848.py",
+     "params": "test_registeration_username_password_pool_ids"
+    }
+   ],
+   "test/units/modules/packaging/os/test_redhat_subscription.py::test_redhat_subscribtion[test_registeration_username_password_one_pool_id]": [
+    {
+     "file": "modules/packaging/os/test_redhat_subscription_test_redhat_subscribtion_test_registeration_username_password_one_pool_id_assertion_848.py",
+     "params": "test_registeration_username_password_one_pool_id"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_10": {
   "status": "error",
