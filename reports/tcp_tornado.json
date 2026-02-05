@@ -42,7 +42,7 @@
   "check": "successful"
  },
  "tornado_3": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.2445530891418457,
    "instrument": 7.520078420639038,
@@ -53,7 +53,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "tornado_4": {
   "status": "completed",
@@ -356,7 +356,7 @@
   "check": "successful"
  },
  "tornado_16": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.27994704246520996,
    "instrument": 7.318443775177002,
@@ -367,6 +367,6 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  }
 }

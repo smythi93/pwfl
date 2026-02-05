@@ -119,7 +119,7 @@
   "check": "successful"
  },
  "matplotlib_6": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.5070240497589111,
    "instrument": 20.393038272857666,
@@ -130,13 +130,13 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "matplotlib_7": {
   "status": "skipped"
  },
  "matplotlib_8": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 29.472480535507202,
    "instrument": 20.853502988815308,
@@ -172,10 +172,10 @@
    ]
   },
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "matplotlib_9": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.22766900062561035,
    "instrument": 20.168366193771362,
@@ -186,7 +186,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "matplotlib_10": {
   "status": "completed",
@@ -231,7 +231,7 @@
   "check": "successful"
  },
  "matplotlib_12": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.7427780628204346,
    "instrument": 20.22815990447998,
@@ -242,7 +242,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "matplotlib_13": {
   "status": "completed",
@@ -464,7 +464,7 @@
   "check": "successful"
  },
  "matplotlib_22": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 23.377630710601807,
    "instrument": 21.250364303588867,
@@ -496,7 +496,7 @@
    ]
   },
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "matplotlib_23": {
   "status": "completed",
@@ -612,7 +612,7 @@
   "check": "successful"
  },
  "matplotlib_28": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.4568922519683838,
    "instrument": 20.851109981536865,
@@ -623,7 +623,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "matplotlib_29": {
   "status": "completed",
@@ -647,7 +647,7 @@
   "check": "successful"
  },
  "matplotlib_30": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 2.4004602432250977,
    "instrument": 20.967588901519775,
@@ -665,6 +665,6 @@
    ]
   },
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  }
 }

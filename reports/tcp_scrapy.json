@@ -446,7 +446,7 @@
   "check": "successful"
  },
  "scrapy_21": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.9506266117095947,
    "instrument": 16.440826892852783,
@@ -457,10 +457,10 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "scrapy_22": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.53035569190979,
    "instrument": 18.641427993774414,
@@ -471,7 +471,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "scrapy_23": {
   "status": "completed",
@@ -572,7 +572,7 @@
   "status": "skipped"
  },
  "scrapy_29": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.5247933864593506,
    "instrument": 16.31650137901306,
@@ -583,7 +583,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "scrapy_30": {
   "status": "completed",

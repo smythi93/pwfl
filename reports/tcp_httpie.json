@@ -102,7 +102,7 @@
   "check": "successful"
  },
  "httpie_3": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.4705007076263428,
    "instrument": 9.600802898406982,
@@ -113,7 +113,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "httpie_4": {
   "status": "completed",
