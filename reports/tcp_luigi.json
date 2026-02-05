@@ -24,7 +24,7 @@
   "status": "skipped"
  },
  "luigi_3": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.21579909324645996,
    "instrument": 36.78395867347717,
@@ -35,7 +35,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "luigi_4": {
   "status": "completed",
@@ -499,7 +499,7 @@
   "check": "successful"
  },
  "luigi_27": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 0.2840592861175537,
    "instrument": 23.27880597114563,
@@ -510,7 +510,7 @@
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "luigi_28": {
   "status": "completed",
