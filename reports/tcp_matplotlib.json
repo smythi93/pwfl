@@ -143,7 +143,7 @@
   "status": "skipped"
  },
  "matplotlib_8": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 42.7347617149353,
    "instrument": 29.4184148311615,
@@ -179,7 +179,7 @@
    ]
   },
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "matplotlib_9": {
   "status": "completed",
@@ -491,7 +491,7 @@
   "check": "successful"
  },
  "matplotlib_22": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 34.348169803619385,
    "instrument": 30.67706298828125,
@@ -523,7 +523,7 @@
    ]
   },
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  },
  "matplotlib_23": {
   "status": "completed",
@@ -681,7 +681,7 @@
   "check": "successful"
  },
  "matplotlib_30": {
-  "status": "completed",
+  "status": "error",
   "time": {
    "purification": 3.347771167755127,
    "instrument": 30.10488224029541,
@@ -699,6 +699,6 @@
    ]
   },
   "test": "successful",
-  "check": "successful"
+  "check": "failed"
  }
 }
