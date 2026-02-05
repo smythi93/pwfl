@@ -317,16 +317,43 @@
   "check": "successful"
  },
  "ansible_12": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_12, no tests4py_info\n"
-  ]
+  "status": "completed",
+  "time": {
+   "purification": 19.008716821670532,
+   "instrument": 28.56909155845642,
+   "test": 206.93611240386963
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/plugins/lookup/test_env.py::test_env_var_value[foo-bar]": [
+    {
+     "file": "plugins/lookup/test_env_test_env_var_value_foo_bar_assertion_23.py",
+     "params": "foo-bar"
+    }
+   ],
+   "test/units/plugins/lookup/test_env.py::test_env_var_value[equation-a=b*100]": [
+    {
+     "file": "plugins/lookup/test_env_test_env_var_value_equation_a_b_100_assertion_23.py",
+     "params": "equation-a=b*100"
+    }
+   ],
+   "test/units/plugins/lookup/test_env.py::test_utf8_env_var_value[simple_var-alpha-\\u03b2-gamma]": [
+    {
+     "file": "plugins/lookup/test_env_test_utf8_env_var_value_simple_var_alpha__u03b2_gamma_assertion_35.py",
+     "params": "simple_var-alpha-\\u03b2-gamma"
+    }
+   ],
+   "test/units/plugins/lookup/test_env.py::test_utf8_env_var_value[the_var-\\xe3n\\u02c8si\\u03b2le]": [
+    {
+     "file": "plugins/lookup/test_env_test_utf8_env_var_value_the_var__xe3n_u02c8si_u03b2le_assertion_35.py",
+     "params": "the_var-\\xe3n\\u02c8si\\u03b2le"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_13": {
   "status": "error",
