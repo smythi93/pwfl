@@ -53,12 +53,17 @@ class Runner(abc.ABC):
         files: Optional[List[os.PathLike] | os.PathLike] = None,
         base: Optional[os.PathLike] = None,
         environ: Environment = None,
+        python: str = "python3",
         k: str = None,
     ) -> List[str]:
         return []
 
     def run_test(
-        self, directory: Path, test: str, environ: Environment = None
+        self,
+        directory: Path,
+        test: str,
+        environ: Environment = None,
+        python: str = "python3",
     ) -> TestResult:
         return TestResult.UNDEFINED
 
@@ -82,17 +87,22 @@ class Runner(abc.ABC):
         output: Path,
         tests: List[str],
         environ: Environment = None,
+        python: str = "python3",
     ):
         output.mkdir(parents=True, exist_ok=True)
         for test_result in TestResult:
             (output / test_result.get_dir()).mkdir(parents=True, exist_ok=True)
         for event_file, test in enumerate(tests):
-            test_result = self.run_test(directory, test, environ=environ)
+            test_result = self.run_test(directory, test, environ=environ, python=python)
             self.tests[test_result].add(test)
             if os.path.exists(directory / "EVENTS_PATH"):
                 shutil.move(
                     directory / "EVENTS_PATH",
                     output / test_result.get_dir() / self.safe(test),
+                )
+            else:
+                LOGGER.debug(
+                    f"Test {test} finished with result {test_result}, but no events were found"
                 )
 
     def run(
@@ -102,6 +112,7 @@ class Runner(abc.ABC):
         files: Optional[List[os.PathLike] | os.PathLike] = None,
         base: Optional[os.PathLike] = None,
         environ: Environment = None,
+        python: str = "python3",
         k: str = None,
     ):
         self.passing_tests.clear()
@@ -111,9 +122,17 @@ class Runner(abc.ABC):
             directory,
             output,
             self.filter_tests(
-                self.get_tests(directory, files=files, base=base, environ=environ, k=k)
+                self.get_tests(
+                    directory,
+                    files=files,
+                    base=base,
+                    environ=environ,
+                    python=python,
+                    k=k,
+                )
             ),
             environ=environ,
+            python=python,
         )
 
 
@@ -366,6 +385,7 @@ class PytestRunner(Runner):
         files: Optional[List[os.PathLike] | os.PathLike] = None,
         base: Optional[os.PathLike] = None,
         environ: Environment = None,
+        python: str = "python3",
         k: str = None,
     ) -> List[str]:
         c = []
@@ -389,7 +409,7 @@ class PytestRunner(Runner):
             c += str_files
         process = subprocess.run(
             [
-                "python3",
+                python,
                 "-m",
                 "pytest",
                 "--collect-only",
@@ -427,11 +447,15 @@ class PytestRunner(Runner):
         return False, None, None
 
     def run_test(
-        self, directory: Path, test: str, environ: Environment = None
+        self,
+        directory: Path,
+        test: str,
+        environ: Environment = None,
+        python: str = "python3",
     ) -> TestResult:
         try:
             output = subprocess.run(
-                ["python3", "-m", "pytest", test],
+                [python, "-m", "pytest", test],
                 stdout=subprocess.PIPE,
                 env=environ,
                 cwd=directory,
@@ -501,12 +525,17 @@ class InputRunner(Runner):
         files: Optional[List[os.PathLike] | os.PathLike] = None,
         base: Optional[os.PathLike] = None,
         environ: Environment = None,
+        python: str = "python3",
         k: str = None,
     ) -> List[str]:
         return list(self.passing.keys()) + list(self.failing.keys())
 
     def run_test(
-        self, directory: Path, test_name: str, environ: Environment = None
+        self,
+        directory: Path,
+        test_name: str,
+        environ: Environment = None,
+        python: str = "python3",
     ) -> TestResult:
         if "passing" in test_name:
             test = self.passing[test_name]
@@ -516,7 +545,7 @@ class InputRunner(Runner):
             result = TestResult.FAILING
         try:
             process = subprocess.run(
-                ["python3", self.access] + test,
+                [python, self.access] + test,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 env=environ,
