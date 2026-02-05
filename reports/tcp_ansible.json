@@ -259,16 +259,35 @@
   "check": "successful"
  },
  "ansible_10": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_10, no tests4py_info\n"
-  ]
+  "status": "completed",
+  "time": {
+   "purification": 6.860950469970703,
+   "instrument": 920.9498174190521,
+   "test": 28.673782348632812
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/modules/system/test_pamd.py::PamdServiceTestCase::test_remove_first_rule": [
+    {
+     "file": "modules/system/test_pamd_test_remove_first_rule_assertion_365.py",
+     "params": null
+    },
+    {
+     "file": "modules/system/test_pamd_test_remove_first_rule_assertion_367.py",
+     "params": null
+    }
+   ],
+   "test/units/modules/system/test_pamd.py::PamdServiceTestCase::test_remove_last_rule": [
+    {
+     "file": "modules/system/test_pamd_test_remove_last_rule_assertion_370.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_11": {
   "status": "error",
@@ -280,8 +299,7 @@
    "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
    "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
    "ValueError: No Tests4Py project found in tmp/ansible_11, no tests4py_info\n"
-  ],
-  "check": "failed"
+  ]
  },
  "ansible_12": {
   "status": "error",
@@ -329,8 +347,7 @@
    "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
    "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
    "ValueError: No Tests4Py project found in tmp/ansible_15, no tests4py_info\n"
-  ],
-  "check": "failed"
+  ]
  },
  "ansible_16": {
   "status": "error",
@@ -342,8 +359,7 @@
    "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
    "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
    "ValueError: No Tests4Py project found in tmp/ansible_16, no tests4py_info\n"
-  ],
-  "check": "failed"
+  ]
  },
  "ansible_17": {
   "status": "error",

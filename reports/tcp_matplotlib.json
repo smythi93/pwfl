@@ -119,28 +119,35 @@
   "check": "successful"
  },
  "matplotlib_6": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.5070240497589111,
-   "instrument": 20.393038272857666,
-   "test": 52.528674364089966
+   "purification": 3.713773250579834,
+   "instrument": 35.51279377937317,
+   "test": 8.926095962524414
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_single_color_c[png]": [
+    {
+     "file": "test_axes.py",
+     "params": "png"
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "matplotlib_7": {
   "status": "skipped"
  },
  "matplotlib_8": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 29.472480535507202,
-   "instrument": 20.853502988815308,
-   "test": 2.3978164196014404
+   "purification": 45.83456110954285,
+   "instrument": 32.02146053314209,
+   "test": 3.5250794887542725
   },
   "checkout": "cached",
   "build": "successful",
@@ -172,21 +179,28 @@
    ]
   },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "matplotlib_9": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.22766900062561035,
-   "instrument": 20.168366193771362,
-   "test": 84.80988240242004
+   "purification": 2.31084942817688,
+   "instrument": 32.848299980163574,
+   "test": 61.28253746032715
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "lib/matplotlib/tests/test_polar.py::test_polar_invertedylim_rorigin[png]": [
+    {
+     "file": "test_polar.py",
+     "params": "png"
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "matplotlib_10": {
   "status": "completed",
@@ -231,18 +245,31 @@
   "check": "successful"
  },
  "matplotlib_12": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.7427780628204346,
-   "instrument": 20.22815990447998,
-   "test": 37.39862847328186
+   "purification": 5.499715566635132,
+   "instrument": 38.607972145080566,
+   "test": 53.811092376708984
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_lines_with_colors[png-data0]": [
+    {
+     "file": "test_axes.py",
+     "params": "png-data0"
+    }
+   ],
+   "lib/matplotlib/tests/test_axes.py::test_lines_with_colors[png-data1]": [
+    {
+     "file": "test_axes.py",
+     "params": "png-data1"
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "matplotlib_13": {
   "status": "completed",
@@ -464,11 +491,11 @@
   "check": "successful"
  },
  "matplotlib_22": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 23.377630710601807,
-   "instrument": 21.250364303588867,
-   "test": 2.3434486389160156
+   "purification": 36.336703300476074,
+   "instrument": 33.93238830566406,
+   "test": 3.4234015941619873
   },
   "checkout": "cached",
   "build": "successful",
@@ -496,7 +523,7 @@
    ]
   },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "matplotlib_23": {
   "status": "completed",
@@ -612,18 +639,25 @@
   "check": "successful"
  },
  "matplotlib_28": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.4568922519683838,
-   "instrument": 20.851109981536865,
-   "test": 14.121623516082764
+   "purification": 9.004551887512207,
+   "instrument": 33.64323091506958,
+   "test": 18.599799871444702
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "lib/matplotlib/tests/test_axes.py::test_log_scales_invalid": [
+    {
+     "file": "test_axes_test_log_scales_invalid_assertion_2149.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "matplotlib_29": {
   "status": "completed",
@@ -647,11 +681,11 @@
   "check": "successful"
  },
  "matplotlib_30": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 2.4004602432250977,
-   "instrument": 20.967588901519775,
-   "test": 1.6631338596343994
+   "purification": 3.337498188018799,
+   "instrument": 32.87473821640015,
+   "test": 2.368546724319458
   },
   "checkout": "cached",
   "build": "successful",
@@ -665,6 +699,6 @@
    ]
   },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  }
 }
