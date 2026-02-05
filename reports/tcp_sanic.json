@@ -1,0 +1,101 @@
+{
+ "sanic_1": {
+  "status": "completed",
+  "time": {
+   "purification": 4.572365045547485,
+   "instrument": 13.619337320327759,
+   "test": 23.019270181655884
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_blueprints.py::test_bp_middleware_order": [
+    {
+     "file": "test_blueprints_test_bp_middleware_order_assertion_304.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "sanic_2": {
+  "status": "skipped"
+ },
+ "sanic_3": {
+  "status": "completed",
+  "time": {
+   "purification": 9.244088888168335,
+   "instrument": 13.378619909286499,
+   "test": 16.54152750968933
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_url_for.py::test_routes_with_host": [
+    {
+     "file": "test_url_for_test_routes_with_host_assertion_9.py",
+     "params": null
+    },
+    {
+     "file": "test_url_for_test_routes_with_host_assertion_10.py",
+     "params": null
+    },
+    {
+     "file": "test_url_for_test_routes_with_host_assertion_11.py",
+     "params": null
+    },
+    {
+     "file": "test_url_for_test_routes_with_host_assertion_12.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "sanic_4": {
+  "status": "completed",
+  "time": {
+   "purification": 7.888800859451294,
+   "instrument": 12.829193830490112,
+   "test": 87.12046194076538
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_requests.py::test_url_for_without_server_name": [
+    {
+     "file": "test_requests_test_url_for_without_server_name_assertion_2118.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "sanic_5": {
+  "status": "completed",
+  "time": {
+   "purification": 2.3465487957000732,
+   "instrument": 16.895813465118408,
+   "test": 4.272977828979492
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_logging.py::test_logging_modified_root_logger_config": [
+    {
+     "file": "test_logging_test_logging_modified_root_logger_config_assertion_115.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}

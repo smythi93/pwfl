@@ -1,0 +1,50 @@
+{
+ "markup_1": {
+  "status": "completed",
+  "time": {
+   "purification": 1.3651454448699951,
+   "instrument": 6.6619932651519775,
+   "test": 1.4714179039001465
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_markup.py::test_quoted_abc": [
+    {
+     "file": "test_markup_test_quoted_abc_assertion_13.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ },
+ "markup_2": {
+  "status": "completed",
+  "time": {
+   "purification": 1.8788280487060547,
+   "instrument": 5.704691410064697,
+   "test": 1.835108995437622
+  },
+  "checkout": "cached",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "tests/test_markup.py::test_abc": [
+    {
+     "file": "test_markup_test_abc_assertion_5.py",
+     "params": null
+    }
+   ],
+   "tests/test_markup.py::test_quoted_abc": [
+    {
+     "file": "test_markup_test_quoted_abc_assertion_13.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
+ }
+}
