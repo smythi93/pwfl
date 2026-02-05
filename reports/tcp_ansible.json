@@ -48,28 +48,46 @@
   "check": "successful"
  },
  "ansible_3": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_3, no tests4py_info\n"
-  ]
+  "status": "completed",
+  "time": {
+   "purification": 3.4627435207366943,
+   "instrument": 15.063722133636475,
+   "test": 1.723966360092163
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/module_utils/test_distribution_version.py::test_distribution_version[stdin29-Kali 2020.2]": [
+    {
+     "file": "module_utils/test_distribution_version_test_distribution_version_stdin29_Kali_2020_2_assertion_1965.py",
+     "params": "stdin29-Kali 2020.2"
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_4": {
-  "status": "error",
-  "time": {},
-  "checkout": "cached",
-  "build": "failed",
-  "error": [
-   "Traceback (most recent call last):\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/default.py\", line 318, in build\n    project, t4p_info, t4p_requirements = load_project(work_dir)\n                                          ^^^^^^^^^^^^^^^^^^^^^^\n",
-   "  File \"/home/smytzek/pwfl/venv/lib/python3.11/site-packages/tests4py/api/utils.py\", line 87, in load_project\n    raise ValueError(f\"No Tests4Py project found in {work_dir}, no tests4py_info\")\n",
-   "ValueError: No Tests4Py project found in tmp/ansible_4, no tests4py_info\n"
-  ]
+  "status": "completed",
+  "time": {
+   "purification": 8.181977272033691,
+   "instrument": 13.309725522994995,
+   "test": 373.8725860118866
+  },
+  "checkout": "successful",
+  "build": "successful",
+  "purification": "successful",
+  "purified_tests": {
+   "test/units/playbook/test_collectionsearch.py::test_collection_static_warning": [
+    {
+     "file": "playbook/test_collectionsearch_test_collection_static_warning_assertion_37.py",
+     "params": null
+    }
+   ]
+  },
+  "test": "successful",
+  "check": "successful"
  },
  "ansible_5": {
   "status": "error",
