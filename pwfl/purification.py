@@ -152,6 +152,7 @@ def sflkit_unittest(
             files=files,
             base=project.test_base,
             environ=environ,
+            python=os.path.join("tests4py_venv", "bin", "python"),
             k=k,
         )
         report.successful = True
