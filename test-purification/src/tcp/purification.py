@@ -697,6 +697,18 @@ def purify_tests(
                             sliced_code = _remove_other_test_functions(
                                 code, test_name, class_name
                             )
+                            if not _test_code_fails(
+                                sliced_code,
+                                test_file,
+                                test_pattern,
+                                src_dir,
+                                venv_python,
+                                venv,
+                            ):
+                                LOGGER.error(
+                                    f"Purified code for test {test_id} does not fail after removing other test functions"
+                                )
+                                sliced_code = code
                     else:
                         LOGGER.warning(
                             f"No slice found for line {slice_target_line}, removing other test functions but keeping atomized code"
@@ -704,6 +716,18 @@ def purify_tests(
                         sliced_code = _remove_other_test_functions(
                             code, test_name, class_name
                         )
+                        if not _test_code_fails(
+                            sliced_code,
+                            test_file,
+                            test_pattern,
+                            src_dir,
+                            venv_python,
+                            venv,
+                        ):
+                            LOGGER.error(
+                                f"Purified code for test {test_id} does not fail after removing other test functions"
+                            )
+                            sliced_code = code
                 except Exception as e:
                     LOGGER.error(f"Error during slicing: {e}")
                     sliced_code = _remove_other_test_functions(
