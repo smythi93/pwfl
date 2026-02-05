@@ -40,11 +40,13 @@ def test_function_finder():
     finder = FunctionFinder(target_test="test_find_hook")
     finder.visit(tree)
 
+    # FunctionFinder now uses composite keys (class_name, test_name)
     assert (
-        "test_find_hook" in finder.test_functions
-    ), "Should find test_find_hook method"
+        "TestFindHooks",
+        "test_find_hook",
+    ) in finder.test_functions, "Should find test_find_hook method with composite key"
 
-    test_func = finder.test_functions["test_find_hook"]
+    test_func = finder.test_functions[("TestFindHooks", "test_find_hook")]
     parent_class = getattr(test_func, "_parent_class", None)
 
     assert parent_class is not None, "Test method should have parent class"
@@ -88,7 +90,9 @@ def test_test_disabler():
 
     # Verify test is disabled
     assert "def disabled_test_find_hook" in new_code, "Test should be renamed"
-    assert "def test_find_hook(self):" not in new_code, "Original test name should not exist"
+    assert (
+        "def test_find_hook(self):" not in new_code
+    ), "Original test name should not exist"
 
     # Verify other methods are not affected
     assert "def setup_method" in new_code, "setup_method should not be renamed"

@@ -111,10 +111,15 @@ class AssertionFinder(ast.NodeVisitor):
 
 class FunctionFinder(ast.NodeVisitor):
 
-    def __init__(self, target_test: Optional[str] = None):
-        self.test_functions: dict[str, ast.FunctionDef] = {}
+    def __init__(
+        self, target_test: Optional[str] = None, target_class: Optional[str] = None
+    ):
+        # Store functions with composite key (class_name, function_name)
+        # class_name is None for module-level functions
+        self.test_functions: dict[tuple[Optional[str], str], ast.FunctionDef] = {}
         self.test_classes: dict[str, ast.ClassDef] = {}
         self.target_test = target_test
+        self.target_class = target_class
         self.current_class = None
 
     def visit_ClassDef(self, node: ast.ClassDef):
@@ -126,16 +131,34 @@ class FunctionFinder(ast.NodeVisitor):
 
     def visit_FunctionDef(self, node: ast.FunctionDef):
         if node.name.startswith("test_"):
-            if self.target_test is None or node.name == self.target_test:
-                self.test_functions[node.name] = node
-                if self.current_class is not None:
-                    node._parent_class = self.current_class
-                param_info = None
-                for decorator in node.decorator_list:
-                    param_info = ParameterizeFinder.extract_parametrize_info(decorator)
-                    if param_info:
-                        break
-                node._parametrize_info = param_info
+            # Check if this matches our target criteria
+            if self.target_test is not None and node.name != self.target_test:
+                self.generic_visit(node)
+                return
+
+            current_class_name = self.current_class.name if self.current_class else None
+
+            # If we have a target class, only collect from that class
+            if (
+                self.target_class is not None
+                and current_class_name != self.target_class
+            ):
+                self.generic_visit(node)
+                return
+
+            # Store with composite key
+            key = (current_class_name, node.name)
+            self.test_functions[key] = node
+
+            if self.current_class is not None:
+                node._parent_class = self.current_class
+
+            param_info = None
+            for decorator in node.decorator_list:
+                param_info = ParameterizeFinder.extract_parametrize_info(decorator)
+                if param_info:
+                    break
+            node._parametrize_info = param_info
         self.generic_visit(node)
 
 
@@ -593,15 +616,13 @@ def purify_tests(
             deactivate_tests[test_file_key] = (tree, [(class_name, test_name)])
         else:
             deactivate_tests[test_file_key][1].append((class_name, test_name))
-        finder = FunctionFinder(target_test=test_name)
+        finder = FunctionFinder(target_test=test_name, target_class=class_name)
         finder.visit(tree)
-        if test_name not in finder.test_functions:
+        # Use composite key to look up the test function
+        test_func_key = (class_name, test_name)
+        if test_func_key not in finder.test_functions:
             continue
-        test_func = finder.test_functions[test_name]
-        if class_name:
-            parent_class = getattr(test_func, "_parent_class", None)
-            if parent_class is None or parent_class.name != class_name:
-                continue
+        test_func = finder.test_functions[test_func_key]
         param_info = getattr(test_func, "_parametrize_info", None)
         param_values_dict = {}
         if param_info and param_suffix:

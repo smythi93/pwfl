@@ -35,8 +35,10 @@ def test_parametrize_finder():
     finder = FunctionFinder(target_test="test_click_invocation")
     finder.visit(tree)
 
-    assert "test_click_invocation" in finder.test_functions
-    test_func = finder.test_functions["test_click_invocation"]
+    # FunctionFinder now uses composite keys (class_name, test_name)
+    # Module-level functions have None as class_name
+    assert (None, "test_click_invocation") in finder.test_functions
+    test_func = finder.test_functions[(None, "test_click_invocation")]
 
     param_info = getattr(test_func, "_parametrize_info", None)
 
@@ -107,19 +109,28 @@ def test_full_purify_parameterized():
         file_param_tuples = result[test_id]
 
         # Should have 2 purified files (one per assertion)
-        assert len(file_param_tuples) == 2, f"Expected 2 files, got {len(file_param_tuples)}"
+        assert (
+            len(file_param_tuples) == 2
+        ), f"Expected 2 files, got {len(file_param_tuples)}"
 
         # Check purified file names and parameters
         for purified_file, param_suffix in file_param_tuples:
             # Verify it's a tuple with param_suffix
-            assert param_suffix == "1-hello", f"Expected param_suffix '1-hello', got {param_suffix}"
+            assert (
+                param_suffix == "1-hello"
+            ), f"Expected param_suffix '1-hello', got {param_suffix}"
 
             assert "test_click" in purified_file.name
             assert "test_click_invocation" in purified_file.name
-            assert "1_hello" in purified_file.name  # Parameter suffix (dashes replaced with underscores)
+            assert (
+                "1_hello" in purified_file.name
+            )  # Parameter suffix (dashes replaced with underscores)
             assert "assertion" in purified_file.name
 
             content = purified_file.read_text()
             # NEW: Parameters are kept in code (not replaced)
             assert "@pytest.mark.parametrize" in content
-            assert "def test_click_invocation(mocker, user_choice, expected_value):" in content
+            assert (
+                "def test_click_invocation(mocker, user_choice, expected_value):"
+                in content
+            )

@@ -49,10 +49,12 @@ def helper_function():
     finder = FunctionFinder()
     finder.visit(tree)
 
+    # FunctionFinder now uses composite keys (class_name, test_name)
+    # Module-level functions have None as class_name
     assert len(finder.test_functions) == 2
-    assert "test_one" in finder.test_functions
-    assert "test_two" in finder.test_functions
-    assert "helper_function" not in finder.test_functions
+    assert (None, "test_one") in finder.test_functions
+    assert (None, "test_two") in finder.test_functions
+    assert (None, "helper_function") not in finder.test_functions
 
 
 def test_function_finder_specific_test():
@@ -68,9 +70,11 @@ def test_two():
     finder = FunctionFinder(target_test="test_one")
     finder.visit(tree)
 
+    # FunctionFinder now uses composite keys (class_name, test_name)
+    # Module-level functions have None as class_name
     assert len(finder.test_functions) == 1
-    assert "test_one" in finder.test_functions
-    assert "test_two" not in finder.test_functions
+    assert (None, "test_one") in finder.test_functions
+    assert (None, "test_two") not in finder.test_functions
 
 
 def test_assertion_atomizer():
@@ -180,8 +184,7 @@ def test_purify_tests_integration():
 
         # Create a test file
         test_file = src_dir / "test_example.py"
-        test_file.write_text(
-            """
+        test_file.write_text("""
 def test_multiple_assertions():
     x = 1
     assert x == 1
@@ -189,8 +192,7 @@ def test_multiple_assertions():
     assert y == 2
     z = 3
     assert z == 3
-"""
-        )
+""")
 
         # Run purification
         result = purify_tests(
