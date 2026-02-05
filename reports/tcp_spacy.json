@@ -42,46 +42,60 @@
   "check": "successful"
  },
  "spacy_3": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.2798349857330322,
-   "instrument": 14.054548740386963,
-   "test": 3.3363919258117676
+   "purification": 0.40508484840393066,
+   "instrument": 28.760115385055542,
+   "test": 4.770360946655273
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
   "purified_tests": {},
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "spacy_4": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.2675504684448242,
-   "instrument": 13.551674127578735,
-   "test": 4.968276023864746
+   "purification": 3.5785324573516846,
+   "instrument": 40.20661163330078,
+   "test": 7.214608430862427
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "spacy/tests/regression/test_issue4665.py::test_issue4665": [
+    {
+     "file": "regression/test_issue4665_test_issue4665_assertion_31.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "spacy_5": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.2851879596710205,
-   "instrument": 19.41172480583191,
-   "test": 6.410243988037109
+   "purification": 3.6255393028259277,
+   "instrument": 40.05114126205444,
+   "test": 9.250815391540527
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "spacy/tests/test_language.py::test_evaluate_no_pipe": [
+    {
+     "file": "test_language_test_evaluate_no_pipe_assertion_79.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  },
  "spacy_6": {
   "status": "skipped"
@@ -158,17 +172,24 @@
   "check": "successful"
  },
  "spacy_10": {
-  "status": "error",
+  "status": "completed",
   "time": {
-   "purification": 0.29672694206237793,
-   "instrument": 52.71930122375488,
-   "test": 40.81934213638306
+   "purification": 4.20089316368103,
+   "instrument": 81.60997200012207,
+   "test": 58.42292785644531
   },
   "checkout": "cached",
   "build": "successful",
   "purification": "successful",
-  "purified_tests": {},
+  "purified_tests": {
+   "spacy/tests/matcher/test_matcher_api.py::test_matcher_valid_callback": [
+    {
+     "file": "matcher/test_matcher_api_test_matcher_valid_callback_assertion_419.py",
+     "params": null
+    }
+   ]
+  },
   "test": "successful",
-  "check": "failed"
+  "check": "successful"
  }
 }
