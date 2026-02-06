@@ -797,14 +797,17 @@ def tcp_evaluate(project_name, bug_id, start=None, end=None, clean=False):
     os.makedirs("results", exist_ok=True)
     reports_dir = Path("reports")
     os.makedirs(reports_dir, exist_ok=True)
-    report_file = reports_dir / f"suggestion_{project_name}_tcp.json"
+    clean_suffix = "_clean" if clean else ""
+    report_file = reports_dir / f"suggestion_{project_name}{clean_suffix}_tcp.json"
     time_report = dict()
     for project in t4p.get_projects(project_name, bug_id):
         if start is not None and project.bug_id < start:
             continue
         if end is not None and project.bug_id > end:
             continue
-        results_file = Path("results", f"{project.get_identifier()}_tcp.json")
+        results_file = Path(
+            "results", f"{project.get_identifier()}{clean_suffix}_tcp.json"
+        )
         if results_file.exists():
             continue
         results = dict()
