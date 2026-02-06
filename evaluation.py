@@ -100,6 +100,14 @@ def get_parser():
     )
     tcp_analyze = tcp_command.add_parser("analyze", help="analyze tcp")
     tcp_evaluate = tcp_command.add_parser("evaluate", help="evaluate tcp")
+    tcp_evaluate.add_argument(
+        "--clean",
+        default=False,
+        action="store_true",
+        dest="clean",
+        help="Do not leverage the refinement score and use the original spectrum for evaluation, i.e., "
+        "the purified tests are only used for event collection, not for rank refinement.",
+    )
 
     # summarize parser
     command.add_parser("summarize", help="summarize results")
@@ -194,7 +202,11 @@ def main(args=None):
             )
         elif arguments.tcp_command == "evaluate":
             tcp_evaluate(
-                arguments.project_name, arguments.bug_id, arguments.start, arguments.end
+                arguments.project_name,
+                arguments.bug_id,
+                arguments.start,
+                arguments.end,
+                arguments.clean,
             )
     elif arguments.command == "analysis":
         analyze(

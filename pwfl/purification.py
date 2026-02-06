@@ -669,6 +669,7 @@ def tcp_get_results_for_type(
     faulty_lines,
     suffix: str,
     eval_metric=max,
+    clean=False,
 ):
     results = dict()
     times = dict()
@@ -681,90 +682,96 @@ def tcp_get_results_for_type(
     ]:
         results[metric.__name__] = dict()
         time_start = time.time()
-        spectra: list[Spectrum] = analyzer.get_analysis_by_type(type_)
-        weighted_sus_locations = []
-        for spectrum in spectra:
-            suggestion = spectrum.get_suggestion(
-                metric=metric,
-                base_dir=location,
-                use_weight=False,
-            )
-            for location in suggestion.lines:
-                weighted_sus_locations.append(
-                    (location, suggestion.suspiciousness, spectrum.weight)
+        if clean:
+            suggestions = analyzer.get_sorted_suggestions(location, metric, type_)
+            times[metric.__name__] = time.time() - time_start
+        else:
+            spectra: list[Spectrum] = analyzer.get_analysis_by_type(type_)
+            weighted_sus_locations = []
+            for spectrum in spectra:
+                suggestion = spectrum.get_suggestion(
+                    metric=metric,
+                    base_dir=location,
+                    use_weight=False,
                 )
-        times[metric.__name__] = time.time() - time_start
-
-        suggestions = []
-        # If TCP, adjust ranks using rank_refinement
-        try:
-            # Build mapping: statement string -> (original Suggestion, Location)
-            stmt_to_location = {}
-            original_scores = {}
-            weights = {}
-
-            for line, sus, weight in weighted_sus_locations:
-                stmt = str(line)
-                stmt_to_location[stmt] = line
-                original_scores[stmt] = sus
-                weights[stmt] = weight
-
-            # Load purified spectra from saved file
-            identifier = project.get_identifier()
-            spectra_dir = Path("tcp_spectra")
-            spectra_file = spectra_dir / f"{identifier}{suffix}.json"
-
-            if not spectra_file.exists():
-                LOGGER.error(f"Warning: TCP spectra file not found: {spectra_file}")
-                LOGGER.error("Run analysis step first to generate TCP spectra")
-                raise FileNotFoundError(f"TCP spectra file not found: {spectra_file}")
-            else:
-                with open(spectra_file, "r") as f:
-                    purified_data = json.load(f)
-
-                # Extract just the spectra (without test names)
-                purified_spectra = [item["spectrum"] for item in purified_data]
-
-                # Apply rank refinement
-                if purified_spectra:
-                    refined_scores = rank_refinement(
-                        original_scores, purified_spectra, technique="combined"
+                for location in suggestion.lines:
+                    weighted_sus_locations.append(
+                        (location, suggestion.suspiciousness, spectrum.weight)
                     )
+            times[metric.__name__] = time.time() - time_start
 
-                    # Rebuild suggestions as Suggestion objects with refined scores
-                    # Group by score (statements with same score go in one Suggestion)
-                    score_to_locations = {}
-                    for stmt, score in refined_scores.items():
-                        if isinstance(analyzer, ProximityAnalyzer):
-                            score *= weights.get(stmt, 1.0)  # Reapply weight if any
-                        if score not in score_to_locations:
-                            score_to_locations[score] = []
-                        if stmt in stmt_to_location:
-                            score_to_locations[score].append(stmt_to_location[stmt])
+            suggestions = []
+            # If TCP, adjust ranks using rank_refinement
+            try:
+                # Build mapping: statement string -> (original Suggestion, Location)
+                stmt_to_location = {}
+                original_scores = {}
+                weights = {}
 
-                    # Create Suggestion objects sorted by score
-                    suggestions = [
-                        Suggestion(locations, score)
-                        for score, locations in sorted(
-                            score_to_locations.items(),
-                            key=lambda x: x[0],
-                            reverse=True,
-                        )
-                    ]
+                for line, sus, weight in weighted_sus_locations:
+                    stmt = str(line)
+                    stmt_to_location[stmt] = line
+                    original_scores[stmt] = sus
+                    weights[stmt] = weight
 
-                    LOGGER.info(
-                        f"TCP rank refinement applied {project}{suffix}: {len(purified_spectra)} spectra used"
+                # Load purified spectra from saved file
+                identifier = project.get_identifier()
+                spectra_dir = Path("tcp_spectra")
+                spectra_file = spectra_dir / f"{identifier}{suffix}.json"
+
+                if not spectra_file.exists():
+                    LOGGER.error(f"Warning: TCP spectra file not found: {spectra_file}")
+                    LOGGER.error("Run analysis step first to generate TCP spectra")
+                    raise FileNotFoundError(
+                        f"TCP spectra file not found: {spectra_file}"
                     )
                 else:
-                    LOGGER.info(
-                        f"Warning: No purified spectra found in file for {project}{suffix}"
-                    )
-                    suggestions = analyzer.get_sorted_suggestions(
-                        location, metric, type_
-                    )
-        except Exception as e:
-            LOGGER.error(f"TCP rank refinement failed: {e}")
-            raise e
+                    with open(spectra_file, "r") as f:
+                        purified_data = json.load(f)
+
+                    # Extract just the spectra (without test names)
+                    purified_spectra = [item["spectrum"] for item in purified_data]
+
+                    # Apply rank refinement
+                    if purified_spectra:
+                        refined_scores = rank_refinement(
+                            original_scores, purified_spectra, technique="combined"
+                        )
+
+                        # Rebuild suggestions as Suggestion objects with refined scores
+                        # Group by score (statements with same score go in one Suggestion)
+                        score_to_locations = {}
+                        for stmt, score in refined_scores.items():
+                            if isinstance(analyzer, ProximityAnalyzer):
+                                score *= weights.get(stmt, 1.0)  # Reapply weight if any
+                            if score not in score_to_locations:
+                                score_to_locations[score] = []
+                            if stmt in stmt_to_location:
+                                score_to_locations[score].append(stmt_to_location[stmt])
+
+                        # Create Suggestion objects sorted by score
+                        suggestions = [
+                            Suggestion(locations, score)
+                            for score, locations in sorted(
+                                score_to_locations.items(),
+                                key=lambda x: x[0],
+                                reverse=True,
+                            )
+                        ]
+
+                        LOGGER.info(
+                            f"TCP rank refinement applied {project}{suffix}: {len(purified_spectra)} spectra used"
+                        )
+                    else:
+                        LOGGER.info(
+                            f"Warning: No purified spectra found in file for {project}{suffix}"
+                        )
+                        suggestions = analyzer.get_sorted_suggestions(
+                            location, metric, type_
+                        )
+            except Exception as e:
+                LOGGER.error(f"TCP rank refinement failed: {e}")
+                raise e
 
         LOGGER.info(
             f"Generated {len(suggestions)} suggestions for {project}{suffix} using {metric.__name__}"
@@ -785,7 +792,7 @@ def tcp_get_results_for_type(
     return results, times
 
 
-def tcp_evaluate(project_name, bug_id, start=None, end=None):
+def tcp_evaluate(project_name, bug_id, start=None, end=None, clean=False):
     Language.PYTHON.setup()
     os.makedirs("results", exist_ok=True)
     reports_dir = Path("reports")
@@ -832,7 +839,13 @@ def tcp_evaluate(project_name, bug_id, start=None, end=None):
                 subject_results[f"line{suffix}"],
                 subject_times[f"line{suffix}"],
             ) = tcp_get_results_for_type(
-                AnalysisType.LINE, analyzer, project, location, faulty_lines, suffix
+                AnalysisType.LINE,
+                analyzer,
+                project,
+                location,
+                faulty_lines,
+                suffix,
+                clean=clean,
             )
         results[project.get_identifier()] = subject_results
         time_report[project.get_identifier()] = subject_times
