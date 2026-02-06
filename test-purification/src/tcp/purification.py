@@ -318,7 +318,7 @@ def rank_refinement(
         if num_tests == 0:
             ratios[stmt] = 0.0
         else:
-            covered = sum((1 for spec in unique_spectra if spec.get(stmt, False)))
+            covered = sum((spec.get(stmt, 0) for spec in unique_spectra))
             ratios[stmt] = covered / num_tests
     scores = list(original_scores.values())
     min_score = min(scores) if scores else 0

@@ -735,7 +735,8 @@ def tcp_get_results_for_type(
                     # Group by score (statements with same score go in one Suggestion)
                     score_to_locations = {}
                     for stmt, score in refined_scores.items():
-                        score *= weights.get(stmt, 1.0)  # Reapply weight if any
+                        if isinstance(analyzer, ProximityAnalyzer):
+                            score *= weights.get(stmt, 1.0)  # Reapply weight if any
                         if score not in score_to_locations:
                             score_to_locations[score] = []
                         if stmt in stmt_to_location:
