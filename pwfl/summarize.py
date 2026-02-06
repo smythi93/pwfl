@@ -169,20 +169,19 @@ def summarize_tcp_all():
             for s in subject_data:
                 results["subjects"].append(s)
                 number_of_subjects += 1
-                for dependency, target in zip(dependency_types, dependency_PRFL):
+                for dependency, target in zip(dependency_types, dependency_TCP):
                     for m in metrics:
                         for sce in scenarios:
                             for loc in localizations:
                                 results[target][m][sce][loc]["all"].append(
                                     subject_data[s][dependency][m][sce][loc]
                                 )
-    for dependency, target in zip(dependency_types, dependency_PRFL):
+    for dependency, target in zip(dependency_types, dependency_TCP):
         for m in metrics:
             for sce in scenarios:
                 for loc in localizations:
                     results[target][m][sce][loc]["avg"] = (
-                        sum(results[dependency][m][sce][loc]["all"])
-                        / number_of_subjects
+                        sum(results[target][m][sce][loc]["all"]) / number_of_subjects
                     )
     with open("summary_tcp.json", "w") as f:
         json.dump(results, f, indent=1)

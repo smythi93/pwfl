@@ -487,6 +487,8 @@ def write_tex(
         best_for_each_metric_tcp,
         line_for_each_metric_tcp,
     )
+    with Path(tex_output, "localization-tcp.tex").open("w") as f:
+        f.write(localization_tcp_table)
     improvement_table = get_improvement_combined_table(
         improvements, improvements_prfl, improvements_tcp
     )
@@ -525,7 +527,11 @@ def analyze(results, prfl=False, tcp=False):
             line_for_each_metric[metric][scenario] = dict()
             for localization, comp in zip(localization_order, localization_comp):
                 bests = dict()
-                for distance in distance_prfl_order if prfl else distance_order:
+                for distance in (
+                    distance_prfl_order
+                    if prfl
+                    else distance_tcp_order if tcp else distance_order
+                ):
                     avg = results[distance][metric][scenario][localization]["avg"]
                     if (
                         distance == "PRFL"
