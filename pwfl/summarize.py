@@ -40,6 +40,7 @@ metrics = [
 
 dependency_types = [f"line{suffix}" for suffix, _ in distances]
 dependency_PRFL = [f"PRFL{suffix}" for suffix, _ in distances]
+dependency_TCP = [f"TCP{suffix}" for suffix, _ in distances]
 scenarios = [scenario.value for scenario in Scenario]
 
 localizations = ["top-1", "top-5", "top-10", "top-200", "exam", "wasted-effort"]
@@ -154,7 +155,7 @@ def summarize_tcp_all():
                 }
                 for metric in metrics
             }
-            for dependency in dependency_types
+            for dependency in dependency_TCP
         },
     }
     number_of_subjects = 0
@@ -168,18 +169,18 @@ def summarize_tcp_all():
             for s in subject_data:
                 results["subjects"].append(s)
                 number_of_subjects += 1
-                for dependency in dependency_types:
+                for dependency, target in zip(dependency_types, dependency_PRFL):
                     for m in metrics:
                         for sce in scenarios:
                             for loc in localizations:
-                                results[dependency][m][sce][loc]["all"].append(
+                                results[target][m][sce][loc]["all"].append(
                                     subject_data[s][dependency][m][sce][loc]
                                 )
-    for dependency in dependency_types:
+    for dependency, target in zip(dependency_types, dependency_PRFL):
         for m in metrics:
             for sce in scenarios:
                 for loc in localizations:
-                    results[dependency][m][sce][loc]["avg"] = (
+                    results[target][m][sce][loc]["avg"] = (
                         sum(results[dependency][m][sce][loc]["all"])
                         / number_of_subjects
                     )

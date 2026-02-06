@@ -31,6 +31,12 @@ tex_translation = {
     "PRFL_defuses": "\\PRFL{}$_{DUU}$",
     "PRFL_assert_use": "\\PRFL{}$_{A_{DU}}$",
     "PRFL_assert_uses": "\\PRFL{}$_{A_{DUU}}$",
+    "TCP": "\\TCP{}",
+    "TCP_line": "\\TCP{}$_L$",
+    "TCP_defuse": "\\TCP{}$_{DU}$",
+    "TCP_defuses": "\\TCP{}$_{DUU}$",
+    "TCP_assert_use": "\\TCP{}$_{A_{DU}}$",
+    "TCP_assert_uses": "\\TCP{}$_{A_{DUU}}$",
 }
 
 scenario_order = [
@@ -49,6 +55,7 @@ metric_order = [
 
 distance_order = [f"line{suffix}" for suffix, _ in distances]
 distance_prfl_order = [f"PRFL{suffix}" for suffix, _ in distances]
+distance_tcp_order = [f"TCP{suffix}" for suffix, _ in distances]
 
 localization_order = [
     "top-1",
@@ -126,11 +133,13 @@ def get_header_tex_table_without_metric():
 def get_baseline_tex_table(
     results,
     results_prfl,
+    results_tcp,
 ):
     table = get_header_tex_table()
     order = [
         (distance_order[0], results),
         ("PRFL", results_prfl),
+        ("TCP", results_tcp),
     ]
     for d, dr_pair in enumerate(order):
         distance, result_lookup = dr_pair
@@ -168,18 +177,11 @@ def get_baseline_tex_table(
 
 
 def get_localization_tex_table(
-    results,
+    order,
     best_for_each_metric,
     line_for_each_metric,
-    results_prfl,
-    line_for_each_metric_prfl,
 ):
     table = get_header_tex_table()
-    prfl_results = results_prfl["PRFL"]
-    order = [
-        # (distance_order[0], results),
-        # ("PRFL", results_prfl),
-    ] + [(distance, results) for distance in distance_order[1:]]
     for d, dr_pair in enumerate(order):
         distance, result_lookup = dr_pair
         for m, metric in enumerate(metric_order):
@@ -194,52 +196,6 @@ def get_localization_tex_table(
                 table += "\\rowstrut{}"
             for scenario in scenario_order:
                 for localization, comp in zip(localization_order, localization_comp):
-                    if distance == distance_prfl_order[0]:
-                        if comp:
-                            mark_as_best = (
-                                result_lookup[distance][metric][scenario][localization][
-                                    "avg"
-                                ]
-                                >= best_for_each_metric[metric][scenario][localization][
-                                    0
-                                ][0]
-                            )
-                        else:
-                            mark_as_best = (
-                                result_lookup[distance][metric][scenario][localization][
-                                    "avg"
-                                ]
-                                <= best_for_each_metric[metric][scenario][localization][
-                                    0
-                                ][0]
-                            )
-                    else:
-                        mark_as_best = (
-                            distance
-                            in best_for_each_metric[metric][scenario][localization][0][
-                                1
-                            ]
-                        )
-                        if mark_as_best:
-                            if comp:
-                                mark_as_best = (
-                                    result_lookup[distance][metric][scenario][
-                                        localization
-                                    ]["avg"]
-                                    >= prfl_results[metric][scenario][localization][
-                                        "avg"
-                                    ]
-                                )
-                            else:
-                                mark_as_best = (
-                                    result_lookup[distance][metric][scenario][
-                                        localization
-                                    ]["avg"]
-                                    <= prfl_results[metric][scenario][localization][
-                                        "avg"
-                                    ]
-                                )
-
                     mark_as_best = (
                         distance
                         in best_for_each_metric[metric][scenario][localization][0][1]
@@ -251,12 +207,6 @@ def get_localization_tex_table(
                             ]
                             > line_for_each_metric[metric][scenario][localization]
                         )
-                        mark_better_as_prfl = (
-                            result_lookup[distance][metric][scenario][localization][
-                                "avg"
-                            ]
-                            > line_for_each_metric_prfl[metric][scenario][localization]
-                        )
                     else:
                         mark_better_as_lines = (
                             result_lookup[distance][metric][scenario][localization][
@@ -264,17 +214,9 @@ def get_localization_tex_table(
                             ]
                             < line_for_each_metric[metric][scenario][localization]
                         )
-                        mark_better_as_prfl = (
-                            result_lookup[distance][metric][scenario][localization][
-                                "avg"
-                            ]
-                            < line_for_each_metric_prfl[metric][scenario][localization]
-                        )
                     table += " & "
                     if mark_better_as_lines:
                         table += "\\textbf{"
-                    # if mark_better_as_prfl:
-                    #     table += "\\textbf{"
                     if mark_as_best:
                         table += "{\\color{best}"
                     if localization.startswith("top"):
@@ -291,8 +233,6 @@ def get_localization_tex_table(
                         )
                     if mark_as_best:
                         table += "}"
-                    # if mark_better_as_prfl:
-                    #     table += "}"
                     if mark_better_as_lines:
                         table += "}"
             table += " \\\\"
@@ -303,80 +243,18 @@ def get_localization_tex_table(
     return table
 
 
-def get_localization_prfl_text_table(
-    results_prfl,
-    best_for_each_metric_prfl,
-    line_for_each_metric_prfl,
-):
-    table = get_header_tex_table()
-    for d, distance in enumerate(distance_prfl_order[1:]):
-        for m, metric in enumerate(metric_order):
-            if d % 2 == 1:
-                table += "\\rowcolor{row}\n"
-            if m == len(metric_order) // 2:
-                table += f"    {tex_translation[distance]}"
-            else:
-                table += "    "
-            table += f" & {tex_translation[metric]}"
-            if metric == metric_order[0]:
-                table += "\\rowstrut{}"
-            for scenario in scenario_order:
-                for localization, comp in zip(localization_order, localization_comp):
-                    mark_as_best = (
-                        distance
-                        in best_for_each_metric_prfl[metric][scenario][localization][0][
-                            1
-                        ]
-                    )
-                    if comp:
-                        mark_better_as_prfl = (
-                            results_prfl[distance][metric][scenario][localization][
-                                "avg"
-                            ]
-                            > line_for_each_metric_prfl[metric][scenario][localization]
-                        )
-                    else:
-                        mark_better_as_prfl = (
-                            results_prfl[distance][metric][scenario][localization][
-                                "avg"
-                            ]
-                            < line_for_each_metric_prfl[metric][scenario][localization]
-                        )
-                    table += " & "
-                    if mark_better_as_prfl:
-                        table += "\\textbf{"
-                    if mark_as_best:
-                        table += "{\\color{best}"
-                    if localization.startswith("top"):
-                        table += (
-                            f"{results_prfl[distance][metric][scenario][localization]['avg'] * 100:.1f}"
-                            "\\%"
-                        )
-                    elif localization == "exam":
-                        table += f"{results_prfl[distance][metric][scenario][localization]['avg']:.3f}"
-                    else:
-                        table += (
-                            f"{results_prfl[distance][metric][scenario][localization]['avg'] / 1000:.1f}"
-                            f"k"
-                        )
-                    if mark_as_best:
-                        table += "}"
-                    if mark_better_as_prfl:
-                        table += "}"
-            table += " \\\\"
-            if m < len(metric_order) - 1:
-                table += "\n"
-        table += "[.2em]\n"
-    table += "\\bottomrule\n\\end{tabular}\n"
-    return table
-
-
-def get_improvement_combined_table(improvements, improvements_prfl):
+def get_improvement_combined_table(improvements, improvements_prfl, improvements_tcp):
     table = get_header_tex_table_without_metric()
     table += get_improvement_tex_table(improvements, distance_order)
     table += "\\midrule\n"
     table += get_improvement_tex_table(
         improvements_prfl, distance_prfl_order, n=len(distance_order) - 1
+    )
+    table += "\\midrule\n"
+    table += get_improvement_tex_table(
+        improvements_tcp,
+        distance_tcp_order,
+        n=len(distance_order) + len(distance_prfl_order) - 2,
     )
     table += "\\bottomrule\n\\end{tabular}\n"
     return table
@@ -439,7 +317,7 @@ def get_improvement_tex_table(improvements, order, n=0):
     return table
 
 
-def get_disadvantages_combined_table(improvements, improvements_prfl):
+def get_disadvantages_combined_table(improvements, improvements_prfl, improvements_tcp):
     actual_decrease = {
         distance: {
             scenario: {
@@ -464,6 +342,17 @@ def get_disadvantages_combined_table(improvements, improvements_prfl):
                     for improvement in improvements_prfl[distance_prfl][metric][
                         scenario
                     ][localization]:
+                        if 0 < improvement < 1:
+                            actual_decrease[distance][scenario][localization].append(
+                                improvement
+                            )
+    for distance, distance_tcp in zip(distance_order[1:], distance_tcp_order[1:]):
+        for scenario in scenario_order:
+            for localization in localization_order:
+                for metric in metric_order:
+                    for improvement in improvements_tcp[distance_tcp][metric][scenario][
+                        localization
+                    ]:
                         if 0 < improvement < 1:
                             actual_decrease[distance][scenario][localization].append(
                                 improvement
@@ -560,42 +449,51 @@ def get_overhead_tex_table(overhead, average_times):
 def write_tex(
     results,
     results_prfl,
+    results_tcp,
     best_for_each_metric,
     best_for_each_metric_prfl,
+    best_for_each_metric_tcp,
     line_for_each_metric,
     line_for_each_metric_prfl,
+    line_for_each_metric_tcp,
     improvements,
     improvements_prfl,
+    improvements_tcp,
     overhead,
     average_times,
 ):
     tex_output = Path("tex")
     if not tex_output.exists():
         tex_output.mkdir()
-    baseline_table = get_baseline_tex_table(results, results_prfl)
+    baseline_table = get_baseline_tex_table(results, results_prfl, results_tcp)
     with Path(tex_output, "baseline.tex").open("w") as f:
         f.write(baseline_table)
     localization_table = get_localization_tex_table(
-        results,
+        [(distance, results) for distance in distance_order[1:]],
         best_for_each_metric,
         line_for_each_metric,
-        results_prfl,
-        line_for_each_metric_prfl,
     )
     with Path(tex_output, "localization.tex").open("w") as f:
         f.write(localization_table)
-    localization_prfl_table = get_localization_prfl_text_table(
-        results_prfl,
+    localization_prfl_table = get_localization_tex_table(
+        [(distance, results_prfl) for distance in distance_prfl_order[1:]],
         best_for_each_metric_prfl,
         line_for_each_metric_prfl,
     )
     with Path(tex_output, "localization-prfl.tex").open("w") as f:
         f.write(localization_prfl_table)
-    improvement_table = get_improvement_combined_table(improvements, improvements_prfl)
+    localization_tcp_table = get_localization_tex_table(
+        [(distance, results_tcp) for distance in distance_tcp_order[1:]],
+        best_for_each_metric_tcp,
+        line_for_each_metric_tcp,
+    )
+    improvement_table = get_improvement_combined_table(
+        improvements, improvements_prfl, improvements_tcp
+    )
     with Path(tex_output, "improvement.tex").open("w") as f:
         f.write(improvement_table)
     disadvantage_table = get_disadvantages_combined_table(
-        improvements, improvements_prfl
+        improvements, improvements_prfl, improvements_tcp
     )
     with Path(tex_output, "disadvantage.tex").open("w") as f:
         f.write(disadvantage_table)
@@ -604,7 +502,7 @@ def write_tex(
         f.write(times_table)
 
 
-def analyze(results, prfl=False):
+def analyze(results, prfl=False, tcp=False):
     """analyze bests for the various metrics and report highest p-value"""
     line_for_each_metric = dict()
     best_for_each_metric = dict()
@@ -613,7 +511,11 @@ def analyze(results, prfl=False):
             m: {s: {lo: list() for lo in localization_order} for s in scenario_order}
             for m in metric_order
         }
-        for distance in (distance_prfl_order[1:] if prfl else distance_order[1:])
+        for distance in (
+            distance_prfl_order[1:]
+            if prfl
+            else distance_tcp_order[1:] if tcp else distance_order[1:]
+        )
     }
     for metric in metric_order:
         line_for_each_metric[metric] = dict()
@@ -625,14 +527,18 @@ def analyze(results, prfl=False):
                 bests = dict()
                 for distance in distance_prfl_order if prfl else distance_order:
                     avg = results[distance][metric][scenario][localization]["avg"]
-                    if distance == "PRFL" if prfl else distance == "line":
+                    if (
+                        distance == "PRFL"
+                        if prfl
+                        else distance == "TCP" if tcp else distance == "line"
+                    ):
                         line_for_each_metric[metric][scenario][localization] = avg
                     else:
                         for distance_result, line_result, subject in zip(
                             results[distance][metric][scenario][localization]["all"],
-                            results["PRFL" if prfl else "line"][metric][scenario][
-                                localization
-                            ]["all"],
+                            results["PRFL" if prfl else "TCP" if tcp else "line"][
+                                metric
+                            ][scenario][localization]["all"],
                             results["subjects"],
                         ):
                             if line_result == distance_result:
@@ -772,13 +678,16 @@ def get_times():
 
 def interpret(tex=False):
     summary = Path("summary.json")
-    summary_prfl = Path("summary_prfl.json", prfl=True)
+    summary_prfl = Path("summary_prfl.json")
+    summary_tcp = Path("summary_tcp.json")
     if not summary.exists() or not summary_prfl.exists():
         return
     with summary.open() as f:
         results = json.load(f)
     with summary_prfl.open() as f:
         results_prfl = json.load(f)
+    with summary_tcp.open() as f:
+        results_tcp = json.load(f)
     (
         best_for_each_metric,
         line_for_each_metric,
@@ -789,18 +698,27 @@ def interpret(tex=False):
         line_for_each_metric_prfl,
         improvements_prfl,
     ) = analyze(results_prfl, prfl=True)
+    (
+        best_for_each_metric_tcp,
+        line_for_each_metric_tcp,
+        improvements_tcp,
+    ) = analyze(results_tcp, tcp=True)
 
     runtimes, overhead, average_times = get_times()
     if tex:
         write_tex(
             results,
             results_prfl,
+            results_tcp,
             best_for_each_metric,
             best_for_each_metric_prfl,
+            best_for_each_metric_tcp,
             line_for_each_metric,
             line_for_each_metric_prfl,
+            line_for_each_metric_tcp,
             improvements,
             improvements_prfl,
+            improvements_tcp,
             overhead,
             average_times,
         )
