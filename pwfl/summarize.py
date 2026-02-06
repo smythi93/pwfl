@@ -141,7 +141,8 @@ def summarize_prfl_all():
         json.dump(results, f, indent=1)
 
 
-def summarize_tcp_all():
+def summarize_tcp_all(clean=False):
+    clean_suffix = "_clean" if clean else ""
     results_dir = Path("results")
     if not results_dir.exists():
         return
@@ -161,7 +162,7 @@ def summarize_tcp_all():
     number_of_subjects = 0
     for subject in subjects:
         for i in range(100):
-            subject_results = results_dir / f"{subject}_{i}_tcp.json"
+            subject_results = results_dir / f"{subject}_{i}{clean_suffix}_tcp.json"
             if not subject_results.exists():
                 continue
             with subject_results.open() as f:

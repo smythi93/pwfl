@@ -112,7 +112,15 @@ def get_parser():
     # summarize parser
     command.add_parser("summarize", help="summarize results")
     command.add_parser("summarize-prfl", help="summarize prfl results")
-    command.add_parser("summarize-tcp", help="summarize tcp results")
+    summarize_tcp = command.add_parser("summarize-tcp", help="summarize tcp results")
+    summarize_tcp.add_argument(
+        "--clean",
+        default=False,
+        action="store_true",
+        dest="clean",
+        help="Do not leverage the refinement score and use the original spectrum for evaluation, i.e., "
+        "the purified tests are only used for event collection, not for rank refinement.",
+    )
 
     # interpret parser
     command.add_parser("interpret", help="interpret results and write tex tables")
