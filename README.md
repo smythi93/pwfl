@@ -128,6 +128,19 @@ python evaluation.py prfl evaluate -p <project_name> [-i <bug_id>]
 python evaluation.py summarize-prfl
 ```
 
+### Reproducing the Results for test case purification
+To reproduce the results for test case purification, run the following steps:
+
+```bash
+python evaluation.py tcp events -p <project_name> [-i <bug_id>]
+python evaluation.py tcp analyze -p <project_name> [-i <bug_id>]
+python evaluation.py tcp evaluate -p <project_name> [-i <bug_id>]
+python evaluation.py summarize-tcp
+```
+
+During the collection of events the script will produce the mappings of the purified test cases in `tcp_mappings/<project_name>_<bug_id>.json`.
+During the analysis of the collected events, the script will produce the purified spectra in `tcp_spectra/<project_name>_<bug_id>.json`.
+These files are used during the evaluation of the fault localization to calculate the refined suspiciousness scores for the purified test cases.
 
 ## License
 
