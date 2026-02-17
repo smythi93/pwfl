@@ -317,7 +317,9 @@ def get_improvement_tex_table(improvements, order, n=0):
     return table
 
 
-def get_disadvantages_combined_table(improvements, improvements_prfl, improvements_tcp):
+def get_disadvantages_combined_table(
+    improvements, improvements_prfl, improvements_tcp, subs
+):
     actual_decrease = {
         distance: {
             scenario: {
@@ -357,6 +359,32 @@ def get_disadvantages_combined_table(improvements, improvements_prfl, improvemen
                             actual_decrease[distance][scenario][localization].append(
                                 improvement
                             )
+    number_of_decreases = 0
+    total_comparisons = 0
+    decreased_subjects = {}
+    for distance in distance_order[1:]:
+        for scenario in scenario_order:
+            for metric in metric_order:
+                total_comparisons += 310
+                for i in range(310):
+                    if all(
+                        [
+                            improvements[distance][metric][scenario][localization][i]
+                            < 1
+                            for localization in localization_order
+                        ]
+                    ):
+                        number_of_decreases += 1
+                        decreased_subjects[subs[i]] = (
+                            decreased_subjects.get(subs[i], 0) + 1
+                        )
+    LOGGER.info(f"Number of decreases: {number_of_decreases}")
+    LOGGER.info(f"Total: {total_comparisons}")
+    LOGGER.info(
+        f"Percentage of decreases: {number_of_decreases / total_comparisons * 100:.2f}%"
+    )
+    for s in sorted(decreased_subjects):
+        LOGGER.info(f"Decreased subject: {s} - {decreased_subjects[s]} decreases")
     table = get_header_tex_table_without_metric()
     table += get_disadvantages_tex_table(actual_decrease, distance_order)
     table += "\\bottomrule\n\\end{tabular}\n"
@@ -461,6 +489,7 @@ def write_tex(
     improvements_tcp,
     overhead,
     average_times,
+    subs,
 ):
     tex_output = Path("tex")
     if not tex_output.exists():
@@ -495,7 +524,7 @@ def write_tex(
     with Path(tex_output, "improvement.tex").open("w") as f:
         f.write(improvement_table)
     disadvantage_table = get_disadvantages_combined_table(
-        improvements, improvements_prfl, improvements_tcp
+        improvements, improvements_prfl, improvements_tcp, subs
     )
     with Path(tex_output, "disadvantage.tex").open("w") as f:
         f.write(disadvantage_table)
@@ -579,6 +608,7 @@ def analyze(results, prfl=False, tcp=False):
         best_for_each_metric,
         line_for_each_metric,
         improvements,
+        results["subjects"],
     )
 
 
@@ -694,21 +724,13 @@ def interpret(tex=False):
         results_prfl = json.load(f)
     with summary_tcp.open() as f:
         results_tcp = json.load(f)
-    (
-        best_for_each_metric,
-        line_for_each_metric,
-        improvements,
-    ) = analyze(results)
-    (
-        best_for_each_metric_prfl,
-        line_for_each_metric_prfl,
-        improvements_prfl,
-    ) = analyze(results_prfl, prfl=True)
-    (
-        best_for_each_metric_tcp,
-        line_for_each_metric_tcp,
-        improvements_tcp,
-    ) = analyze(results_tcp, tcp=True)
+    best_for_each_metric, line_for_each_metric, improvements, subs = analyze(results)
+    best_for_each_metric_prfl, line_for_each_metric_prfl, improvements_prfl, _ = (
+        analyze(results_prfl, prfl=True)
+    )
+    best_for_each_metric_tcp, line_for_each_metric_tcp, improvements_tcp, _ = analyze(
+        results_tcp, tcp=True
+    )
 
     runtimes, overhead, average_times = get_times()
     if tex:
@@ -727,4 +749,5 @@ def interpret(tex=False):
             improvements_tcp,
             overhead,
             average_times,
+            subs,
         )
