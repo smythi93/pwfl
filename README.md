@@ -2,18 +2,37 @@
 
 ## Abstract
 
-When a program fails, statistical fault localization (SFL) provides important debugging hints by identifying the program locations whose execution most correlates with failures.
-However, such correlations can be significantly weakened if a test contains passing and failing assertions, creating ambiguous and misleading associations.
-Likewise, if multiple lines correlate with failure with the same strength, SFL provides little orientation to disambiguate between these lines.
-   
-This paper proposes a novel approach that assigns different _weights_ to code locations in the test subject:
-The more recently a subject line is executed before the test fails, the higher its weight.
-This way, code executed last before a failing assertion gets a higher weight than earlier (passing) assertions or test setup code.
-Once computed, the weight of lines can be integrated into any SFL metric.
-   
-Our evaluation of proximity-weighted fault localization on 310 real-world programs shows that it vastly outperforms traditional and state-of-the-art fault localization techniques.
-On average, per test subject, proximity-weighted fault localization ranks faulty lines higher by between 200% and 300%, _reducing the effort to find faulty locations by a factor of three to four_.
-Our approach can be easily integrated into existing fault localization techniques to improve performance, making it a valuable addition to automated debugging.
+When a program fails, statistical fault localization (SFL) provides
+important debugging hints by identifying the locations whose execution
+most correlates with failures. However, such correlations can be
+significantly weakened if a test contains both *passing* and *failing*
+assertions, creating ambiguous and misleading associations. Likewise, if
+multiple lines correlate with failure with the same strength, SFL
+provides little guidance to disambiguate between them.
+
+This paper proposes a novel proximity-based weighting scheme for SFL
+that assigns different *weights* to code locations in the test subject
+based on temporal proximity to failure. The more recently a subject line
+is executed before the test fails, the higher its weight. We
+operationalize a well-known debugging heuristic into a lightweight
+statistical form compatible with existing SFL formulas. Our approach
+applies to *any test*, from simple single-line tests (where it preserves
+traditional SFL behavior), to single-assertion tests with multiple setup
+lines (where it benefits from temporal proximity), to complex
+multi-assertion tests (where it provides the most benefit by
+distinguishing failing from passing assertions). Once computed,
+proximity weights can be integrated into any existing SFL technique.
+
+Our evaluation of proximity-weighted fault localization on
+310 real-world programs shows that it consistently outperforms
+traditional and state-of-the-art fault localization techniques across
+all test types. Proximity-weighted fault localization shows per-subject
+relative improvements of 200%--400%, meaning that, for a typical
+subject, it provides 3 to 5 times the baseline effectiveness. These
+improvements represent substantial gains over baseline techniques. Our
+approach can be integrated into existing fault localization techniques
+to improve performance, making it a valuable addition to automated
+debugging.
 
 ## Setup
 
