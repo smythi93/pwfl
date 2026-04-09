@@ -1,8 +1,16 @@
+"""
+Command-line entry point for the PWFL experimental pipeline.
+
+This module wires all pipeline stages (event collection, analysis, evaluation,
+summarization, interpretation, and auxiliary checks) into one CLI.
+"""
+
 import argparse
 import logging
 import sys
 
 from pwfl.analyze import analyze
+from pwfl import logger as pwfl_logger
 from pwfl.cg import build_call_graph, get_call_graph_events
 from pwfl.check import (
     check_events,
@@ -14,9 +22,8 @@ from pwfl.check import (
 from pwfl.evaluate import evaluate
 from pwfl.events import get_events
 from pwfl.interpret import interpret
-from pwfl import logger as pwfl_logger
 from sflkit import logger as sflkit_logger
-from tcp import logger as tcp_logger
+from pyurify import logger as tcp_logger
 from pwfl.prfl import build_pr, evaluate_prfl
 from pwfl.summarize import summarize_all, summarize_prfl_all, summarize_tcp_all
 from pwfl.purification import get_tcp_events, tcp_analyze, tcp_evaluate
@@ -24,6 +31,15 @@ from pwfl.tests import get_results, analyze_file
 
 
 def get_parser():
+    """
+    Build the top-level CLI parser.
+
+    The parser exposes subcommands for each stage of the PWFL workflow and
+    forwards normalized arguments to the corresponding ``pwfl`` module.
+
+    :returns: Fully configured argument parser.
+    :rtype: argparse.ArgumentParser
+    """
     argument_parser = argparse.ArgumentParser(description="Evaluate PWFL")
     argument_parser.add_argument(
         "-v", "--verbose", action="store_true", help="increase output verbosity"
@@ -67,7 +83,7 @@ def get_parser():
     analysis = command.add_parser("analyze", help="analyze projects")
 
     # Evaluation parser
-    evaluate = command.add_parser("evaluate", help="evaluate projects")
+    evaluate_ = command.add_parser("evaluate", help="evaluate projects")
 
     # CG parser
     cg = command.add_parser("cg", help="construct call graphs")
@@ -98,9 +114,9 @@ def get_parser():
         dest="enable_slicing",
         help="disable dynamic slicing during purification",
     )
-    tcp_analyze = tcp_command.add_parser("analyze", help="analyze tcp")
-    tcp_evaluate = tcp_command.add_parser("evaluate", help="evaluate tcp")
-    tcp_evaluate.add_argument(
+    tcp_analyze_ = tcp_command.add_parser("analyze", help="analyze tcp")
+    tcp_evaluate_ = tcp_command.add_parser("evaluate", help="evaluate tcp")
+    tcp_evaluate_.add_argument(
         "--clean",
         default=False,
         action="store_true",
@@ -110,8 +126,8 @@ def get_parser():
     )
 
     # summarize parser
-    command.add_parser("summarize", help="summarize results")
-    command.add_parser("summarize-prfl", help="summarize prfl results")
+    summarize = command.add_parser("summarize", help="summarize results")
+    summarize_prfl = command.add_parser("summarize-prfl", help="summarize prfl results")
     summarize_tcp = command.add_parser("summarize-tcp", help="summarize tcp results")
     summarize_tcp.add_argument(
         "--clean",
@@ -122,6 +138,15 @@ def get_parser():
         "the purified tests are only used for event collection, not for rank refinement.",
     )
 
+    for subparser in [summarize, summarize_prfl, summarize_tcp]:
+        subparser.add_argument(
+            "--out",
+            default=None,
+            type=str,
+            dest="output",
+            help="The output file for storing the summarized results.",
+        )
+
     # interpret parser
     command.add_parser("interpret", help="interpret results and write tex tables")
 
@@ -130,14 +155,14 @@ def get_parser():
         tests_get,
         events,
         analysis,
-        evaluate,
+        evaluate_,
         cg_events,
         cg_build,
         prfl_build,
         prfl_evaluate,
         tcp_events,
-        tcp_analyze,
-        tcp_evaluate,
+        tcp_analyze_,
+        tcp_evaluate_,
     ]:
         subparser.add_argument(
             "-p", type=str, default=None, dest="project_name", help="project name"
@@ -152,14 +177,25 @@ def get_parser():
 
 
 def main(args=None):
+    """
+    Parse CLI arguments and dispatch to the selected workflow stage.
+
+    :param args: Optional CLI argument list. If ``None``, ``sys.argv[1:]`` is
+        used.
+    :type args: list[str] | None
+    :returns: None
+    """
     argument_parser = get_parser()
     arguments = argument_parser.parse_args(args or sys.argv[1:])
     if arguments.verbose:
+        # Keep logger levels synchronized so dependent packages emit debug logs too.
         pwfl_logger.debug()
         sflkit_logger.LOGGER.setLevel(logging.DEBUG)
         for handler in sflkit_logger.LOGGER.handlers:
             handler.setLevel(logging.DEBUG)
         tcp_logger.debug()
+
+    # Central command dispatch for all pipeline stages.
     if arguments.command == "check":
         fallback = not any(
             [
@@ -216,7 +252,7 @@ def main(args=None):
                 arguments.end,
                 arguments.clean,
             )
-    elif arguments.command == "analysis":
+    elif arguments.command == "analyze":
         analyze(
             arguments.project_name, arguments.bug_id, arguments.start, arguments.end
         )
@@ -243,11 +279,11 @@ def main(args=None):
                 arguments.project_name, arguments.bug_id, arguments.start, arguments.end
             )
     elif arguments.command == "summarize":
-        summarize_all()
+        summarize_all(arguments.output)
     elif arguments.command == "summarize-prfl":
-        summarize_prfl_all()
+        summarize_prfl_all(arguments.output)
     elif arguments.command == "summarize-tcp":
-        summarize_tcp_all()
+        summarize_tcp_all(arguments.output, clean=arguments.clean)
     elif arguments.command == "interpret":
         interpret(tex=True)
 

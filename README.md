@@ -2,37 +2,32 @@
 
 ## Abstract
 
-When a program fails, statistical fault localization (SFL) provides
-important debugging hints by identifying the locations whose execution
-most correlates with failures. However, such correlations can be
-significantly weakened if a test contains both *passing* and *failing*
-assertions, creating ambiguous and misleading associations. Likewise, if
-multiple lines correlate with failure with the same strength, SFL
-provides little guidance to disambiguate between them.
+When a program fails, statistical fault localization (SFL) provides important debugging hints by identifying the 
+locations whose execution most correlates with failures.
+However, such correlations can be significantly weakened if a test contains both _passing_ and _failing_ assertions, 
+creating ambiguous and misleading associations.
+Likewise, if multiple lines correlate with failure with the same strength, SFL provides little guidance to disambiguate 
+between them.
+    
+This paper proposes a novel proximity-based weighting scheme for SFL that assigns different _weights_ to code locations 
+in the test subject based on temporal proximity to failure.
+The more recently a subject line is executed before the test fails, the higher its weight.
+We operationalize a well-known debugging heuristic into a lightweight statistical form compatible with existing SFL 
+formulas.
+Our approach applies to _any test_, from simple single-line tests (where it preserves traditional SFL behavior), to 
+single-assertion tests with multiple setup lines (where it benefits from temporal proximity), to complex 
+multi-assertion tests (where it provides the most benefit by distinguishing failing from passing assertions).
+Once computed, proximity weights can be integrated into any existing SFL technique.
+    
+Our evaluation of proximity-weighted fault localization on 310~real-world programs shows that it consistently 
+outperforms fault localization techniques across all test types.
+Proximity-weighted fault localization shows per-subject relative improvements of 200%-400%, meaning that, for a 
+typical subject, it provides 3 to 5 times the baseline effectiveness.
+These improvements represent substantial gains over baseline techniques.
+Our approach can be integrated into existing fault localization techniques to improve performance, making it a valuable 
+addition to automated debugging.
 
-This paper proposes a novel proximity-based weighting scheme for SFL
-that assigns different *weights* to code locations in the test subject
-based on temporal proximity to failure. The more recently a subject line
-is executed before the test fails, the higher its weight. We
-operationalize a well-known debugging heuristic into a lightweight
-statistical form compatible with existing SFL formulas. Our approach
-applies to *any test*, from simple single-line tests (where it preserves
-traditional SFL behavior), to single-assertion tests with multiple setup
-lines (where it benefits from temporal proximity), to complex
-multi-assertion tests (where it provides the most benefit by
-distinguishing failing from passing assertions). Once computed,
-proximity weights can be integrated into any existing SFL technique.
-
-Our evaluation of proximity-weighted fault localization on
-310 real-world programs shows that it consistently outperforms
-traditional and state-of-the-art fault localization techniques across
-all test types. Proximity-weighted fault localization shows per-subject
-relative improvements of 200%--400%, meaning that, for a typical
-subject, it provides 3 to 5 times the baseline effectiveness. These
-improvements represent substantial gains over baseline techniques. Our
-approach can be integrated into existing fault localization techniques
-to improve performance, making it a valuable addition to automated
-debugging.
+## Structure
 
 ## Setup
 
@@ -46,6 +41,80 @@ in the `sflkit` directory.
 As subjects of our evaluation, we leverage [Tests4Py](https://github.com/smythi93/Tests4Py).
 
 Additionally, we have implemented multiple scripts to run the experiments and analyze the results.
+
+## Docker
+
+If you prefer an isolated environment, you can build a single image that embeds
+the repository files needed for the notebook and evaluation workflows. The
+container does not rely on a host bind mount, so it runs independently of your
+local Python environment.
+
+Build the image:
+
+```bash
+docker build -t pwfl .
+```
+
+Open an interactive shell with the project already available inside the image:
+
+```bash
+docker run -it pwfl
+```
+
+Because the image is self-contained, avoid ``--rm`` when you want to inspect the
+generated files afterwards. If you remove the container on exit, the evaluation
+artifacts disappear with it.
+
+Run the notebook example and expose Jupyter on port 8888:
+
+```bash
+docker run --rm -it \
+  -p 8888:8888 \
+  pwfl \
+  jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root \
+  --ServerApp.token='' --ServerApp.password='' --notebook-dir=/workspace
+```
+
+Run the reduced evaluation driver and copy the outputs back to the host:
+
+```bash
+python docker_pwfl.py small-eval
+```
+
+This command keeps a persistent helper container alive, copies the generated
+`small_eval/` directory into `docker-output/<timestamp>/`, and prints the shell
+command you can use to inspect the container afterwards. It only builds the
+image when missing.
+
+If you want to rebuild explicitly, pass:
+
+```bash
+python docker_pwfl.py small-eval --build
+```
+
+You can also open a shell directly with:
+
+```bash
+python docker_pwfl.py shell
+```
+
+To force a rebuild before opening the shell:
+
+```bash
+python docker_pwfl.py shell --build
+```
+
+From the interactive shell, you can run the full pipeline manually, for example:
+
+```bash
+python evaluation.py events -p black -i 1
+python evaluation.py analyze -p black -i 1
+python evaluation.py evaluate -p black -i 1
+```
+
+If you need to persist generated artifacts such as `results/`, `reports/`, or
+`analysis/`, copy them out of the container after the run or use the helper
+script to export the evaluation directory automatically.
 
 ### Installing Requirements
 
@@ -81,13 +150,13 @@ If you want to check out how proximity-weighted fault localization works, we rec
 To collect the event data, run the following command:
 
 ```bash
-python evaluation.py events -p <project_name> [-b <bug_id>]
+python evaluation.py events -p <project_name> [-i <bug_id>]
 ```
 
 For instance, to collect the event data for bug 1 of the project `black`, run the following command:
 
 ```bash
-python evaluation.py events -p black -b 1
+python evaluation.py events -p black -i 1
 ```
 
 The collected event data will be stored in the `sflkit_events` directory.
