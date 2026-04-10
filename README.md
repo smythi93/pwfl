@@ -54,27 +54,6 @@ pwfl/
 └── docker-output/          # Exported outputs from docker_pwfl.py
 ```
 
-## Artifact Availability and Provenance
-
-This artifact provides the PWFL implementation, evaluation scripts, and
-generated-study data artifacts used in the paper.
-
-- **Source repository**: this project repository.
-- **Persistent archival link (for FSE Available badge)**: `TBD (Zenodo DOI to be inserted)`.
-- **Primary data provenance**: execution traces and derived analysis outputs are
-  produced by this codebase from Tests4Py subjects via `tests4py`, `sflkit`,
-  and `pyurify`.
-- **Generated data directories**: `sflkit_events/`, `mappings/`,
-  `tcp_mappings/`, `tcp_spectra/`, `call_graphs/`, `reports/`, `results/`, and
-  `docker-output/`.
-- **Ethical and legal statement**: the artifact operates on open-source subject
-  projects and generates program-execution metadata; it is not designed to
-  process personal/sensitive user data.
-
-Storage demand depends on run scope: smoke runs are small, while full
-reproduction across all subjects and variants can generate multiple GB of
-intermediate and result artifacts.
-
 ## Setup
 
 We leverage SFLKit 0.5.7 to collect the event data for the subjects. PWFL is
