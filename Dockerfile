@@ -35,6 +35,7 @@ WORKDIR /workspace
 
 # Copy only the files needed to run the notebook and evaluation workflows.
 COPY pyproject.toml README.md LICENSE evaluation.py run_small_eval.py example.ipynb ./
+COPY middle ./middle
 COPY src ./src
 
 RUN python -m pip install --upgrade pip setuptools wheel \

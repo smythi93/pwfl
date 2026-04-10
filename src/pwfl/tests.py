@@ -5,8 +5,10 @@ Utilities for analyzing test-suite structure in the PWFL study.
 import ast
 import json
 import os
+from contextlib import contextmanager
 from pathlib import Path
 
+import matplotlib as mpl
 import seaborn as sns
 import tests4py.api as t4p
 from tests4py.projects import Project, TestStatus
@@ -123,11 +125,14 @@ class Visitor(ast.NodeVisitor):
         :returns: None
         """
         if self.current_test_assertions:
+            line_number = getattr(node, "lineno", None)
+            if line_number is None:
+                return
             self.current_test_assertions[-1] += 1
             self.lines_between_assertions.append(
-                node.lineno - self.last_assertion_line[-1]
+                line_number - self.last_assertion_line[-1]
             )
-            self.last_assertion_line[-1] = node.lineno
+            self.last_assertion_line[-1] = line_number
 
     def visit_Assert(self, node):
         """
@@ -149,6 +154,21 @@ class Visitor(ast.NodeVisitor):
         """
         if "assert" in ast.unparse(node.func).lower():
             self.visit_assertion(node)
+
+
+@contextmanager
+def pdf_font_context():
+    """
+    Temporarily configure Matplotlib to embed TrueType fonts in PDF output.
+
+    Matplotlib defaults to Type 3 fonts for PDFs in some environments, which
+    can look poor in many viewers. Setting both PDF and PS font types to 42
+    keeps the exported figures text-based and more portable.
+
+    :returns: Context manager yielding control with the updated rcParams.
+    """
+    with mpl.rc_context({"pdf.fonttype": 42, "ps.fonttype": 42}):
+        yield
 
 
 def analyze_subject(project: Project, visitor: Visitor):
@@ -275,45 +295,46 @@ def analyze_file(file):
     with open(file, "r") as f:
         data = json.load(f)
     visitor = Visitor.load(data)
-    test_per_subject = sns.displot(
-        {"Tests per Subject": visitor.tests_per_subject},
-        kde=True,
-        stat="count",
-        x="Tests per Subject",
-        bins=50,
-    )
-    results = Path("../../study")
+    results = Path("study")
     results.mkdir(exist_ok=True)
-    test_per_subject.savefig(results / "tests_per_subject.pdf")
-    assertions_per_test = sns.displot(
-        {"Assertions per Test": [x for x in visitor.lines_per_test if x <= 15]},
-        kde=True,
-        stat="count",
-        x="Assertions per Test",
-        bins=15,
-        kde_kws={"bw_adjust": 5},
-    )
-    assertions_per_test.savefig(results / "assertions_per_test.pdf")
-    lines_per_test = sns.displot(
-        {"Lines per Test": [x for x in visitor.lines_per_test if x <= 60]},
-        kde=True,
-        stat="count",
-        x="Lines per Test",
-        bins=20,
-        kde_kws={"bw_adjust": 2},
-    )
-    lines_per_test.savefig(results / "lines_per_test.pdf")
-    lines_between_assertions = sns.displot(
-        {
-            "Lines between Assertions": [
-                x for x in visitor.lines_between_assertions if x <= 30
-            ]
-        },
-        kde=True,
-        stat="count",
-        x="Lines between Assertions",
-        bins=20,
-        kde_kws={"bw_adjust": 5},
-    )
-    lines_between_assertions.savefig(results / "lines_between_assertions.pdf")
+    with pdf_font_context():
+        test_per_subject = sns.displot(
+            {"Tests per Subject": visitor.tests_per_subject},
+            kde=True,
+            stat="count",
+            x="Tests per Subject",
+            bins=50,
+        )
+        test_per_subject.savefig(results / "tests_per_subject.pdf")
+        assertions_per_test = sns.displot(
+            {"Assertions per Test": [x for x in visitor.lines_per_test if x <= 15]},
+            kde=True,
+            stat="count",
+            x="Assertions per Test",
+            bins=15,
+            kde_kws={"bw_adjust": 5},
+        )
+        assertions_per_test.savefig(results / "assertions_per_test.pdf")
+        lines_per_test = sns.displot(
+            {"Lines per Test": [x for x in visitor.lines_per_test if x <= 60]},
+            kde=True,
+            stat="count",
+            x="Lines per Test",
+            bins=20,
+            kde_kws={"bw_adjust": 2},
+        )
+        lines_per_test.savefig(results / "lines_per_test.pdf")
+        lines_between_assertions = sns.displot(
+            {
+                "Lines between Assertions": [
+                    x for x in visitor.lines_between_assertions if x <= 30
+                ]
+            },
+            kde=True,
+            stat="count",
+            x="Lines between Assertions",
+            bins=20,
+            kde_kws={"bw_adjust": 5},
+        )
+        lines_between_assertions.savefig(results / "lines_between_assertions.pdf")
     print_results(visitor)

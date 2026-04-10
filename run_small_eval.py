@@ -64,6 +64,7 @@ def run(args):
         cwd=TARGET_DIR,
         stdout=sys.stdout,
         stderr=sys.stderr,
+        check=True,
     )
 
 

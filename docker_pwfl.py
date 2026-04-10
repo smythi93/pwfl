@@ -198,9 +198,9 @@ def exec_in_container(args: list[str]) -> None:
     run(["docker", "exec", CONTAINER, *args])
 
 
-def copy_outputs() -> Path:
+def copy_paths(paths_to_copy: list[str]) -> Path:
     """
-    Copy small-eval outputs from the container back to the host.
+    Copy selected outputs from the container back to the host.
 
     :returns: Host output directory.
     """
@@ -208,9 +208,6 @@ def copy_outputs() -> Path:
     target = OUTPUT_ROOT / stamp
     target.mkdir(parents=True, exist_ok=True)
 
-    paths_to_copy = [
-        "small_eval",
-    ]
     for relative in paths_to_copy:
         run(
             [
@@ -251,7 +248,43 @@ def small_eval(force_build: bool = False, tiny: bool = False) -> None:
     if tiny:
         cmd.append("--tiny")
     exec_in_container(cmd)
-    output_dir = copy_outputs()
+    output_dir = copy_paths(["small_eval"])
+    print_summary_files(output_dir)
+    print(f"Copied outputs to: {output_dir.resolve()}")
+    print(f"Inspect the live container with: docker exec -it {CONTAINER} bash")
+
+
+def middle_cli(
+    force_build: bool = False,
+    no_cache: bool = False,
+    mode: str = "line",
+    metric: str = "tarantula",
+    workers: int = 4,
+    verbose: bool = False,
+) -> None:
+    """
+    Run the middle example through the local PWFL CLI and export the ranking.
+
+    :returns: None
+    """
+    image_id = ensure_image(force_build=force_build, no_cache=no_cache)
+    ensure_container(image_id=image_id)
+    cmd = [
+        "pwfl",
+        "middle",
+        "-t",
+        "tests.py",
+        "-m",
+        mode,
+        "-s",
+        metric,
+        "-w",
+        str(workers),
+    ]
+    if verbose:
+        cmd.append("-v")
+    exec_in_container(cmd)
+    output_dir = copy_paths(["pwfl_ranking.json"])
     print_summary_files(output_dir)
     print(f"Copied outputs to: {output_dir.resolve()}")
     print(f"Inspect the live container with: docker exec -it {CONTAINER} bash")
@@ -335,6 +368,45 @@ def main() -> None:
         action="store_true",
         help="Run the script with even fewer subject, to verify everything works as expected",
     )
+    middle_parser = sub.add_parser(
+        "middle-cli",
+        help="Run the local PWFL CLI on middle with fixed test target tests.py",
+    )
+    middle_parser.add_argument(
+        "--build",
+        action="store_true",
+        help="Build the image before running, even if it already exists",
+    )
+    middle_parser.add_argument(
+        "--no-cache",
+        action="store_true",
+        help="Build without Docker layer cache when used with --build",
+    )
+    middle_parser.add_argument(
+        "-m",
+        "--mode",
+        default="line",
+        help="Analysis mode for PWFL (default: line)",
+    )
+    middle_parser.add_argument(
+        "-s",
+        "--metric",
+        default="tarantula",
+        help="Suspiciousness metric for PWFL (default: tarantula)",
+    )
+    middle_parser.add_argument(
+        "-w",
+        "--workers",
+        type=int,
+        default=4,
+        help="PWFL parallel workers (default: 4)",
+    )
+    middle_parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="Enable verbose mode for PWFL (off by default)",
+    )
     shell_parser = sub.add_parser(
         "shell", help="Open a shell inside the persistent container"
     )
@@ -368,6 +440,15 @@ def main() -> None:
         build_image(no_cache=args.no_cache)
     elif args.command == "small-eval":
         small_eval(force_build=args.build, tiny=args.tiny)
+    elif args.command == "middle-cli":
+        middle_cli(
+            force_build=args.build,
+            no_cache=args.no_cache,
+            mode=args.mode,
+            metric=args.metric,
+            workers=args.workers,
+            verbose=args.verbose,
+        )
     elif args.command == "shell":
         shell(force_build=args.build)
     elif args.command == "example":

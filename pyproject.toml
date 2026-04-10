@@ -18,7 +18,7 @@ requires-python = ">=3.10"
 classifiers = [
     "Intended Audience :: Science/Research",
     "Programming Language :: Python :: 3.10",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License",
     "Topic :: Scientific/Engineering",
     "Topic :: Software Development :: Testing"
 ]
@@ -29,7 +29,11 @@ dependencies = [
     "numpy>=2.4.4",
     "sflkit>=0.5.7",
     "pyurify>=0.0.1",
+    "argcomplete>=3.6.3",
 ]
+
+[project.scripts]
+pwfl = "pwfl.cli:main"
 
 [tool.black]
 line-length = 88

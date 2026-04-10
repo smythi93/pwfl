@@ -1,0 +1,11 @@
+# Explicit Python dependency versions for artifact setup.
+# Mirrors pyproject.toml lower bounds for reproducible installs.
+
+tests4py>=0.0.13
+seaborn>=0.13.2
+pytest>=9.0.3
+numpy>=2.4.4
+sflkit>=0.5.7
+pyurify>=0.0.1
+argcomplete>=3.6.3
+
